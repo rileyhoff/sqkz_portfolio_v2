@@ -5,12 +5,12 @@ Author: Riley Hoff
 body{
     padding: 0;
     margin: 0;
-    font-family: kumlien-pro,serif;
-    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
     font-style: normal;
     color: #222;
-    background-color:gainsboro;
-    overflow: hidden;
+    background-color:whitesmoke;
+    overflow-x: hidden;
 }
 .grid-container{
     display: grid;
@@ -26,15 +26,8 @@ img{
     height: 100%;
     display: none;
     grid-column: 5/9;
-    grid-row: 4/16;
+    grid-row: 5/17;
     object-fit: cover;
-}
-img::after{
-    display: block;
-    content: "tesing ";
-    height: 500px;
-    width: 500px;
-    background-color: gainsboro;
 }
 .active{
     display: block;
@@ -55,10 +48,60 @@ div#bg{
     margin: 20vw;
     text-align:center;
   }
-  header{
-      grid-column: 5/9;
-      grid-row: 2/4;
-      margin: auto;
-      z-index: 100;
-      width: 20vw;
+  /* Intro Page */
+  header{  
+    font-family: 'Covered By Your Grace', cursive;
+    grid-column: 2/6;
+    grid-row: 2/3;
+    /* margin: ; */
+    z-index: 100;
+    /* letter-spacing: 1em; */
+    font-size: 5vw;
+    line-height: 1em;
+  }
+  h1 a:hover{
+      text-decoration: line-through;
+  }
+  a{
+      text-decoration: none;
+      color: black;
+  }
+  nav{
+    grid-column: 9/12;
+    grid-row: 13/20;
+    z-index: 200;
+    font-size: 1.5em;
+  }
+  nav a{
+      float: left;
+      display: block;
+      margin: .25vh 5vw;
+      padding: .25vh;
+      z-index: 200;
+      transition: all .2s ease-in-out;
+  }
+  nav a:hover {
+    text-decoration: line-through;
+    padding-left: .75em;
+  }
+  svg{
+     transition: all ease-in-out 1s;
+  }
+  svg:hover{
+    transform: rotate(-5deg);
+  }
+  /*about me*/
+  #about{ 
+    grid-column: 1/12;
+    grid-row: 22/42;
+    text-align: center;
+    background-color: teal;
+  }
+
+  @keyframes fade-in {
+      0%{
+          opacity: 0;
+            }100%{
+        opacity: 1;
+      }
   }
