@@ -1,107 +1,201 @@
 /*
-SQKZ INTRO
+SQKZ Version 2
 Author: Riley Hoff
 */
 body{
-    padding: 0;
-    margin: 0;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 100;
-    font-style: normal;
-    color: #222;
-    background-color:whitesmoke;
-    overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  font-family: josefin-sans, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-weight: 100;
+  font-style: normal;
+  color: #222;
+  background-color:whitesmoke;
+  overflow-x: hidden;
+  letter-spacing: .1em;
 }
-.grid-container{
-    display: grid;
-    grid-template-columns: repeat(12, minmax(50px, 1fr));
-    row-gap: 0;
-    grid-auto-rows: 5vh;
-}
-img{
-    /* position: absolute;
-    left: 100%; */
-    margin: auto;
-    width: 100%;
-    height: 100%;
-    display: none;
-    grid-column: 5/9;
-    grid-row: 5/17;
-    object-fit: cover;
-}
-.active{
-    display: block;
-}
-div#bg{
-    margin:auto;
-    display:block;
-    position:absolute;
-    left: 0;
-    top: 0;
-    background-color: transparent;
-    width:100vw;
-    height:100vh;
-  }
-  div#num{
-    width:200px; 
-    display:block;
-    margin: 20vw;
-    text-align:center;
-  }
-  /* Intro Page */
-  header{  
-    font-family: 'Covered By Your Grace', cursive;
-    grid-column: 2/6;
-    grid-row: 2/3;
-    /* margin: ; */
-    z-index: 100;
-    /* letter-spacing: 1em; */
-    font-size: 5vw;
-    line-height: 1em;
-  }
-  h1 a:hover{
-      text-decoration: line-through;
-  }
-  a{
-      text-decoration: none;
-      color: black;
-  }
-  nav{
-    grid-column: 9/12;
-    grid-row: 13/20;
-    z-index: 200;
-    font-size: 1.5em;
-  }
-  nav a{
-      float: left;
-      display: block;
-      margin: .25vh 5vw;
-      padding: .25vh;
-      z-index: 200;
-      transition: all .2s ease-in-out;
-  }
-  nav a:hover {
-    text-decoration: line-through;
-    padding-left: .75em;
-  }
-  svg{
-     transition: all ease-in-out 1s;
-  }
-  svg:hover{
-    transform: rotate(-5deg);
-  }
-  /*about me*/
-  #about{ 
-    grid-column: 1/12;
-    grid-row: 22/42;
-    text-align: center;
-    background-color: teal;
-  }
 
-  @keyframes fade-in {
-      0%{
-          opacity: 0;
-            }100%{
-        opacity: 1;
-      }
+p{
+  margin: 0;
+  font-size: 1.25em;
+}
+
+a{
+  font-size: 1.25em;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(12, minmax(50px, 1fr));
+  row-gap: 0;
+  grid-auto-rows: 5vh;
+}
+
+img{
+  position: fixed;
+  left: 33.333333%; 
+  top: 20vh;
+  margin: auto;
+  width: 33.33333vw;
+  height: 33.33333vw;
+  display: none;
+  grid-column: 5/9;
+  grid-row: 5/17;
+  object-fit: cover;
+  z-index: -100;
+}
+
+.active{
+  display: block;
+}
+
+div#bg{
+  margin:auto;
+  display:block;
+  position:absolute;
+  left: 0;
+  top: 0;
+  background-color: transparent;
+  width:100vw;
+  height:100vh;
+}
+
+#bg.pause{
+  display: none;
+}
+
+div#num{
+  width:200px; 
+  display:block;
+  margin: 20vw;
+  text-align:center;
+}
+
+/* Intro Page */
+header{  
+  grid-column: 6/9;
+  padding-left: 5vw;
+  grid-row: 3;
+  z-index: 100;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  text-decoration: line-through;
+}
+
+nav{
+  align-items: end;
+  grid-column: 3/5;
+  grid-row: 13/17;
+  z-index: 200;
+  font-size: 1.5em;
+  clear: both;
+}
+nav a{
+  float: right;
+  display: block;
+  width: 80%;
+  padding: .25vh 2.5vw .25vh 0;
+  z-index: 200;
+  transition: all .2s ease-in-out;
+  text-align: right;
+}
+ 
+nav a:hover {
+  text-decoration: line-through;
+  padding-right: 4vw;
+}
+
+svg{
+  transition: all ease-in-out 1s;
+}
+
+#sqkz_title:hover{
+  transform: translateY(-5vh) rotate(5deg);
+}
+
+.dot{
+  height: 20px;
+  width: 20px;
+  transition: all ease-in-out 1s;
+}
+
+#dot_1{
+  z-index: 101;
+  grid-column: 9;
+  grid-row: 10;
+  margin-left: 5vw;
+}
+
+#dot_1:hover{
+  transform: rotate(360deg);
+}
+#v_line_1{
+  grid-column: 4;
+  grid-row: 5/13;
+  height: 100%; 
+  width: 100%;
+}
+
+/*about me*/
+#bio{
+  grid-column: 3/8;
+  grid-row: 27/37;
+  width: 100%;
+  font-size: 1.25em;
+  line-height: 1.25em;
+}
+#name{
+  font-family: azo-sans-web, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  grid-column: 3/8;
+  grid-row: 36/42;
+}
+
+#dot_2{
+  grid-column: 3/8;
+  grid-row: 33;
+}
+
+#h_line_1{
+  grid-column: 10/13;
+  grid-row: 32;
+}
+
+#h_scribble{
+  width: 130%;
+  margin: -10% ;
+  grid-column: 10;
+  grid-row: 37;
+}
+
+#insta{
+  grid-column: 10;
+  grid-row: 36;
+} 
+
+#contact{
+  grid-column: 10;
+  grid-row: 33;
+}
+#aboutBG{
+  background-color: palevioletred;
+  grid-column: 5/9;
+  grid-row: 26/38;
+  width: 33.3333vw;
+  height: 33.3333vw;
+  z-index: -1;
+}
+
+@keyframes fade-in {
+  0%{
+    opacity: 0;
+  }100%{
+    opacity: 1;
   }
+}
