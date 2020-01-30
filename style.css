@@ -2,9 +2,15 @@
 SQKZ Version 2
 Author: Riley Hoff
 */
+html{
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
 body{
   padding: 0;
   margin: 0;
+  width: 100%;
+  height: 100vh;
   font-family: josefin-sans, sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -13,7 +19,10 @@ body{
   color: #222;
   background-color:whitesmoke;
   overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
   letter-spacing: .1em;
+  scroll-snap-type: y mandatory;
 }
 
 p{
@@ -24,12 +33,21 @@ p{
 a{
   font-size: 1.25em;
 }
+body > section{
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  scroll-snap-align: start;
+}
 
 .grid-container{
+  scroll-snap-align: start;
   display: grid;
   grid-template-columns: repeat(12, minmax(50px, 1fr));
   row-gap: 0;
-  grid-auto-rows: 5vh;
+  grid-template-rows: repeat(20, minmax(10px, 1fr));
 }
 
 img{
@@ -71,8 +89,15 @@ div#num{
   margin: 20vw;
   text-align:center;
 }
+.right_link{
+  grid-column: 10/13;
+  z-index: 200;
+}
 
-/* Intro Page */
+/*
+Intro Page 
+grid-rows : 0 to 20
+*/
 header{  
   grid-column: 6/9;
   padding-left: 5vw;
@@ -141,10 +166,71 @@ svg{
   width: 100%;
 }
 
-/*about me*/
+/*
+Painting Page
+grid-rows : 21 to 40
+*/
+.right_link.painting{
+  grid-row: 13;
+}
+#h_line_2{
+  grid-column: 10/13;
+  grid-row: 12;
+}
+#dot_3{
+  grid-column: 3;
+  grid-row: 12;
+}
+#painting_bg{
+  grid-column: 1/13;
+  grid-row: 1/21;
+  background-color: burlywood;
+  z-index: -500;
+}
+.animation.active{
+  background-color: crimson;
+  transition: all .2s;
+}
+
+/*
+Drawing Page 
+grid-rows : 41 to 60
+*/
+.right_link.drawing{
+  grid-row: 13;
+}
+#h_line_3{
+  grid-column: 10/13;
+  grid-row: 12;
+}
+#dot_4{
+  grid-column: 3;
+  grid-row: 12;
+}
+
+/*
+Misc Page 
+grid-rows : 61 to 80
+*/
+.right_link.misc{
+  grid-row: 13;
+}
+#h_line_4{
+  grid-column: 10/13;
+  grid-row: 12;
+}
+#dot_5{
+  grid-column: 3;
+  grid-row: 12;
+}
+
+/*
+about me
+grid-rows : 81 to 100
+*/
 #bio{
   grid-column: 3/8;
-  grid-row: 27/37;
+  grid-row: 7/17;
   width: 100%;
   font-size: 1.25em;
   line-height: 1.25em;
@@ -154,39 +240,39 @@ svg{
   font-weight: 700;
   font-style: normal;
   grid-column: 3/8;
-  grid-row: 36/42;
+  grid-row: 16/22;
 }
 
 #dot_2{
-  grid-column: 3/8;
-  grid-row: 33;
+  grid-column: 3;
+  grid-row: 13;
 }
 
 #h_line_1{
   grid-column: 10/13;
-  grid-row: 32;
+  grid-row: 12;
 }
 
 #h_scribble{
   width: 130%;
   margin: -10% ;
   grid-column: 10;
-  grid-row: 37;
+  grid-row: 17;
 }
 
 #insta{
   grid-column: 10;
-  grid-row: 36;
+  grid-row: 16;
 } 
 
 #contact{
   grid-column: 10;
-  grid-row: 33;
+  grid-row: 13;
 }
 #aboutBG{
   background-color: palevioletred;
   grid-column: 5/9;
-  grid-row: 26/38;
+  grid-row: 6/18;
   width: 33.3333vw;
   height: 33.3333vw;
   z-index: -1;
@@ -199,3 +285,4 @@ svg{
     opacity: 1;
   }
 }
+
