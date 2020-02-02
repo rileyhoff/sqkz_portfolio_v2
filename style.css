@@ -66,6 +66,19 @@ img{
   object-fit: cover;
   z-index: -100;
 }
+#default_img{
+  display: block;
+  z-index: -200;
+}
+.detail_img{
+  position: static;
+  grid-column: 5/9;
+  grid-row: 5/17;
+  display: block;
+  z-index: 500;
+  object-fit: cover;
+  margin: 0;
+}
 
 .active{
   display: block;
@@ -74,9 +87,8 @@ img{
 div#bg{
   margin:auto;
   display:block;
-  position:absolute;
-  left: 0;
-  top: 0;
+  grid-column: 1/13;
+  grid-row: 1/21;
   background-color: transparent;
   width:100vw;
   height:100vh;
@@ -263,7 +275,7 @@ grid-rows : 81 to 100
   grid-column: 10;
   grid-row: 13;
 }
-#aboutBG{
+#about_img{
   background-color: palevioletred;
   grid-column: 5/9;
   grid-row: 5/17;

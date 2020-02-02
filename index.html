@@ -24,7 +24,7 @@
       url: folder,
       success: function (data) {
         $(data).find("a").attr("href", function (i, val) {
-          if (val.match(/\.(jpe?g|png|gif|JPE?G)$/)) {
+          if (val.match(/\.(jpe?g|gif|JPE?G)$/)) { //does not read png 
             //images on remote server
             //$("#").append( "<img src='" + folder + "/" + val +"'>" );
             //images on local computer
@@ -92,6 +92,7 @@
       <a href="#misc">misc.</a>
       <a href="#about">about.</a>
     </nav>
+    <img src="img\DSC_0674.JPG" id="default_img" class="">
     <svg id="dot_1" class="dot" onclick="pauseImages()" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 73.02002 81.94496">
       <title>dot_1</title>
@@ -109,6 +110,7 @@
   <section id="painting" class="painting grid-container">
     <!-- painting -->
     <a href="/painting.html" class="painting right_link">painting.</a>
+    <img src="img\IMG_20200128_133557_220.jpg" id="paint_img" class="detail_img">
     <svg id="h_line_2" class="h_line" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 268.63379 13.33114">
       <title>H_Line_1</title>
@@ -126,6 +128,7 @@
   <section id="drawing" class="drawing grid-container">
     <!-- drawing -->
     <a href="/drawing.html" class="drawing right_link">drawing.</a>
+    <img src="img\sketchers.jpg" id="draw_img" class="detail_img">
     <svg id="h_line_3" class="h_line" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 268.63379 13.33114">
       <title>H_Line_1</title>
@@ -143,6 +146,7 @@
   <section id="misc" class="misc grid-container">
     <!-- misc -->
     <a href="/misc.html" class="misc right_link">misc.</a>
+    <img src="img\atsea.jpg" id="misc_img" class="detail_img">
     <svg id="h_line_4" class="h_line" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 268.63379 13.33114">
       <title>H_Line_1</title>
@@ -159,6 +163,7 @@
   </section>
   <section id="about" class="about grid-container">
     <!-- about -->
+    <img src="img\profile_pic.jpg" id="about_img" class="detail_img">
     <p id="bio">
       I’m an artist and creative, who’s passions lie in art making
       and technology. A recent graduate from the University of
@@ -190,9 +195,8 @@
         d="M878.12131,545.15009a6.14129,6.14129,0,0,1,3.51886-5.491,1.51061,1.51061,0,0,0-.75708-2.7952L863.34866,538.467a1.501,1.501,0,0,0,0,3q32.82048,1.68852,65.691,2.03972,32.98627.34742,65.96822-.66288,18.53944-.568,37.0622-1.56526a1.501,1.501,0,0,0,0-3,594.32717,594.32717,0,0,0-153.99292,4.11616c-3.14775.496-6.28306,1.07762-9.432,1.563a15.5317,15.5317,0,0,1-6.0035-.09642c-1.5611-.387-3.09406-1.22334-3.26449-2.98412-.19255-1.98925,1.713-3.38242,3.25175-4.22674a27.94979,27.94979,0,0,1,7.39239-2.32651q4.60258-1.04087,9.27607-1.72572a146.69609,146.69609,0,0,1,18.84664-1.47264c25.37383-.44881,50.54909,4.34983,75.509,8.3015l78.26883,12.39159,9.62929,1.52451c1.88871.299,2.702-2.59131.79751-2.89283l-80.98478-12.82158c-13.13012-2.07878-26.24876-4.2687-39.41142-6.1337a298.32026,298.32026,0,0,0-38.60705-3.38639c-12.73009-.13633-25.81068.86718-38.11716,4.302-3.91,1.0913-9.21463,3.80635-8.84128,8.6198.36354,4.687,5.2476,6.14027,9.23658,6.15a44.74445,44.74445,0,0,0,7.476-.95323q5.04917-.84723,10.11253-1.60674,9.92742-1.48918,19.9021-2.63322,19.61879-2.25207,39.35842-3.19586a593.37177,593.37177,0,0,1,79.88992,1.55968q4.85757.42382,9.70762.92752v-3q-32.81664,1.76182-65.68626,2.18643-32.98542.4211-65.96955-.51554-18.54066-.52662-37.06559-1.48247v3l17.53443-1.60314-.75708-2.79521a9.128,9.128,0,0,0-5.0047,8.08143,1.5009,1.5009,0,0,0,3,0Z"
         transform="translate(-856.36823 -528.0967)" />
     </svg>
-    <div id="aboutBG"></div>
+    <!-- <div id="aboutBG"></div> -->
   </section>
-  <div id="box">box</div>
   <script>
     displayItems();
 
@@ -207,9 +211,9 @@
     function intersectionCallback(entries, observer) {
       entries.forEach(entry => {
         if (entry.intersectionRatio >= 1) {
-          console.log("Fully visible!");
+          return true;
         } else {
-          console.log("Not fully visible!");
+          return false;
         }
       });
     }
@@ -220,10 +224,16 @@
     var paint = document.querySelector('#h_line_2');
     var draw = document.querySelector('#h_line_3');
     var misc = document.querySelector('#h_line_4');
-    observer.observe(about);
-    observer.observe(paint);
-    observer.observe(draw);
-    observer.observe(misc);
+    // observer.observe(about);
+    // if(observer.observe(paint) == true){
+    //   document.getElementById(10).className = "active";
+    //   console.log("TRUEEE");
+    // }else{
+    //   document.getElementById(10).className = "hidden";
+    //   console.log("Falses");
+    // }
+    // observer.observe(draw);
+    // observer.observe(misc);
   </script>
 
 </body>
