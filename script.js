@@ -1,8 +1,10 @@
 function displayItems() {
   var url = document.URL;
   var id = url.substring(url.lastIndexOf('#') + 1);
+  if(Number.isInteger(id)){
   document.getElementById(id).style.display = "block";
   document.getElementById(id + "Nav").className = "active";
+  }
 }
 
 function mouseMove() {
@@ -31,6 +33,10 @@ function mouseMove() {
 
 function pauseImages() {
   document.getElementById("bg").classList.toggle("pause");
+}
+
+function swipeLeft(e){
+  e.parentElement.classList.add("animateOut");
 }
 
 //init

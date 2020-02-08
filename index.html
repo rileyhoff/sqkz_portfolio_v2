@@ -35,7 +35,7 @@
       }
     });
 
-  // Smooth scroll to # links
+    // Smooth scroll to # links
     $(document).ready(function () {
       // Add smooth scrolling to all links
       $("a").on('click', function (event) {
@@ -52,7 +52,7 @@
           // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
           $('html, body').animate({
             scrollTop: $(hash).offset().top
-          }, 200, function () {
+          }, 500, function () {
 
             // Add hash (#) to URL when done scrolling (default click behavior)
             window.location.hash = hash;
@@ -60,6 +60,20 @@
         } // End if
       });
     });
+
+    //   //delay links to run animations
+    //   $('a').click(function (e) {
+    //     console.log("fuck.this");
+    //     e.preventDefault();                   // prevent default anchor behavior
+    //     var goTo = this.getAttribute("href"); // store anchor href
+
+    //     // do something while timeOut ticks ... 
+    //     console.log("HERE");
+    //     setTimeout(function () {
+    //       console.log("HERE");
+    //       window.location = goTo;
+    //     }, 7000);                             // time in ms
+    //   }); 
   </script>
 </head>
 
@@ -109,7 +123,7 @@
   </section>
   <section id="painting" class="painting grid-container">
     <!-- painting -->
-    <a href="/painting.html" class="painting right_link">painting.</a>
+    <a href="/painting.html" class="painting right_link" onclick="swipeLeft(this)">painting.</a>
     <img src="img\IMG_20200128_133557_220.jpg" id="paint_img" class="detail_img">
     <svg id="h_line_2" class="h_line" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 268.63379 13.33114">
@@ -195,45 +209,54 @@
         d="M878.12131,545.15009a6.14129,6.14129,0,0,1,3.51886-5.491,1.51061,1.51061,0,0,0-.75708-2.7952L863.34866,538.467a1.501,1.501,0,0,0,0,3q32.82048,1.68852,65.691,2.03972,32.98627.34742,65.96822-.66288,18.53944-.568,37.0622-1.56526a1.501,1.501,0,0,0,0-3,594.32717,594.32717,0,0,0-153.99292,4.11616c-3.14775.496-6.28306,1.07762-9.432,1.563a15.5317,15.5317,0,0,1-6.0035-.09642c-1.5611-.387-3.09406-1.22334-3.26449-2.98412-.19255-1.98925,1.713-3.38242,3.25175-4.22674a27.94979,27.94979,0,0,1,7.39239-2.32651q4.60258-1.04087,9.27607-1.72572a146.69609,146.69609,0,0,1,18.84664-1.47264c25.37383-.44881,50.54909,4.34983,75.509,8.3015l78.26883,12.39159,9.62929,1.52451c1.88871.299,2.702-2.59131.79751-2.89283l-80.98478-12.82158c-13.13012-2.07878-26.24876-4.2687-39.41142-6.1337a298.32026,298.32026,0,0,0-38.60705-3.38639c-12.73009-.13633-25.81068.86718-38.11716,4.302-3.91,1.0913-9.21463,3.80635-8.84128,8.6198.36354,4.687,5.2476,6.14027,9.23658,6.15a44.74445,44.74445,0,0,0,7.476-.95323q5.04917-.84723,10.11253-1.60674,9.92742-1.48918,19.9021-2.63322,19.61879-2.25207,39.35842-3.19586a593.37177,593.37177,0,0,1,79.88992,1.55968q4.85757.42382,9.70762.92752v-3q-32.81664,1.76182-65.68626,2.18643-32.98542.4211-65.96955-.51554-18.54066-.52662-37.06559-1.48247v3l17.53443-1.60314-.75708-2.79521a9.128,9.128,0,0,0-5.0047,8.08143,1.5009,1.5009,0,0,0,3,0Z"
         transform="translate(-856.36823 -528.0967)" />
     </svg>
-    <!-- <div id="aboutBG"></div> -->
   </section>
   <script>
     displayItems();
 
-    //---- Scroll animation (not fully implented) --
+    // Sticky Detail Photos //
 
-    var intersectionOptions = {
-      root: null,  // use the viewport
-      rootMargin: '0px',
-      threshold: 1.0
-    }
+    // When the user scrolls the page, execute myFunction
+    document.body.addEventListener('scroll', () => stickyPhoto());
 
-    function intersectionCallback(entries, observer) {
-      entries.forEach(entry => {
-        if (entry.intersectionRatio >= 1) {
-          return true;
-        } else {
-          return false;
+    // Get all sections
+    var sections = [document.getElementById("painting"),
+    document.getElementById("drawing"),
+    document.getElementById("misc"),
+    document.getElementById("about")]
+    // Get the offset position of the navbar
+    var next = 0;
+    var cur = -1;
+    var sticky = sections[next].offsetTop;
+    var drop = null;
+
+    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function stickyPhoto() {
+      //scrolled into new section
+      if (document.body.scrollTop > sticky) {
+        sections[next].classList.add("sticky");
+        if (next < 4) {
+          next++;
+          cur++;
         }
-      });
+        //set to next section and record previous
+        sticky = sections[next].offsetTop;
+        drop = (sections[cur].offsetTop + sections[cur].offsetHeight);
+
+       //drop photo when scrolling up 
+      } if (document.body.scrollTop < drop) {
+        console.log("Drop");
+        sections[next].classList.remove("sticky");
+        if (next > 0) {
+          next--;
+          cur--;
+        }
+        //record location on page
+        sticky = sections[next].offsetTop;
+        if (cur > 0) {
+          drop = (sections[cur].offsetTop + sections[cur].offsetHeight);
+        }
+      } 
     }
-
-    var observer = new IntersectionObserver(intersectionCallback, intersectionOptions);
-
-    var about = document.querySelector('#h_line_1');
-    var paint = document.querySelector('#h_line_2');
-    var draw = document.querySelector('#h_line_3');
-    var misc = document.querySelector('#h_line_4');
-    // observer.observe(about);
-    // if(observer.observe(paint) == true){
-    //   document.getElementById(10).className = "active";
-    //   console.log("TRUEEE");
-    // }else{
-    //   document.getElementById(10).className = "hidden";
-    //   console.log("Falses");
-    // }
-    // observer.observe(draw);
-    // observer.observe(misc);
   </script>
 
 </body>

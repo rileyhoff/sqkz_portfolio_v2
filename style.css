@@ -20,9 +20,8 @@ body{
   background-color:whitesmoke;
   overflow-x: hidden;
   overflow-y: scroll;
-  scroll-behavior: smooth;
   letter-spacing: .1em;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
 }
 
 p{
@@ -75,13 +74,23 @@ img{
   grid-column: 5/9;
   grid-row: 5/17;
   display: block;
-  z-index: 500;
+  z-index: -90;
   object-fit: cover;
   margin: 0;
 }
 
 .active{
   display: block;
+}
+
+.sticky > img{
+  position: fixed;
+  left: 33.333333%; 
+  top: 20vh;
+  margin: auto;
+  width: 33.33333vw;
+  height: 33.33333vw;
+  z-index: -90;
 }
 
 div#bg{
@@ -282,6 +291,11 @@ grid-rows : 81 to 100
   width: 33.3333vw;
   height: 33.3333vw;
   z-index: -1;
+}
+/*animations */
+.animateOut {
+  transition: all .7s ease-in-out;
+  transform: translateX(-100vw);
 }
 
 @keyframes fade-in {
