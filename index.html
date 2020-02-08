@@ -77,13 +77,13 @@
   </script>
 </head>
 
-<body>
+<body id="body" class="">
   <!-- Intro -->
-  <section class="intro grid-container">
+  <section id="intro" class="intro grid-container">
     <div id="bg" class="" onmousemove="mouseMove()"></div>
     <header>
       <!-- <h1 id="title" class=""><a href="index.html">sqkz.</a></h1>  -->
-      <svg id="sqkz_title" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 827.06 355.58002">
+      <svg id="sqkz_title" href="#intro" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 827.06 355.58002">
         <title>Untitled-2</title>
         <path
           d="M552.46144,557.88971v52.06c21.62994,9.8,49.68994,13.86,69.3,13.86,44.96,0,79.1-21.3,79.44-58.48,0-20.4-9.84-33.57-30.4-42.69l21.27-7.01v-52.05c-21.3-9.13-48.34-13.52-68.29-13.52-43.94,0-77.06994,21.63-77.41,57.46,0,19.61,9.7,33.56,30.74,42.99Z"
@@ -142,7 +142,7 @@
   <section id="drawing" class="drawing grid-container">
     <!-- drawing -->
     <a href="/drawing.html" class="drawing right_link">drawing.</a>
-    <img src="img\sketchers.jpg" id="draw_img" class="detail_img">
+    <img src="img\jdsfg.JPG" id="draw_img" class="detail_img">
     <svg id="h_line_3" class="h_line" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 268.63379 13.33114">
       <title>H_Line_1</title>
@@ -210,6 +210,8 @@
         transform="translate(-856.36823 -528.0967)" />
     </svg>
   </section>
+  <!-- all sections -->
+  <a id="top" href="#intro">[top]</a>
   <script>
     displayItems();
 
@@ -229,34 +231,6 @@
     var sticky = sections[next].offsetTop;
     var drop = null;
 
-    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-    function stickyPhoto() {
-      //scrolled into new section
-      if (document.body.scrollTop > sticky) {
-        sections[next].classList.add("sticky");
-        if (next < 4) {
-          next++;
-          cur++;
-        }
-        //set to next section and record previous
-        sticky = sections[next].offsetTop;
-        drop = (sections[cur].offsetTop + sections[cur].offsetHeight);
-
-       //drop photo when scrolling up 
-      } if (document.body.scrollTop < drop) {
-        console.log("Drop");
-        sections[next].classList.remove("sticky");
-        if (next > 0) {
-          next--;
-          cur--;
-        }
-        //record location on page
-        sticky = sections[next].offsetTop;
-        if (cur > 0) {
-          drop = (sections[cur].offsetTop + sections[cur].offsetHeight);
-        }
-      } 
-    }
   </script>
 
 </body>

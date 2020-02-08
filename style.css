@@ -166,6 +166,17 @@ svg{
 #sqkz_title:hover{
   transform: translateY(-5vh) rotate(5deg);
 }
+.detail #sqkz_title{
+ position: absolute;
+ top: 5vh;
+ right: 5vw; 
+ width: 10vw;
+ animation: fade-in 1s 0s  1 linear;
+}
+
+.detail #sqkz_title:hover{
+  transform: rotate(10deg);
+}
 
 .dot{
   height: 20px;
@@ -284,6 +295,7 @@ grid-rows : 81 to 100
   grid-column: 10;
   grid-row: 13;
 }
+
 #about_img{
   background-color: palevioletred;
   grid-column: 5/9;
@@ -292,6 +304,27 @@ grid-rows : 81 to 100
   height: 33.3333vw;
   z-index: -1;
 }
+
+/* no specific section */
+#top{
+  display: none;
+  font-family: "azo-sans-web",sans-serif;
+  position: absolute;
+  top: 90vh;
+  right: 5vw;
+  margin: 0;
+  padding: 0;
+  color: #aaaaaa;
+  animation: fade-in 1s 0s 1;
+}
+.detail > #top{
+  display: block;
+}
+
+#top:hover{
+  color: inherit;
+}
+
 /*animations */
 .animateOut {
   transition: all .7s ease-in-out;

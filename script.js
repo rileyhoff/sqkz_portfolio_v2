@@ -1,9 +1,9 @@
 function displayItems() {
   var url = document.URL;
   var id = url.substring(url.lastIndexOf('#') + 1);
-  if(Number.isInteger(id)){
-  document.getElementById(id).style.display = "block";
-  document.getElementById(id + "Nav").className = "active";
+  if (Number.isInteger(id)) {
+    document.getElementById(id).style.display = "block";
+    document.getElementById(id + "Nav").className = "active";
   }
 }
 
@@ -13,30 +13,66 @@ function mouseMove() {
   if ((z % 10) == 1) {
     //when on first element set prev to last element
     if (x == 0) {
-      prev = 28;
+      prev = 34;
     } else {
       prev = x - 1;
     }
     x += 1;
     //number of items (including 0)
-    if (x > 28) {
+    if (x > 34) {
       x = 0;
     }
     document.getElementById(x + 3).className = "active";
     document.getElementById(prev + 3).className = "hidden";
-    console.log("prev:", x + 3);
   }
-
-  // document.getElementById("num").innerHTML = x;
-  // document.getElementById("prev").innerHTML = prev + 2;
 }
 
 function pauseImages() {
   document.getElementById("bg").classList.toggle("pause");
 }
 
-function swipeLeft(e){
+function swipeLeft(e) {
   e.parentElement.classList.add("animateOut");
+}
+
+function pastIntro(){
+  if (document.body.scrollTop > (document.getElementById("intro").offsetHeight-20) || document.documentElement.scrollTop > (document.getElementById("intro").offsetHeight - 20)){
+    // console.log("douchea");
+    document.getElementById("body").classList.add("detail");
+  }else{
+    // console.log("inherr");
+    document.getElementById("body").classList.remove("detail");
+  }
+}
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function stickyPhoto() {
+  //scrolled into new section
+  if (document.body.scrollTop > sticky) {
+    sections[next].classList.add("sticky");
+    if (next < 4) {
+      next++;
+      cur++;
+    }
+    //set to next section and record previous
+    sticky = sections[next].offsetTop;
+    drop = (sections[cur].offsetTop + sections[cur].offsetHeight);
+
+    //drop photo when scrolling up 
+  } if (document.body.scrollTop < drop) {
+    sections[next].classList.remove("sticky");
+    if (next > 0) {
+      next--;
+      cur--;
+    }
+    //record location on page
+    sticky = sections[next].offsetTop;
+    if (cur > 0) {
+      drop = (sections[cur].offsetTop + sections[cur].offsetHeight);
+    }
+  }
+  //check if past intro
+  pastIntro();
 }
 
 //init
