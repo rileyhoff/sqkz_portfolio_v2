@@ -75,7 +75,24 @@ function stickyPhoto() {
   pastIntro();
 }
 
+
+function contactForm(){
+  if (contact==false){
+  document.getElementById('about').classList.toggle("show_form");
+  document.getElementById('contact').innerHTML = "About.";
+  contact = true;
+  }else{
+    document.getElementById('about').classList.toggle("show_form");
+    document.getElementById('contact').innerHTML = "Contact.";
+    contact = false;
+  }
+}
+
+
 //init
 z = 0;
 x = 0; //change back to 0 to use above function
 prev = 0;
+
+//contact form not opened
+var contact = false;

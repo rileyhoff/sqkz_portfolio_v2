@@ -1,0 +1,105 @@
+/*
+SQKZ Version 2
+Author: Riley Hoff
+*/
+html{
+  scroll-behavior: smooth;
+}
+body{
+  padding: 0;
+  margin: 0;
+  font-family: josefin-sans, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-weight: 100;
+  color: #222;
+  background-color:whitesmoke;
+  letter-spacing: .1em;
+}
+
+p{
+  margin: 0;
+  font-size: 1.25em;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  font-size: 1.25em;
+}
+
+nav a{
+  float: right;
+  display: block;
+  width: 10vw;
+  padding: 0 2.5vw;
+  z-index: 200;
+  transition: all .2s ease-in-out;
+  text-align: right;
+}
+ 
+nav a:hover {
+  text-decoration: line-through;
+  padding-top: 1vh;
+}
+nav .active{
+  color: #aaaaaa;
+}
+nav .active:hover{
+  padding: 0 2.5vw;
+  text-decoration: none;
+}
+
+svg{
+  transition: all ease-in-out 1s;
+}
+
+#sqkz_title{
+padding-top: 2vh;
+ width: 10vw;
+ animation: fade-in 1s 0s  1 linear;
+}
+
+#sqkz_title:hover{
+  transform: rotate(10deg);
+}
+
+.dot{
+  height: 20px;
+  width: 20px;
+  transition: all ease-in-out 1s;
+}
+
+img{
+  width: 33.33vw;
+  height: 33vw;
+  object-fit: contain;
+  margin:  0;
+  padding: 1vw 0;
+  white-space: nowrap;
+  transform:rotate(90deg);
+}
+
+section{
+  position: absolute;
+  top: -17.5vw;
+  left: 30vw;
+  transform: rotate(-90deg);
+  width: 70vh;
+  height: 100vw;
+  overflow-y: visible;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  z-index: -100;
+  /* white-space: nowrap; */
+}
+
+@keyframes fade-in {
+  0%{
+    opacity: 0;
+  }100%{
+    opacity: 1;
+  }
+}
+

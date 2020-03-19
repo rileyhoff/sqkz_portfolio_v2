@@ -15,7 +15,6 @@ body{
   font-weight: 600;
   font-style: normal;
   font-weight: 100;
-  font-style: normal;
   color: #222;
   background-color:whitesmoke;
   overflow-x: hidden;
@@ -31,7 +30,14 @@ p{
 
 a{
   font-size: 1.25em;
+  text-decoration: none;
+  color: black;
 }
+
+a:hover{
+  text-decoration: line-through;
+}
+
 body > section{
   display: grid;
   height: 100vh;
@@ -65,10 +71,12 @@ img{
   object-fit: cover;
   z-index: -100;
 }
+
 #default_img{
   display: block;
   z-index: -200;
 }
+
 .detail_img{
   position: static;
   grid-column: 5/9;
@@ -127,13 +135,6 @@ header{
   padding-left: 5vw;
   grid-row: 3;
   z-index: 100;
-}
-a{
-  text-decoration: none;
-  color: black;
-}
-a:hover{
-  text-decoration: line-through;
 }
 
 nav{
@@ -277,6 +278,7 @@ grid-rows : 81 to 100
 #h_line_1{
   grid-column: 10/13;
   grid-row: 12;
+  z-index: 100;
 }
 
 #h_scribble{
@@ -294,6 +296,7 @@ grid-rows : 81 to 100
 #contact{
   grid-column: 10;
   grid-row: 13;
+  transition: all 1s ease-in-out;
 }
 
 #about_img{
@@ -303,6 +306,70 @@ grid-rows : 81 to 100
   width: 33.3333vw;
   height: 33.3333vw;
   z-index: -1;
+}
+
+/* contact form */
+#about.show_form{
+  transition: all 1s ease-in-out;
+  transform: translateX(-100vw);
+}
+#contact_form
+{
+  transition: all 1s ease-in-out;
+  position: relative;
+  left: 100vw;
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+ background-color: whitesmoke;
+}
+
+.show_form #contact {
+  transition: all 1s 2.4s;
+  transform: translateX(35vw);
+}
+
+.show_form #h_line_1{
+  transition: all 1s 2s;
+  transform: translateX(20vw);
+}
+
+input{
+  grid-column: 4/12;
+  height: 100%;
+  width: 100%;
+  margin-bottom: auto;
+  background-color: transparent;
+  border: solid black 4px;
+  padding-left: 2vw;
+  font-size: 1.25em;
+}
+
+input:focus{
+  border: solid lightcoral 4px;
+}
+
+#contact_name{
+  /* margin-right: .5vw; */
+  grid-column: 4/8;
+  grid-row: 5;
+}
+
+#contact_email{
+  /* padding-left: .5vw; */
+  grid-column: 8/12;
+  grid-row: 5;
+}
+
+#contact_subject{
+  /* margin:  2.5vh 0 0 0 ; */
+  grid-column: 4/12;
+  grid-row: 7;
+}
+
+#contact_message{
+  grid-column: 4/12;
+  grid-row: 9/17;
 }
 
 /* no specific section */
