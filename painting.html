@@ -35,6 +35,7 @@ $.ajax({
     });
   }
 });
+
 </script>
 <body>
   <header>
@@ -61,11 +62,13 @@ $.ajax({
     <a href="/index.html#about">about.</a>
   </nav>
 </header>
-  <h1>PAINTING.</h1>
   <a href="index.html">Back.</a>
-  <section>
+  <section id="imgs">
     <!-- images go here -->
   </section>
+  <div id="next_btn" class="move_btn" onmouseover="interval = setInterval(galleryNext,10);" onmouseout="clearInterval(interval);"></div>
+  <div id="prev_btn" class="move_btn" onmouseover="interval = setInterval(galleryPrev,10);" onmouseout="clearInterval(interval);"></div>
+  <p id="more_arrow">--></p>
 </body>
 
 </html>

@@ -4,6 +4,9 @@ Author: Riley Hoff
 */
 html{
   scroll-behavior: smooth;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 body{
   padding: 0;
@@ -15,6 +18,8 @@ body{
   color: #222;
   background-color:whitesmoke;
   letter-spacing: .1em;
+  /* width: 100vw; */
+  /* height: 100vh; */
 }
 
 p{
@@ -28,26 +33,38 @@ a{
   font-size: 1.25em;
 }
 
+header{
+  position: absolute;
+  background-color: whitesmoke;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 90vw;
+  height: 15vh;
+  padding: 0 5vw;
+}
+
 nav a{
   float: right;
   display: block;
-  width: 10vw;
-  padding: 0 2.5vw;
+  width: 5vw;
+  padding: 0 0 0 5vw;
   z-index: 200;
   transition: all .2s ease-in-out;
   text-align: right;
+  margin-top: 5vh;
 }
  
 nav a:hover {
   text-decoration: line-through;
-  padding-top: 1vh;
+  transform: rotate(-5deg);
 }
 nav .active{
   color: #aaaaaa;
 }
 nav .active:hover{
-  padding: 0 2.5vw;
   text-decoration: none;
+  transform: rotate(5deg);
 }
 
 svg{
@@ -58,6 +75,7 @@ svg{
 padding-top: 2vh;
  width: 10vw;
  animation: fade-in 1s 0s  1 linear;
+ float: left;
 }
 
 #sqkz_title:hover{
@@ -74,7 +92,7 @@ img{
   width: 33.33vw;
   height: 33vw;
   object-fit: contain;
-  margin:  0;
+  margin:  auto;
   padding: 1vw 0;
   white-space: nowrap;
   transform:rotate(90deg);
@@ -82,10 +100,10 @@ img{
 
 section{
   position: absolute;
-  top: -17.5vw;
-  left: 30vw;
+  top: -45vh;
+  left: 27vw;
   transform: rotate(-90deg);
-  width: 70vh;
+  width: 80vh;
   height: 100vw;
   overflow-y: visible;
   overflow-x: hidden;
@@ -93,6 +111,45 @@ section{
   padding: 0;
   z-index: -100;
   /* white-space: nowrap; */
+}
+
+#next_btn{
+  position: absolute;
+  top: 20vh;
+  right: 0;
+  width: 15vw;
+  height: 80vh;
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(245,245,245,1));
+  opacity: 0;
+  transition: all .2s;
+}
+
+#prev_btn{
+  position: absolute;
+  top: 20vh;
+  left: 0;
+  width: 15vw;
+  height: 80vh;
+  background-image: linear-gradient(to left, rgba(255,0,0,0), rgba(245,245,245,1));
+  opacity: 0;
+  transition: all .2s;
+  
+}
+
+.move_btn:hover{
+  /* background-color: whitesmoke; */
+  opacity: 1 !important;
+}
+
+#more_arrow{
+  font-size: 2em;
+  display: block;
+  /* width: 100px; */
+  /* height: 100px; */
+  position: absolute;
+  right: 5vw;
+  bottom:5vh;
+  z-index: 10000;
 }
 
 @keyframes fade-in {

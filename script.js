@@ -89,6 +89,19 @@ function contactForm(){
 }
 
 
+function galleryNext(){
+  var el = document.querySelector('section');
+  // console.log(el.scrollLeft, el.scrollTop);
+  el.scrollTop +=10;
+}
+
+function galleryPrev(){
+  var el = document.querySelector('section');
+  // console.log(el.scrollLeft, el.scrollTop);
+  el.scrollTop -=10;
+}
+
+
 //init
 z = 0;
 x = 0; //change back to 0 to use above function
@@ -96,3 +109,6 @@ prev = 0;
 
 //contact form not opened
 var contact = false;
+
+//interval id
+var interval;
