@@ -37,44 +37,11 @@ function swipeLeft(e) {
 
 function pastIntro(){
   if (document.body.scrollTop > (document.getElementById("intro").offsetHeight-20) || document.documentElement.scrollTop > (document.getElementById("intro").offsetHeight - 20)){
-    // console.log("douchea");
     document.getElementById("body").classList.add("detail");
   }else{
-    // console.log("inherr");
     document.getElementById("body").classList.remove("detail");
   }
 }
-
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function stickyPhoto() {
-  //scrolled into new section
-  if (document.body.scrollTop > sticky) {
-    sections[next].classList.add("sticky");
-    if (next < 4) {
-      next++;
-      cur++;
-    }
-    //set to next section and record previous
-    sticky = sections[next].offsetTop;
-    drop = (sections[cur].offsetTop + sections[cur].offsetHeight);
-
-    //drop photo when scrolling up 
-  } if (document.body.scrollTop < drop) {
-    sections[next].classList.remove("sticky");
-    if (next > 0) {
-      next--;
-      cur--;
-    }
-    //record location on page
-    sticky = sections[next].offsetTop;
-    if (cur > 0) {
-      drop = (sections[cur].offsetTop + sections[cur].offsetHeight);
-    }
-  }
-  //check if past intro
-  pastIntro();
-}
-
 
 function contactForm(){
   if (contact==false){
@@ -87,7 +54,6 @@ function contactForm(){
     contact = false;
   }
 }
-
 
 function galleryNext(){
   var el = document.querySelector('section');

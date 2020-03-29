@@ -91,16 +91,6 @@ img{
   display: block;
 }
 
-.sticky > img{
-  position: fixed;
-  left: 33.333333%; 
-  top: 20vh;
-  margin: auto;
-  width: 33.33333vw;
-  height: 33.33333vw;
-  z-index: -90;
-}
-
 div#bg{
   margin:auto;
   display:block;
@@ -115,12 +105,6 @@ div#bg{
   display: none;
 }
 
-div#num{
-  width:200px; 
-  display:block;
-  margin: 20vw;
-  text-align:center;
-}
 .right_link{
   grid-column: 10/13;
   z-index: 200;
@@ -179,6 +163,33 @@ svg{
   transform: rotate(10deg);
 }
 
+#about_nav{
+  display: none;
+}
+
+.detail #about_nav{
+  display: block;
+  position: absolute;
+  font-size: 1em;
+  top: 0;
+  right: 5vh;
+  opacity: 0;
+  transition: all .2s 0s linear;
+  padding: 15vh 0;
+}
+
+.detail #about_nav:hover{
+  opacity: 1;
+}
+
+.detail #about_nav a{
+  padding: .5vh 2.5vw .5vh 0;
+}
+
+.detail #about_nav a:hover{
+  padding-right: 4vw;
+}
+
 .dot{
   height: 20px;
   width: 20px;
@@ -218,42 +229,9 @@ grid-rows : 21 to 40
   grid-row: 12;
 }
 
-
-/*
-Drawing Page 
-grid-rows : 41 to 60
-*/
-.right_link.drawing{
-  grid-row: 13;
-}
-#h_line_3{
-  grid-column: 10/13;
-  grid-row: 12;
-}
-#dot_4{
-  grid-column: 3;
-  grid-row: 12;
-}
-
-/*
-Misc Page 
-grid-rows : 61 to 80
-*/
-.right_link.misc{
-  grid-row: 13;
-}
-#h_line_4{
-  grid-column: 10/13;
-  grid-row: 12;
-}
-#dot_5{
-  grid-column: 3;
-  grid-row: 12;
-}
-
 /*
 about me
-grid-rows : 81 to 100
+grid-rows : 21 to 40
 */
 #bio{
   grid-column: 3/8;
