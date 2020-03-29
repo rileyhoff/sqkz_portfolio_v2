@@ -148,12 +148,19 @@ section{
 #more_arrow{
   font-size: 2em;
   display: block;
-  /* width: 100px; */
-  /* height: 100px; */
   position: absolute;
   right: 5vw;
   bottom:5vh;
   z-index: 10000;
+}
+
+/* animations */
+
+.animate_out {
+  /* overflow: hidden; */
+  transition: all .8s ease-in-out;
+  transform: translateX(100vw);
+  opacity: 0;
 }
 
 @keyframes fade-in {

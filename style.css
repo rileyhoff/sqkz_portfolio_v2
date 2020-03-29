@@ -391,9 +391,12 @@ input:focus{
 }
 
 /*animations */
-.animateOut {
-  transition: all .7s ease-in-out;
+
+.animate_out {
+  overflow: hidden;
+  transition: all 1s ease-in-out;
   transform: translateX(-100vw);
+  opacity: 0;
 }
 
 @keyframes fade-in {

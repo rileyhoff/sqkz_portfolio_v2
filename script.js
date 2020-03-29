@@ -71,6 +71,13 @@ function galleryPrev(){
   el.scrollTop -=10;
 }
 
+//delay links to run animations
+function delay (URL) {
+  document.body.classList.add("animate_out");
+  setTimeout( function() { 
+    window.location = URL 
+  }, 500 );
+}
 
 //init
 z = 0;

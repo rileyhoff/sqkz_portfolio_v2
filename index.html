@@ -61,19 +61,6 @@
       });
     });
 
-      // //delay links to run animations
-      // $('a').click(function (e) {
-      //   console.log("fuck.this");
-      //   e.preventDefault();                   // prevent default anchor behavior
-      //   var goTo = this.getAttribute("href"); // store anchor href
-
-      //   // do something while timeOut ticks ... 
-      //   console.log("HERE");
-      //   setTimeout(function () {
-      //     console.log("HERE");
-      //     window.location = goTo;
-      //   }, 7000);                             // time in ms
-      // }); 
   </script>
 </head>
 
@@ -102,9 +89,9 @@
       </a>
     </header>
     <nav class="">
-      <a href="/painting.html">painting.</a>
-      <a href="/drawing.html">drawing.</a>
-      <a href="/misc.html">misc.</a>
+      <a href="javascript:delay('/painting.html')">painting.</a>
+      <a href="javascript:delay('/drawing.html')">drawing.</a>
+      <a href="javascript:delay('/misc.html')">misc.</a>
       <a href="#about">about.</a>
     </nav>
     <img src="img\DSC_0674.JPG" id="default_img" class="">
@@ -167,9 +154,9 @@
   <!-- all sections -->
   <a id="top" href="#intro">[top]</a>
   <nav id="about_nav" class="">
-    <a href="/painting.html">painting.</a>
-    <a href="/drawing.html">drawing.</a>
-    <a href="/misc.html">misc.</a>
+    <a href="javascript:delay('/painting.html')">painting.</a>
+    <a href="javascript:delay('/drawing.html')">drawing.</a>
+    <a href="javascript:delay('/misc.html')">misc.</a>
   </nav>
   <script>
     displayItems();
