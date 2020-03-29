@@ -31,6 +31,10 @@ function pauseImages() {
   document.getElementById("bg").classList.toggle("pause");
 }
 
+function theatreView() {
+  document.getElementById("body").classList.toggle("theatre");
+}
+
 function swipeLeft(e) {
   e.parentElement.classList.add("animateOut");
 }

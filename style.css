@@ -151,6 +151,42 @@ svg{
 #sqkz_title:hover{
   transform: translateY(-5vh) rotate(5deg);
 }
+/*theatre view */
+body.theatre {
+  background-color: black;
+  overflow: hidden;
+}
+
+.theatre #dot_1{
+  fill: whitesmoke;
+  position: fixed;
+  right: 10vw;
+  top: 50%;
+  z-index: 2002;
+}
+
+.theatre img{
+  width: 80vh;
+  height: 80vh;
+  top: 10vh;
+  left: 10vw;
+}
+.theatre img{
+  z-index: 2000;
+}
+.theatre #bg{
+  z-index: 2001;
+}
+.theatre #sqkz_title{
+  fill: transparent;
+  stroke: whitesmoke;
+  stroke-width: 5;
+  position: fixed;
+  right: 10vw;
+  width: 20vw;
+}
+
+/*detail page*/
 .detail #sqkz_title{
  position: absolute;
  top: 5vh;
@@ -211,22 +247,6 @@ svg{
   grid-row: 5/13;
   height: 100%; 
   width: 100%;
-}
-
-/*
-Painting Page
-grid-rows : 21 to 40
-*/
-.right_link.painting{
-  grid-row: 13;
-}
-#h_line_2{
-  grid-column: 10/13;
-  grid-row: 12;
-}
-#dot_3{
-  grid-column: 3;
-  grid-row: 12;
 }
 
 /*
