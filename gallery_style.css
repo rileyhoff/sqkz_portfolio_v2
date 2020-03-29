@@ -43,6 +43,9 @@ header{
   height: 15vh;
   padding: 0 5vw;
 }
+nav{
+  animation: slide-left 2s 0s backwards ease-in-out;
+}
 
 nav a{
   float: right;
@@ -74,8 +77,8 @@ svg{
 #sqkz_title{
 padding-top: 2vh;
  width: 10vw;
- animation: fade-in 1s 0s  1 linear;
  float: left;
+ animation: slide-left 2s 0s backwards ease-in-out;
 }
 
 #sqkz_title:hover{
@@ -96,6 +99,7 @@ img{
   padding: 1vw 0;
   white-space: nowrap;
   transform:rotate(90deg);
+  animation: fade-in 1s 2s backwards;
 }
 
 section{
@@ -157,6 +161,14 @@ section{
     opacity: 0;
   }100%{
     opacity: 1;
+  }
+}
+
+@keyframes slide-left{
+  0%{
+    transform: translateX(100vw);
+  }100%{
+    transform: translateX(0);
   }
 }
 
