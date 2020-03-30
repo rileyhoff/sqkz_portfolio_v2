@@ -37,7 +37,7 @@ $.ajax({
 });
 
 </script>
-<body>
+<body class="">
   <header>
     <a href="javascript:delay('/index.html')"><svg id="sqkz_title" data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 827.06 355.58002">
@@ -71,6 +71,8 @@ $.ajax({
     onmouseout="clearInterval(interval);"></div>
   <div id="prev_btn" class="move_btn" onmouseover="interval = setInterval(galleryPrev,10);"
     onmouseout="clearInterval(interval);"></div>
+
+  <button id="grid_btn" onclick="gridView()"></button>
 
   <!-- fullscreen image view -->
   <div id="fullscreen_view" class="">

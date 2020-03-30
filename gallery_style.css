@@ -203,6 +203,41 @@ section{
   z-index: 1010;
 }
 
+/* Grid View */
+#grid_btn{
+  position: fixed;
+  bottom: 5vh;
+  right: 5vw;
+  background-color: teal;
+  height: 50px;
+  width: 50px;
+}
+
+body.grid{
+  overflow-y: scroll;
+}
+.grid img.gallery{
+  float: left;
+  width: 12vw;
+  height: 12vw;
+  padding: .5vw;
+  transform: none;
+  overflow: hidden;
+  object-fit: cover;
+}
+.grid section{
+  transform: none;
+  width: 100vw;
+  height: 85vh;
+  left: 5vw;
+  top: 15vh;
+  animation: slide-up 1s 0s;
+}
+
+.grid .move_btn{
+  display: none;
+}
+
 /* animations */
 
 .animate_out {
@@ -210,6 +245,7 @@ section{
   transition: all .8s ease-in-out;
   transform: translateX(100vw);
   opacity: 0;
+  overflow: visible !important;
 }
 
 @keyframes fade-in {
@@ -228,3 +264,10 @@ section{
   }
 }
 
+@keyframes slide-up{
+  0%{
+    transform: translateY(100vw);
+  }100%{
+    transform: translateY(0);
+  }
+}

@@ -102,6 +102,11 @@ function fullscreenViewClose(){
   document.getElementById('fullscreen_view').classList.remove('active');
 }
 
+//grid view
+function gridView(){
+  document.body.classList.toggle('grid');
+}
+
 //init
 z = 0;
 x = 0; //change back to 0 to use above function
