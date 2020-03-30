@@ -79,6 +79,29 @@ function delay (URL) {
   }, 500 );
 }
 
+//fullscreen view
+function fullscreenViewOpen(el){
+
+  var imgFile = el.src.split("/").slice(-2).join("/"); //get file name of image and containing folder
+  document.getElementById("fullscreen_img").src = imgFile;
+  
+  //get art infomation
+  imgFile = imgFile.split('.').slice(0, -1).join('.'); //take off file extention
+  var imgData = unescape(imgFile.split("/").pop()); //take off folder
+  var imgData = imgData.split(", ").slice(); //slice by ", " in file name
+  
+  document.getElementById("art_title").innerHTML = imgData[1];
+  document.getElementById("dimentions").innerHTML = imgData[2];
+  document.getElementById("medium").innerHTML = imgData[3];
+
+  //make screen active
+  document.getElementById('fullscreen_view').classList.add('active');
+}
+
+function fullscreenViewClose(){
+  document.getElementById('fullscreen_view').classList.remove('active');
+}
+
 //init
 z = 0;
 x = 0; //change back to 0 to use above function

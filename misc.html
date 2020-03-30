@@ -29,7 +29,7 @@ success: function (data) {
       //images on remote server
       //$("#").append( "<img src='" + folder + "/" + val +"'>" );
       //images on local computer
-      $("section").append("<img src='" + val + "' id='" + i + "'>");
+      $("section").append("<img src='" + val + "' id='" + i + "' class='gallery' onclick='fullscreenViewOpen(this)'>");
       i++;
     }
   });
@@ -67,7 +67,19 @@ success: function (data) {
 </section>
 <div id="next_btn" class="move_btn" onmouseover="interval = setInterval(galleryNext,10);" onmouseout="clearInterval(interval);"></div>
 <div id="prev_btn" class="move_btn" onmouseover="interval = setInterval(galleryPrev,10);" onmouseout="clearInterval(interval);"></div>
-<p id="more_arrow">--></p>
+
+  <!-- fullscreen image view -->
+  <div id="fullscreen_view" class="">
+    <img id="fullscreen_img" src="">
+    <div id="artwork_info" >
+      <p id="art_title" >Untitled.</p>
+      <p id="dimentions" >? x ? in</p>
+      <p id="medium" >???</p>
+    </div>
+    <button id="fullscreen_exit" onclick="fullscreenViewClose()">X.</button>
+    <div id="fullscreen_bg" onclick="fullscreenViewClose()"></div>
+  </div>
+
 </body>
 
 </html>
