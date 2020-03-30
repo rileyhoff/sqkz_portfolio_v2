@@ -113,7 +113,6 @@ section{
   margin: 0;
   padding: 0;
   z-index: -100;
-  /* white-space: nowrap; */
 }
 
 #next_btn{
@@ -126,6 +125,14 @@ section{
   opacity: 0;
   transition: all .2s;
 }
+#next_arrow{
+  position: absolute;
+  display: block;
+  opacity: 1;
+  right: 5vw;
+  top: 30vh;
+  width: 5vw;
+}
 
 #prev_btn{
   position: absolute;
@@ -136,7 +143,6 @@ section{
   background-image: linear-gradient(to left, rgba(255,0,0,0), rgba(245,245,245,1));
   opacity: 0;
   transition: all .2s;
-  
 }
 
 .move_btn:hover{
@@ -194,8 +200,8 @@ section{
 #fullscreen_exit{
   background-color: transparent;
   border: none;
-  font-family: josefin-sans, sans-serif;
-  font-size: 2.5em;
+  width: 40px;
+  height: 40px;
   position: fixed;
   top: 5vh;
   right: 5vw;
@@ -203,14 +209,44 @@ section{
   z-index: 1010;
 }
 
+#fullscreen_exit svg{
+  width: 100%;
+  height: auto;
+}
+
 /* Grid View */
 #grid_btn{
   position: fixed;
   bottom: 5vh;
   right: 5vw;
-  background-color: teal;
+  border: none;
+  background-color: transparent;
   height: 50px;
   width: 50px;
+}
+
+#grid_btn svg{
+  fill: #aaaaaa;
+  width: 100%;
+  height: auto;
+  transition: all .2s;
+}
+
+#grid_btn svg:hover{
+  fill: #222;
+}
+
+.grid #grid_svg {
+  display: none;
+}
+
+#list_svg {
+  display: none;
+  width: 125% !important;
+}
+
+.grid #list_svg {
+  display: block;
 }
 
 body.grid{

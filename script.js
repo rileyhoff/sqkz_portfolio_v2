@@ -104,7 +104,9 @@ function fullscreenViewClose(){
 
 //grid view
 function gridView(){
+  document.getElementById("imgs").scrollTop = 0; // make sure images are scrolled to top
   document.body.classList.toggle('grid');
+  
 }
 
 //init
