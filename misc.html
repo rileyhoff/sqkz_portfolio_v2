@@ -29,7 +29,7 @@ success: function (data) {
       //images on remote server
       //$("#").append( "<img src='" + folder + "/" + val +"'>" );
       //images on local computer
-      $("section").append("<img src='" + val + "' id='" + i + "' class='gallery' onclick='fullscreenViewOpen(this)'>");
+      $("section").append("<div id='gallery_img'><img src='" + val + "' id='" + i + "' class='gallery' onclick='fullscreenViewOpen(this)'></div>");
       i++;
     }
   });
@@ -37,7 +37,7 @@ success: function (data) {
 });
 
 </script>
-<body>
+<body class="list">
 <header>
   <a href="javascript:delay('/index.html')"><svg id="sqkz_title"  data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 827.06 355.58002">
     <title>SQKZ</title>
@@ -88,5 +88,25 @@ success: function (data) {
   </div>
 
 </body>
-
+<script>
+  //horizontally scroll gallery section
+  (function() {
+    function scrollHorizontally(e) {
+        e = window.event || e;
+        var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+        document.getElementById('imgs').scrollLeft -= (delta*80); // Multiplied by 80
+        e.preventDefault();
+    }
+    if (document.getElementById('imgs').addEventListener) {
+        // IE9, Chrome, Safari, Opera
+        document.getElementById('imgs').addEventListener("mousewheel", scrollHorizontally, false);
+        // Firefox
+        document.getElementById('imgs').addEventListener("DOMMouseScroll", scrollHorizontally, false);
+    } else {
+        // IE 6/7/8
+        document.getElementById('imgs').attachEvent("onmousewheel", scrollHorizontally);
+    }
+  })();
+  
+  </script>
 </html>

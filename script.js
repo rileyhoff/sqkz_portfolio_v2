@@ -62,13 +62,13 @@ function contactForm(){
 function galleryNext(){
   var el = document.querySelector('section');
   // console.log(el.scrollLeft, el.scrollTop);
-  el.scrollTop +=10;
+  el.scrollLeft +=10;
 }
 
 function galleryPrev(){
   var el = document.querySelector('section');
   // console.log(el.scrollLeft, el.scrollTop);
-  el.scrollTop -=10;
+  el.scrollLeft -=10;
 }
 
 //delay links to run animations
@@ -106,6 +106,7 @@ function fullscreenViewClose(){
 function gridView(){
   document.getElementById("imgs").scrollTop = 0; // make sure images are scrolled to top
   document.body.classList.toggle('grid');
+  document.body.classList.toggle('list');
   
 }
 
