@@ -94,12 +94,32 @@ function fullscreenViewOpen(el){
   document.getElementById("dimentions").innerHTML = imgData[2];
   document.getElementById("medium").innerHTML = imgData[3];
 
+  //get detail images if available
+  if(imgData[5]!="N" || imgData == undefined){
+    var folder = imgFile.split("/")[0];//get folder name
+
+    console.log(folder);
+    document.getElementById("detail_imgs").className = "active";
+    document.getElementById("detail_imgs").innerHTML  = ""; //reset to no images
+    for(var i=1; i <= imgData[5]; i++){
+    document.getElementById("detail_imgs").innerHTML += "<img src='"+folder+"/details/"+imgData[0]+"/"+i+".jpg' onclick='swapDetailImg(this)'>"
+    }
+  }
+
   //make screen active
   document.getElementById('fullscreen_view').classList.add('active');
 }
 
 function fullscreenViewClose(){
   document.getElementById('fullscreen_view').classList.remove('active');
+  document.getElementById('detail_imgs').classList.remove('active');
+}
+
+//swap detail image with fullscreen image
+function swapDetailImg(el){
+  var source = document.getElementById("fullscreen_img").src;
+  document.getElementById("fullscreen_img").src = el.src;
+  el.src = source;
 }
 
 //grid view

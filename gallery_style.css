@@ -94,9 +94,10 @@ img.gallery{
   width: auto;
   height: 60vh;
   object-fit: contain;
-  padding: 0 1vw;
+  padding: 0 0.5vw;
   margin: 0;
   animation: fade-in 1s 2s backwards;
+  transition: all .2s ease-in-out;
 }
 
 section{
@@ -111,6 +112,14 @@ section{
   margin: 0;
   padding: 0;
   z-index: -100;
+}
+
+.grid section{
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.grid img.gallery:hover{
+  transform: scale(1.05);
 }
 
 #gallery_img{
@@ -204,6 +213,25 @@ section{
   padding: .25em 0;
 }
 
+#detail_imgs{
+  display: none;
+  z-index: 1010;
+  position: fixed;
+  top: 20vh;
+  right: 5vw;
+  width: 10vw;
+}
+
+#detail_imgs.active{
+  display: block;
+}
+
+#detail_imgs img{
+  max-width: 10vw;
+  max-height: 20vh;
+  float: right;
+  padding: .1vw;
+}
 
 #fullscreen_exit{
   background-color: transparent;
