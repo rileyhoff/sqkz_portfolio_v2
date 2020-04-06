@@ -17,8 +17,6 @@ body{
   color: #222;
   background-color:whitesmoke;
   letter-spacing: .1em;
-  /* width: 100vw; */
-  /* height: 100vh; */
 }
 
 p{
@@ -170,6 +168,12 @@ section{
 
 #fullscreen_view{
   display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 100vh;
+  left: 0;
+  z-index: 1000;
 }
 
 #fullscreen_view.active{
@@ -186,51 +190,107 @@ section{
   opacity: .9;
   background-color: whitesmoke;
 }
-
-#fullscreen_img{
+#fullscreen_content{
+  display: flex;
+  width: 90vw;
+  height: 90vh;
   position: fixed;
-  max-height: 90vh;
-  max-width: 75vw;
-  width: auto;
-  top: 50%;
+  top: 5vh;
   left: 5vw;
+  z-index: 1010;
+}
+#fullscreen_img{
+  position: relative;
+  max-height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  float: right;
+  margin: auto;
+  top: 50%;
   transform: translate(0, -50%);
+  padding-right: 1.25vw;
+}
+
+#full_img_container{
+  position: relative;
+  width: max-content;
+  max-width: 75vw;
+  min-width: 50vw;
+  height: 100%;
   z-index: 1010;
 }
 
 #artwork_info{
-  position: fixed;
-  bottom: 5vh;
-  right: 5vw;
-  width: 20vw;
+  position: relative;
+  display: flex;
+  align-self: end;
+  flex-direction: column;
+  padding-left: 1.25vw;
+  min-width: 25vw;
+  max-width: 50vw;
   z-index: 1010;
 }
 #artwork_info p {
-  text-align: right;
-  display: block;
-  float: right;
-  width: 20vw;
-  padding: .25em 0;
+  font-family: azo-sans-web, sans-serif;
+  font-weight: 100;
+  font-size: 1em;
+  text-align: left;
+  display: inline-block;
+  width: 100%;
+  padding: .1em 0;
+  z-index: 1010;
 }
 
 #detail_imgs{
   display: none;
   z-index: 1010;
   position: fixed;
-  top: 20vh;
-  right: 5vw;
-  width: 10vw;
+  height: 100vh;
+  top: 50%;
+  top: 0;
+  left: -9vw;
+  width: 12vw;
+  flex-direction: column;
+  align-self: center;
 }
 
 #detail_imgs.active{
-  display: block;
+  display: flex;
+  justify-content: center;
+  /* background-color: whitesmoke; */
+  transition: all .5s ease-in-out;
+  
+}
+#detail_imgs.active:hover{
+  transform: translateX(7vw);
+  background-color: whitesmoke;
+ 
+}
+#detail_imgs.active:hover > img{
+  width: 5vw;
+  height: 5vw;
 }
 
 #detail_imgs img{
-  max-width: 10vw;
-  max-height: 20vh;
-  float: right;
-  padding: .1vw;
+  transition: all .5s ease-in-out;
+  width: 5vw;
+  height: 5vw;
+  object-fit: cover;
+  padding: 1vh 2.5vw;
+  align-self: center;
+  
+}
+
+#detail_imgs .view{
+  opacity: .5;
+}
+
+#detail_imgs #detail_title{
+  position: relative;
+  left: 9.5vw;
+  writing-mode: vertical-lr;
+  z-index: 1010;
 }
 
 #fullscreen_exit{

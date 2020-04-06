@@ -39,95 +39,107 @@ function swipeLeft(e) {
   e.parentElement.classList.add("animateOut");
 }
 
-function pastIntro(){
-  if (document.body.scrollTop > (document.getElementById("intro").offsetHeight-20) || document.documentElement.scrollTop > (document.getElementById("intro").offsetHeight - 20)){
+function pastIntro() {
+  if (document.body.scrollTop > (document.getElementById("intro").offsetHeight - 20) || document.documentElement.scrollTop > (document.getElementById("intro").offsetHeight - 20)) {
     document.getElementById("body").classList.add("detail");
-  }else{
+  } else {
     document.getElementById("body").classList.remove("detail");
   }
 }
 
-function contactForm(){
-  if (contact==false){
-  document.getElementById('about').classList.toggle("show_form");
-  document.getElementById('contact').innerHTML = "About.";
-  contact = true;
-  }else{
+function contactForm() {
+  if (contact == false) {
+    document.getElementById('about').classList.toggle("show_form");
+    document.getElementById('contact').innerHTML = "About.";
+    contact = true;
+  } else {
     document.getElementById('about').classList.toggle("show_form");
     document.getElementById('contact').innerHTML = "Contact.";
     contact = false;
   }
 }
 
-function galleryNext(){
+function galleryNext() {
   var el = document.querySelector('section');
   // console.log(el.scrollLeft, el.scrollTop);
-  el.scrollLeft +=10;
+  el.scrollLeft += 10;
 }
 
-function galleryPrev(){
+function galleryPrev() {
   var el = document.querySelector('section');
   // console.log(el.scrollLeft, el.scrollTop);
-  el.scrollLeft -=10;
+  el.scrollLeft -= 10;
 }
 
 //delay links to run animations
-function delay (URL) {
+function delay(URL) {
   document.body.classList.add("animate_out");
-  setTimeout( function() { 
-    window.location = URL 
-  }, 500 );
+  setTimeout(function () {
+    window.location = URL
+  }, 500);
 }
 
-//fullscreen view
-function fullscreenViewOpen(el){
+function fullscreenViewOpen(el) {
 
-  var imgFile = el.src.split("/").slice(-2).join("/"); //get file name of image and containing folder
-  document.getElementById("fullscreen_img").src = imgFile;
-  
-  //get art infomation
-  imgFile = imgFile.split('.').slice(0, -1).join('.'); //take off file extention
-  var imgData = unescape(imgFile.split("/").pop()); //take off folder
-  var imgData = imgData.split(", ").slice(); //slice by ", " in file name
-  
-  document.getElementById("art_title").innerHTML = imgData[1];
-  document.getElementById("dimentions").innerHTML = imgData[2];
-  document.getElementById("medium").innerHTML = imgData[3];
+  //get id number of image
+  var id = el.src.split("_").slice(-1).pop(); //get file name of image and containing folder
+  id = id.split('.').slice(0, -1).join('.'); //take off file extention
 
-  //get detail images if available
-  if(imgData[5]!="N" || imgData == undefined){
-    var folder = imgFile.split("/")[0];//get folder name
+  if (artworks[id] == undefined) {
+    document.getElementById("fullscreen_img").src = el.src;
+    //get art infomation
+    document.getElementById("art_title").innerHTML = "Untitled.";
+    document.getElementById("dimentions").innerHTML = "";
+    document.getElementById("medium").innerHTML = "";
+  } else {
 
-    console.log(folder);
-    document.getElementById("detail_imgs").className = "active";
-    document.getElementById("detail_imgs").innerHTML  = ""; //reset to no images
-    for(var i=1; i <= imgData[5]; i++){
-    document.getElementById("detail_imgs").innerHTML += "<img src='"+folder+"/details/"+imgData[0]+"/"+i+".jpg' onclick='swapDetailImg(this)'>"
+    var art = artworks[id];
+
+    document.getElementById("fullscreen_img").src = el.src;
+
+    //get art infomation
+    document.getElementById("art_title").innerHTML = art.title;
+    document.getElementById("dimentions").innerHTML = art.dimentions;
+    document.getElementById("medium").innerHTML = art.medium;
+
+    // get detail images if available
+    if (!(art.detail_imgs == 0 || art.detail_imgs == undefined)) {
+      document.getElementById("detail_imgs").className = "active";
+      //reset and add main image & add title
+      document.getElementById("detail_imgs").innerHTML = "<p id='detail_title' >Detail.</p><img src='" + el.src + "' class = 'view'  onclick='detailActive(this)'></img>";
+      for (var i = 1; i <= art.detail_imgs; i++) {
+        document.getElementById("detail_imgs").innerHTML += "<img src='" + art.section + "/details/" + id + "/" + i + ".jpg' onclick='detailActive(this)'>"
+      }
     }
   }
-
   //make screen active
   document.getElementById('fullscreen_view').classList.add('active');
 }
 
-function fullscreenViewClose(){
+function fullscreenViewClose() {
   document.getElementById('fullscreen_view').classList.remove('active');
   document.getElementById('detail_imgs').classList.remove('active');
 }
 
 //swap detail image with fullscreen image
-function swapDetailImg(el){
-  var source = document.getElementById("fullscreen_img").src;
-  document.getElementById("fullscreen_img").src = el.src;
-  el.src = source;
+function detailActive(el) {
+  //remove view from all detail images
+  NodeList.prototype.forEach = Array.prototype.forEach
+  var children = document.getElementById("detail_imgs").childNodes;
+  children.forEach(function (item) {
+    item.classList.remove("view")
+  });
+  //add view to clicked element
+  el.classList.add("view");
+  document.getElementById('fullscreen_img').src = el.src;
 }
 
 //grid view
-function gridView(){
+function gridView() {
   document.getElementById("imgs").scrollTop = 0; // make sure images are scrolled to top
   document.body.classList.toggle('grid');
   document.body.classList.toggle('list');
-  
+
 }
 
 //init
