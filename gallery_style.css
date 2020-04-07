@@ -110,6 +110,7 @@ section{
   margin: 0;
   padding: 0;
   z-index: -100;
+  animation: slide-left 1s 1s backwards ease-in-out;
 }
 
 .grid section{
@@ -120,18 +121,18 @@ section{
   transform: scale(1.05);
 }
 
-#gallery_img{
+.gallery_img{
   display: inline-block;
 }
-.list #gallery_img:first-child{
+.list .gallery_img:first-child{
   padding-left: 15vw;
 }
-.list #gallery_img:last-child{
+.list .gallery_img:last-child{
   padding-right: 4vw;
 }
 
 #next_btn{
-  position: absolute;
+  position: fixed;
   top: 20vh;
   right: 0;
   width: 15vw;
@@ -150,7 +151,7 @@ section{
 }
 
 #prev_btn{
-  position: absolute;
+  position: fixed;
   top: 20vh;
   left: 0;
   width: 15vw;
@@ -162,6 +163,71 @@ section{
 
 .move_btn:hover{
   opacity: 1 !important;
+}
+
+#categories{
+  position: relative;
+  display: flex;
+  width: 15vw;
+  height: 60vh;
+  float: left;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 100 !important;
+  text-align: right;
+}
+.grid #categories{
+  height: 85vh;
+  width: 20vw;
+  position: fixed;
+  left: -15vw;
+  top: 15vh;
+  background-color: whitesmoke;
+  align-items: flex-end;
+  justify-content: flex-start;
+  transition: all .5s ease-in-out;
+}
+
+.grid #categories::before {
+  content: "Categories";
+  padding: 1vh 2vw  0 0;
+  position: relative;
+  writing-mode: vertical-lr;
+  
+}
+
+#categories > button{
+  color: #aaaaaa;
+  height: 2vh;
+  margin: 0vh 0vw 0vh 5vw;
+  padding-right: 0;
+  text-align: right;
+  background-color: transparent;
+  border: none;
+  font-size: 2vh;
+  transition: all .2s;
+}
+.grid #categories > button{
+  height: 4vh;
+  margin: 0;
+  padding-right: 5vw;
+}
+
+#categories:hover > button {
+  height: 4vh;
+}
+.grid #categories:hover {
+  left: 0;
+}
+#categories > button:hover {
+  text-decoration: line-through;
+  color: #222;
+}
+.list #categories > button:hover{
+  padding-right: 1vw;
+}
+#categories > button.active {
+  color: #222;
 }
 
 /* Fullscreen View */
@@ -258,7 +324,6 @@ section{
 #detail_imgs.active{
   display: flex;
   justify-content: center;
-  /* background-color: whitesmoke; */
   transition: all .5s ease-in-out;
   
 }

@@ -61,13 +61,11 @@ function contactForm() {
 
 function galleryNext() {
   var el = document.querySelector('section');
-  // console.log(el.scrollLeft, el.scrollTop);
   el.scrollLeft += 10;
 }
 
 function galleryPrev() {
   var el = document.querySelector('section');
-  // console.log(el.scrollLeft, el.scrollTop);
   el.scrollLeft -= 10;
 }
 
@@ -79,11 +77,17 @@ function delay(URL) {
   }, 500);
 }
 
-function fullscreenViewOpen(el) {
-
+function getArtworkId(el){
   //get id number of image
   var id = el.src.split("_").slice(-1).pop(); //get file name of image and containing folder
   id = id.split('.').slice(0, -1).join('.'); //take off file extention
+  return id;
+}
+
+function fullscreenViewOpen(el) {
+
+  //get id number of image
+  var id = getArtworkId(el);
 
   if (artworks[id] == undefined) {
     document.getElementById("fullscreen_img").src = el.src;
@@ -124,7 +128,7 @@ function fullscreenViewClose() {
 //swap detail image with fullscreen image
 function detailActive(el) {
   //remove view from all detail images
-  NodeList.prototype.forEach = Array.prototype.forEach
+  NodeList.prototype.forEach = Array.prototype.forEach;
   var children = document.getElementById("detail_imgs").childNodes;
   children.forEach(function (item) {
     item.classList.remove("view")
@@ -140,6 +144,34 @@ function gridView() {
   document.body.classList.toggle('grid');
   document.body.classList.toggle('list');
 
+}
+
+function filter(category, el) {
+  //get all artwork images
+  var images = document.getElementsByClassName("gallery");
+
+  for (var i = 0; i < images.length; i++) {
+    if (category == "all") {
+      images[i].style.display = "block";
+      images[i].style.animation = "slide-left 1s";
+    } else {
+      //get id number of image
+      var id = getArtworkId(images[i]);
+
+      if (!(artworks[id].subsection == category)) {
+        images[i].style.display = "none";
+      } else {
+        images[i].style.display = "block";
+        images[i].style.animation = "slide-left 1s";
+      }
+    }
+  }
+    //make clicked link active
+    var children = document.getElementById("categories").children;
+    for (var i = 0; i < children.length; i++){
+      children[i].classList.remove("active");
+    }
+    el.classList.add("active");  
 }
 
 //init
