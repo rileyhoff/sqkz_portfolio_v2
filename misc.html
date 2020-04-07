@@ -64,10 +64,18 @@ success: function (data) {
 </nav>
 </header>
 <section id="imgs">
+  <div id="categories">
+    <button onclick="filter('ln',this)" class="">Last Night.</button>
+    <button onclick="filter('collage',this)" class="">Collages.</button>
+    <button onclick="filter('photo',this)" class="">Photography.</button>
+    <button onclick="filter('all',this)" class="active">View All.</button>
+  </div>
+  <div id="next_btn" class="move_btn" onmouseover="interval = setInterval(galleryNext,10);"
+  onmouseout="clearInterval(interval);"></div>
+  <div id="prev_btn" class="move_btn" onmouseover="interval = setInterval(galleryPrev,10);"
+  onmouseout="clearInterval(interval);"></div>
   <!-- images go here -->
 </section>
-<div id="next_btn" class="move_btn" onmouseover="interval = setInterval(galleryNext,10);" onmouseout="clearInterval(interval);"></div>
-<div id="prev_btn" class="move_btn" onmouseover="interval = setInterval(galleryPrev,10);" onmouseout="clearInterval(interval);"></div>
 
 <button id="grid_btn" onclick="gridView()">
   <svg id="grid_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 394.19 428.42"><circle cx="53" cy="53" r="53"/><circle cx="197" cy="53" r="53"/><circle cx="341" cy="53" r="53"/><path d="M643,437c0,53-32.19,65.86-53,73-35,12-53-43.73-53-73a53,53,0,0,1,106,0Z" transform="translate(-393 -236)"/><circle cx="341" cy="201" r="53"/><path d="M787,585c0,10.55.42,18.19,0,28-3,70-44,56-66,31-19.34-22-40-11-40-59a53,53,0,0,1,106,0Z" transform="translate(-393 -236)"/><circle cx="197" cy="349" r="53"/><circle cx="53" cy="349" r="53"/><path d="M499,437c-5,78-23.73,53-53,53a53,53,0,0,1,0-106C475.27,384,500.87,407.79,499,437Z" transform="translate(-393 -236)"/></svg>

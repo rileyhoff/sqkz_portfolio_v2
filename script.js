@@ -157,8 +157,10 @@ function filter(category, el) {
     } else {
       //get id number of image
       var id = getArtworkId(images[i]);
-
-      if (!(artworks[id].subsection == category)) {
+      // if(artworks[id] == undefined){
+      //   return;
+      // }
+      if (artworks[id] == undefined || !(artworks[id].subsection == category)) {
         images[i].style.display = "none";
       } else {
         images[i].style.display = "block";
