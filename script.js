@@ -106,6 +106,15 @@ function fullscreenViewOpen(el) {
     document.getElementById("dimentions").innerHTML = art.dimentions;
     document.getElementById("medium").innerHTML = art.medium;
 
+    //see if work is for sale
+    if(artworks[id].price == 0 || artworks[id].price == "NFS"){
+      document.getElementById("price_text").innerHTML = "NFS";
+      document.getElementById("price").className = "nfs";
+    }else{
+      document.getElementById("price_text").innerHTML = "Available";
+      document.getElementById("price").className = "available";
+    }
+
     // get detail images if available
     if (!(art.detail_imgs == 0 || art.detail_imgs == undefined)) {
       document.getElementById("detail_imgs").className = "active";
