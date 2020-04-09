@@ -12,11 +12,11 @@ body{
   padding: 0;
   margin: 0;
   font-family: josefin-sans, sans-serif;
+  font-weight: 400;
   font-style: normal;
-  font-weight: 100;
   color: #222;
   background-color:whitesmoke;
-  letter-spacing: .1em;
+  /* letter-spacing: .1em; */
 }
 
 p{
@@ -26,8 +26,14 @@ p{
 
 a{
   text-decoration: none;
-  color: black;
+  color: #222;
   font-size: 1.25em;
+}
+
+button{
+  font-family: nimbus-sans, sans-serif; 
+  font-style: normal;
+  font-weight: 400;
 }
 
 header{
@@ -42,25 +48,32 @@ header{
 }
 nav{
   animation: slide-left 2s 0s backwards ease-in-out;
+  display: flex;
+  position: absolute;
+  right: 2.5vw;
+  top: 5vh;
 }
 
 nav a{
-  float: right;
+  /* float: right; */
   display: block;
-  width: 5vw;
-  padding: 0 0 0 5vw;
+  /* width: 5vw; */
+  padding: 0 2.5vw;
   z-index: 200;
   transition: all .2s ease-in-out;
   text-align: right;
-  margin-top: 5vh;
+  /* margin-top: 5vh; */
+  color: #aaaaaa;
 }
  
 nav a:hover {
   text-decoration: line-through;
   transform: rotate(-5deg);
+  color: #222;
 }
 nav .active{
-  color: #aaaaaa;
+  /* color: #aaaaaa; */
+  color: #222;
 }
 nav .active:hover{
   text-decoration: none;
@@ -180,14 +193,16 @@ section{
   align-items: flex-end;
   justify-content: flex-start;
   transition: all .5s ease-in-out;
+  animation: fade-in .5s 1s backwards;
 }
 
 .grid #categories::before {
-  content: "Categories";
+   font-family: nimbus-sans, sans-serif; 
+   font-weight: 400;
+  content: "Categories.";
   padding: 1vh 2vw  0 0;
   position: relative;
-  writing-mode: vertical-lr;
-  
+  writing-mode: vertical-lr;  
 }
 
 #categories > button{
@@ -294,7 +309,9 @@ section{
 }
 #artwork_info p {
   font-family: azo-sans-web, sans-serif;
-  font-weight: 100;
+  /* font-family: nimbus-sans, sans-serif;   */
+  font-weight: 700;
+  letter-spacing: .1em;
   font-size: 1em;
   text-align: left;
   display: inline-block;
@@ -395,6 +412,8 @@ section{
 }
 
 #detail_imgs #detail_title{
+   font-family: nimbus-sans, sans-serif; 
+   font-weight: 500;
   position: relative;
   left: 9.5vw;
   writing-mode: vertical-lr;
