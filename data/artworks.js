@@ -30,7 +30,7 @@ const artworks = {
     "title": "Danville",
     "dimentions": "???",
     "medium": "Acrylics on Canvas",
-    "price": "NFS",
+    "price": "hold",
     "detail_imgs": 2,
     "section": "paint",
     "subsection": "thesis"

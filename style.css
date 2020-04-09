@@ -332,7 +332,7 @@ grid-rows : 21 to 40
   transform: translateX(20vw);
 }
 
-input{
+input, textarea{
   position: relative;
   grid-column: 4/12;
   height: 100%;
@@ -344,24 +344,27 @@ input{
   padding-left: 2vw; 
   font-size: 1.25em;
   z-index: 1000;
+  font-family: josefin-sans, sans-serif;
+  font-size: 1em;
 }
-
+textarea{
+  padding-top: 1em;
+}
 label{
   position: relative;
   top: -4vh;
   left: 2vw;
   transition: all .2s linear;
-  /* height: 5vh; */
-  width: 20vw;
+  width: 100%;
   display: block;
+  font-size: 1em;
 }
 
-label:hover{
-  top: -10vh;
-  padding-bottom: 4vh;
+#contact_message label{
+  top: -36vh;
 }
 
-input:focus{
+input:focus, textarea:focus{
   border: solid lightcoral 4px
 }
 
@@ -370,6 +373,19 @@ input:focus + label{
   left: 0;
 }
 
+#contact_message textarea:focus + label{
+  top: -41vh;
+  left: 0;
+}
+
+input:valid + label{
+  top: -9vh;
+  left: 0;
+}
+#contact_message textarea:valid + label{
+  top: -41vh;
+  left: 0;
+}
 #contact_name{
   /* margin-right: .5vw; */
   grid-column: 4/7;
@@ -390,7 +406,32 @@ input:focus + label{
 
 #contact_message{
   grid-column: 4/11;
-  grid-row: 9/17;
+  grid-row: 9/16;
+}
+
+#contact_submit{
+  grid-row:  17;
+  grid-column: 10;
+  height: 120%;
+  width: 150%;
+  position: relative;
+  left: -1.5vw;
+  border: none;
+  background-color: #222;
+  color: whitesmoke;
+  padding: 5%;
+  font-family: josefin-sans, sans-serif;
+  letter-spacing: .1em;
+  font-size: 1em;
+}
+
+#contact_submit:hover{
+  background-color: lightcoral;
+}
+#contact_submit:active{
+  background-color: rgb(211, 104, 104);
+  border-top: 4px solid rgb(167, 71, 71);
+  border-left: 4px solid rgb(167, 71, 71);
 }
 
 /* no specific section */

@@ -144,17 +144,18 @@
         d="M878.12131,545.15009a6.14129,6.14129,0,0,1,3.51886-5.491,1.51061,1.51061,0,0,0-.75708-2.7952L863.34866,538.467a1.501,1.501,0,0,0,0,3q32.82048,1.68852,65.691,2.03972,32.98627.34742,65.96822-.66288,18.53944-.568,37.0622-1.56526a1.501,1.501,0,0,0,0-3,594.32717,594.32717,0,0,0-153.99292,4.11616c-3.14775.496-6.28306,1.07762-9.432,1.563a15.5317,15.5317,0,0,1-6.0035-.09642c-1.5611-.387-3.09406-1.22334-3.26449-2.98412-.19255-1.98925,1.713-3.38242,3.25175-4.22674a27.94979,27.94979,0,0,1,7.39239-2.32651q4.60258-1.04087,9.27607-1.72572a146.69609,146.69609,0,0,1,18.84664-1.47264c25.37383-.44881,50.54909,4.34983,75.509,8.3015l78.26883,12.39159,9.62929,1.52451c1.88871.299,2.702-2.59131.79751-2.89283l-80.98478-12.82158c-13.13012-2.07878-26.24876-4.2687-39.41142-6.1337a298.32026,298.32026,0,0,0-38.60705-3.38639c-12.73009-.13633-25.81068.86718-38.11716,4.302-3.91,1.0913-9.21463,3.80635-8.84128,8.6198.36354,4.687,5.2476,6.14027,9.23658,6.15a44.74445,44.74445,0,0,0,7.476-.95323q5.04917-.84723,10.11253-1.60674,9.92742-1.48918,19.9021-2.63322,19.61879-2.25207,39.35842-3.19586a593.37177,593.37177,0,0,1,79.88992,1.55968q4.85757.42382,9.70762.92752v-3q-32.81664,1.76182-65.68626,2.18643-32.98542.4211-65.96955-.51554-18.54066-.52662-37.06559-1.48247v3l17.53443-1.60314-.75708-2.79521a9.128,9.128,0,0,0-5.0047,8.08143,1.5009,1.5009,0,0,0,3,0Z"
         transform="translate(-856.36823 -528.0967)" />
     </svg>
-    <div id="contact_form" class="grid-container">
-      <div id="contact_name"><input type="text" id="txt_name"><label>Name</label></div>
-      <div id="contact_email"><input type="text" id="txt_email"><label>Email</label></div>
-      <div id="contact_subject"><input type="text" id="txt_subject"><label>Subject</label></div>
-      <div id="contact_message"><input type="text" id="txt_message"><label>Message.</label></div>
-    </div>
+    <form action="mailto:rileyhoff@outlook.com" method="post" enctype="text/plain" id="contact_form" class="grid-container">
+      <div id="contact_name"><input type="text" id="txt_name" required><label>Name</label></div>
+      <div id="contact_email"><input type="text" id="txt_email" required><label>Email</label></div>
+      <div id="contact_subject"><input type="text" id="txt_subject" required><label>Subject</label></div>
+      <div id="contact_message"><textarea type="text" id="txt_message" required></textarea><label>Message.</label></div>
+      <input id="contact_submit" type="submit" value="Send.">
+    </form>
   </section>
   <!-- all sections -->
   <a id="top" href="#intro">[top]</a>
   <nav id="about_nav" class="">
-    <a href="javascript:delay('/painting.html')">painting.</a>
+    <a href="javascript:delay('/painting.html)">painting.</a>
     <a href="javascript:delay('/drawing.html')">drawing.</a>
     <a href="javascript:delay('/misc.html')">misc.</a>
   </nav>

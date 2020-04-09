@@ -110,6 +110,12 @@ function fullscreenViewOpen(el) {
     if(artworks[id].price == 0 || artworks[id].price == "NFS"){
       document.getElementById("price_text").innerHTML = "NFS";
       document.getElementById("price").className = "nfs";
+    }else if(artworks[id].price == "sold"){
+      document.getElementById("price_text").innerHTML = "Sold";
+      document.getElementById("price").className = "sold";
+    }else if(artworks[id].price == "hold"){
+      document.getElementById("price_text").innerHTML = "Hold";
+      document.getElementById("price").className = "hold";
     }else{
       document.getElementById("price_text").innerHTML = "Available";
       document.getElementById("price").className = "available";

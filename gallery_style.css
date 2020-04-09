@@ -318,13 +318,19 @@ section{
 .available #price_dot{
   fill: green;
 }
-#artwork_info:hover .available{
+.sold #price_dot{
+  fill: red;
+}
+.hold #price_dot{
+  fill: gold;
+}
+#artwork_info:hover .available , #artwork_info:hover .hold{
   padding-bottom: 2em;
 }
-#artwork_info:hover > #price.available{
+#artwork_info:hover > #price.available , #artwork_info:hover > #price.hold{
   padding-top: 1em;
 }
-#artwork_info:hover .available #price_inquire_btn{
+#artwork_info:hover .available #price_inquire_btn, #artwork_info:hover .hold #price_inquire_btn {
   display: inline-block;
   animation: fade-in .5s .2s backwards;
 }
@@ -339,6 +345,9 @@ section{
   background-color: transparent;
   padding: .75em 2.25em;
   margin-right: 10vw;
+}
+#price_inquire_btn a{
+  font-size: 1em;
 }
 
 /*detail images*/
