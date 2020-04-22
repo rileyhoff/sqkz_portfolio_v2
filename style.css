@@ -471,3 +471,301 @@ input:valid + label{
   }
 }
 
+
+@media only screen and (max-width: 750px){
+/* display none for desktop only elements */ 
+#default_img{
+  display: none;
+}
+#bg{
+  display: none !important;
+}
+#sqkz_title{
+  display: none;
+}
+#about_nav{
+  display: none !important;
+}
+#v_line_1{
+  display: none;
+}
+#dot_1{
+  display: none;
+}
+.mbl #intro_imgs{
+  display: none;
+}
+/* general */
+.grid-container{
+  display: grid !important;
+  grid-template-columns: repeat(12, minmax(0px,1fr));
+  row-gap: 0;
+  grid-template-rows: repeat(20, minmax(10px, 1fr));
+}
+body{
+  scroll-snap-type: y mandatory;
+}
+/*intro*/
+#intro_gif{
+  position: relative;
+  display: block;
+  width: 100vw;
+  height: 80vh;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  grid-row: 1;
+  grid-column: 1;
+
+}
+  /* Nav */
+  nav{
+    position: fixed;
+    top: 80vh;
+    left: 0;
+    height: 80vh;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: none;
+    background-color: whitesmoke;
+    border-top: none;
+    z-index: 2000;
+    transition: .3s ease-in-out;
+  }
+  nav.show{
+    display: flex;
+    height: 100vh;
+    top:0 !important;
+  }
+  nav a {
+    display: none;
+    text-align: center;
+    padding: 5vh 0;
+
+  /*test*/
+    /* width: 5vw; */
+  }
+  nav.show a{
+    display: block;
+  }
+  .detail nav{
+    top: 90vh;
+  }
+div.mobile_icon {
+    display: inline-block;
+    cursor: pointer;
+    position: fixed;
+    bottom: 8.5vh;
+    left: 50%;
+    margin-left: -17.5px;
+    z-index: 2000;
+    transition: all .2s ease-in-out;
+}
+.detail .mobile_icon{
+  bottom: 3.5vh;
+}
+.bar1, .bar2 {
+    width: 35px;
+    height: 4px;
+    background-color: #ff9581;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+.change .bar1 {   /* Rotate first bar */
+    -webkit-transform: rotate(-45deg) translate(-4px, 2px) ;
+    transform: rotate(-45deg) translate(-4px, 2px) ;
+}
+
+.change .bar2 { /* Rotate last bar */
+    -webkit-transform: rotate(45deg) translate(-4px, 4px) ;
+    transform: rotate(45deg) translate(-4px, -4px) ;
+}
+
+/*about section */
+.detail #sqkz_title{
+  display: none;
+  top: 5vh;
+  left: 10vw;
+  grid-column: 1/3;
+  grid-row: 1/3;
+  width: 15vh;
+}
+
+#about_img{
+  width: 100%;
+  height: 100%;
+  grid-column: 7/13;
+  grid-row: 2/9;
+  object-fit: contain;
+  background-color: transparent;
+}
+/*
+about me
+grid-rows : 21 to 40
+*/
+#bio{
+  grid-column: 2/9;
+  grid-row: 2/17;
+  width: 100%;
+  font-size: 1em;
+  line-height: 3.5vh;
+}
+#name{
+  font-family: azo-sans-web, sans-serif;
+  font-size: 1.1em;
+  font-weight: 700;
+  font-style: normal;
+  grid-column: 2/10;
+  grid-row: 18;
+}
+
+#dot_2{
+  grid-column: 10;
+  grid-row: 10;
+  width: 15px;
+  height: 15px;
+}
+
+#h_line_1{
+  display: none;
+  position: relative;
+  /* top: 2.5vh; */
+  grid-column: 7/13;
+  grid-row: 15;
+  z-index: 100;
+}
+
+#h_scribble{
+  /* display: none; */
+  width: 130%;
+  margin: -10% ;
+  grid-column: 2/5;
+  grid-row: 15;
+}
+
+#insta{
+  text-decoration: underline;
+  width: 100%;
+  text-align: right;
+  grid-column: 5/12;
+  grid-row: 16;
+} 
+
+#contact{
+  text-decoration: underline;
+  width: 100%;
+  text-align: right;
+  grid-column: 5/12;
+  grid-row: 14;
+  transition: all 1s ease-in-out;
+}
+
+/* contact form */
+
+.show_form #contact {
+  text-decoration: none;
+  grid-row: 1;
+  position: relative;
+  top: 2.5vh;
+  width: 100vw;
+  text-align: right ;
+  transition: all 1s 2.4s;
+  transform: translateX(55vw);
+}
+
+
+input, textarea{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin-bottom: auto;
+  background-color: transparent;
+  border: none;
+  border: solid black 3px;
+  padding-left: 2vw; 
+  font-size: 1em;
+  z-index: 1000;
+  font-family: josefin-sans, sans-serif;
+}
+textarea{
+  padding-top: 1em;
+}
+label{
+  position: relative;
+  top: -4vh;
+  left: 2vw;
+  transition: all .2s linear;
+  width: 100%;
+  display: block;
+  font-size: 1em;
+}
+
+#contact_message label{
+  top: -36vh;
+}
+
+input:focus, textarea:focus{
+  border: solid lightcoral 4px
+}
+
+input:focus + label{
+  top: -9vh;
+  left: 0;
+}
+
+#contact_message textarea:focus + label{
+  top: -41vh;
+  left: 0;
+}
+
+input:valid + label{
+  top: -9vh;
+  left: 0;
+}
+#contact_message textarea:valid + label{
+  top: -41vh;
+  left: 0;
+}
+#contact_name{
+  /* margin-right: .5vw; */
+  grid-column: 2/12;
+  grid-row: 3;
+}
+
+#contact_email{
+  /* padding-left: .5vw; */
+  grid-column: 2/12;
+  grid-row: 5;
+}
+
+#contact_subject{
+  /* margin:  2.5vh 0 0 0 ; */
+  grid-column: 2/12;
+  grid-row: 7;
+}
+
+#contact_message{
+  grid-column: 2/12;
+  grid-row: 9/16;
+}
+
+#contact_submit{
+  grid-row:  17;
+  grid-column: 2/12;
+  height: 120%;
+  width: 105%;
+  position: relative;
+  left: 0;
+  border: none;
+  background-color: #222;
+  color: whitesmoke;
+  /* padding: 5%; */
+  font-family: josefin-sans, sans-serif;
+  letter-spacing: .1em;
+  font-size: 1em;
+}
+
+}

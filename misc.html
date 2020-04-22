@@ -6,11 +6,10 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="author" content="Riley Hoff">
-  <meta name="description" content="sqkz .............. riley hoff">
-  <meta name="viewport" content="width=device-width, initial-scale=1">\
-  <link href="gallery_style.css" rel="stylesheet" type="text/css" media="screen" />
-  <link rel="stylesheet" href="https://use.typekit.net/mwa6qok.css">
-  <!-- <link rel="icon" href="images/sqkzIcon.png"> -->
+  <meta name="description" content="sqkz art portfolio website - Riley Hoff">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="gallery_style.css" rel="stylesheet" type="text/css" media="screen">
+  <link rel="stylesheet" href="https://use.typekit.net/mwa6qok.css" >
   <script src="data/artworks.js"></script>
   <script src="script.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -19,7 +18,7 @@
 <![endif]-->
 </head>
 <script>
-  var folder = "misc/";
+  var folder = "misc";
 
 $.ajax({
 
@@ -27,15 +26,39 @@ url: folder,
 success: function (data) {
   $(data).find("a").attr("href", function (i, val) {
     if (val.match(/\.(jpe?g|gif|JPE?G)$/)) { //does not read png 
-      //images on remote server
-      //$("#").append( "<img src='" + folder + "/" + val +"'>" );
-      //images on local computer
-      $("section").append("<div class='gallery_img'><img src='" + val + "' id='" + i + "' class='gallery' onclick='fullscreenViewOpen(this)'></div>");
+      //images on local server
+      // $("section").append("<div class='gallery_img'><img "
+      //         +"srcset='/200px" + val +" 200w, "
+      // + "/500px" + val +" 500w, " 
+      // +"/1000px" + val +" 1000w, " 
+      // + val +" 1700w'" 
+      // + "alt='" + val +"' " 
+      // +"src='" + val + "' id='" + i + "' class='gallery' onclick='fullscreenViewOpen(this)'></div>");
+
+      //images on remote server computer
+      $("section").append("<div class='gallery_img'><img "
+      +"srcset='" + folder + "/1000px/" + val +" 1000w, " 
+      + folder + "/" + val +" 1700w'" 
+      + "alt='" + val +"' " 
+      +"src='" + folder + "/" + val + "' id='" + i + "' class='gallery' onclick='fullscreenViewOpen(this)'></div>");
       i++;
     }
   });
 }
 });
+
+//if on mobile add make grid mode
+var width = $(window).width();
+if (width <= 750) {
+        $('body').addClass('grid');
+    }
+$(window).resize(function () {
+    if (width <= 750) {
+        $('body').addClass('grid');
+    }
+});
+
+
 
 </script>
 <body class="list">
@@ -56,12 +79,17 @@ success: function (data) {
       d="M1373.43141,587.63971c0,19.94-6.34009,70.34-27,50.77-19-18-46-18-46.02-50.77a36.51161,36.51161,0,0,1,73.02,0Z"
       transform="translate(-546.37141 -361.82971)" />
 </svg></a>
-<nav>
-  <a href="javascript:delay('/index.html#about')">about.</a>
+<nav class="">
+  <a href="javascript:delay('/dev/painting.html')">painting.</a>
+  <a href="javascript:delay('/dev/drawing.html')">drawing.</a>
   <a href="#misc" class="active">misc.</a>
-  <a href="javascript:delay('/drawing.html')">drawing.</a>
-  <a href="javascript:delay('/painting.html')">painting.</a>
+  <a href="javascript:delay('/dev/index.html#about')">about.</a>
 </nav>
+      <!-- mobile menu icon -->
+      <div id="mbl_icon"  class="mobile_icon" onclick="mobileIcon(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+      </div>
 </header>
 <section id="imgs">
   <div id="categories">
@@ -78,14 +106,16 @@ success: function (data) {
 </section>
 
 <button id="grid_btn" onclick="gridView()">
-  <svg id="grid_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 394.19 428.42"><circle cx="53" cy="53" r="53"/><circle cx="197" cy="53" r="53"/><circle cx="341" cy="53" r="53"/><path d="M643,437c0,53-32.19,65.86-53,73-35,12-53-43.73-53-73a53,53,0,0,1,106,0Z" transform="translate(-393 -236)"/><circle cx="341" cy="201" r="53"/><path d="M787,585c0,10.55.42,18.19,0,28-3,70-44,56-66,31-19.34-22-40-11-40-59a53,53,0,0,1,106,0Z" transform="translate(-393 -236)"/><circle cx="197" cy="349" r="53"/><circle cx="53" cy="349" r="53"/><path d="M499,437c-5,78-23.73,53-53,53a53,53,0,0,1,0-106C475.27,384,500.87,407.79,499,437Z" transform="translate(-393 -236)"/></svg>
-  <svg id="list_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 394 118.9"><path d="M643,437c0,33-32.19,49.86-53,57-35,12-53-27.73-53-57a53,53,0,0,1,106,0Z" transform="translate(-393 -384)"/><circle cx="341" cy="53" r="53"/><path d="M499,437c5,108-28,50-56,53-29.1,3.12-50-23.73-50-53a53,53,0,0,1,53-53C475.27,384,497.65,407.76,499,437Z" transform="translate(-393 -384)"/></svg>
+  <p id="grid_svg">Grid.</p>
+  <p id="list_svg">List.</p>
+  <!-- <svg id="grid_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 394.19 428.42"><circle cx="53" cy="53" r="53"/><circle cx="197" cy="53" r="53"/><circle cx="341" cy="53" r="53"/><path d="M643,437c0,53-32.19,65.86-53,73-35,12-53-43.73-53-73a53,53,0,0,1,106,0Z" transform="translate(-393 -236)"/><circle cx="341" cy="201" r="53"/><path d="M787,585c0,10.55.42,18.19,0,28-3,70-44,56-66,31-19.34-22-40-11-40-59a53,53,0,0,1,106,0Z" transform="translate(-393 -236)"/><circle cx="197" cy="349" r="53"/><circle cx="53" cy="349" r="53"/><path d="M499,437c-5,78-23.73,53-53,53a53,53,0,0,1,0-106C475.27,384,500.87,407.79,499,437Z" transform="translate(-393 -236)"/></svg> -->
+  <!-- <svg id="list_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 394 118.9"><path d="M643,437c0,33-32.19,49.86-53,57-35,12-53-27.73-53-57a53,53,0,0,1,106,0Z" transform="translate(-393 -384)"/><circle cx="341" cy="53" r="53"/><path d="M499,437c5,108-28,50-56,53-29.1,3.12-50-23.73-50-53a53,53,0,0,1,53-53C475.27,384,497.65,407.76,499,437Z" transform="translate(-393 -384)"/></svg> -->
 </button>
 
   <!-- fullscreen image view -->
   <div id="fullscreen_view" class="">
     <div id="fullscreen_content">
-      <div id="full_img_container"><img id="fullscreen_img" src="">        
+      <div id="full_img_container"><img id="fullscreen_img" src="">             
         <div id="detail_imgs" class="none">
         <!-- detail images goes here -->
       </div>
@@ -116,7 +146,7 @@ success: function (data) {
   //horizontally scroll gallery section
   (function() {
     function scrollHorizontally(e) {
-      if(document.body.className == "list"){
+      if((document.body.className == "list") && (width > 750)){
         e = window.event || e;
         var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
         document.getElementById('imgs').scrollLeft -= (delta*80); // Multiplied by 80
@@ -134,5 +164,10 @@ success: function (data) {
     }
   })();
   
+  //initial window width check
+  if (width <= 750) {
+      $('body').removeClass('list');
+        $('body').addClass('grid');
+    }
   </script>
 </html>

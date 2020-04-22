@@ -7,6 +7,12 @@ function displayItems() {
   }
 }
 
+//mobile menu animation
+function mobileIcon(el) {
+  el.classList.toggle("change");
+  document.getElementsByTagName('NAV')[0].classList.toggle("show");
+}
+
 function mouseMove() {
   z += 1;
   //how fast to change items
@@ -18,7 +24,7 @@ function mouseMove() {
       prev = x - 1;
     }
     x += 1;
-    //number of items (including 0)
+    //number of items (including 0)  --> AKA Minus 1!
     if (x > 31) {
       x = 0;
     }
@@ -50,7 +56,11 @@ function pastIntro() {
 function contactForm() {
   if (contact == false) {
     document.getElementById('about').classList.toggle("show_form");
-    document.getElementById('contact').innerHTML = "About.";
+    if(document.body.classList.contains("mbl")){
+      document.getElementById('contact').innerHTML = "X.";
+    }else{
+      document.getElementById('contact').innerHTML = "About.";
+    }
     contact = true;
   } else {
     document.getElementById('about').classList.toggle("show_form");
@@ -98,7 +108,7 @@ function fullscreenViewOpen(el) {
   } else {
 
     var art = artworks[id];
-
+    //place fullscreen image
     document.getElementById("fullscreen_img").src = el.src;
 
     //get art infomation
@@ -158,7 +168,6 @@ function gridView() {
   document.getElementById("imgs").scrollTop = 0; // make sure images are scrolled to top
   document.body.classList.toggle('grid');
   document.body.classList.toggle('list');
-
 }
 
 function filter(category, el) {
