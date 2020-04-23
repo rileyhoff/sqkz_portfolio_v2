@@ -8,6 +8,15 @@
   <meta name="author" content="Riley Hoff">
   <meta name="description" content="sqkz art portfolio website - Riley Hoff">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="msapplication-TileColor" content="#fda062">
+  <meta name="msapplication-config" content="/icon/browserconfig.xml">
+  <meta name="theme-color" content="#fda062">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png">
+  <link rel="manifest" href="/icon/site.webmanifest">
+  <link rel="mask-icon" href="/icon/safari-pinned-tab.svg" color="#fda062">
+  <link rel="shortcut icon" href="/icon/favicon.ico">
   <link href="style.css" rel="stylesheet" type="text/css" media="screen">
   <link rel="stylesheet" href="https://use.typekit.net/mwa6qok.css">
   <script src="script.js"></script>
@@ -34,20 +43,20 @@
           if (val.match(/\.(jpe?g|gif|JPE?G)$/)) { //does not read png 
             //images on remote server
      
-      //       $("#intro_imgs").append("<img "
+            $("#intro_imgs").append("<img "
       // +"srcset='" + folder + "/200px/" + val +" 200w, "
       // + folder + "/500px/" + val +" 500w, " 
       // + folder + "/" + val +" 1000w'"  
-      // + "alt='" + val +"' " 
-      // +"src='" + folder + "/" + val + "' id='" + i + "' class='intro_img' >");
+      + "alt='" + val +"' " 
+      +"src='" + folder + "/" + val + "' id='" + i + "' class='intro_img' >");
             //images on local computer
             // $("#intro_imgs").append("<img src='" + val + "' id='" + i + "' class='intro_img'>");
-            $("#intro_imgs").append("<img "
-      +"srcset='/200px/" + val +" 200w, "
-      + "/500px/" + val +" 500w, " 
-      +  val +" 1000w'"  
-      + "alt='" + val +"' " 
-      +"src='" + val + "' id='" + i + "' class='intro_img' >");
+      //       $("#intro_imgs").append("<img "
+      // +"srcset='/200px/" + val +" 200w, "
+      // + "/500px/" + val +" 500w, " 
+      // +  val +" 1000w'"  
+      // + "alt='" + val +"' " 
+      // +"src='" + val + "' id='" + i + "' class='intro_img' >");
             i++;
           }
         });
@@ -119,7 +128,7 @@
             <div class="bar1"></div>
             <div class="bar2"></div>
           </div>
-    <img src="intro\DSC_0674.JPG" id="default_img" class="">
+    <img src="intro\DSC_0674.jpg" id="default_img" class="">
     <div id="intro_imgs">
       <!-- intro images append here  -->
     </div>

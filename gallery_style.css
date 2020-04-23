@@ -36,6 +36,8 @@ button{
   font-family: nimbus-sans, sans-serif; 
   font-weight: 400;
   font-style: normal;
+  background-color: transparent;
+  border: solid #222 2px;
 }
 
 header{
@@ -102,7 +104,6 @@ div.mobile_icon {
     height: 5vh;
     width: 100vw;
     /* left: 33.334%; */
-    
     z-index: 2000;
     background-color: whitesmoke;
 }
@@ -147,8 +148,9 @@ img.gallery{
   max-width: 100vw;
   height: auto;
   object-fit: contain;
-  padding: 0 0.5vw;
-  margin: 0;
+  padding: 0;
+  margin: 0 0.5vw;
+  background-color: lightgrey;
 }
 
 .gallery_img{
@@ -182,8 +184,8 @@ body.grid{
   float: left;
   width: 32.334vw;
   height: 32.334vw;
-  padding: 0 .5vw;
-  margin: 0;
+  padding: 0;
+  margin: 0 0.5vw;
   transform: none;
   overflow: hidden;
   object-fit: cover;
@@ -276,7 +278,7 @@ body.grid{
 /*categories button/tab */
 
 #categories{
-  height: 10vh;
+  height: 0;
   width: 90vw;
   position: relative;
   left: 0;
@@ -288,19 +290,27 @@ body.grid{
   align-items: flex-start;
   overflow: hidden;
   background-color: whitesmoke;
-  transition: all .2s ease-in-out;
+  transition: all .2s linear;
   animation: none;
 }
+#categories.open {
+  height: min-content;
+  padding-bottom: 2.5vh;
+}
 
-
-#categories::before{
+#categories_btn{
+  display: none;
+}
+#categories_btn{
+  display: block;
   font-family: josefin-sans, sans-serif;
   font-weight: 400;
   font-size: 1.25em;
-  content: "Categories.";
+  border: none;
   padding: 0 0;
   line-height: 10vh;
   width: 90vw;
+  height: 10vh;
   text-align: right;
   position: relative;
   writing-mode: horizontal-tb;
@@ -317,15 +327,7 @@ body.grid{
   font-size: 1em;
   transition: none;
 }
-.grid #categories > button{
-  height: 4vh;
-  padding-right: 5vw;
-}
-/* open categories tab */
-.grid #categories:hover, .list #categories:hover {
-  height: min-content;
-  padding-bottom: 2.5vh;
-}
+
 #categories > button.active {
   color: #222;
 }
@@ -508,8 +510,33 @@ body.grid{
   height: auto;
 }
 
+/* animations */
+.fade_in{
+  animation: fade_in .2s 0s 1 backwards;
+}
+@keyframes fade-in {
+  0%{
+    opacity: 0;
+  }100%{
+    opacity: 1;
+  }
+}
 
+@keyframes slide-left{
+  0%{
+    transform: translateX(100vw);
+  }100%{
+    transform: translateX(0);
+  }
+}
 
+@keyframes slide-up{
+  0%{
+    transform: translateY(100vw);
+  }100%{
+    transform: translateY(0);
+  }
+}
 
 
 /* --------------------------------- DESKTOP -------------------------------- */
@@ -595,7 +622,8 @@ img.gallery{
 .list img.gallery{
   width: auto;
   height: 60vh;
-  padding: 0 0.5vw;
+  margin: 0 0.5vw;
+  padding: 0;
 }
 
  /* move buttons */
@@ -651,7 +679,8 @@ display: block;
 .grid img.gallery{
   width: 12vw;
   height: 12vw;
-  padding: .5vw;
+  padding: 0;
+  margin: .5vw;
   overflow: hidden;
 }
 .grid section{
@@ -696,7 +725,13 @@ display: block;
   animation: fade-in .5s 1s backwards;
 }
 
-#categories::before{
+#categories_btn{
+  display: none;
+}
+
+.grid #categories::before{
+  display: block;
+  content: "Categories.";
   font-family: nimbus-sans, sans-serif;
   font-size: 1em;
   line-height: 1em;
@@ -723,6 +758,12 @@ display: block;
   font-size: 2vh;
   transition: all .2s;
 }
+
+.grid #categories > button{
+  height: 4vh;
+  padding-right: 5vw;
+}
+
 #categories > button:hover {
   text-decoration: line-through;
   color: #222;
@@ -753,7 +794,7 @@ display: block;
   left: 5vw;
   padding: 0;
   z-index: 1010;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 #fullscreen_img{
   position: relative;
@@ -768,7 +809,7 @@ display: block;
 #full_img_container{
   max-width: 75vw;
   min-width: 50vw;
-  height: 100%;
+  height: 90vh;
   width: max-content;
 }
 
@@ -855,27 +896,4 @@ display: block;
   overflow: visible !important;
 }
 
-@keyframes fade-in {
-  0%{
-    opacity: 0;
-  }100%{
-    opacity: 1;
-  }
-}
-
-@keyframes slide-left{
-  0%{
-    transform: translateX(100vw);
-  }100%{
-    transform: translateX(0);
-  }
-}
-
-@keyframes slide-up{
-  0%{
-    transform: translateY(100vw);
-  }100%{
-    transform: translateY(0);
-  }
-}
 }

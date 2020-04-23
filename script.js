@@ -28,13 +28,17 @@ function mouseMove() {
     if (x > 31) {
       x = 0;
     }
-    document.getElementById(x + 3).className = "active";
-    document.getElementById(prev + 3).className = "hidden";
+    document.getElementById(x + 5).className = "active";
+    document.getElementById(prev + 5).className = "hidden";
   }
 }
 
 function pauseImages() {
   document.getElementById("bg").classList.toggle("pause");
+}
+
+function fadeIn(el) {
+  el.classList.add("fade_in");
 }
 
 function theatreView() {
@@ -169,6 +173,9 @@ function gridView() {
   document.body.classList.toggle('grid');
   document.body.classList.toggle('list');
 }
+function openCategories(){
+  document.getElementById('categories').classList.toggle('open');
+}
 
 function filter(category, el) {
   //get all artwork images
@@ -198,6 +205,7 @@ function filter(category, el) {
       children[i].classList.remove("active");
     }
     el.classList.add("active");  
+    document.getElementById('categories').classList.remove('open');
 }
 
 //init

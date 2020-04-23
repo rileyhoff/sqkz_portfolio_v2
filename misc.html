@@ -8,6 +8,15 @@
   <meta name="author" content="Riley Hoff">
   <meta name="description" content="sqkz art portfolio website - Riley Hoff">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="msapplication-TileColor" content="#fda062">
+  <meta name="msapplication-config" content="/icon/browserconfig.xml">
+  <meta name="theme-color" content="#fda062">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png">
+  <link rel="manifest" href="/icon/site.webmanifest">
+  <link rel="mask-icon" href="/icon/safari-pinned-tab.svg" color="#fda062">
+  <link rel="shortcut icon" href="/icon/favicon.ico">
   <link href="gallery_style.css" rel="stylesheet" type="text/css" media="screen">
   <link rel="stylesheet" href="https://use.typekit.net/mwa6qok.css" >
   <script src="data/artworks.js"></script>
@@ -27,20 +36,20 @@ success: function (data) {
   $(data).find("a").attr("href", function (i, val) {
     if (val.match(/\.(jpe?g|gif|JPE?G)$/)) { //does not read png 
       //images on local server
-      // $("section").append("<div class='gallery_img'><img "
+      $("section").append("<div class='gallery_img'><img "
       //         +"srcset='/200px" + val +" 200w, "
       // + "/500px" + val +" 500w, " 
       // +"/1000px" + val +" 1000w, " 
       // + val +" 1700w'" 
-      // + "alt='" + val +"' " 
-      // +"src='" + val + "' id='" + i + "' class='gallery' onclick='fullscreenViewOpen(this)'></div>");
+      + "alt='" + val +"' " 
+      +"src='" + val + "' id='" + i + "' class='gallery' onclick='fullscreenViewOpen(this)'></div>");
 
       //images on remote server computer
-      $("section").append("<div class='gallery_img'><img "
-      +"srcset='" + folder + "/1000px/" + val +" 1000w, " 
-      + folder + "/" + val +" 1700w'" 
-      + "alt='" + val +"' " 
-      +"src='" + folder + "/" + val + "' id='" + i + "' class='gallery' onclick='fullscreenViewOpen(this)'></div>");
+      // $("section").append("<div class='gallery_img'><img "
+      // +"srcset='" + folder + "/1000px/" + val +" 1000w, " 
+      // + folder + "/" + val +" 1700w'" 
+      // + "alt='" + val +"' " 
+      // +"src='" + folder + "/" + val + "' id='" + i + "' class='gallery'  onload='fadeIn(this)' onclick='fullscreenViewOpen(this)'></div>");
       i++;
     }
   });
@@ -92,6 +101,7 @@ $(window).resize(function () {
       </div>
 </header>
 <section id="imgs">
+  <button id="categories_btn" onclick="openCategories()">Categories.</button>
   <div id="categories">
     <button onclick="filter('ln',this)" class="">Last Night.</button>
     <button onclick="filter('collage',this)" class="">Collages.</button>
@@ -167,7 +177,7 @@ $(window).resize(function () {
   //initial window width check
   if (width <= 750) {
       $('body').removeClass('list');
-        $('body').addClass('grid');
+      $('body').addClass('grid');
     }
   </script>
 </html>

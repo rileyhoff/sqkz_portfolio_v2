@@ -8,6 +8,15 @@
   <meta name="author" content="Riley Hoff">
   <meta name="description" content="sqkz art portfolio website - Riley Hoff">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="msapplication-TileColor" content="#fda062">
+  <meta name="msapplication-config" content="/icon/browserconfig.xml">
+  <meta name="theme-color" content="#fda062">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png">
+  <link rel="manifest" href="/icon/site.webmanifest">
+  <link rel="mask-icon" href="/icon/safari-pinned-tab.svg" color="#fda062">
+  <link rel="shortcut icon" href="/icon/favicon.ico">
   <link href="gallery_style.css" rel="stylesheet" type="text/css" media="screen" >
   <link rel="stylesheet" href="https://use.typekit.net/mwa6qok.css" >
   <script src="data/artworks.js"></script>
@@ -35,7 +44,7 @@ $.ajax({
       + folder + "/1000px/" + val +" 1000w, " 
       + folder + "/" + val +" 1700w'" 
       + "alt='" + val +"' " 
-      +"src='" + folder + "/" + val + "' id='" + i + "' class='gallery' onclick='fullscreenViewOpen(this)'></div>");
+      +"src='" + folder + "/" + val + "' id='" + i + "' class='gallery' onload='fadeIn(this)' onclick='fullscreenViewOpen(this)'></div>");
         i++;
       }
     });
@@ -86,6 +95,7 @@ $(window).resize(function () {
           </div>
   </header>
   <section id="imgs">
+    <button id="categories_btn" onclick="openCategories()">Categories.</button>
     <div id="categories">
       <button onclick="filter('thesis',this)" class="">Senior Thesis.</button>
       <button onclick="filter(2019,this)" class="">2019. - 2020.</button>
