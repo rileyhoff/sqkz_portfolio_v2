@@ -11,6 +11,7 @@ function displayItems() {
 function mobileIcon(el) {
   el.classList.toggle("change");
   document.getElementsByTagName('NAV')[0].classList.toggle("show");
+  document.getElementById('sqkz_title').classList.toggle("nav");
 }
 
 function mouseMove() {
@@ -97,6 +98,12 @@ function getArtworkId(el){
   id = id.split('.').slice(0, -1).join('.'); //take off file extention
   return id;
 }
+function getArtworkIdString(str){
+  //get id number of image
+  var id = str.split("_").slice(-1).pop(); //get file name of image and containing folder
+  id = id.split('.').slice(0, -1).join('.'); //take off file extention
+  return id;
+}
 
 function fullscreenViewOpen(el) {
 
@@ -130,9 +137,11 @@ function fullscreenViewOpen(el) {
     }else if(artworks[id].price == "hold"){
       document.getElementById("price_text").innerHTML = "Hold";
       document.getElementById("price").className = "hold";
+      document.getElementById("inquire_link").href = "contact.php?art="+el.src;
     }else{
       document.getElementById("price_text").innerHTML = "Available";
       document.getElementById("price").className = "available";
+      document.getElementById("inquire_link").href = "contact.php?art="+el.src;
     }
 
     // get detail images if available

@@ -38,6 +38,13 @@ button{
   font-style: normal;
   background-color: transparent;
   border: solid #222 2px;
+  cursor: pointer;
+}
+
+img{ /* for alt text */
+  font-family: nimbus-sans, sans-serif; 
+  color: lightgray;
+  font-size: .25em;
 }
 
 header{
@@ -85,10 +92,22 @@ header{
     text-align: center;
     padding: 5vh 0;
     color: #aaaaaa;
+    font-size: 28px;
   }
 
   nav.show a{
     display: block;
+  }
+
+  #sqkz_title.nav{ /* when nav mbl nav is shown */
+    position: fixed;
+    top: 0;
+    padding-top: 5vh;
+    left: 50%;
+    height: auto;
+    width: 110px;
+    margin-left: -55px;
+    animation: slide-down .8s .2s 1 backwards cubic-bezier(.35,-0.3,.16,1.37);
   }
 
   nav .active{
@@ -136,7 +155,7 @@ section{
   top: 20vh;
   left: 0;
   width: 100vw;
-  height: 80vh;
+  height: 85vh;
   white-space: nowrap;
   margin: 0;
   padding: 0;
@@ -160,7 +179,7 @@ img.gallery{
 /* Grid View */
 .grid section{
   width: 100vw;
-  height: 80vh;
+  height: 85vh;
   left: 0vw;
   top: 10vh;
   white-space: normal;
@@ -206,7 +225,7 @@ body.grid{
 .list section{
   top: 10vh;
   width: 100vw;
-  height: 80vh;
+  height: 85vh;
   white-space: normal;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -404,6 +423,7 @@ body.grid{
   max-width: 90vw;
   z-index: 1010;
 }
+
 #artwork_info p {
   font-family: azo-sans-web, sans-serif;
   font-weight: 700;
@@ -496,8 +516,8 @@ body.grid{
 #fullscreen_exit{
   background-color: transparent;
   border: none;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   position: fixed;
   top: 5vh;
   right: 5vw;
@@ -511,6 +531,13 @@ body.grid{
 }
 
 /* animations */
+
+.animate_out {
+  transition: all .2s linear;
+  opacity: 0;
+  overflow: visible !important;
+}
+
 .fade_in{
   animation: fade_in .2s 0s 1 backwards;
 }
@@ -538,10 +565,17 @@ body.grid{
   }
 }
 
+@keyframes slide-down {
+  0%{
+    top: -100vh;
+  }100%{
+    top: 0;
+  }
+}
 
 /* --------------------------------- DESKTOP -------------------------------- */
 
-@media only screen and (min-width: 750px){
+@media only screen and (min-width: 850px){
   body{
     padding: 0;
   }
@@ -579,6 +613,7 @@ body.grid{
     text-align: center;
     width: auto;
     height: unset;
+    font-size: 1.25em;
   }
    
   nav a:hover {
@@ -637,6 +672,7 @@ img.gallery{
   background-image: -webkit-linear-gradient(to right, rgba(255,0,0,0), rgba(245,245,245,1));
   opacity: 0;
   transition: all .2s;
+  cursor: url('/dev/SQKZ_V2_SVG/arrow_right.png'), auto;
 }
 
 #prev_btn{
@@ -648,6 +684,7 @@ img.gallery{
   background-image: linear-gradient(to left, rgba(255,0,0,0), rgba(245,245,245,1));
   opacity: 0;
   transition: all .2s;
+  cursor: url('/dev/SQKZ_V2_SVG/arrow_left.png'), auto;
 }
 
 .move_btn {
@@ -886,14 +923,4 @@ display: block;
   z-index: 1010;
   cursor: pointer !important;
 }
-
-/* animations */
-
-.animate_out {
-  transition: all .8s ease-in-out;
-  transform: translateX(100vw);
-  opacity: 0;
-  overflow: visible !important;
-}
-
 }

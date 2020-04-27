@@ -36,20 +36,20 @@ success: function (data) {
   $(data).find("a").attr("href", function (i, val) {
     if (val.match(/\.(jpe?g|gif|JPE?G)$/)) { //does not read png 
       //images on local server
-      $("section").append("<div class='gallery_img'><img "
+      // $("section").append("<div class='gallery_img'><img "
       //         +"srcset='/200px" + val +" 200w, "
       // + "/500px" + val +" 500w, " 
       // +"/1000px" + val +" 1000w, " 
       // + val +" 1700w'" 
-      + "alt='" + val +"' " 
-      +"src='" + val + "' id='" + i + "' class='gallery' onclick='fullscreenViewOpen(this)'></div>");
+      // + "alt='" + val +"' " 
+      // +"src='" + val + "' id='" + i + "' class='gallery' onclick='fullscreenViewOpen(this)'></div>");
 
       //images on remote server computer
-      // $("section").append("<div class='gallery_img'><img "
-      // +"srcset='" + folder + "/1000px/" + val +" 1000w, " 
-      // + folder + "/" + val +" 1700w'" 
-      // + "alt='" + val +"' " 
-      // +"src='" + folder + "/" + val + "' id='" + i + "' class='gallery'  onload='fadeIn(this)' onclick='fullscreenViewOpen(this)'></div>");
+      $("section").append("<div class='gallery_img'><img "
+      +"srcset='" + folder + "/1000px/" + val +" 1000w, " 
+      + folder + "/" + val +" 1700w'" 
+      + "alt='" + val +"' " 
+      +"src='" + folder + "/" + val + "' id='" + i + "' class='gallery'  onload='fadeIn(this)' onclick='fullscreenViewOpen(this)'></div>");
       i++;
     }
   });
@@ -58,11 +58,11 @@ success: function (data) {
 
 //if on mobile add make grid mode
 var width = $(window).width();
-if (width <= 750) {
+if (width <= 850) {
         $('body').addClass('grid');
     }
 $(window).resize(function () {
-    if (width <= 750) {
+    if (width <= 850) {
         $('body').addClass('grid');
     }
 });
@@ -142,7 +142,7 @@ $(window).resize(function () {
             d="M996.41642,527.3197c0,19.94-9.05489,10.50176-20,36.77-10,24-53-4-53.02-36.77a36.51161,36.51161,0,0,1,73.02,0Z"
             transform="translate(-923.3964 -491.14972)" />
         </svg><span id="price_text"></span><br/>
-        <button id="price_inquire_btn" ><a href="mailto:rileyhoff@outlook.com?Subject=Inquiring%20about%20art">Inquire.</a></button>
+        <a id="inquire_link" href="contact.php"><button id="price_inquire_btn" >Inquire.</button></a>
         </p>
       </div>
     <button id="fullscreen_exit" onclick="fullscreenViewClose()">
@@ -175,7 +175,7 @@ $(window).resize(function () {
   })();
   
   //initial window width check
-  if (width <= 750) {
+  if (width <= 850) {
       $('body').removeClass('list');
       $('body').addClass('grid');
     }

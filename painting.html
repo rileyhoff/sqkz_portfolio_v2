@@ -54,11 +54,11 @@ $.ajax({
 
 //if on mobile add make grid mode
 var width = $(window).width();
-if (width <= 750) {
+if (width <= 850) {
         $('body').addClass('grid');
     }
 $(window).resize(function () {
-    if (width <= 750) {
+    if (width <= 850) {
         $('body').addClass('grid');
     }
 });
@@ -137,7 +137,7 @@ $(window).resize(function () {
             d="M996.41642,527.3197c0,19.94-9.05489,10.50176-20,36.77-10,24-53-4-53.02-36.77a36.51161,36.51161,0,0,1,73.02,0Z"
             transform="translate(-923.3964 -491.14972)" />
         </svg><span id="price_text"></span><br/>
-        <a href="mailto:rileyhoff@outlook.com?Subject=Inquiring%20about%20art"><button id="price_inquire_btn" >Inquire.</button></a>
+        <a id="inquire_link" href="contact.php"><button id="price_inquire_btn" >Inquire.</button></a>
         </p>
       </div>
     <button id="fullscreen_exit" onclick="fullscreenViewClose()">
@@ -169,7 +169,7 @@ $(window).resize(function () {
   })();
   
   //initial window width check
-  if (width <= 750) {
+  if (width <= 850) {
       $('body').removeClass('list');
         $('body').addClass('grid');
     }
