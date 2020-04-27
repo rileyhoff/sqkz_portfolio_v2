@@ -189,13 +189,6 @@ img.gallery{
   animation: none;
 }
 
-#grid_btn{
-position: fixed;
-display: block;
-z-index: 100;
-bottom: 0;
-right: 10vw;
-}
 body.grid{
   overflow-y: scroll;
 }
@@ -243,20 +236,16 @@ body.grid{
 /* toggle grid button */
 #grid_btn{
   position: fixed;
-  bottom: 5vh;
-  right: 5vw;
+  bottom: 0;
+  right: 0;
   border: none;
   background-color: transparent;
-  height: 50px;
-  width: 50px;
+  height: 7.5vh;
+  width: 33.334vw;
+  padding: 0;
+  display: block;
+  z-index: 100;
 }
-
-/* #grid_btn svg{
-  fill: #aaaaaa;
-  width: 100%;
-  height: auto;
-  transition: all .2s;
-} */
 
 #grid_btn p{
   font-family: josefin-sans, sans-serif;
@@ -694,6 +683,14 @@ display: block;
 .move_btn:hover{
   opacity: 1 !important;
 }
+
+#grid_btn{
+  height: 5vh;
+  width: 10%;
+  bottom: 5vh;
+  right: 5vw;
+}
+
 #grid_btn p{
   font-family: nimbus-sans, sans-serif;
   font-size: 1.25em;
@@ -789,7 +786,7 @@ display: block;
 
 #categories > button{
   height: 2vh;
-  margin: 0vh 0vw 0vh 5vw;
+  margin: 0;
   padding-right: 0;
   text-align: right;
   font-size: 2vh;
