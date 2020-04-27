@@ -18,7 +18,7 @@
   <link rel="mask-icon" href="/icon/safari-pinned-tab.svg" color="#fda062">
   <link rel="shortcut icon" href="/icon/favicon.ico">
   <link href="gallery_style.css" rel="stylesheet" type="text/css" media="screen">
-  <link rel="stylesheet" href="https://use.typekit.net/mwa6qok.css" >
+  <link rel="stylesheet" href="https://use.typekit.net/mwa6qok.css">
   <script src="data/artworks.js"></script>
   <script src="script.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -29,155 +29,164 @@
 <script>
   var folder = "misc";
 
-$.ajax({
+  $.ajax({
 
-url: folder,
-success: function (data) {
-  $(data).find("a").attr("href", function (i, val) {
-    if (val.match(/\.(jpe?g|gif|JPE?G)$/)) { //does not read png 
-      //images on local server
-      // $("section").append("<div class='gallery_img'><img "
-      //         +"srcset='/200px" + val +" 200w, "
-      // + "/500px" + val +" 500w, " 
-      // +"/1000px" + val +" 1000w, " 
-      // + val +" 1700w'" 
-      // + "alt='" + val +"' " 
-      // +"src='" + val + "' id='" + i + "' class='gallery' onclick='fullscreenViewOpen(this)'></div>");
+    url: folder,
+    success: function (data) {
+      $(data).find("a").attr("href", function (i, val) {
+        if (val.match(/\.(jpe?g|gif|JPE?G)$/)) { //does not read png 
+          //images on local server
+          // $("section").append("<div class='gallery_img'><img "
+          //         +"srcset='/200px" + val +" 200w, "
+          // + "/500px" + val +" 500w, " 
+          // +"/1000px" + val +" 1000w, " 
+          // + val +" 1700w'" 
+          // + "alt='" + val +"' " 
+          // +"src='" + val + "' id='" + i + "' class='gallery' onclick='fullscreenViewOpen(this)'></div>");
 
-      //images on remote server computer
-      $("section").append("<div class='gallery_img'><img "
-      +"srcset='" + folder + "/1000px/" + val +" 1000w, " 
-      + folder + "/" + val +" 1700w'" 
-      + "alt='" + val +"' " 
-      +"src='" + folder + "/" + val + "' id='" + i + "' class='gallery'  onload='fadeIn(this)' onclick='fullscreenViewOpen(this)'></div>");
-      i++;
+          //images on remote server computer
+          $("section").append("<div class='gallery_img'><img "
+            + "srcset='" + folder + "/1000px/" + val + " 1000w, "
+            + folder + "/" + val + " 1700w'"
+            + "alt='" + val + "' "
+            + "src='" + folder + "/" + val + "' id='" + i + "' class='gallery'  onload='fadeIn(this)' onclick='fullscreenViewOpen(this)'></div>");
+          i++;
+        }
+      });
     }
   });
-}
-});
 
-//if on mobile add make grid mode
-var width = $(window).width();
-if (width <= 850) {
-        $('body').addClass('grid');
-    }
-$(window).resize(function () {
+  //if on mobile add make grid mode
+  var width = $(window).width();
+  if (width <= 850) {
+    $('body').addClass('grid');
+  }
+  $(window).resize(function () {
     if (width <= 850) {
-        $('body').addClass('grid');
+      $('body').addClass('grid');
     }
-});
+  });
 
 
 
 </script>
-<body class="list">
-<header>
-  <a href="javascript:delay('/index.html')"><svg id="sqkz_title"  data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 827.06 355.58002">
-    <title>SQKZ</title>
-    <path
-      d="M552.46144,557.88971v52.06c21.62994,9.8,49.68994,13.86,69.3,13.86,44.96,0,79.1-21.3,79.44-58.48,0-20.4-9.84-33.57-30.4-42.69l21.27-7.01v-52.05c-21.3-9.13-48.34-13.52-68.29-13.52-43.94,0-77.06994,21.63-77.41,57.46,0,19.61,9.7,33.56,30.74,42.99Z"
-      transform="translate(-546.37141 -361.82971)" />
-    <path
-      d="M844.58143,459.51971l48.68-8.45v255.41l-66.83,10.93c-.59-18.99-.1-101.72-.1-101.72l-.68-.33c-8.45,4.73-20.96,8.45-34.82,8.45-43.94,0-79.77-33.47-79.77-83.84,0-51.38,36.84-89.91,91.61-89.91A101.67857,101.67857,0,0,1,844.58143,459.51971Z"
-      transform="translate(-546.37141 -361.82971)" />
-    <polygon
-      points="499.88 166.31 557.68 258.26 367.36 258.26 367.36 0 434.3 0 434.3 160.23 434.97 160.57 481.62 91.95 555.31 91.95 499.88 166.31" />
-    <polygon
-      points="728.03 92.62 662.79 204.85 663.13 205.52 726 205.52 726 258.26 563.41 258.26 563.07 257.59 628.31 145.36 627.97 144.68 570.84 144.68 570.84 91.95 727.69 91.95 728.03 92.62" />
-    <path
-      d="M1373.43141,587.63971c0,19.94-6.34009,70.34-27,50.77-19-18-46-18-46.02-50.77a36.51161,36.51161,0,0,1,73.02,0Z"
-      transform="translate(-546.37141 -361.82971)" />
-</svg></a>
-<nav class="">
-  <a href="javascript:delay('/dev/painting.html')">painting.</a>
-  <a href="javascript:delay('/dev/drawing.html')">drawing.</a>
-  <a href="#misc" class="active">misc.</a>
-  <a href="javascript:delay('/dev/index.html#about')">about.</a>
-</nav>
-      <!-- mobile menu icon -->
-      <div id="mbl_icon"  class="mobile_icon" onclick="mobileIcon(this)">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-      </div>
-</header>
-<section id="imgs">
-  <button id="categories_btn" onclick="openCategories()">Categories.</button>
-  <div id="categories">
-    <button onclick="filter('ln',this)" class="">Last Night.</button>
-    <button onclick="filter('collage',this)" class="">Collages.</button>
-    <button onclick="filter('photo',this)" class="">Photography.</button>
-    <button onclick="filter('all',this)" class="active">View All.</button>
-  </div>
-  <div id="next_btn" class="move_btn" onmouseover="interval = setInterval(galleryNext,10);"
-  onmouseout="clearInterval(interval);"></div>
-  <div id="prev_btn" class="move_btn" onmouseover="interval = setInterval(galleryPrev,10);"
-  onmouseout="clearInterval(interval);"></div>
-  <!-- images go here -->
-</section>
 
-<button id="grid_btn" onclick="gridView()">
-  <p id="grid_svg">Grid.</p>
-  <p id="list_svg">List.</p>
-  <!-- <svg id="grid_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 394.19 428.42"><circle cx="53" cy="53" r="53"/><circle cx="197" cy="53" r="53"/><circle cx="341" cy="53" r="53"/><path d="M643,437c0,53-32.19,65.86-53,73-35,12-53-43.73-53-73a53,53,0,0,1,106,0Z" transform="translate(-393 -236)"/><circle cx="341" cy="201" r="53"/><path d="M787,585c0,10.55.42,18.19,0,28-3,70-44,56-66,31-19.34-22-40-11-40-59a53,53,0,0,1,106,0Z" transform="translate(-393 -236)"/><circle cx="197" cy="349" r="53"/><circle cx="53" cy="349" r="53"/><path d="M499,437c-5,78-23.73,53-53,53a53,53,0,0,1,0-106C475.27,384,500.87,407.79,499,437Z" transform="translate(-393 -236)"/></svg> -->
-  <!-- <svg id="list_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 394 118.9"><path d="M643,437c0,33-32.19,49.86-53,57-35,12-53-27.73-53-57a53,53,0,0,1,106,0Z" transform="translate(-393 -384)"/><circle cx="341" cy="53" r="53"/><path d="M499,437c5,108-28,50-56,53-29.1,3.12-50-23.73-50-53a53,53,0,0,1,53-53C475.27,384,497.65,407.76,499,437Z" transform="translate(-393 -384)"/></svg> -->
-</button>
+<body class="list">
+  <header>
+    <a href="javascript:delay('/index.html')"><svg id="sqkz_title" data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 827.06 355.58002">
+        <title>SQKZ</title>
+        <path
+          d="M552.46144,557.88971v52.06c21.62994,9.8,49.68994,13.86,69.3,13.86,44.96,0,79.1-21.3,79.44-58.48,0-20.4-9.84-33.57-30.4-42.69l21.27-7.01v-52.05c-21.3-9.13-48.34-13.52-68.29-13.52-43.94,0-77.06994,21.63-77.41,57.46,0,19.61,9.7,33.56,30.74,42.99Z"
+          transform="translate(-546.37141 -361.82971)" />
+        <path
+          d="M844.58143,459.51971l48.68-8.45v255.41l-66.83,10.93c-.59-18.99-.1-101.72-.1-101.72l-.68-.33c-8.45,4.73-20.96,8.45-34.82,8.45-43.94,0-79.77-33.47-79.77-83.84,0-51.38,36.84-89.91,91.61-89.91A101.67857,101.67857,0,0,1,844.58143,459.51971Z"
+          transform="translate(-546.37141 -361.82971)" />
+        <polygon
+          points="499.88 166.31 557.68 258.26 367.36 258.26 367.36 0 434.3 0 434.3 160.23 434.97 160.57 481.62 91.95 555.31 91.95 499.88 166.31" />
+        <polygon
+          points="728.03 92.62 662.79 204.85 663.13 205.52 726 205.52 726 258.26 563.41 258.26 563.07 257.59 628.31 145.36 627.97 144.68 570.84 144.68 570.84 91.95 727.69 91.95 728.03 92.62" />
+        <path
+          d="M1373.43141,587.63971c0,19.94-6.34009,70.34-27,50.77-19-18-46-18-46.02-50.77a36.51161,36.51161,0,0,1,73.02,0Z"
+          transform="translate(-546.37141 -361.82971)" />
+      </svg></a>
+    <nav class="">
+      <a href="javascript:delay('/dev/painting.html')">painting.</a>
+      <a href="javascript:delay('/dev/drawing.html')">drawing.</a>
+      <a href="#misc" class="active">misc.</a>
+      <a href="javascript:delay('/dev/index.html#about')">about.</a>
+    </nav>
+    <!-- mobile menu icon -->
+    <div id="mbl_icon" class="mobile_icon" onclick="mobileIcon(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+    </div>
+  </header>
+  <section id="imgs">
+    <button id="categories_btn" onclick="openCategories()">Categories.</button>
+    <div id="categories">
+      <button onclick="filter('ln',this)" class="">Last Night.</button>
+      <button onclick="filter('collage',this)" class="">Collages.</button>
+      <button onclick="filter('photo',this)" class="">Photography.</button>
+      <button onclick="filter('all',this)" class="active">View All.</button>
+    </div>
+    <div id="next_btn" class="move_btn" onmouseover="interval = setInterval(galleryNext,10);"
+      onmouseout="clearInterval(interval);"></div>
+    <div id="prev_btn" class="move_btn" onmouseover="interval = setInterval(galleryPrev,10);"
+      onmouseout="clearInterval(interval);"></div>
+    <!-- images go here -->
+  </section>
+
+  <button id="grid_btn" onclick="gridView()">
+    <p id="grid_svg">Grid.</p>
+    <p id="list_svg">List.</p>
+    <!-- <svg id="grid_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 394.19 428.42"><circle cx="53" cy="53" r="53"/><circle cx="197" cy="53" r="53"/><circle cx="341" cy="53" r="53"/><path d="M643,437c0,53-32.19,65.86-53,73-35,12-53-43.73-53-73a53,53,0,0,1,106,0Z" transform="translate(-393 -236)"/><circle cx="341" cy="201" r="53"/><path d="M787,585c0,10.55.42,18.19,0,28-3,70-44,56-66,31-19.34-22-40-11-40-59a53,53,0,0,1,106,0Z" transform="translate(-393 -236)"/><circle cx="197" cy="349" r="53"/><circle cx="53" cy="349" r="53"/><path d="M499,437c-5,78-23.73,53-53,53a53,53,0,0,1,0-106C475.27,384,500.87,407.79,499,437Z" transform="translate(-393 -236)"/></svg> -->
+    <!-- <svg id="list_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 394 118.9"><path d="M643,437c0,33-32.19,49.86-53,57-35,12-53-27.73-53-57a53,53,0,0,1,106,0Z" transform="translate(-393 -384)"/><circle cx="341" cy="53" r="53"/><path d="M499,437c5,108-28,50-56,53-29.1,3.12-50-23.73-50-53a53,53,0,0,1,53-53C475.27,384,497.65,407.76,499,437Z" transform="translate(-393 -384)"/></svg> -->
+  </button>
 
   <!-- fullscreen image view -->
   <div id="fullscreen_view" class="">
     <div id="fullscreen_content">
-      <div id="full_img_container"><img id="fullscreen_img" src="">             
+      <div id="full_img_container"><img id="fullscreen_img" src="">
         <div id="detail_imgs" class="none">
-        <!-- detail images goes here -->
+          <!-- detail images goes here -->
+        </div>
       </div>
-    </div>
       <div id="artwork_info">
         <p id="art_title">Untitled.</p>
         <p id="dimentions"></p>
         <p id="medium"></p>
         <p id="price">
           <svg id="price_dot" class="dot" onclick="theatreView()" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 73.02002 81.94496">
-          <title>price_dot</title>
-          <path
-            d="M996.41642,527.3197c0,19.94-9.05489,10.50176-20,36.77-10,24-53-4-53.02-36.77a36.51161,36.51161,0,0,1,73.02,0Z"
-            transform="translate(-923.3964 -491.14972)" />
-        </svg><span id="price_text"></span><br/>
-        <a id="inquire_link" href="contact.php"><button id="price_inquire_btn" >Inquire.</button></a>
+            viewBox="0 0 73.02002 81.94496">
+            <title>price_dot</title>
+            <path
+              d="M996.41642,527.3197c0,19.94-9.05489,10.50176-20,36.77-10,24-53-4-53.02-36.77a36.51161,36.51161,0,0,1,73.02,0Z"
+              transform="translate(-923.3964 -491.14972)" />
+          </svg><span id="price_text"></span><br />
+          <a id="inquire_link" href="contact.php"><button id="price_inquire_btn">Inquire.</button></a>
         </p>
       </div>
-    <button id="fullscreen_exit" onclick="fullscreenViewClose()">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 73.96 71.13"><path d="M538.94,255.41a414,414,0,0,0-40.79,59c-3.79,6.67,6.49,12.67,10.28,6a397.49,397.49,0,0,1,38.93-56.56c4.84-5.86-3.53-14.33-8.42-8.42Z" transform="translate(-474.85 -252.48)"/><path d="M491,262.39l14.11,22.76c4,6.49,14.29.55,10.28-6-6.31-10.33-15.28-19.33-26.13-24.86-5.13-2.61-12.28-3.19-14.15,3.79-1.52,5.67,3.11,10.62,6.47,14.5,16.37,18.95,39.08,30.92,56.13,49.19,5.23,5.61,13.64-2.82,8.41-8.42-12.88-13.81-28.83-24-43-36.3-3.43-3-6.75-6.05-9.87-9.34-1.64-1.73-3.27-3.51-4.76-5.38-.23-.28-1.4-2.26-1.7-2.31l-3.5,4.55,1.4.76c1.32,1.54,4.33,2.6,6,3.86a52.46,52.46,0,0,1,5.5,4.7,56.83,56.83,0,0,1,8.92,11.27l10.28-6-14.11-22.76c-4-6.49-14.34-.52-10.28,6Z" transform="translate(-474.85 -252.48)"/></svg>
-    </button>
-    <div id="fullscreen_bg" onclick="fullscreenViewClose()"></div>
-  </div>
+      <button id="fullscreen_exit" onclick="fullscreenViewClose()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 73.96 71.13">
+          <path
+            d="M538.94,255.41a414,414,0,0,0-40.79,59c-3.79,6.67,6.49,12.67,10.28,6a397.49,397.49,0,0,1,38.93-56.56c4.84-5.86-3.53-14.33-8.42-8.42Z"
+            transform="translate(-474.85 -252.48)" />
+          <path
+            d="M491,262.39l14.11,22.76c4,6.49,14.29.55,10.28-6-6.31-10.33-15.28-19.33-26.13-24.86-5.13-2.61-12.28-3.19-14.15,3.79-1.52,5.67,3.11,10.62,6.47,14.5,16.37,18.95,39.08,30.92,56.13,49.19,5.23,5.61,13.64-2.82,8.41-8.42-12.88-13.81-28.83-24-43-36.3-3.43-3-6.75-6.05-9.87-9.34-1.64-1.73-3.27-3.51-4.76-5.38-.23-.28-1.4-2.26-1.7-2.31l-3.5,4.55,1.4.76c1.32,1.54,4.33,2.6,6,3.86a52.46,52.46,0,0,1,5.5,4.7,56.83,56.83,0,0,1,8.92,11.27l10.28-6-14.11-22.76c-4-6.49-14.34-.52-10.28,6Z"
+            transform="translate(-474.85 -252.48)" /></svg>
+      </button>
+      <div id="fullscreen_bg" onclick="fullscreenViewClose()"></div>
+    </div>
 
 </body>
 <script>
   //horizontally scroll gallery section
-  (function() {
+  (function () {
     function scrollHorizontally(e) {
-      if((document.body.className == "list") && (width > 750)){
+      if ((document.body.className == "list") && (width > 750)) {
         e = window.event || e;
         var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-        document.getElementById('imgs').scrollLeft -= (delta*80); // Multiplied by 80
+        document.getElementById('imgs').scrollLeft -= (delta * 80); // Multiplied by 80
         e.preventDefault();
       }
     }
     if (document.getElementById('imgs').addEventListener) {
-        // IE9, Chrome, Safari, Opera
-        document.getElementById('imgs').addEventListener("mousewheel", scrollHorizontally, false);
-        // Firefox
-        document.getElementById('imgs').addEventListener("DOMMouseScroll", scrollHorizontally, false);
+      // IE9, Chrome, Safari, Opera
+      document.getElementById('imgs').addEventListener("mousewheel", scrollHorizontally, false);
+      // Firefox
+      document.getElementById('imgs').addEventListener("DOMMouseScroll", scrollHorizontally, false);
     } else {
-        // IE 6/7/8
-        document.getElementById('imgs').attachEvent("onmousewheel", scrollHorizontally);
+      // IE 6/7/8
+      document.getElementById('imgs').attachEvent("onmousewheel", scrollHorizontally);
     }
   })();
-  
+
   //initial window width check
   if (width <= 850) {
-      $('body').removeClass('list');
-      $('body').addClass('grid');
-    }
-  </script>
+    $('body').removeClass('list');
+    $('body').addClass('grid');
+  }
+</script>
+
 </html>
