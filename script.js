@@ -61,9 +61,9 @@ function pastIntro() {
 function contactForm() {
   if (contact == false) {
     document.getElementById('about').classList.toggle("show_form");
-    if(document.body.classList.contains("mbl")){
+    if (document.body.classList.contains("mbl")) {
       document.getElementById('contact').innerHTML = "X.";
-    }else{
+    } else {
       document.getElementById('contact').innerHTML = "About.";
     }
     contact = true;
@@ -92,13 +92,13 @@ function delay(URL) {
   }, 500);
 }
 
-function getArtworkId(el){
+function getArtworkId(el) {
   //get id number of image
   var id = el.src.split("_").slice(-1).pop(); //get file name of image and containing folder
   id = id.split('.').slice(0, -1).join('.'); //take off file extention
   return id;
 }
-function getArtworkIdString(str){
+function getArtworkIdString(str) {
   //get id number of image
   var id = str.split("_").slice(-1).pop(); //get file name of image and containing folder
   id = id.split('.').slice(0, -1).join('.'); //take off file extention
@@ -128,20 +128,20 @@ function fullscreenViewOpen(el) {
     document.getElementById("medium").innerHTML = art.medium;
 
     //see if work is for sale
-    if(artworks[id].price == 0 || artworks[id].price == "NFS"){
+    if (artworks[id].price == 0 || artworks[id].price == "NFS") {
       document.getElementById("price_text").innerHTML = "NFS";
       document.getElementById("price").className = "nfs";
-    }else if(artworks[id].price == "sold"){
+    } else if (artworks[id].price == "sold") {
       document.getElementById("price_text").innerHTML = "Sold";
       document.getElementById("price").className = "sold";
-    }else if(artworks[id].price == "hold"){
+    } else if (artworks[id].price == "hold") {
       document.getElementById("price_text").innerHTML = "Hold";
       document.getElementById("price").className = "hold";
-      document.getElementById("inquire_link").href = "contact.php?art="+el.src;
-    }else{
+      document.getElementById("inquire_link").href = "contact.php?art=" + el.src;
+    } else {
       document.getElementById("price_text").innerHTML = "Available";
       document.getElementById("price").className = "available";
-      document.getElementById("inquire_link").href = "contact.php?art="+el.src;
+      document.getElementById("inquire_link").href = "contact.php?art=" + el.src;
     }
 
     // get detail images if available
@@ -182,7 +182,7 @@ function gridView() {
   document.body.classList.toggle('grid');
   document.body.classList.toggle('list');
 }
-function openCategories(){
+function openCategories() {
   document.getElementById('categories').classList.toggle('open');
 }
 
@@ -208,13 +208,13 @@ function filter(category, el) {
       }
     }
   }
-    //make clicked link active
-    var children = document.getElementById("categories").children;
-    for (var i = 0; i < children.length; i++){
-      children[i].classList.remove("active");
-    }
-    el.classList.add("active");  
-    document.getElementById('categories').classList.remove('open');
+  //make clicked link active
+  var children = document.getElementById("categories").children;
+  for (var i = 0; i < children.length; i++) {
+    children[i].classList.remove("active");
+  }
+  el.classList.add("active");
+  document.getElementById('categories').classList.remove('open');
 }
 
 //init
