@@ -131,10 +131,10 @@ function fullscreenViewOpen(el) {
     if (artworks[id].price == 0 || artworks[id].price == "NFS") {
       document.getElementById("price_text").innerHTML = "NFS";
       document.getElementById("price").className = "nfs";
-    } else if (artworks[id].price == "sold") {
+    } else if (artworks[id].price == "sold" || artworks[id].price == 1111) {
       document.getElementById("price_text").innerHTML = "Sold";
       document.getElementById("price").className = "sold";
-    } else if (artworks[id].price == "hold") {
+    } else if (artworks[id].price == "hold" || artworks[id].price == 1) {
       document.getElementById("price_text").innerHTML = "Hold";
       document.getElementById("price").className = "hold";
       document.getElementById("inquire_link").href = "contact.php?art=" + el.src;

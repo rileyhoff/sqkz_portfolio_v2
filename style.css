@@ -166,7 +166,7 @@ body.theatre {
 }
 
 .theatre #dot_1{
-  fill: whitesmoke;
+  fill: lightcoral;
   position: fixed;
   right: 10vw;
   top: 50%;
@@ -189,12 +189,7 @@ body.theatre {
 }
 
 .theatre #sqkz_title{
-  fill: transparent;
-  stroke: whitesmoke;
-  stroke-width: 5;
-  position: fixed;
-  right: 10vw;
-  width: 20vw;
+  display: none;
 }
 
 /*detail page*/
@@ -611,15 +606,18 @@ content: '"';
   }
 
   body{
-    min-height: 600px;
-    scroll-snap-type: y mandatory;
+    min-height: 800px;
   }
 
   .grid-container{
-    min-height: 600px;
+    min-height: 800px;
   }
 
   #default_img{
+    display: none;
+  }
+
+  div#intro_imgs{
     display: none;
   }
 
@@ -665,12 +663,13 @@ content: '"';
     position: relative;
     display: block;
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
     z-index: 1000;
     top: 0;
     left: 0;
     grid-row: 1;
     grid-column: 1;
+    object-fit: cover;
   }
 
   header{
@@ -689,17 +688,19 @@ content: '"';
     justify-content: center;
     align-items: center;
     animation: none;
-    background-color: whitesmoke;
     border-top: none;
     z-index: 2000;
     transition: .3s ease-in-out;
     opacity: 1;
   }
-
+nav{
+    background-color: transparent;
+  }
   nav.show, .contact nav.right_nav.show{
     display: flex;
     height: 100vh;
     top: 0 !important;
+    background-color: whitesmoke;
   }
 
   #sqkz_title.nav{ /* when nav mbl nav is shown */
@@ -720,6 +721,7 @@ content: '"';
     text-align: center;
     padding: 5vh 0;
     font-size: 28px;
+    background-color: transparent;
   }
 
   nav.show a, .contact nav.right_nav.show a{
@@ -732,6 +734,7 @@ content: '"';
 
   .detail nav, .contact nav.right_nav{
     top: 90vh;
+    background-color: whitesmoke;
   }
 
   div.mobile_icon {
@@ -798,7 +801,7 @@ content: '"';
     font-weight: 700;
     font-style: normal;
     grid-column: 2/10;
-    grid-row: 18;
+    grid-row: 17;
   }
 
   #dot_2{
@@ -870,11 +873,11 @@ content: '"';
   }
 
   #contact_message label{
-    top: -36vh;
+    top: -100%;
   }
   
   .art #contact_message label{
-    top: -16vh;
+    top: -100%;
   }
 
   input:focus, textarea:focus{
@@ -882,31 +885,31 @@ content: '"';
   }
 
   input:focus + label{
-    top: -9vh;
+    top: -180%;
     left: 0;
   }
 
   #contact_message textarea:focus + label{
-    top: -41vh;
+    top: -110%;
     left: 0;
   }
 
   .art #contact_message textarea:focus + label{
-    top: -21vh;
+    top: -180%;
   }
 
   input:valid + label{
-    top: -9vh;
+    top: -180%;
     left: 0;
   }
 
   #contact_message textarea:valid + label{
-    top: -41vh;
+    top: -110;
     left: 0;
   }
 
   .art #contact_message textarea:valid + label{
-    top: -21vh;
+    top: -110%;
   }
 
   #contact_name{
@@ -985,10 +988,18 @@ content: '"';
     font-size: 1em;
   }
 
+  #back_link{
+    grid-row: 1;
+    line-height: 5vh;
+  }
+
   .animate_out {
     transition: all .2s linear;
     opacity: 0;
     transform: none;
     overflow: visible !important;
+  }
+  #top{
+    display: none !important;
   }
 }

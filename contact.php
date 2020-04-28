@@ -90,10 +90,10 @@ switch (@$_GET['do'])
 <section id="about" class="about detail contact grid-container">
 <header>
 <nav id="" class="right_nav">
-      <a href="javascript:delay('/dev/painting.html')">painting.</a>
-      <a href="javascript:delay('/dev/drawing.html')">drawing.</a>
-      <a href="javascript:delay('/dev/misc.html')">misc.</a>
-      <a href="/dev/index.html#about">about.</a>
+      <a href="javascript:delay('/painting.html')">painting.</a>
+      <a href="javascript:delay('/drawing.html')">drawing.</a>
+      <a href="javascript:delay('/misc.html')">misc.</a>
+      <a href="/index.html#about">about.</a>
     </nav>
           <!-- mobile menu icon -->
           <div id="mbl_icon" class="mobile_icon" onclick="mobileIcon(this)">
@@ -133,7 +133,7 @@ switch (@$_GET['do'])
     <?php if($staus == "sent"){
   echo "<h2 id='sent_msg'>Your message was sent. I'll be contacting you shortly :)</h2>";
 }?>
-    <div id="art_sample"><img id="sample_img" src="\dev\paint\1, Distance_SQKZ_Riley-Hoff_4.jpg">
+    <div id="art_sample"><img id="sample_img" src="">
     <p id="art_title"></p>
   </div>
     <form action="contact.php?do=send" method="POST" id="contact_form" class="grid-container">

@@ -37,8 +37,7 @@
         if (val.match(/\.(jpe?g|gif|JPE?G)$/)) { //does not read png 
           //images on local server
           // $("section").append("<div class='gallery_img'><img "
-          //         +"srcset='/200px" + val +" 200w, "
-          // + "/500px" + val +" 500w, " 
+          //         +"srcset='/500px" + val +" 500w, "
           // +"/1000px" + val +" 1000w, " 
           // + val +" 1700w'" 
           // + "alt='" + val +"' " 
@@ -46,7 +45,8 @@
 
           //images on remote server computer
           $("section").append("<div class='gallery_img'><img "
-            + "srcset='" + folder + "/1000px/" + val + " 1000w, "
+            + "srcset='" + folder + "/500px/" + val + " 500w, "
+            + folder + "/1000px/" + val + " 1000w, "
             + folder + "/" + val + " 1700w'"
             + "alt='" + val + "' "
             + "src='" + folder + "/" + val + "' id='" + i + "' class='gallery'  onload='fadeIn(this)' onclick='fullscreenViewOpen(this)'></div>");
@@ -91,10 +91,10 @@
           transform="translate(-546.37141 -361.82971)" />
       </svg></a>
     <nav class="">
-      <a href="javascript:delay('/dev/painting.html')">painting.</a>
-      <a href="javascript:delay('/dev/drawing.html')">drawing.</a>
+      <a href="javascript:delay('/painting.html')">painting.</a>
+      <a href="javascript:delay('/drawing.html')">drawing.</a>
       <a href="#misc" class="active">misc.</a>
-      <a href="javascript:delay('/dev/index.html#about')">about.</a>
+      <a href="javascript:delay('/index.html#about')">about.</a>
     </nav>
     <!-- mobile menu icon -->
     <div id="mbl_icon" class="mobile_icon" onclick="mobileIcon(this)">
