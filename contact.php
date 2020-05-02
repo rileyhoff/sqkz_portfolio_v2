@@ -44,7 +44,7 @@ switch (@$_GET['do'])
     }
  
        unset($_GET['do']);
-       header("Location: index.html?email=sent");
+       header("Location: /?email=sent");
      break;
  
  default: break;
@@ -93,7 +93,7 @@ switch (@$_GET['do'])
       <a href="javascript:delay('/painting.html')">painting.</a>
       <a href="javascript:delay('/drawing.html')">drawing.</a>
       <a href="javascript:delay('/misc.html')">misc.</a>
-      <a href="/index.html#about">about.</a>
+      <a href="/#about">about.</a>
     </nav>
           <!-- mobile menu icon -->
           <div id="mbl_icon" class="mobile_icon" onclick="mobileIcon(this)">
@@ -120,9 +120,7 @@ switch (@$_GET['do'])
       </a>
     </header>
     <h1 id="contact_title"><?php if($art){echo "Art Inquiry.";}else{echo "Contact Me.";} ?></h1>
-    <a id="back_link" class="right_link" href="<?php if($art){echo "javascript:history.back()";}else{echo "index.html#about";} ?>" >Back.</a>
-      <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 73.96 71.13"><path d="M538.94,255.41a414,414,0,0,0-40.79,59c-3.79,6.67,6.49,12.67,10.28,6a397.49,397.49,0,0,1,38.93-56.56c4.84-5.86-3.53-14.33-8.42-8.42Z" transform="translate(-474.85 -252.48)"/><path d="M491,262.39l14.11,22.76c4,6.49,14.29.55,10.28-6-6.31-10.33-15.28-19.33-26.13-24.86-5.13-2.61-12.28-3.19-14.15,3.79-1.52,5.67,3.11,10.62,6.47,14.5,16.37,18.95,39.08,30.92,56.13,49.19,5.23,5.61,13.64-2.82,8.41-8.42-12.88-13.81-28.83-24-43-36.3-3.43-3-6.75-6.05-9.87-9.34-1.64-1.73-3.27-3.51-4.76-5.38-.23-.28-1.4-2.26-1.7-2.31l-3.5,4.55,1.4.76c1.32,1.54,4.33,2.6,6,3.86a52.46,52.46,0,0,1,5.5,4.7,56.83,56.83,0,0,1,8.92,11.27l10.28-6-14.11-22.76c-4-6.49-14.34-.52-10.28,6Z" transform="translate(-474.85 -252.48)"/></svg> -->
-        <!-- </a> -->
+    <a id="back_link" class="right_link" href="<?php if($art){echo "javascript:history.back()";}else{echo "/#about";} ?>" >Back.</a>
     <svg id="h_line_1" class="h_line" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 268.63379 13.33114">
       <title>H_Line_1</title>
@@ -136,7 +134,7 @@ switch (@$_GET['do'])
     <div id="art_sample"><img id="sample_img" src="">
     <p id="art_title"></p>
   </div>
-    <form action="contact.php?do=send" method="POST" id="contact_form" class="grid-container">
+    <form action="contact?do=send" method="POST" id="contact_form" class="grid-container">
       <div id="contact_name"><input type="text" name="name" id="txt_name"  value="<?php echo @$name ?>" required><label class="required">Name</label></div>
       <div id="contact_email"><input type="email" name="email" id="txt_email" onkeyup="this.setAttribute('value', this.value);" pattern="[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?" value="<?php echo @$email ?>" required><label class="required">Email</label></div>
       <div id="contact_phone"><input type="tel" name="phone" id="txt_phone" pattern="^\+?[\d -]{0,13}" onkeyup="this.setAttribute('value', this.value);" value="<?php echo @$phone ?>"><label>Phone (optional)</label></div>

@@ -28,10 +28,10 @@
 
 </head>
 <script>
-  var folder = "draw";
+  var folder = "/imgs/draw";
 
   $.ajax({
-
+    
     url: folder,
     success: function (data) {
       $(data).find("a").attr("href", function (i, val) {
@@ -72,7 +72,7 @@
 
 <body class="list">
   <header>
-    <a href="javascript:delay('/index.html')"><svg id="sqkz_title" data-name="Layer 1"
+    <a href="javascript:delay('/')"><svg id="sqkz_title" data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 827.06 355.58002">
         <title>SQKZ</title>
         <path
@@ -91,9 +91,9 @@
       </svg></a>
     <nav class="">
       <a href="javascript:delay('/painting.html')">painting.</a>
-      <a href="#drawing" class="active">drawing.</a>
+      <a href="#" class="active">drawing.</a>
       <a href="javascript:delay('/misc.html')">misc.</a>
-      <a href="javascript:delay('/index.html#about')">about.</a>
+      <a href="javascript:delay('/#about')">about.</a>
     </nav>
     <!-- mobile menu icon -->
     <div id="mbl_icon" class="mobile_icon" onclick="mobileIcon(this)">

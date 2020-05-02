@@ -369,14 +369,16 @@ textarea{
   padding-top: 1em;
 }
 
-label{
+label, #contact_phone > input[value=""] + label{
   position: relative;
-  top: -4vh;
+  top: calc(-8px - 5vh);
   left: 2vw;
   transition: all .2s linear;
   width: 100%;
   display: block;
   font-size: 1em;
+  height: calc(8px + 5vh);
+  line-height: calc(8px + 5vh);
 }
 
 .required::after {
@@ -384,7 +386,8 @@ label{
 }
 
 #contact_message label{
-  top: -36vh;
+  top: calc(-8px - 1em - 35vh);
+  height: calc(8px + 1em + 35vh);
 }
 
 input:focus, textarea:focus, #contact_phone > input[value=""]:focus{
@@ -399,23 +402,15 @@ input:not([value=""]):invalid, #contact_phone > input:not([value=""]):invalid{
   background-color: rgba(235, 107, 107, 0.384);
 }
 
-input:focus + label, input:not([value=""]):not(:focus):invalid + label, #contact_phone > input[value=""]:focus + label {
-  top: -9vh;
+input:focus + label, input:not([value=""]):not(:focus):invalid + label, #contact_phone > input[value=""]:focus + label, input:valid + label {
+  top: calc(-16px - 5vh - .75em);
+  line-height: 1.25em;
   left: 0;
 }
 
-#contact_message textarea:focus + label{
-  top: -41vh;
-  left: 0;
-}
-
-input:valid + label{
-  top: -9vh;
-  left: 0;
-}
-
-#contact_message textarea:valid + label{
-  top: -41vh;
+#contact_message textarea:focus + label, #contact_message textarea:valid + label{
+  top: calc(-16px - 1.75em - 35vh);
+  line-height: 1.25em;
   left: 0;
 }
 
@@ -436,11 +431,6 @@ input:valid + label{
 
 #contact_phone > input[value=""]{
   border: #222 4px solid;
-}
-
-#contact_phone > input[value=""] + label{
-  top: -4vh;
-  left: 2vw;
 }
 
 #contact_message{
@@ -829,7 +819,9 @@ nav{
     grid-column: 5/12;
     grid-row: 16;
   } 
-
+  .contact .grid-container{
+    height: 800px;
+  }
   #contact{
     text-decoration: underline;
     width: 100%;
@@ -846,13 +838,13 @@ nav{
 
   input, textarea{
     position: relative;
-    height: 100%;
+    height: 100%; /* 5vh */
     width: 100%;
     margin-bottom: auto;
     background-color: transparent;
     border: none;
     border: solid #222 3px;
-    padding-left: 2vw; 
+    padding: 0 0 0 2vw; 
     font-size: 1em;
     z-index: 1000;
     font-family: josefin-sans, sans-serif;
@@ -862,54 +854,41 @@ nav{
     padding-top: 1em;
   }
 
-  label{
+  label, #contact_phone > input[value=""] + label{
     position: relative;
-    top: -4vh;
+    height: 47px;
+    top: -47px;
     left: 2vw;
     transition: all .2s linear;
     width: 100%;
     display: block;
     font-size: 1em;
+    line-height: 47px;
   }
 
   #contact_message label{
-    top: -100%;
+    top: -301px;
   }
   
   .art #contact_message label{
-    top: -100%;
+    top: -141px;
   }
 
   input:focus, textarea:focus{
     border: solid lightcoral 4px
   }
-
-  input:focus + label{
-    top: -180%;
+  input:focus + label, input:not([value=""]):not(:focus):invalid + label, #contact_phone > input[value=""]:focus + label, input:valid + label{
+    top: -70px;
     left: 0;
   }
 
-  #contact_message textarea:focus + label{
-    top: -110%;
+  #contact_message textarea:focus + label, #contact_message textarea:valid + label{
+    top: -324px;
     left: 0;
   }
 
-  .art #contact_message textarea:focus + label{
-    top: -180%;
-  }
-
-  input:valid + label{
-    top: -180%;
-    left: 0;
-  }
-
-  #contact_message textarea:valid + label{
-    top: -110;
-    left: 0;
-  }
-
-  .art #contact_message textarea:valid + label{
-    top: -110%;
+  .art #contact_message textarea:focus + label, .art #contact_message textarea:valid + label{
+    top: -164px;
   }
 
   #contact_name{

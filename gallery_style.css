@@ -861,7 +861,7 @@ body.grid{
     float: right;
     top: 50%;
     transform: translate(0, -50%);
-    padding-right: 1.25vw;
+    padding: 0 1.25vw 0 0;
   }
 
   #full_img_container{

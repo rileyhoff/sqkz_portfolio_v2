@@ -136,12 +136,12 @@ function fullscreenViewOpen(el) {
       document.getElementById("price").className = "sold";
     } else if (artworks[id].price == "hold" || artworks[id].price == 1) {
       document.getElementById("price_text").innerHTML = "Hold";
-      document.getElementById("price").className = "hold";
-      document.getElementById("inquire_link").href = "contact.php?art=" + el.src;
+      document.getElementById("price").className = "hold"; 
+      document.getElementById("inquire_link").href = "contact.php?art=/imgs/" + el.src.split('/').slice(-2).join('/');
     } else {
       document.getElementById("price_text").innerHTML = "Available";
       document.getElementById("price").className = "available";
-      document.getElementById("inquire_link").href = "contact.php?art=" + el.src;
+      document.getElementById("inquire_link").href = "contact.php?art=/imgs/" + el.src.split('/').slice(-2).join('/');
     }
 
     // get detail images if available
@@ -150,7 +150,7 @@ function fullscreenViewOpen(el) {
       //reset and add main image & add title
       document.getElementById("detail_imgs").innerHTML = "<p id='detail_title' >Detail.</p><img src='" + el.src + "' class = 'view'  onclick='detailActive(this)'></img>";
       for (var i = 1; i <= art.detail_imgs; i++) {
-        document.getElementById("detail_imgs").innerHTML += "<img src='" + art.section + "/details/" + id + "/" + i + ".jpg' onclick='detailActive(this)'>"
+        document.getElementById("detail_imgs").innerHTML += "<img src='/imgs/" + art.section + "/details/" + id + "/" + i + ".jpg' onclick='detailActive(this)'>"
       }
     }
   }
@@ -197,9 +197,6 @@ function filter(category, el) {
     } else {
       //get id number of image
       var id = getArtworkId(images[i]);
-      // if(artworks[id] == undefined){
-      //   return;
-      // }
       if (artworks[id] == undefined || !(artworks[id].subsection == category)) {
         images[i].style.display = "none";
       } else {
