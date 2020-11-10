@@ -431,6 +431,11 @@ body.grid{
   width: 100%;
   padding: .1em 0;
   z-index: 1010;
+  color: #222;
+}
+
+.nfs #price_text{
+  color: #aaaaaa;
 }
 
 #price_dot{

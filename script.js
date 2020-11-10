@@ -20,13 +20,13 @@ function mouseMove() {
   if ((z % 10) == 1) {
     //when on first element set prev to last element
     if (x == 0) {
-      prev = 31;
+      prev = 33;
     } else {
       prev = x - 1;
     }
     x += 1;
     //number of items (including 0)  --> AKA Minus 1!
-    if (x > 31) {
+    if (x > 33) {
       x = 0;
     }
     document.getElementById(x + 5).className = "active";
@@ -108,7 +108,8 @@ function getArtworkIdString(str) {
 function fullscreenViewOpen(el) {
 
   //get id number of image
-  var id = getArtworkId(el);
+  // var id = getArtworkId(el);
+  var id = el.id;
 
   if (artworks[id] == undefined) {
     document.getElementById("fullscreen_img").src = el.src;
@@ -129,7 +130,8 @@ function fullscreenViewOpen(el) {
 
     //see if work is for sale
     if (artworks[id].price == 0 || artworks[id].price == "NFS") {
-      document.getElementById("price_text").innerHTML = "NFS";
+      document.getElementById("price_text").innerHTML = "Not for Sale";
+      // document.getElementById("price_text").style.color = "#aaa";
       document.getElementById("price").className = "nfs";
     } else if (artworks[id].price == "sold" || artworks[id].price == 1111) {
       document.getElementById("price_text").innerHTML = "Sold";
@@ -137,11 +139,13 @@ function fullscreenViewOpen(el) {
     } else if (artworks[id].price == "hold" || artworks[id].price == 1) {
       document.getElementById("price_text").innerHTML = "Hold";
       document.getElementById("price").className = "hold"; 
-      document.getElementById("inquire_link").href = "contact.php?art=/imgs/" + el.src.split('/').slice(-2).join('/');
+      // document.getElementById("inquire_link").href = "contact.php?art=/imgs/" + el.src.split('/').slice(-2).join('/');
+      document.getElementById("inquire_link").href = "contact.php?art="+id;
     } else {
       document.getElementById("price_text").innerHTML = "Available";
       document.getElementById("price").className = "available";
-      document.getElementById("inquire_link").href = "contact.php?art=/imgs/" + el.src.split('/').slice(-2).join('/');
+      // document.getElementById("inquire_link").href = "contact.php?art=/imgs/" + el.src.split('/').slice(-2).join('/');
+      document.getElementById("inquire_link").href = "contact.php?art="+id;
     }
 
     // get detail images if available
@@ -149,8 +153,9 @@ function fullscreenViewOpen(el) {
       document.getElementById("detail_imgs").className = "active";
       //reset and add main image & add title
       document.getElementById("detail_imgs").innerHTML = "<p id='detail_title' >Detail.</p><img src='" + el.src + "' class = 'view'  onclick='detailActive(this)'></img>";
+      var detail_folder = art.file.split('.').slice(0, -1).join('.');
       for (var i = 1; i <= art.detail_imgs; i++) {
-        document.getElementById("detail_imgs").innerHTML += "<img src='/imgs/" + art.section + "/details/" + id + "/" + i + ".jpg' onclick='detailActive(this)'>"
+        document.getElementById("detail_imgs").innerHTML += "<img src='/imgs/" + art.section + "/details/" + detail_folder + "/" + i + ".jpg' onclick='detailActive(this)'>"
       }
     }
   }
@@ -196,7 +201,7 @@ function filter(category, el) {
       images[i].style.animation = "slide-left 1s";
     } else {
       //get id number of image
-      var id = getArtworkId(images[i]);
+      var id = images[i].id;
       if (artworks[id] == undefined || !(artworks[id].subsection == category)) {
         images[i].style.display = "none";
       } else {
@@ -212,6 +217,22 @@ function filter(category, el) {
   }
   el.classList.add("active");
   document.getElementById('categories').classList.remove('open');
+}
+
+function displayImages(type, n){ //n is max number of images
+  var folder = "imgs/"+type;
+  for (var i = 0; i < n; i++){
+    var file = artworks[i].file;
+    console.log(file);
+    if(file != undefined && file != "" && artworks[i].section == type){
+      document.getElementById("imgs").innerHTML += "<div class='gallery_img'><img "
+      + "srcset='" + folder + "/500px/" + file + " 500w, "
+      + folder + "/1000px/" + file + " 1000w, "
+      + folder + "/" + file + " 1700w'"
+      + "alt='" + artworks[i].title + "' "
+      + "src='" + folder + "/" + file + "' id='" + i + "' class='gallery' loading='lazy' onload='fadeIn(this)' onclick='fullscreenViewOpen(this)'></div>";
+    }
+  }
 }
 
 //init

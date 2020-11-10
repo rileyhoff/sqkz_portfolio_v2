@@ -36,11 +36,11 @@ switch (@$_GET['do'])
        $emess.= "---\n".$name."\n";
        $emess.= "E: ".$email."\n";
        $emess.= "P: ".$phone."\n";
-       $emess.= "Artwork: ".$artwork."\n";
+       $emess.= "Artwork id: ".$artwork."\n";
        $ehead = "From: "."inquiry@sqkz.art"."\r\n";
        $subj = "SQKZ - Art inquiry from ".$name."!";
        $mailsend=mail("$myemail","$subj","$emess","$ehead");
-       $message = "Email was sent. :) We will be contacting you shortly!";
+       $message = "Your message was sent. Thank you for your interest! &#10084;";
     }
  
        unset($_GET['do']);
@@ -129,7 +129,7 @@ switch (@$_GET['do'])
         transform="translate(-825.58451 -532.58518)" />
     </svg>
     <?php if($staus == "sent"){
-  echo "<h2 id='sent_msg'>Your message was sent. I'll be contacting you shortly :)</h2>";
+  echo "<h2 id='sent_msg'>Your message was sent. Thank you for your interest! &#10084;</h2>";
 }?>
     <div id="art_sample"><img id="sample_img" src="">
     <p id="art_title"></p>
@@ -145,9 +145,9 @@ switch (@$_GET['do'])
   </section>
   <script>
   <?php if($art){echo "
-var id = getArtworkIdString('".$art."');\n
-document.getElementById('sample_img').src = '".$art."';\n
-document.getElementById('art_title').innerHTML = artworks[id].title;\n";}?>
+// var id = getArtworkIdString('".$art."');\n
+document.getElementById('sample_img').src =  \"/imgs/\" + artworks[".$art."].section + \"/\" + artworks[".$art."].file;\n
+document.getElementById('art_title').innerHTML = artworks[".$art."].title;\n";}?>
 
    //initial check for window width
    if (width <= 850) {
