@@ -39,6 +39,7 @@ button{
   background-color: transparent;
   border: solid #222 2px;
   cursor: pointer;
+  outline: none;
 }
 
 img{ /* for alt text */
