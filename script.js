@@ -192,6 +192,8 @@ function openCategories() {
 }
 
 function filter(category, el) {
+  if (category != "video") {
+    if (document.body.classList.contains('video')) {document.body.classList.remove('video'); }
   //get all artwork images
   var images = document.getElementsByClassName("gallery");
 
@@ -210,6 +212,10 @@ function filter(category, el) {
       }
     }
   }
+}else{
+  //video is category
+  showVideo();
+}
   //make clicked link active
   var children = document.getElementById("categories").children;
   for (var i = 0; i < children.length; i++) {
@@ -233,6 +239,14 @@ function displayImages(type, n){ //n is max number of images
       + "src='" + folder + "/" + file + "' id='" + i + "' class='gallery' loading='lazy' onload='fadeIn(this)' onclick='fullscreenViewOpen(this)'></div>";
     }
   }
+}
+
+function showVideo() {
+    document.body.classList.add('video');
+    if (document.body.classList.contains('list')) {
+      document.body.classList.remove('list');
+      document.body.classList.add('grid');
+    }
 }
 
 //init

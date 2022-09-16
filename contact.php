@@ -27,6 +27,9 @@ switch (@$_GET['do'])
     }
     if ($secretinfo == "")
     {
+      // if name on blocked list dont send
+      if ( $name == "HenryDef") { break; }
+
       // convert email to lowercase letters
       $email = strtolower($email);
       

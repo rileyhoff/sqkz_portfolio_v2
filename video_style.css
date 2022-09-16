@@ -1,0 +1,63 @@
+#imgs {background-color: whitesmoke;}
+body.video, .video header, .video nav, .video #categories, .video #imgs { background-color: #000;  }
+body,  header, nav, #imgs { transition: background-color 0.5s ease-in-out !important;}
+.video.list img.gallery { transition: all 0s, background-color 0.5s ease-in-out !important; }
+
+.video a, body.video, .video #categories_btn {
+    color: whitesmoke;
+}
+.video nav a {
+    color: #ccc;
+}
+.video nav a:hover, .video #categories .active {
+    color: lightcoral;
+}
+.video nav a.active {
+    color: #777;
+}
+.vid_grid { display: none;}
+.video .gallery_img, .video #grid_btn { display: none !important;}
+.video .vid_grid { display: grid !important;}
+
+.video_wrap {
+    position: relative;
+    height: 60vh;
+    width: 23%;
+    padding: 0 0.5vw;
+}
+.video_wrap_2 {
+    position: relative;
+    height: 60vh;
+    width: 77%;
+    padding: 0 0.5vw;
+}
+.video_wrap video, .video_wrap_2 video {
+width: 100%;
+position: absolute;
+height: 100%;
+overflow: hidden;
+}
+
+.vid_grid {
+display: grid;
+grid-template-columns: repeat( 3, 1fr);
+grid-template-rows: repeat( 2, minmax( 0, 33.334vh));
+max-width: 90vw;
+gap: 2.5vw;
+transition: all 0s;
+animation: slide-up .7s 0s backwards;
+overflow: hidden;
+}
+.vid_grid > div { grid-column: span 1;}
+.vid_grid > div iframe { max-height: 33.334vh !important;}
+
+.video_btn { font-weight: 700; }
+
+@media only screen and ( max-width: 849px) {
+    .vid_grid { 
+        grid-template-columns: repeat( 1, 1fr); 
+        grid-template-rows: repeat( 6, minmax( 0, 33.334vh));
+        margin: 0 5vw 2.5vh; 
+        gap: 2.5vh;
+    }
+}
