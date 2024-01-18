@@ -2,6 +2,10 @@
 SQKZ Version 2
 Author: Riley Hoff
 */
+@font-face {
+  font-family: Magtis;
+  src: url(/fonts/Magtis-ExtraBold-free\ personal\ use.otf);
+}
 html{
   overflow: hidden;
   scroll-behavior: smooth;
@@ -12,7 +16,7 @@ body{
   margin: 0;
   width: 100%;
   height: 100vh;
-  font-family: josefin-sans, sans-serif;
+  font-family: Magtis, sans-serif;
   font-weight: 600;
   font-style: normal;
   font-weight: 100;
@@ -20,10 +24,21 @@ body{
   background-color:whitesmoke;
   overflow-x: hidden;
   overflow-y: scroll;
-  letter-spacing: .1em;
   scroll-snap-type: y proximity;
 }
-
+#sqkz_title{
+  font-size: 5.5vw;
+  line-height: 5.5vw;
+  position: absolute;
+  top: calc(50vh - 2.75vw);
+  width: 30vw;
+  left: 35vw;
+  text-align: center;
+  color: whitesmoke;
+  font-family: Magtis, sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
 p{
   margin: 0;
   font-size: 1.25em;
@@ -36,7 +51,7 @@ a{
 }
 
 a:hover{
-  text-decoration: line-through;
+  color:lightcoral;
 }
 
 body > section{
@@ -73,7 +88,7 @@ img{
   object-fit: cover;
   z-index: -100;
   /* for alt text */
-  font-family: nimbus-sans, sans-serif; 
+  font-family: 'EB Garamond', serif;
   color: #222;
   font-size: .75em;
 }
@@ -115,6 +130,27 @@ div#bg{
   grid-column: 10/13;
   z-index: 200;
 }
+.strike {
+  position: relative;
+}
+.strike::after  {
+  content:'';
+  position: absolute;
+  width: 120%;
+  height: 1px;
+  bottom: 50%;
+  left: -12%;
+  background-color: lightcoral;
+  opacity: .25;
+  transform: scaleX(0);
+  /* transform-origin: bottom right; */
+  transition: transform 0.3s;
+}
+
+.strike:hover::after {
+  /* transform-origin: bottom left; */
+  transform: scaleX(1);
+}
 
 /*
 Intro Page 
@@ -124,7 +160,7 @@ header{
   grid-column: 6/9;
   padding-left: 5vw;
   grid-row: 3;
-  z-index: 100;
+  z-index: -1;
 }
 
 nav{
@@ -144,19 +180,15 @@ nav a{
   z-index: 200;
   transition: all .2s ease-in-out;
   text-align: right;
+  font-size: 1.25em;
 }
  
 nav a:hover {
-  text-decoration: line-through;
   padding-right: 4vw;
 }
 
 svg{
   transition: all ease-in-out 1s;
-}
-
-#sqkz_title:hover{
-  transform: translateY(-5vh) rotate(5deg);
 }
 
 /*theatre view */
@@ -194,15 +226,14 @@ body.theatre {
 
 /*detail page*/
 .detail #sqkz_title{
+color: #222;
  position: absolute;
+ font-size: 2em;
  top: 5vh;
- right: 5vw; 
- width: 10vw;
+ left: 0; 
+ width: 95vw;
+ text-align: right;
  animation: fade-in 1s 0s  1 linear;
-}
-
-.detail #sqkz_title:hover{
-  transform: rotate(10deg);
 }
 
 .right_nav{
@@ -264,13 +295,15 @@ grid-rows : 21 to 40
   grid-column: 3/8;
   grid-row: 7/17;
   width: 100%;
-  font-size: 1.25em;
-  line-height: 1.25em;
+  font-size: 1.33rem;
+  line-height: 1.5;
+  font-family: 'EB Garamond', serif;
+  font-weight: 500;
 }
 
 #name{
-  font-family: azo-sans-web, sans-serif;
-  font-weight: 700;
+  font-family: Magtis, sans-serif;
+  font-weight: 400;
   font-style: normal;
   grid-column: 3/8;
   grid-row: 16/22;
@@ -302,8 +335,8 @@ grid-rows : 21 to 40
 #contact{
   grid-column: 10;
   grid-row: 13;
-  transition: all 1s ease-in-out;
 }
+
 
 #about_img{
   background-color: palevioletred;
@@ -324,9 +357,11 @@ grid-rows : 21 to 40
   margin: 0;
   padding: 0;
   width: 100%;
-  font-family: "azo-sans-web",sans-serif;
+  font-family: Magtis,sans-serif;
   font-weight: 700;
 }
+
+.contact header { z-index: 1; }
 
 #contact_form {
   transition: all 1s ease-in-out;
@@ -336,6 +371,7 @@ grid-rows : 21 to 40
   display: grid;
   width: 100vw;
   height: 100vh;
+  font-family: 'EB Garamond', serif;
 }
 
 .contact #contact {
@@ -358,11 +394,11 @@ input, textarea{
   margin-bottom: auto;
   background-color: transparent;
   border: none;
-  border: solid #222 4px;
+  border: solid #222 2px;
   padding-left: 2vw; 
   font-size: 1.25em;
   z-index: 1000;
-  font-family: josefin-sans, sans-serif;
+  font-family: 'EB Garamond', serif;
   font-size: 1em;
 }
 textarea{
@@ -389,13 +425,14 @@ label, #contact_phone > input[value=""] + label{
   top: calc(-8px - 1em - 35vh);
   height: calc(8px + 1em + 35vh);
 }
+input:focus, textarea:focus { outline: none;}
 
 input:focus, textarea:focus, #contact_phone > input[value=""]:focus{
-  border: solid lightcoral 4px;
+  border: solid lightcoral 2px;
 }
 
 input:valid, textarea:valid, #contact_phone > input:not([value=""]):valid{
-  border: solid  rgb(56, 187, 106) 4px;
+  border: solid  rgb(56, 187, 106) 2px;
 }
 
 input:not([value=""]):invalid, #contact_phone > input:not([value=""]):invalid{
@@ -430,7 +467,7 @@ input:focus + label, input:not([value=""]):not(:focus):invalid + label, #contact
 }
 
 #contact_phone > input[value=""]{
-  border: #222 4px solid;
+  border: #222 2px solid;
 }
 
 #contact_message{
@@ -449,7 +486,7 @@ input:focus + label, input:not([value=""]):not(:focus):invalid + label, #contact
   background-color: #222;
   color: whitesmoke;
   padding: 5%;
-  font-family: josefin-sans, sans-serif;
+  font-family: Magtis, serif;
   letter-spacing: .1em;
   font-size: 1em;
 }
@@ -460,8 +497,8 @@ input:focus + label, input:not([value=""]):not(:focus):invalid + label, #contact
 
 #contact_submit:active{
   background-color: rgb(211, 104, 104);
-  border-top: 4px solid rgb(167, 71, 71);
-  border-left: 4px solid rgb(167, 71, 71);
+  border-top: 2px solid rgb(167, 71, 71);
+  border-left: 2px solid rgb(167, 71, 71);
 }
 
 form:valid #contact_submit:hover{
@@ -470,8 +507,8 @@ form:valid #contact_submit:hover{
 
 form:valid #contact_submit:active {
   background-color: rgb(56, 187, 106);
-  border-top: 4px solid rgb(35, 139, 75);
-  border-left: 4px solid rgb(35, 139, 75);
+  border-top: 2px solid rgb(35, 139, 75);
+  border-left: 2px solid rgb(35, 139, 75);
 }
 
 #sent_msg {
@@ -532,9 +569,16 @@ content: '"';
 }
 
 #back_link {
-  grid-row: 2;
+  grid-row: 0;
   grid-column: 2;
+  position: relative;
+  top: 5vh;
+  height: 62px;
+  display: flex;
 }
+#back_link svg { max-width: 50px; transition: all .2s; }
+#back_link:hover svg { fill: lightcoral; }
+#back_link .strike::after { bottom: 51px !important; }
 
 .contact #h_line_1 {
   grid-row: 2;
@@ -544,7 +588,7 @@ content: '"';
 /* no specific section */
 #top{
   display: none;
-  font-family: "azo-sans-web",sans-serif;
+  font-family: 'EB Garamond', serif;
   position: absolute;
   top: 90vh;
   right: 5vw;
@@ -619,6 +663,8 @@ content: '"';
     display: none;
     position: fixed;
     top: -200px;
+    color: #222;
+    font-size: 2em;
   }
 
   .detail .right_nav{
@@ -786,7 +832,7 @@ nav{
   }
 
   #name{
-    font-family: azo-sans-web, sans-serif;
+    font-family: 'EB Garamond', serif;
     font-size: 1.1em;
     font-weight: 700;
     font-style: normal;
@@ -843,11 +889,11 @@ nav{
     margin-bottom: auto;
     background-color: transparent;
     border: none;
-    border: solid #222 3px;
+    border: solid #222 2px;
     padding: 0 0 0 2vw; 
     font-size: 1em;
     z-index: 1000;
-    font-family: josefin-sans, sans-serif;
+    font-family: 'EB Garamond', serif;
   }
 
   textarea{
@@ -875,7 +921,7 @@ nav{
   }
 
   input:focus, textarea:focus{
-    border: solid lightcoral 4px
+    border: solid lightcoral 2px
   }
   input:focus + label, input:not([value=""]):not(:focus):invalid + label, #contact_phone > input[value=""]:focus + label, input:valid + label{
     top: -70px;
@@ -919,7 +965,7 @@ nav{
   }
 
   #contact_phone > input[value=""]{
-    border: solid 3px #222;
+    border: solid 2px #222;
   }
 
   #contact_message{
@@ -941,7 +987,7 @@ nav{
     border: none;
     background-color: #222;
     color: whitesmoke;
-    font-family: josefin-sans, sans-serif;
+    font-family: 'EB Garamond', serif;
     letter-spacing: .1em;
     font-size: 1em;
   }
@@ -970,6 +1016,9 @@ nav{
   #back_link{
     grid-row: 1;
     line-height: 5vh;
+    position: relative;
+    height: auto;
+    top: 0;
   }
 
   .animate_out {
@@ -981,4 +1030,5 @@ nav{
   #top{
     display: none !important;
   }
+  form { z-index: 0;}
 }

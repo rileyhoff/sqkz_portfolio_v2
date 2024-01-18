@@ -2,6 +2,10 @@
 SQKZ.art - Gallery Pages
 Author: Riley Hoff
 */
+@font-face {
+  font-family: Magtis;
+  src: url(/fonts/Magtis-ExtraBold-free\ personal\ use.otf);
+}
 
 /* mobile view */
 html{
@@ -14,7 +18,7 @@ html{
 body{
   padding-bottom: 7.5vh;
   margin: 0;
-  font-family: josefin-sans, sans-serif;
+  font-family: Magtis, serif;
   font-weight: 400;
   font-style: normal;
   color: #222;
@@ -33,8 +37,8 @@ a{
 }
 
 button{
-  font-family: nimbus-sans, sans-serif; 
-  font-weight: 400;
+  font-family: 'EB Garamond', serif;
+  font-weight: 500;
   font-style: normal;
   background-color: transparent;
   border: solid #222 2px;
@@ -43,7 +47,7 @@ button{
 }
 
 img{ /* for alt text */
-  font-family: nimbus-sans, sans-serif; 
+  font-family: 'EB Garamond', serif;
   color: lightgray;
   font-size: .25em;
 }
@@ -59,12 +63,15 @@ header{
 }
 
 #sqkz_title{
-  padding-top: 2vh;
-  width: 20vw;
-  height: 5vh;
+  padding-top: 3.25vh;
   position: absolute;
   left: 5%;
   z-index: 2001;
+  font-size: 2em;
+  text-align: center;
+  font-family: Magtis, sans-serif;
+  font-weight: 400;
+  margin: 0;
 }
 
 
@@ -254,9 +261,9 @@ body.grid{
 }
 
 #grid_btn p{
-  font-family: josefin-sans, sans-serif;
+  font-family: 'EB Garamond', serif;
   position: fixed;
-  font-weight: 400;
+  font-weight: 500;
   color: #222;
   width: 33.334vw;
   height: 7.5vh;
@@ -271,10 +278,7 @@ body.grid{
 } 
 
 #grid_btn p:hover{
-  fill: #222;
-  text-decoration: line-through;
-  transform: rotate(-5deg);
-  font-weight: 700;
+  color: lightcoral;
 }
 
 .grid #grid_svg {
@@ -319,8 +323,8 @@ body.grid{
 
 #categories_btn{
   display: block;
-  font-family: josefin-sans, sans-serif;
-  font-weight: 400;
+  font-family: 'EB Garamond', serif;
+  font-weight: 500;
   font-size: 1.25em;
   border: none;
   padding: 0 0;
@@ -423,8 +427,8 @@ body.grid{
 }
 
 #artwork_info p {
-  font-family: azo-sans-web, sans-serif;
-  font-weight: 700;
+  font-family: 'EB Garamond', serif;
+  font-weight: 500;
   letter-spacing: .1em;
   font-size: 1em;
   text-align: left;
@@ -460,12 +464,12 @@ body.grid{
 }
 
 #price_inquire_btn{
-  font-family: josefin-sans, sans-serif;
-  font-size: 1em;
+  font-family: Magtis, serif;
+  font-size: 1rem;
   display: block;
   position: static;
   margin: 1em 0;
-  border: solid #222 2px;
+  border: solid #222 1px;
   background-color: whitesmoke;
   padding: .75em 2.25em;
   width: 100%;
@@ -525,13 +529,10 @@ body.grid{
   top: 5vh;
   right: 5vw;
   padding: 0;
+  font-size: 2em;
   z-index: 1010;
 }
-
-#fullscreen_exit svg{
-  width: 100%;
-  height: auto;
-}
+#fullscreen_exit:hover { color: lightcoral; }
 
 /* animations */
 .animate_out {
@@ -592,10 +593,12 @@ body.grid{
     height: unset;
     float: left;
     animation: slide-left 2s 0s backwards ease-in-out;
+    transition: all .2s;
   }
    
   #sqkz_title:hover{
-     transform: rotate(10deg);
+     color: lightcoral;
+     transform: rotate(-3deg);
   }
 
   nav{
@@ -618,17 +621,37 @@ body.grid{
     width: auto;
     height: unset;
     font-size: 1.25em;
+    position: relative;
   }
    
   nav a:hover {
-    text-decoration: line-through;
-    transform: rotate(-5deg);
-    color: #222;
+    color: lightcoral;
+  }
+  nav a::after  {
+    content:'';
+    position: absolute;
+    width: calc(100% - 4vw);
+    height: 1px;
+    bottom: 50%;
+    left: 2vw;
+    background-color: lightcoral;
+    opacity: .25;
+    transform: scaleX(0);
+    /* transform-origin: bottom right; */
+    transition: transform 0.3s;
+  }
+
+  nav a:hover::after {
+    /* transform-origin: bottom left; */
+    transform: scaleX(1);
   }
 
   nav .active:hover{
     text-decoration: none;
-    transform: rotate(5deg);
+    color:maroon;
+  }
+  nav a.active::after  {
+    background-color: maroon;
   }
 
   #mbl_icon{
@@ -680,7 +703,7 @@ body.grid{
     background-image: -webkit-linear-gradient(to right, rgba(255,0,0,0), rgba(245,245,245,1));
     opacity: 0;
     transition: all .2s;
-    cursor: url('/svg/arrow_right.png'), auto;
+    cursor: url('/svg/arrow_right_1.png'), auto;
   }
 
   #prev_btn{
@@ -692,7 +715,7 @@ body.grid{
     background-image: linear-gradient(to left, rgba(255,0,0,0), rgba(245,245,245,1));
     opacity: 0;
     transition: all .2s;
-    cursor: url('/svg/arrow_left.png'), auto;
+    cursor: url('/svg/arrow_left_1.png'), auto;
   }
 
   .move_btn {
@@ -711,7 +734,8 @@ body.grid{
   }
 
   #grid_btn p{
-    font-family: nimbus-sans, sans-serif;
+    font-family: 'EB Garamond', serif;
+    font-weight: 500;
     font-size: 1.25em;
     bottom: 5vh;
     right: 5vw;
@@ -721,7 +745,7 @@ body.grid{
   }
 
   #grid_btn:hover{
-    font-variant: strike;
+    color: lightcoral;
   }
 
   #grid_btn p::before{
@@ -771,6 +795,7 @@ body.grid{
     justify-content: flex-end;
     align-items: flex-end;
     padding: 0;
+    overflow: visible;
   }
 
   .grid #categories{
@@ -792,11 +817,11 @@ body.grid{
   .grid #categories::before{
     display: block;
     content: "Categories.";
-    font-family: nimbus-sans, sans-serif;
+    font-family: 'EB Garamond', serif;
     font-size: 1em;
     line-height: 1em;
     width: auto;
-    font-weight: 400;
+    font-weight: 500;
     padding: 1vh 2vw 0 0;
     position: relative;
     writing-mode: vertical-lr;
@@ -827,8 +852,7 @@ body.grid{
   }
 
   #categories > button:hover {
-    text-decoration: line-through;
-    color: #222;
+    color: lightcoral;
   }
 
   #categories:hover > button {
@@ -841,8 +865,7 @@ body.grid{
   }
 
   #categories > button:hover {
-    text-decoration: line-through;
-    color: #222;
+    color: lightcoral;
   }
 
   .list #categories > button:hover{
@@ -909,7 +932,14 @@ body.grid{
     background-color: transparent;
     margin: 0 10vw 0  0;
   }
-
+  #price_inquire_btn:hover {
+    background-color: rgba(0, 128, 0, 0.25);
+  }
+  #price_inquire_btn:active {
+    background-color: green;
+    color: #fff;
+    border-color: green;
+  }
   /*detail images*/
   #detail_imgs{
     position: fixed;
@@ -940,12 +970,13 @@ body.grid{
     height: 5vw;
     padding: 1vh 2.5vw;
     align-self: center;
+    cursor: pointer;
   }
 
   #detail_imgs #detail_title{
     display: block;
-    font-family: nimbus-sans, sans-serif; 
-    font-weight: 500;
+    font-family: Magtis, serif;
+    font-weight: 400;
     position: relative;
     left: 9.5vw;
     writing-mode: vertical-lr;

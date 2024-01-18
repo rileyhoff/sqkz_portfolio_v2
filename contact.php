@@ -27,7 +27,7 @@ switch (@$_GET['do'])
     }
     if ($secretinfo == "")
     {
-      // if name on blocked list dont send
+      //if blocked name don't send
       if ( $name == "HenryDef") { break; }
 
       // convert email to lowercase letters
@@ -74,6 +74,11 @@ switch (@$_GET['do'])
   <link rel="shortcut icon" href="/icon/favicon.ico">
   <link href="style.css" rel="stylesheet" type="text/css" media="screen">
   <link rel="stylesheet" href="https://use.typekit.net/mwa6qok.css">
+  <link rel="stylesheet" href="https://use.typekit.net/mwa6qok.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="data/artworks.js"></script>
   <script src="script.js"></script>
@@ -103,34 +108,12 @@ switch (@$_GET['do'])
             <div class="bar1"></div>
             <div class="bar2"></div>
           </div>
-      <a href="#intro" >
-        <svg id="sqkz_title" style="<?php if($staus){echo "fill: whitesmoke";} ?>" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 827.06 355.58002">
-        <title>SQKZ</title>
-        <path
-          d="M552.46144,557.88971v52.06c21.62994,9.8,49.68994,13.86,69.3,13.86,44.96,0,79.1-21.3,79.44-58.48,0-20.4-9.84-33.57-30.4-42.69l21.27-7.01v-52.05c-21.3-9.13-48.34-13.52-68.29-13.52-43.94,0-77.06994,21.63-77.41,57.46,0,19.61,9.7,33.56,30.74,42.99Z"
-          transform="translate(-546.37141 -361.82971)" />
-        <path
-          d="M844.58143,459.51971l48.68-8.45v255.41l-66.83,10.93c-.59-18.99-.1-101.72-.1-101.72l-.68-.33c-8.45,4.73-20.96,8.45-34.82,8.45-43.94,0-79.77-33.47-79.77-83.84,0-51.38,36.84-89.91,91.61-89.91A101.67857,101.67857,0,0,1,844.58143,459.51971Z"
-          transform="translate(-546.37141 -361.82971)" />
-        <polygon
-          points="499.88 166.31 557.68 258.26 367.36 258.26 367.36 0 434.3 0 434.3 160.23 434.97 160.57 481.62 91.95 555.31 91.95 499.88 166.31" />
-        <polygon
-          points="728.03 92.62 662.79 204.85 663.13 205.52 726 205.52 726 258.26 563.41 258.26 563.07 257.59 628.31 145.36 627.97 144.68 570.84 144.68 570.84 91.95 727.69 91.95 728.03 92.62" />
-        <path
-          d="M1373.43141,587.63971c0,19.94-6.34009,70.34-27,50.77-19-18-46-18-46.02-50.77a36.51161,36.51161,0,0,1,73.02,0Z"
-          transform="translate(-546.37141 -361.82971)" />
-        </svg>
-      </a>
+          <a href="#intro">
+            <h1 id="sqkz_title">sqkz.</h1>
+          </a>
     </header>
     <h1 id="contact_title"><?php if($art){echo "Art Inquiry.";}else{echo "Contact Me.";} ?></h1>
-    <a id="back_link" class="right_link" href="<?php if($art){echo "javascript:history.back()";}else{echo "/#about";} ?>" >Back.</a>
-    <svg id="h_line_1" class="h_line" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 268.63379 13.33114">
-      <title>H_Line_1</title>
-      <path
-        d="M833.21313,537.12054a2.33813,2.33813,0,0,0-2.9134,3.12091,2.37937,2.37937,0,0,0,4.11454.07557,1.50809,1.50809,0,0,0-.89645-2.20349l-6.03892-.92843a1.50766,1.50766,0,0,0-1.15584,2.74162c12.94981,8.154,29.01823,6.222,43.42454,4.33743q26.82226-3.50873,53.81523-5.40215c17.96244-1.2817,35.95614-2.09582,53.95671-2.592,18.108-.49917,36.22353-.67678,54.338-.68453,18.03033-.00772,36.06017.153,54.08943.33361q3.41128.03417,6.82255.069a1.5009,1.5009,0,0,0,0-3c-17.93994-.18236-35.88017-.36356-53.82113-.39728-17.94133-.03373-35.884.07985-53.82105.488-17.91808.4077-35.83123,1.10941-53.7181,2.25277-17.8775,1.14277-35.72935,2.72679-53.51233,4.8969-7.82515.95493-15.64155,2.21775-23.52484,2.58737-7.27746.3412-14.7715-.09771-21.5853-2.8927a32.39486,32.39486,0,0,1-4.94952-2.58678l-1.15584,2.74162,6.03892.92843-.89645-2.20349.59176,1.21051c1.80515.68951,2.586-2.20969.79752-2.89284Z"
-        transform="translate(-825.58451 -532.58518)" />
-    </svg>
+    <a id="back_link" class="right_link" href="<?php if($art){echo "javascript:history.back()";}else{echo "/#about";} ?>" ><span class="strike">Back.</span></a>
     <?php if($staus == "sent"){
   echo "<h2 id='sent_msg'>Your message was sent. Thank you for your interest! &#10084;</h2>";
 }?>
