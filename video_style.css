@@ -1,20 +1,27 @@
-#imgs {background-color: whitesmoke;}
-body.video, .video header, .video nav, .video #categories, .video #imgs { background-color: #000;  }
-body,  header, nav, #imgs { transition: background-color 0.5s ease-in-out !important;}
+:root {
+    --bg-color-v: #000;
+    --primary-color-v: #ccc;
+    --secondary-color-v: #f5f5f5;
+    --accent-color-v: #f08080;
+  }
+
+body.video, .video header, .video nav, .video #categories, .video #imgs, .video div.mobile_icon { background-color: var(--bg-color-v);  }
+body,  header, #imgs { transition: background-color 0.5s ease-in-out !important;}
 .video.list img.gallery { transition: all 0s, background-color 0.5s ease-in-out !important; }
 
 .video a, body.video, .video #categories_btn {
-    color: whitesmoke;
+    color: var(--secondary-color-v);
 }
 .video nav a {
-    color: #ccc;
+    color: var(--primary-color-v) !important;
 }
 .video nav a:hover, .video #categories .active {
-    color: lightcoral;
+    color: var(--accent-color-v);
 }
 .video nav a.active {
     color: #777;
 }
+.video #mbl_icon > div { background-color: var(--secondary-color-v) !important; }
 .vid_grid { display: none;}
 .video .gallery_img, .video #grid_btn { display: none !important;}
 .video .vid_grid { display: grid !important;}

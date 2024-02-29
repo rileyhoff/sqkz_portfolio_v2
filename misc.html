@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>SQKZ. - MISC.</title>
+  <title>SQKZ - MISC</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="author" content="Riley Hoff">
@@ -19,10 +19,10 @@
   <link rel="shortcut icon" href="/icon/favicon.ico">
   <link href="gallery_style.css" rel="stylesheet" type="text/css" media="screen">
   <link href="video_style.css" rel="stylesheet" type="text/css" media="screen">
-  <link rel="stylesheet" href="https://use.typekit.net/mwa6qok.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <script src="data/artworks.js"></script>
   <script src="script.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -48,12 +48,13 @@
 <body class="list">
   <header>
     <a href="javascript:delay('/')">
-      <h1 id="sqkz_title">sqkz.</h1></a>
+      <h1 id="sqkz_title">Sqkz</h1>
+    </a>
     <nav class="">
-      <a href="javascript:delay('/painting.html')">painting.</a>
-      <a href="javascript:delay('/drawing.html')">drawing.</a>
-      <a href="#" class="active">misc.</a>
-      <a href="javascript:delay('/#about')">about.</a>
+      <a href="javascript:delay('/painting.html')">painting</a>
+      <a href="javascript:delay('/drawing.html')">drawing</a>
+      <a href="#" class="active">misc</a>
+      <a href="javascript:delay('/#about')">about</a>
     </nav>
     <!-- mobile menu icon -->
     <div id="mbl_icon" class="mobile_icon" onclick="mobileIcon(this)">
@@ -62,13 +63,13 @@
     </div>
   </header>
   <section id="imgs">
-    <button id="categories_btn" onclick="openCategories()">Categories.</button>
+    <button id="categories_btn" onclick="openCategories()">Categories</button>
     <div id="categories">
-      <button class="video_btn" onclick="filter('video',this)">[ Video. ]</button>
-      <button onclick="filter('ln',this)" class="">Last Night.</button>
-      <button onclick="filter('collage',this)" class="">Collages.</button>
-      <button onclick="filter('photo',this)" class="">Photography.</button>
-      <button onclick="filter('all',this)" class="active">View All.</button>
+      <button class="video_btn" onclick="filter('video',this)">[ Video ]</button>
+      <button onclick="filter('ln',this)" class="">Last Night</button>
+      <button onclick="filter('collage',this)" class="">Collages</button>
+      <button onclick="filter('photo',this)" class="">Photography</button>
+      <button onclick="filter('all',this)" class="active">View All</button>
     </div>
     <div id="next_btn" class="move_btn" onmouseover="interval = setInterval(galleryNext,10);"
       onmouseout="clearInterval(interval);"></div>
@@ -86,8 +87,8 @@
   </section>
 
   <button id="grid_btn" onclick="gridView()">
-    <p id="grid_svg">Grid.</p>
-    <p id="list_svg">List.</p>
+    <span id="grid_svg">Grid</span>
+    <span id="list_svg">List</span>
  </button>
 
   <!-- fullscreen image view -->
@@ -99,13 +100,13 @@
         </div>
       </div>
       <div id="artwork_info">
-        <p id="art_title">Untitled.</p>
+        <p id="art_title">Untitled</p>
         <p id="dimentions"></p>
         <p id="medium"></p>
         <p id="price">
           <svg id="price_dot" class="dot" onclick="theatreView()"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 644 644"><title>price_dot</title><path d="M312.40571,0h23.23061c0,278.75264,308.62688,298.6688,308.62688,298.6688v29.87425S338.95077,365.04619,338.95077,643.79883H309.08389C309.08389,365.04619.457,328.54305.457,328.54305V298.6688S312.40571,278.75264,312.40571,0Z"/></svg>
           <span id="price_text"></span><br />
-          <a id="inquire_link" href="contact.php"><button id="price_inquire_btn">Inquire.</button></a>
+          <a id="inquire_link" href="contact.php"><button id="price_inquire_btn">Inquire</button></a>
         </p>
       </div>
       <button id="fullscreen_exit" onclick="fullscreenViewClose()">
@@ -118,7 +119,7 @@
 <script>
 
   //display images
-  displayImages("misc", 140);
+  displayImages("misc", 141);
 
   //horizontally scroll gallery section
   (function () {

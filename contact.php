@@ -57,7 +57,7 @@ switch (@$_GET['do'])
 <html lang="en">
 
 <head>
-  <title>SQKZ. - Contact.</title>
+  <title>SQKZ - Contact</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="author" content="Riley Hoff">
@@ -73,12 +73,10 @@ switch (@$_GET['do'])
   <link rel="mask-icon" href="/icon/safari-pinned-tab.svg" color="#fda062">
   <link rel="shortcut icon" href="/icon/favicon.ico">
   <link href="style.css" rel="stylesheet" type="text/css" media="screen">
-  <link rel="stylesheet" href="https://use.typekit.net/mwa6qok.css">
-  <link rel="stylesheet" href="https://use.typekit.net/mwa6qok.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="data/artworks.js"></script>
   <script src="script.js"></script>
@@ -98,10 +96,10 @@ switch (@$_GET['do'])
 <section id="about" class="about detail contact grid-container">
 <header>
 <nav id="" class="right_nav">
-      <a href="javascript:delay('/painting.html')">painting.</a>
-      <a href="javascript:delay('/drawing.html')">drawing.</a>
-      <a href="javascript:delay('/misc.html')">misc.</a>
-      <a href="/#about">about.</a>
+      <a href="javascript:delay('/painting.html')">painting</a>
+      <a href="javascript:delay('/drawing.html')">drawing</a>
+      <a href="javascript:delay('/misc.html')">misc</a>
+      <a href="/#about">about</a>
     </nav>
           <!-- mobile menu icon -->
           <div id="mbl_icon" class="mobile_icon" onclick="mobileIcon(this)">
@@ -109,11 +107,11 @@ switch (@$_GET['do'])
             <div class="bar2"></div>
           </div>
           <a href="#intro">
-            <h1 id="sqkz_title">sqkz.</h1>
+            <h1 id="sqkz_title">Sqkz</h1>
           </a>
     </header>
-    <h1 id="contact_title"><?php if($art){echo "Art Inquiry.";}else{echo "Contact Me.";} ?></h1>
-    <a id="back_link" class="right_link" href="<?php if($art){echo "javascript:history.back()";}else{echo "/#about";} ?>" ><span class="strike">Back.</span></a>
+    <h1 id="contact_title"><?php if($art){echo "Art Inquiry";}else{echo "Contact Me";} ?></h1>
+    <a id="back_link" class="right_link" href="<?php if($art){echo "javascript:history.back()";}else{echo "/#about";} ?>" ><span>Back</span></a>
     <?php if($staus == "sent"){
   echo "<h2 id='sent_msg'>Your message was sent. Thank you for your interest! &#10084;</h2>";
 }?>
@@ -126,7 +124,7 @@ switch (@$_GET['do'])
       <div id="contact_phone"><input type="tel" name="phone" id="txt_phone" pattern="^\+?[\d -]{0,13}" onkeyup="this.setAttribute('value', this.value);" value="<?php echo @$phone ?>"><label>Phone (optional)</label></div>
       <div id="contact_message"><textarea type="text" name="sendmail" id="txt_message" value="<?php echo @$sendmail ?>" required></textarea><label class="required">Message</label></div>
       <input type="hidden" name="art" value="<?php echo @$art ?>" >
-      <input id="contact_submit" type="submit" name="submit" value="Send.">
+      <input id="contact_submit" type="submit" name="submit" value="Send">
     </form>
   </section>
   <script>

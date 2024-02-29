@@ -11,7 +11,13 @@ function displayItems() {
 function mobileIcon(el) {
   el.classList.toggle("change");
   document.getElementsByTagName('NAV')[0].classList.toggle("show");
-  document.getElementById('sqkz_title').classList.toggle("nav");
+  document.getElementById('sqkz_title').classList.toggle("open");
+}
+//mobile menu animation index page
+function mobileIconHP(el) {
+  el.classList.toggle("change");
+  document.getElementsByTagName('NAV')[0].classList.toggle("show");
+  document.getElementById('sqkz_title_svg').classList.toggle("open");
 }
 
 function mouseMove() {
@@ -56,6 +62,7 @@ function pastIntro() {
   } else {
     document.getElementById("body").classList.remove("detail");
   }
+  document.body.style.setProperty('--scroll', window.body.scrollTop / window.body.offsetHeight);
 }
 
 function contactForm() {
@@ -138,14 +145,14 @@ function fullscreenViewOpen(el) {
       document.getElementById("price").className = "sold";
     } else if (artworks[id].price == "hold" || artworks[id].price == 1) {
       document.getElementById("price_text").innerHTML = "Hold";
-      document.getElementById("price").className = "hold"; 
+      document.getElementById("price").className = "hold";
       // document.getElementById("inquire_link").href = "contact.php?art=/imgs/" + el.src.split('/').slice(-2).join('/');
-      document.getElementById("inquire_link").href = "contact.php?art="+id;
+      document.getElementById("inquire_link").href = "contact.php?art=" + id;
     } else {
       document.getElementById("price_text").innerHTML = "Available";
       document.getElementById("price").className = "available";
       // document.getElementById("inquire_link").href = "contact.php?art=/imgs/" + el.src.split('/').slice(-2).join('/');
-      document.getElementById("inquire_link").href = "contact.php?art="+id;
+      document.getElementById("inquire_link").href = "contact.php?art=" + id;
     }
 
     // get detail images if available
@@ -193,29 +200,29 @@ function openCategories() {
 
 function filter(category, el) {
   if (category != "video") {
-    if (document.body.classList.contains('video')) {document.body.classList.remove('video'); }
-  //get all artwork images
-  var images = document.getElementsByClassName("gallery");
+    if (document.body.classList.contains('video')) { document.body.classList.remove('video'); }
+    //get all artwork images
+    var images = document.getElementsByClassName("gallery");
 
-  for (var i = 0; i < images.length; i++) {
-    if (category == "all") {
-      images[i].style.display = "block";
-      images[i].style.animation = "slide-left 1s";
-    } else {
-      //get id number of image
-      var id = images[i].id;
-      if (artworks[id] == undefined || !(artworks[id].subsection == category)) {
-        images[i].style.display = "none";
-      } else {
+    for (var i = 0; i < images.length; i++) {
+      if (category == "all") {
         images[i].style.display = "block";
         images[i].style.animation = "slide-left 1s";
+      } else {
+        //get id number of image
+        var id = images[i].id;
+        if (artworks[id] == undefined || !(artworks[id].subsection == category)) {
+          images[i].style.display = "none";
+        } else {
+          images[i].style.display = "block";
+          images[i].style.animation = "slide-left 1s";
+        }
       }
     }
+  } else {
+    //video is category
+    showVideo();
   }
-}else{
-  //video is category
-  showVideo();
-}
   //make clicked link active
   var children = document.getElementById("categories").children;
   for (var i = 0; i < children.length; i++) {
@@ -225,28 +232,30 @@ function filter(category, el) {
   document.getElementById('categories').classList.remove('open');
 }
 
-function displayImages(type, n){ //n is max number of images
-  var folder = "imgs/"+type;
-  for (var i = 0; i < n; i++){
-    var file = artworks[i].file;
-    console.log(file);
-    if(file != undefined && file != "" && artworks[i].section == type){
-      document.getElementById("imgs").innerHTML += "<div class='gallery_img'><img "
-      + "srcset='" + folder + "/500px/" + file + " 500w, "
-      + folder + "/1000px/" + file + " 1000w, "
-      + folder + "/" + file + " 1700w'"
-      + "alt='" + artworks[i].title + "' "
-      + "src='" + folder + "/" + file + "' id='" + i + "' class='gallery' loading='lazy' onload='fadeIn(this)' onclick='fullscreenViewOpen(this)'></div>";
+function displayImages(type, n) { //n is max number of images
+  var folder = "imgs/" + type;
+  for (var i = 0; i < n; i++) {
+    if (typeof artworks[i] === 'undefined' || artworks[i] === null) { return; }
+    else {
+      var file = artworks[i].file;
+      if (file != undefined && file != "" && artworks[i].section == type) {
+        document.getElementById("imgs").innerHTML += "<div class='gallery_img'><img "
+          + "srcset='" + folder + "/500px/" + file + " 500w, "
+          + folder + "/1000px/" + file + " 1000w, "
+          + folder + "/" + file + " 1700w'"
+          + "alt='" + artworks[i].title + "' "
+          + "src='" + folder + "/" + file + "' id='" + i + "' class='gallery' loading='lazy' onload='fadeIn(this)' onclick='fullscreenViewOpen(this)'></div>";
+      }
     }
   }
 }
 
 function showVideo() {
-    document.body.classList.add('video');
-    if (document.body.classList.contains('list')) {
-      document.body.classList.remove('list');
-      document.body.classList.add('grid');
-    }
+  document.body.classList.add('video');
+  if (document.body.classList.contains('list')) {
+    document.body.classList.remove('list');
+    document.body.classList.add('grid');
+  }
 }
 
 //init
