@@ -598,6 +598,7 @@ form:valid #contact_submit:active {
   max-height: 100%;
   padding-left: 10%;
   margin: 0;
+  border: none;
 }
 
 #art_sample p {
