@@ -467,7 +467,7 @@ const artworks = [
     "dimentions": "22 x 18in",
     "medium": "Acrylics on Canvas",
     "price": 500,
-    "detail_imgs": 3,
+    "detail_imgs": 2,
     "section": "paint",
     "subsection": "thesis",
     "file": "Morning_SQKZ_Riley-Hoff.jpg"
@@ -665,7 +665,7 @@ const artworks = [
     "dimentions": "22 x 18in",
     "medium": "Acrylics on Canvas",
     "price": 0,
-    "detail_imgs": 2,
+    "detail_imgs": 0,
     "section": "paint",
     "subsection": 2018,
     "file": "Engulf_SQKZ_Riley-Hoff.jpg"
@@ -1075,7 +1075,7 @@ const artworks = [
     "detail_imgs": 2,
     "section": "draw",
     "subsection": 2019,
-    "file": "Untitled Palm Tree_SQKZ_Riley-Hoff.jpg"
+    "file": "untitled-palm-tree_SQKZ_Riley-Hoff.jpg"
   },
   {
     "id": 98,
