@@ -230,10 +230,6 @@ img.gallery {
   animation: none;
 }
 
-body.grid {
-  overflow-y: scroll;
-}
-
 .grid img.gallery {
   float: left;
   width: 32.334vw;
