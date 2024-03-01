@@ -46,6 +46,7 @@
 </script>
 
 <body class="list">
+  <div id="cursor"></div>
   <header>
     <a href="javascript:delay('/')">
       <h1 id="sqkz_title">Sqkz</h1>
@@ -63,13 +64,13 @@
     </div>
   </header>
   <section id="imgs">
-    <button id="categories_btn" onclick="openCategories()">Categories</button>
+    <button id="categories_btn" onclick="openCategories()" onmouseover="cursorHover()" onmouseout="endCursorHover()">Categories</button>
     <div id="categories">
-      <button class="video_btn" onclick="filter('video',this)">[ Video ]</button>
-      <button onclick="filter('ln',this)" class="">Last Night</button>
-      <button onclick="filter('collage',this)" class="">Collages</button>
-      <button onclick="filter('photo',this)" class="">Photography</button>
-      <button onclick="filter('all',this)" class="active">View All</button>
+      <button class="video_btn" onclick="filter('video',this)" onmouseover="cursorHover()" onmouseout="endCursorHover()">[ Video ]</button>
+      <button onclick="filter('ln',this)" class="" onmouseover="cursorHover()" onmouseout="endCursorHover()">Last Night</button>
+      <button onclick="filter('collage',this)" class="" onmouseover="cursorHover()" onmouseout="endCursorHover()">Collages</button>
+      <button onclick="filter('photo',this)" class="" onmouseover="cursorHover()" onmouseout="endCursorHover()">Photography</button>
+      <button onclick="filter('all',this)" class="active" onmouseover="cursorHover()" onmouseout="endCursorHover()">View All</button>
     </div>
     <div id="next_btn" class="move_btn" onmouseover="interval = setInterval(galleryNext,10);"
       onmouseout="clearInterval(interval);"></div>
@@ -117,6 +118,42 @@
 
 </body>
 <script>
+// track mouse position
+var cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', moveCursor)
+
+function moveCursor(e) {
+  var x = e.clientX;
+  var y = e.clientY;
+  cursor.style.left = `${x}px`;
+  cursor.style.top = `${y}px`;
+}
+
+//get all anchor tags, buttons and hoverable elements to animate cursor hover
+var links = Array.from(document.querySelectorAll('a, button, .hoverable'));
+
+links.forEach(links => {
+  links.addEventListener('mousemove', function() {
+    cursor.classList.add('hover');
+  })
+  links.addEventListener('mouseleave', function () {
+    cursor.classList.remove('hover');
+  })
+});
+//click animation
+window.addEventListener("mousedown", ()=>{
+  $('#cursor').addClass('mouse-down');
+    });
+    window.addEventListener("mouseup", ()=>{
+  $('#cursor').removeClass('mouse-down');
+    });
+//hover animation
+  function cursorHover() {
+      $('#cursor').addClass('hover');
+  }
+  function endCursorHover() {
+      $('#cursor').removeClass('hover');
+  }
 
   //display images
   displayImages("misc", 141);

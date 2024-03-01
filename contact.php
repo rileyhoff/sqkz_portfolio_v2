@@ -93,6 +93,7 @@ switch (@$_GET['do'])
 <![endif]-->
 </head>
 <body id="body" class="<?php if($art){echo "art";} ?>">
+<div id="cursor"></div>
 <section id="about" class="about detail contact grid-container">
 <header>
 <nav id="" class="right_nav">
@@ -132,6 +133,43 @@ switch (@$_GET['do'])
 // var id = getArtworkIdString('".$art."');\n
 document.getElementById('sample_img').src =  \"/imgs/\" + artworks[".$art."].section + \"/\" + artworks[".$art."].file;\n
 document.getElementById('art_title').innerHTML = artworks[".$art."].title;\n";}?>
+
+// track mouse position
+var cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', moveCursor)
+
+function moveCursor(e) {
+  var x = e.clientX;
+  var y = e.clientY;
+  cursor.style.left = `${x}px`;
+  cursor.style.top = `${y}px`;
+}
+
+//get all anchor tags, buttons and hoverable elements to animate cursor hover
+var links = Array.from(document.querySelectorAll('a, button, .hoverable'));
+
+links.forEach(links => {
+  links.addEventListener('mousemove', function() {
+    cursor.classList.add('hover');
+  })
+  links.addEventListener('mouseleave', function () {
+    cursor.classList.remove('hover');
+  })
+});
+//click animation
+window.addEventListener("mousedown", ()=>{
+  $('#cursor').addClass('mouse-down');
+    });
+    window.addEventListener("mouseup", ()=>{
+  $('#cursor').removeClass('mouse-down');
+    });
+//hover animation
+  function cursorHover() {
+      $('#cursor').addClass('hover');
+  }
+  function endCursorHover() {
+      $('#cursor').removeClass('hover');
+  }
 
    //initial check for window width
    if (width <= 850) {

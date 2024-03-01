@@ -24,7 +24,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
 
-
   <script src="script.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <!--[if lt IE 9]>
@@ -73,6 +72,7 @@
 </head>
 
 <body id="body" class="">
+  <div id="cursor"></div>
   <!-- Intro -->
   <section id="intro" class="intro grid-container">
     <div id="bg" class="" onmousemove="mouseMove()"></div>
@@ -144,26 +144,60 @@
     <a href="javascript:delay('/misc.html')">misc</a>
   </nav>
   <h2 id='sent_msg' style="display: none;" onclick="this.style.transform = 'scaleY(0)'"></h2>
-  <script>
-    displayItems();
-
-    //get email sent variable
-    var url = document.URL;
-    var emailStatus = url.substring(url.lastIndexOf('email=') + 6);
-    if (emailStatus == 'sent') {
-      document.getElementById('sent_msg').innerHTML = "Your message was sent. Thank you for your interest! &#10084;";
-      document.getElementById('sent_msg').style.display = "block";
-    }
-
-    //Check if scrolled past intro
-    document.body.addEventListener('scroll', () => pastIntro());
-
-    //initial check for window width
-    if (width <= 850) {
-      $('body').addClass('mbl');
-    }
-  </script>
-
 </body>
+<script>
+  // track mouse position
 
+  var cursor = document.getElementById('cursor');
+
+document.addEventListener('mousemove', moveCursor)
+
+function moveCursor(e) {
+  var x = e.clientX;
+  var y = e.clientY;
+  cursor.style.left = `${x}px`;
+  cursor.style.top = `${y}px`;
+}
+var links = Array.from(document.querySelectorAll('a'));
+
+links.forEach(links => {
+  links.addEventListener('mousemove', function() {
+    cursor.classList.add('hover');
+  })
+//To remove the class when it doesn't hover the text
+  links.addEventListener('mouseleave', function () {
+    cursor.classList.remove('hover');
+  })
+})
+window.addEventListener("mousedown", ()=>{
+  $('#cursor').addClass('mouse-down');
+    });
+    window.addEventListener("mouseup", ()=>{
+  $('#cursor').removeClass('mouse-down');
+    });
+
+    function cursorHover() {
+  document.getElementById("cursor").classList.add("hover");
+}
+document.querySelector("a").addEventListener("mouseover", cursorHover);
+
+
+  displayItems();
+
+  //get email sent variable
+  var url = document.URL;
+  var emailStatus = url.substring(url.lastIndexOf('email=') + 6);
+  if (emailStatus == 'sent') {
+    document.getElementById('sent_msg').innerHTML = "Your message was sent. Thank you for your interest! &#10084;";
+    document.getElementById('sent_msg').style.display = "block";
+  }
+
+  //Check if scrolled past intro
+  document.body.addEventListener('scroll', () => pastIntro());
+
+  //initial check for window width
+  if (width <= 850) {
+    $('body').addClass('mbl');
+  }
+</script>
 </html>

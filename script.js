@@ -26,13 +26,13 @@ function mouseMove() {
   if ((z % 10) == 1) {
     //when on first element set prev to last element
     if (x == 0) {
-      prev = 33;
+      prev = 32;
     } else {
       prev = x - 1;
     }
     x += 1;
     //number of items (including 0)  --> AKA Minus 1!
-    if (x > 33) {
+    if (x > 32) {
       x = 0;
     }
     document.getElementById(x + 5).className = "active";
@@ -159,7 +159,7 @@ function fullscreenViewOpen(el) {
     if (!(art.detail_imgs == 0 || art.detail_imgs == undefined)) {
       document.getElementById("detail_imgs").className = "active";
       //reset and add main image & add title
-      document.getElementById("detail_imgs").innerHTML = "<p id='detail_title' >Detail.</p><img src='" + el.src + "' class = 'view'  onclick='detailActive(this)'></img>";
+      document.getElementById("detail_imgs").innerHTML = "<p id='detail_title' class='hoverable' >Detail.</p><img src='" + el.src + "' class = 'view'  onclick='detailActive(this)'></img>";
       var detail_folder = art.file.split('.').slice(0, -1).join('.');
       for (var i = 1; i <= art.detail_imgs; i++) {
         document.getElementById("detail_imgs").innerHTML += "<img src='/imgs/" + art.section + "/details/" + detail_folder + "/" + i + ".jpg' onclick='detailActive(this)'>"

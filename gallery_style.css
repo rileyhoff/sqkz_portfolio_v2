@@ -17,7 +17,7 @@ Author: Riley Hoff
   --bg-color: #f5f5f5;
   --primary-color: #222;
   --secondary-color: #fff;
-  --accent-color: #f08080;
+  --accent-color: #0f7f7f; /* inverse of #f08080 */
 }
 
 /* mobile view */
@@ -38,6 +38,8 @@ body {
   background-color: var(--bg-color);
 }
 
+#cursor {display: none;}
+
 p {
   margin: 0;
   font-size: 1.25em;
@@ -55,7 +57,7 @@ button {
   font-style: normal;
   background-color: transparent;
   border: solid var(--primary-color) 2px;
-  cursor: pointer;
+  /* cursor: pointer; */
   outline: none;
 }
 
@@ -153,7 +155,7 @@ nav .active {
 
 div.mobile_icon {
   display: inline-block;
-  cursor: pointer;
+  /* cursor: pointer; */
   position: fixed;
   bottom: 0;
   left: 0;
@@ -724,7 +726,7 @@ body.grid {
     background-image: -webkit-linear-gradient(to right, rgba(255, 0, 0, 0), rgba(245, 245, 245, 1));
     opacity: 0;
     transition: all .2s;
-    cursor: url('/svg/arrow_right_1.png'), auto;
+    /* cursor: url('/svg/arrow_right_1.png'), auto; */
   }
 
   #prev_btn {
@@ -736,7 +738,7 @@ body.grid {
     background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgba(245, 245, 245, 1));
     opacity: 0;
     transition: all .2s;
-    cursor: url('/svg/arrow_left_1.png'), auto;
+    /* cursor: url('/svg/arrow_left_1.png'), auto; */
   }
 
   .move_btn {
@@ -986,7 +988,7 @@ body.grid {
     height: 5vw;
     padding: 1vh 2.5vw;
     align-self: center;
-    cursor: pointer;
+    /* cursor: pointer; */
   }
 
   #detail_imgs #detail_title {
@@ -997,7 +999,38 @@ body.grid {
     left: 9.5vw;
     writing-mode: vertical-lr;
     z-index: 1010;
-    cursor: pointer !important;
+    /* cursor: pointer !important; */
+  }
+    html, *{
+      cursor: none !important;
+    }
+    #cursor {
+      display: block;
+      position: fixed;
+      width: 40px;
+      height: 40px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      border-radius: 50%;
+      top: var(--y, 0);
+      left: var(--x, 0);
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      mix-blend-mode: difference;
+      transition: transform .2s, height .2s, width .2s;
+      z-index: 1000000;
+      pointer-events: none; 
+    }
+    #cursor.hover {
+      width: 80px;
+      height: 80px;
+      /* background: transparent; */
+      /* border: 4px solid #fff; */
+  
+  }
+  #cursor.mouse-down {
+    height: 10px;
+    width: 10px;
   }
 }
 
