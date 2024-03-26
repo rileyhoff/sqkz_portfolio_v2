@@ -67,6 +67,7 @@
     <button id="categories_btn" onclick="openCategories()" onmouseover="cursorHover()" onmouseout="endCursorHover()">Categories</button>
     <div id="categories">
       <button class="video_btn" onclick="filter('video',this)" onmouseover="cursorHover()" onmouseout="endCursorHover()">[ Video ]</button>
+      <button onclick="filter('gd',this)" class="" onmouseover="cursorHover()" onmouseout="endCursorHover()">Digital</button>
       <button onclick="filter('ln',this)" class="" onmouseover="cursorHover()" onmouseout="endCursorHover()">Last Night</button>
       <button onclick="filter('collage',this)" class="" onmouseover="cursorHover()" onmouseout="endCursorHover()">Collages</button>
       <button onclick="filter('photo',this)" class="" onmouseover="cursorHover()" onmouseout="endCursorHover()">Photography</button>
@@ -156,7 +157,7 @@ window.addEventListener("mousedown", ()=>{
   }
 
   //display images
-  displayImages("misc", 141);
+  displayImages("misc", 146);
 
   //horizontally scroll gallery section
   (function () {
