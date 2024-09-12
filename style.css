@@ -38,7 +38,7 @@ body {
   background-color: #f5f5f5;
   overflow-x: hidden;
   overflow-y: scroll;
-  scroll-snap-type: y proximity;
+  /* scroll-snap-type: y proximity; */
   scroll-behavior: smooth;
 }
 
@@ -84,7 +84,7 @@ body>section {
   width: 100vw;
   margin: 0;
   padding: 0;
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
 }
 
 .misc.grid-container {
@@ -92,7 +92,7 @@ body>section {
 }
 
 .grid-container {
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
   display: grid !important;
   grid-template-columns: repeat(12, minmax(50px, 1fr));
   row-gap: 0;
