@@ -38,14 +38,14 @@
       }
     });
     if (width > 850) {
-      var folder = "/imgs/intro";
+      var folder = "./imgs/intro";
 
       $.ajax({
 
         url: folder,
         success: function (data) {
           $(data).find("a").attr("href", function (i, val) {
-            if (val.match(/\.(jpe?g|gif|JPE?G)$/)) { //does not read png 
+            if (val.match(/\.(jpe?g|gif|webp|JPE?G)$/)) { //does not read png 
               //images on remote server
 
               $("#intro_imgs").append("<img "
@@ -113,7 +113,7 @@
       <div class="bar1"></div>
       <div class="bar2"></div>
     </div>
-    <img src="/imgs/intro/DSC_0674.jpg" id="default_img" class="" alt="">
+    <img src="./imgs/intro/intro_0000_ballet_SQKZ_riley-hoff.webp" id="default_img" class="" alt="">
     <div id="intro_imgs">
       <!-- intro images append here  -->
     </div>

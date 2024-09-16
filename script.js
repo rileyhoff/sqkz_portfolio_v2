@@ -26,13 +26,13 @@ function mouseMove() {
   if ((z % 10) == 1) {
     //when on first element set prev to last element
     if (x == 0) {
-      prev = 32;
+      prev = 20;
     } else {
       prev = x - 1;
     }
     x += 1;
     //number of items (including 0)  --> AKA Minus 1!
-    if (x > 32) {
+    if (x > 20) {
       x = 0;
     }
     document.getElementById(x + 5).className = "active";
