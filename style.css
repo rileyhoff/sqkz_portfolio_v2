@@ -211,13 +211,11 @@ nav a {
   font-weight: 600;
 }
 
-nav a:hover {}
-
 svg {
   transition: all ease-in-out 1s;
 }
 
-/*theatre view */
+/* theatre view */
 body.theatre {
   background-color: var(--primary-color, #000);
   overflow: hidden;
