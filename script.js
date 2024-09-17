@@ -239,12 +239,21 @@ function displayImages(type, n) { //n is max number of images
     else {
       var file = artworks[i].file;
       if (file != undefined && file != "" && artworks[i].section == type) {
-        document.getElementById("imgs").innerHTML += "<div class='gallery_img'><img "
-          + "srcset='" + folder + "/500px/" + file + " 500w, "
-          + folder + "/1000px/" + file + " 1000w, "
-          + folder + "/" + file + " 1700w'"
-          + "alt='" + artworks[i].title + "' "
-          + "src='" + folder + "/" + file + "' id='" + i + "' class='gallery' loading='lazy' onload='fadeIn(this)' onclick='fullscreenViewOpen(this)'></div>";
+        if (i < 3) { //eager loading
+          document.getElementById("imgs").innerHTML += "<div class='gallery_img'><img "
+            + "srcset='" + folder + "/500px/" + file + " 500w, "
+            + folder + "/1000px/" + file + " 1000w, "
+            + folder + "/" + file + " 1700w'"
+            + "alt='" + artworks[i].title + "' "
+            + "src='" + folder + "/" + file + "' id='" + i + "' class='gallery' loading='eager' onload='fadeIn(this)' onclick='fullscreenViewOpen(this)'></div>";
+        } else {
+          document.getElementById("imgs").innerHTML += "<div class='gallery_img'><img "
+            + "srcset='" + folder + "/500px/" + file + " 500w, "
+            + folder + "/1000px/" + file + " 1000w, "
+            + folder + "/" + file + " 1700w'"
+            + "alt='" + artworks[i].title + "' "
+            + "src='" + folder + "/" + file + "' id='" + i + "' class='gallery' loading='lazy' onload='fadeIn(this)' onclick='fullscreenViewOpen(this)'></div>";
+        }
       }
     }
   }
