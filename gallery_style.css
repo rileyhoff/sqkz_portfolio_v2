@@ -295,6 +295,21 @@ img.gallery {
   color: var(--accent-color);
 }
 
+#grid_btn svg {
+  display: none;
+  height: 20px;
+  width: 20px;
+  fill: #aaaaaa;
+  padding: 20px;
+  transition: all .2s ease-in-out;  
+}
+#list_svg svg {
+  height: 30px;
+  width: 30px;
+  padding: 15px;
+}
+#grid_btn:hover svg { fill: var(--primary-color);}
+
 .grid #grid_svg {
   display: none;
 }
@@ -746,19 +761,31 @@ img.gallery {
   }
 
   #grid_btn {
-    height: auto;
-    width: fit-content;
-    padding: 10px 5vw 10px 20px;
-    text-align: left;
     bottom: 5vh;
-    right: 0;
+    right: 5vw;
     background-color: rgba(245, 245, 245, 0.75);
     backdrop-filter: blur(4px);
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border: .5px solid rgba(149, 157, 165, 0.2);
+    border-radius: 100%;
+    box-shadow: rgba(149, 157, 165, 0.25) 0px 6px 24px;
+    transition: all .2s ease-in-out;
   }
 
   #grid_btn:hover {
     color: var(--accent-color);
+    border: 1px solid #000;
+    height: 80px;
+    width: 80px;
+    padding: 10px;
+    bottom: calc(5vh - 10px );
+    right: calc(5vw - 10px );
   }
+
+  #grid_btn svg { display: block; }
+  #grid_btn .mbl-txt { display: none; }  
 
   /* Grid View  */
   .grid img.gallery {
