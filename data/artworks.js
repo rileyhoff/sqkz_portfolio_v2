@@ -15,7 +15,7 @@ const artworks = [
     "title": "Untitled",
     "dimentions": "9 x 12in",
     "medium": "Oil on Board",
-    "price": 200,
+    "price": 1111,
     "detail_imgs": 1,
     "section": "paint",
     "subsection": 2022,
