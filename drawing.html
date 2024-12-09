@@ -22,7 +22,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <script src="data/artworks.js"></script>
   <script src="script.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -67,13 +68,19 @@
     </div>
   </header>
   <section id="imgs">
-    <button id="categories_btn" onclick="openCategories()" onmouseover="cursorHover()" onmouseout="endCursorHover()">Categories</button>
+    <button id="categories_btn" onclick="openCategories()" onmouseover="cursorHover()"
+      onmouseout="endCursorHover()">Categories</button>
     <div id="categories">
-      <button onclick="filter(2024,this)" class="" onmouseover="cursorHover()" onmouseout="endCursorHover()">2023 - 2024</button>
-      <button onclick="filter(2022,this)" class="" onmouseover="cursorHover()" onmouseout="endCursorHover()">2021 - 2022</button>
-      <button onclick="filter(2019,this)" class="" onmouseover="cursorHover()" onmouseout="endCursorHover()">2019 - 2020</button>
-      <button onclick="filter(2018,this)" class="" onmouseover="cursorHover()" onmouseout="endCursorHover()">Past - 2018</button>
-      <button onclick="filter('all',this)" class="active" onmouseover="cursorHover()" onmouseout="endCursorHover()">View All</button>
+      <button onclick="filter(2024,this)" class="" onmouseover="cursorHover()" onmouseout="endCursorHover()">2023 -
+        2024</button>
+      <button onclick="filter(2022,this)" class="" onmouseover="cursorHover()" onmouseout="endCursorHover()">2021 -
+        2022</button>
+      <button onclick="filter(2019,this)" class="" onmouseover="cursorHover()" onmouseout="endCursorHover()">2019 -
+        2020</button>
+      <button onclick="filter(2018,this)" class="" onmouseover="cursorHover()" onmouseout="endCursorHover()">Past -
+        2018</button>
+      <button onclick="filter('all',this)" class="active" onmouseover="cursorHover()" onmouseout="endCursorHover()">View
+        All</button>
     </div>
     <div id="next_btn" class="move_btn" onmouseover="interval = setInterval(galleryNext,10);"
       onmouseout="clearInterval(interval);"></div>
@@ -83,9 +90,29 @@
   </section>
 
   <button id="grid_btn" onclick="gridView()">
-    <span id="grid_svg" title="Grid View"><span class="mbl-txt">Grid</span><?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600"><defs></defs><rect class="b" x="450" y="450" width="150" height="150" rx="30" ry="30"/><rect class="b" x="450" y="225" width="150" height="150" rx="30" ry="30"/><rect class="b" x="450" width="150" height="150" rx="30" ry="30"/><rect class="b" x="225" y="450" width="150" height="150" rx="30" ry="30"/><rect class="b" x="225" y="225" width="150" height="150" rx="30" ry="30"/><rect class="b" x="225" width="150" height="150" rx="30" ry="30"/><rect class="b" y="450" width="150" height="150" rx="30" ry="30"/><rect class="b" y="225" width="150" height="150" rx="30" ry="30"/><rect class="b" width="150" height="150" rx="30" ry="30"/></svg></span>
-    <span id="list_svg" title="List View"><span class="mbl-txt">List</span><?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 150"><defs></defs><rect class="b" x="425" y="0" width="175" height="150" rx="30" ry="30"/><rect class="b" x="212.5" width="175" height="150" rx="30" ry="30"/><rect class="b" y="0" width="175" height="150" rx="30" ry="30"/></svg></span>
- </button>
+    <span id="grid_svg" title="Grid View"><span class="mbl-txt">Grid</span>
+      <?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+        <defs></defs>
+        <rect class="b" x="450" y="450" width="150" height="150" rx="30" ry="30" />
+        <rect class="b" x="450" y="225" width="150" height="150" rx="30" ry="30" />
+        <rect class="b" x="450" width="150" height="150" rx="30" ry="30" />
+        <rect class="b" x="225" y="450" width="150" height="150" rx="30" ry="30" />
+        <rect class="b" x="225" y="225" width="150" height="150" rx="30" ry="30" />
+        <rect class="b" x="225" width="150" height="150" rx="30" ry="30" />
+        <rect class="b" y="450" width="150" height="150" rx="30" ry="30" />
+        <rect class="b" y="225" width="150" height="150" rx="30" ry="30" />
+        <rect class="b" width="150" height="150" rx="30" ry="30" />
+      </svg>
+    </span>
+    <span id="list_svg" title="List View"><span class="mbl-txt">List</span>
+      <?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 150">
+        <defs></defs>
+        <rect class="b" x="425" y="0" width="175" height="150" rx="30" ry="30" />
+        <rect class="b" x="212.5" width="175" height="150" rx="30" ry="30" />
+        <rect class="b" y="0" width="175" height="150" rx="30" ry="30" />
+      </svg>
+    </span>
+  </button>
 
   <!-- fullscreen image view -->
   <div id="fullscreen_view" class="">
@@ -118,41 +145,41 @@
 
 </body>
 <script>
-// track mouse position
-var cursor = document.getElementById('cursor');
-document.addEventListener('mousemove', moveCursor)
+  // track mouse position
+  var cursor = document.getElementById('cursor');
+  document.addEventListener('mousemove', moveCursor)
 
-function moveCursor(e) {
-  var x = e.clientX;
-  var y = e.clientY;
-  cursor.style.left = `${x}px`;
-  cursor.style.top = `${y}px`;
-}
+  function moveCursor(e) {
+    var x = e.clientX;
+    var y = e.clientY;
+    cursor.style.left = `${x}px`;
+    cursor.style.top = `${y}px`;
+  }
 
-//get all anchor tags, buttons and hoverable elements to animate cursor hover
-var links = Array.from(document.querySelectorAll('a, button, .hoverable'));
+  //get all anchor tags, buttons and hoverable elements to animate cursor hover
+  var links = Array.from(document.querySelectorAll('a, button, .hoverable'));
 
-links.forEach(links => {
-  links.addEventListener('mousemove', function() {
-    cursor.classList.add('hover');
-  })
-  links.addEventListener('mouseleave', function () {
-    cursor.classList.remove('hover');
-  })
-});
-//click animation
-window.addEventListener("mousedown", ()=>{
-  $('#cursor').addClass('mouse-down');
-    });
-    window.addEventListener("mouseup", ()=>{
-  $('#cursor').removeClass('mouse-down');
-    });
-//hover animation
+  links.forEach(links => {
+    links.addEventListener('mousemove', function () {
+      cursor.classList.add('hover');
+    })
+    links.addEventListener('mouseleave', function () {
+      cursor.classList.remove('hover');
+    })
+  });
+  //click animation
+  window.addEventListener("mousedown", () => {
+    $('#cursor').addClass('mouse-down');
+  });
+  window.addEventListener("mouseup", () => {
+    $('#cursor').removeClass('mouse-down');
+  });
+  //hover animation
   function cursorHover() {
-      $('#cursor').addClass('hover');
+    $('#cursor').addClass('hover');
   }
   function endCursorHover() {
-      $('#cursor').removeClass('hover');
+    $('#cursor').removeClass('hover');
   }
   //display images
   displayImages("draw", 123);

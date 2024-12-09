@@ -30,6 +30,9 @@
 <script src="//html5shim.googlecode.com/sin/trunk/html5.js"></script>
 <![endif]-->
   <script>
+    // remove animate_out class if on body element
+    document.body.classList.remove("animate_out");
+
     //if on mobile add make grid mode
     var width = $(window).width();
     $(window).resize(function () {
@@ -150,36 +153,36 @@
 
   var cursor = document.getElementById('cursor');
 
-document.addEventListener('mousemove', moveCursor)
+  document.addEventListener('mousemove', moveCursor)
 
-function moveCursor(e) {
-  var x = e.clientX;
-  var y = e.clientY;
-  cursor.style.left = `${x}px`;
-  cursor.style.top = `${y}px`;
-}
-var links = Array.from(document.querySelectorAll('a'));
+  function moveCursor(e) {
+    var x = e.clientX;
+    var y = e.clientY;
+    cursor.style.left = `${x}px`;
+    cursor.style.top = `${y}px`;
+  }
+  var links = Array.from(document.querySelectorAll('a'));
 
-links.forEach(links => {
-  links.addEventListener('mousemove', function() {
-    cursor.classList.add('hover');
+  links.forEach(links => {
+    links.addEventListener('mousemove', function () {
+      cursor.classList.add('hover');
+    })
+    //To remove the class when it doesn't hover the text
+    links.addEventListener('mouseleave', function () {
+      cursor.classList.remove('hover');
+    })
   })
-//To remove the class when it doesn't hover the text
-  links.addEventListener('mouseleave', function () {
-    cursor.classList.remove('hover');
-  })
-})
-window.addEventListener("mousedown", ()=>{
-  $('#cursor').addClass('mouse-down');
-    });
-    window.addEventListener("mouseup", ()=>{
-  $('#cursor').removeClass('mouse-down');
-    });
+  window.addEventListener("mousedown", () => {
+    $('#cursor').addClass('mouse-down');
+  });
+  window.addEventListener("mouseup", () => {
+    $('#cursor').removeClass('mouse-down');
+  });
 
-    function cursorHover() {
-  document.getElementById("cursor").classList.add("hover");
-}
-document.querySelector("a").addEventListener("mouseover", cursorHover);
+  function cursorHover() {
+    document.getElementById("cursor").classList.add("hover");
+  }
+  document.querySelector("a").addEventListener("mouseover", cursorHover);
 
 
   displayItems();
@@ -200,4 +203,5 @@ document.querySelector("a").addEventListener("mouseover", cursorHover);
     $('body').addClass('mbl');
   }
 </script>
+
 </html>
