@@ -29,49 +29,6 @@
   <!--[if lt IE 9]>
 <script src="//html5shim.googlecode.com/sin/trunk/html5.js"></script>
 <![endif]-->
-  <script>
-    // remove animate_out class if on body element
-    document.body.classList.remove("animate_out");
-
-    //if on mobile add make grid mode
-    var width = $(window).width();
-    $(window).resize(function () {
-      if (width <= 850) {
-        $('body').addClass('mbl');
-      }
-    });
-    if (width > 850) {
-      var folder = "./imgs/intro";
-
-      $.ajax({
-
-        url: folder,
-        success: function (data) {
-          $(data).find("a").attr("href", function (i, val) {
-            if (val.match(/\.(jpe?g|gif|webp|JPE?G)$/)) { //does not read png 
-              //images on remote server
-
-              $("#intro_imgs").append("<img "
-                // +"srcset='" + folder + "/200px/" + val +" 200w, "
-                // + folder + "/500px/" + val +" 500w, " 
-                // + folder + "/" + val +" 1000w'"  
-                + "alt='" + val + "' "
-                + "src='" + folder + "/" + val + "' id='" + i + "' class='intro_img' >");
-              //images on local computer
-              // $("#intro_imgs").append("<img src='" + val + "' id='" + i + "' class='intro_img'>");
-              //       $("#intro_imgs").append("<img "
-              // +"srcset='/200px/" + val +" 200w, "
-              // + "/500px/" + val +" 500w, " 
-              // +  val +" 1000w'"  
-              // + "alt='" + val +"' " 
-              // +"src='" + val + "' id='" + i + "' class='intro_img' >");
-              i++;
-            }
-          });
-        }
-      });
-    }
-  </script>
 </head>
 
 <body id="body" class="">
@@ -149,8 +106,50 @@
   <h2 id='sent_msg' style="display: none;" onclick="this.style.transform = 'scaleY(0)'"></h2>
 </body>
 <script>
-  // track mouse position
 
+    //if on mobile add make grid mode
+    var width = $(window).width();
+    $(window).resize(function () {
+      if (width <= 850) {
+        $('body').addClass('mbl');
+      }
+    });
+    
+    if (width > 850) {
+      var folder = "./imgs/intro";
+
+      $.ajax({
+
+        url: folder,
+        success: function (data) {
+          $(data).find("a").attr("href", function (i, val) {
+            if (val.match(/\.(jpe?g|gif|webp|JPE?G)$/)) { //does not read png 
+              //images on remote server
+
+              $("#intro_imgs").append("<img "
+                // +"srcset='" + folder + "/200px/" + val +" 200w, "
+                // + folder + "/500px/" + val +" 500w, " 
+                // + folder + "/" + val +" 1000w'"  
+                + "alt='" + val + "' "
+                + "src='" + folder + "/" + val + "' id='" + i + "' class='intro_img' >");
+              //images on local computer
+              // $("#intro_imgs").append("<img src='" + val + "' id='" + i + "' class='intro_img'>");
+              //       $("#intro_imgs").append("<img "
+              // +"srcset='/200px/" + val +" 200w, "
+              // + "/500px/" + val +" 500w, " 
+              // +  val +" 1000w'"  
+              // + "alt='" + val +"' " 
+              // +"src='" + val + "' id='" + i + "' class='intro_img' >");
+              i++;
+            }
+          });
+        }
+      });
+    }
+
+
+
+  // track mouse position
   var cursor = document.getElementById('cursor');
 
   document.addEventListener('mousemove', moveCursor)
