@@ -162,8 +162,10 @@ function fullscreenViewOpen(el) {
       document.getElementById("detail_imgs").innerHTML = "<p id='detail_title' class='hoverable' >Detail.</p><img src='" + el.src + "' class = 'view'  onclick='detailActive(this)'></img>";
       var detail_folder = art.file.split('.').slice(0, -1).join('.');
       for (var i = 1; i <= art.detail_imgs; i++) {
+        if (i >= 10) {return;}else{
         document.getElementById("detail_imgs").innerHTML += "<img src='/imgs/" + art.section + "/details/" + detail_folder + "/" + i + ".jpg' onclick='detailActive(this)'>"
       }
+    }
     }
   }
   //make screen active
@@ -200,7 +202,9 @@ function openCategories() {
 
 function filter(category, el) {
   if (category != "video") {
+    // remove video class on body
     if (document.body.classList.contains('video')) { document.body.classList.remove('video'); }
+
     //get all artwork images
     var images = document.getElementsByClassName("gallery");
 
@@ -208,6 +212,15 @@ function filter(category, el) {
       if (category == "all") {
         images[i].style.display = "block";
         images[i].style.animation = "slide-left 1s";
+      } else if (category == "available") {
+        //get id number of image
+        var id = images[i].id;
+        if (artworks[id] == undefined || (artworks[id].price == (1111)|| artworks[id].price == (0))) {
+          images[i].style.display = "none";
+        } else {
+          images[i].style.display = "block";
+          images[i].style.animation = "slide-left 1s";
+        }
       } else {
         //get id number of image
         var id = images[i].id;

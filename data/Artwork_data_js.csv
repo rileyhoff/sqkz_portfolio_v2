@@ -5,7 +5,7 @@ id,title,dimentions,medium,price,detail_imgs,section,subsection,file
 3,Holly Grove,9 x 12in,Oil on Board,1111,1,paint,2022,holly-grove_SQKZ_riley-hoff.webp
 4,Old Westbury,9 x 12in,Oil on Board,250,2,paint,2022,westbury_SQKZ_riley-hoff.jpg
 5,Photobooth,9 x 12in,Oil on Board,0,1,paint,2022,photobooth_SQKZ_riley-hoff.jpg
-6,Cohasett - Untitled,9 x 12in,Oil on Board,200,1,paint,2022,cohasett-impression_SQKZ_riley-hoff.webp
+6,Cohasett - Untitled,9 x 12in,Oil on Board,1111,1,paint,2022,cohasett-impression_SQKZ_riley-hoff.webp
 7,Memories,16 x 20in,Oil on Canvas,1111,2,paint,2022,memories_SQKZ_riley-hoff.jpg
 8,Ioborda,9 x 12in,Oil on Canvas,1111,2,paint,2022,Ioborda_SQKZ_Riley-Hoff.jpg
 9,Cowboy Study,9 x 12in,Oil on Paper,1111,1,paint,2022,cowboy_SQKZ_riley-hoff.jpg
@@ -22,7 +22,7 @@ id,title,dimentions,medium,price,detail_imgs,section,subsection,file
 20,turns,16 x 20in,Oil on Canvas,1111,3,paint,2022,turns_SQKZ_Riley-Hoff.jpg
 21,Horse study,9 x 12in,Oil on Board,1111,2,paint,2022,horse-study_SQKZ_Riley-Hoff.jpg
 22,Bowl,14 x 14in,Oil on Canvas,100,2,paint,2022,bowl_SQKZ_Riley-Hoff.jpg
-23,Brothers,9 x 12in,Oil on Paper,75,1,paint,2022,Brothers_SQKZ_Riley-Hoff.jpg
+23,Brothers,9 x 12in,Oil on Paper,0,1,paint,2022,Brothers_SQKZ_Riley-Hoff.jpg
 24,Sandy Beach,16 x 20in,Oil on Canvas,1111,2,paint,2022,Sandy-beach_SQKZ_Riley-Hoff.jpg
 25,Horse study II,9 x 12in,Oil on Board,1111,1,paint,2022,horse-2_SQKZ_riley-hoff.jpg
 26,Self Portrait with Olive Branch,16 x 20in,Oil on Canvas,250,3,paint,2022,Self-portrait-olive_SQKZ_Riley-Hoff.jpg
@@ -38,11 +38,11 @@ id,title,dimentions,medium,price,detail_imgs,section,subsection,file
 36,Summer in Winter,,Oil on Canvas,200,1,paint,q,summerinwinter_SQKZ_Riley-Hoff.jpg
 37,Shell,16 x 20in,Oil on Canvas,250,1,paint,2022,Shell_SQKZ_Riley-Hoff.jpg
 38,Maia,9 x 12in,Oil on Paper,0,1,paint,2022,Maia_SQKZ_Riley-Hoff.jpg
-39,Dress Shoes,9 x 12in,Oil on Board,100,2,paint,2022,dress-shoes_SQKZ_Riley-Hoff.jpg
+39,Dress Shoes,9 x 12in,Oil on Board,1111,2,paint,2022,dress-shoes_SQKZ_Riley-Hoff.jpg
 40,Hawaii,15 x 19in,Oil on Canvas,1111,3,paint,2022,Hawaii_SQKZ_Riley-Hoff.jpg
 41,Lands End II,16 x 20in,Oil on Canvas,250,3,paint,2022,Lands-End-2_SQKZ_Riley-Hoff.jpg
 42,Gaze,,Oil on Canvas,150,1,paint,2022,gaze_SQKZ_Riley-Hoff.jpg
-43,Sunburn,22 x 18in,Oil on Canvas,200,3,paint,q,sunburn_SKQZ_Riley-Hoff.jpg
+43,Sunburn,22 x 18in,Oil on Canvas,1111,3,paint,q,sunburn_SKQZ_Riley-Hoff.jpg
 44,Pacific St,24 x 30in,Acrylic on Canvas,500,2,paint,2019,Pacific-St_SQKZ_Riley-Hoff.jpg
 45,Toile,16 x 20in,Oil on Canvas,1111,5,paint,q,toile_SQKZ_Riley-Hoff.jpg
 46,Grand Army Plaza,11 x 14in,Oil on Paper,50,1,paint,2022,grand-army-plaza_SQKZ_Riley-Hoff.jpg
@@ -56,7 +56,7 @@ id,title,dimentions,medium,price,detail_imgs,section,subsection,file
 54,Morning,22 x 18in,Acrylics on Canvas,500,2,paint,thesis,Morning_SQKZ_Riley-Hoff.jpg
 55,Wine Still Life,8 x 10in,Oil on Board,1111,1,paint,q,wine_SQKZ_Riley-Hoff.jpg
 56,Orchids,14 x 18in,Oil on Canvas Board,500,6,paint,q,Orchids_SQKZ_Riley-Hoff.jpg
-57,Untitled,12 x 9in,Oil on Board,100,2,paint,q,Untitled flower 2_SQKZ_Riley-Hoff.jpg
+57,Untitled,9 x 12in,Oil on Board,1111,2,paint,q,Untitled flower 2_SQKZ_Riley-Hoff.jpg
 58,Chantal,8 x 12in,Acrylics on Canvas,200,2,paint,2019,Chantal_SQKZ_Riley-Hoff.jpg
 59,Dog on Tiles,8 x 10in,Oil on Board,150,4,paint,q,dogontiles_SQKZ_Riley-Hoff.jpg
 60,Exit 2,18 x 20in,Oil on Canvas Panel,1111,1,paint,q,Exit2_SQKZ_Riley-Hoff.jpg
@@ -66,7 +66,7 @@ id,title,dimentions,medium,price,detail_imgs,section,subsection,file
 64,Untitled.,14 x 14in,Oil on Canvas,150,1,paint,q,late_SQKZ_Riley-Hoff.jpg
 65,Jorja,,Oil on Paper,100,1,paint,q,jorja_SKQZ_Riley-Hoff.jpg
 66,Palm Oil,14 x 14in,Oil on Canvas,250,1,paint,q,Palm-Oil_SQKZ_Riley-Hoff.jpg
-67,Distance,10 x 14in,Acrylics on Canvas,200,0,paint,2019,Distance_SQKZ_Riley-Hoff.jpg
+67,Distance,10 x 14in,Acrylics on Canvas,0,0,paint,2019,Distance_SQKZ_Riley-Hoff.jpg
 68,Self Portrait with Dells,8 x 10in,Oil on Board,150,1,paint,q,Self-Portrait-Dells_SQKZ_Riley-Hoff.jpg
 69,Lavender II,8 x 8in,Acrylics on Canvas,100,3,paint,thesis,Lavender II_SQKZ_Riley-Hoff.jpg
 70,Self Portrait at Night,8 x 10in,Oil on Board,150,3,paint,q,selfportraitatnight_SQKZ_Riley-Hoff.jpg
@@ -84,10 +84,10 @@ id,title,dimentions,medium,price,detail_imgs,section,subsection,file
 82,Emerald,,Acrylics on Paper,0,0,paint,2018,Emerald_SQKZ_Riley-Hoff.jpg
 83,Arizona II,8 x 8in,Acrylics on Canvas,100,3,paint,thesis,Arizona II_SQKZ_Riley-Hoff.jpg
 84,Arizona,22 x 18in,Acrylics on Canvas,0,3,paint,thesis,Arizona_SQKZ_Riley-Hoff.jpg
-85,Valentine,10 x 10in,Acrylics on Canvas,100,1111,paint,2019,Valentine_SQKZ_Riley-Hoff.jpg
+85,Valentine,10 x 10in,Acrylics on Canvas,1111,0,paint,2019,Valentine_SQKZ_Riley-Hoff.jpg
 86,Rust,8 x 10in,Acylics on Canvas,1111,1,paint,2018,Rust_SQKZ_Riley-Hoff.jpg
 87,Untitled (flowers),10 x 14in,Acrylics on Canvas,100,0,paint,2019,Untitled flowers_SQKZ_Riley-Hoff.jpg
-88,Marble,10 x 8in,Acrylics on Board,250,1,paint,2019,Marble_SQKZ_Riley-Hoff.jpg
+88,Marble,8 x 10in,Acrylics on Board,250,1,paint,2019,Marble_SQKZ_Riley-Hoff.jpg
 89,Untitled (hands),10 x 14in,Acrylics on Canvas,100,0,paint,2019,Untitled hands_SQKZ_Riley-Hoff.jpg
 90,Still Life with Lime,14 x 10in,Acrylics on Canvas,1111,0,paint,2019,Still Life with Lime_SQKZ_Riley-Hoff.jpg
 91,Iceland,8 x 36in,Oil on Canvas,300,6,paint,2022,Iceland_SQKZ_Riley-Hoff.jpg
@@ -95,15 +95,15 @@ id,title,dimentions,medium,price,detail_imgs,section,subsection,file
 93,Self Portrait with Flowers,22 x 18in,Acrylics on Canvas,1111,0,paint,2018,Self Portrait with Flowers_SQKZ_Riley-Hoff.jpg
 94,Gigi,Unknown,Acrylics on Canvas,0,0,paint,2019,Gigi_SQKZ_Riley-Hoff.jpg
 95,Runner - Cover Art,8 x 8in,Charcoal on Paper,100,0,draw,2024,Runner_SQKZ_Riley-Hoff.jpg
-96,Voices Stuck - Cover Art,8 x 8in,Charcoal and Graphite on Paper,100,0,draw,2024,VS_SQKZ_Riley-Hoff.jpg
+96,Voices Stuck - Cover Art,8 x 8in,Charcoal and Graphite on Paper,1111,0,draw,2024,VS_SQKZ_Riley-Hoff.jpg
 97,Avoid the Wait - Cover Art,8 x 8in,Charcoal and Graphite on Paper,100,0,draw,2024,ATW_SQKZ_Riley-Hoff.jpg
-98,Untitled,5 x 7in,Charcoal on Paper,100,1111,draw,2024,cat_SQKZ_Riley-Hoff.jpg
+98,Untitled,5 x 7in,Charcoal on Paper,1111,1,draw,2024,cat_SQKZ_Riley-Hoff.jpg
 99,Olive,9 x 12in,Graphite on Paper,50,1,draw,2024,olive_SQKZ_Riley-Hoff.jpg
 100,Luxembourg,15 x 24in,Charcoal on Paper,250,2,draw,2019,Luxembourg_SQKZ_Riley-Hoff.jpg
 101,Munich,15 x 24in,Charcoal on Paper,250,2,draw,2019,Munich_SQKZ_Riley-Hoff.jpg
-102,My bed for a bit,,Charcoal on Paper,150,1,draw,2019,My bed for a bit_SQKZ_Riley-Hoff.jpg
-103,Sense,12 x 9in,Charcoal on Paper,1111,1,draw,2022,Sense_SQKZ_Riley-Hoff.jpg
-104,Nothing.,7.5 x 11in,Charcoal on Paper,50,1,draw,2019,Nothing_SQKZ_Riley-Hoff.jpg
+102,My bed for a bit,,Charcoal on Paper,0,1,draw,2019,My bed for a bit_SQKZ_Riley-Hoff.jpg
+103,Sense,9 x 12in,Charcoal on Paper,1111,1,draw,2022,Sense_SQKZ_Riley-Hoff.jpg
+104,Nothing.,7.5 x 11in,Charcoal on Paper,0,1,draw,2019,Nothing_SQKZ_Riley-Hoff.jpg
 105,Lie,24 x 30in,Charcoal on Paper,100,1,draw,2022,lie_SQKZ_Riley-Hoff.jpg
 106,Ilie,9 x 12in,Charcoal on Paper,0,0,draw,2019,Ilie_SQKZ_Riley-Hoff.jpg
 107,Swan,11 x 14in,Charcoal on Paper,1111,1,draw,2022,swan_SQKZ_Riley-Hoff.jpg
@@ -114,9 +114,9 @@ id,title,dimentions,medium,price,detail_imgs,section,subsection,file
 112,Untitled.,-,Charcoal on Paper,100,1,draw,2022,untitledportrait2_SQKZ_Riley-Hoff.jpg
 113,"Bella, Profile",11 x 14in,Charcoal on Paper,0,2,draw,2022,bella-profile_SQKZ_Riley-Hoff.jpg
 114,Night I,9 x 12in,Charcoal on Paper,50,1,draw,2022,night1_SQKZ_Riley-Hoff.jpg
-115,Night II,9 x 12in,Charcoal on Paper,50,1111,draw,2022,night2_SQKZ_Riley-Hoff.jpg
+115,Night II,9 x 12in,Charcoal on Paper,1111,1,draw,2022,night2_SQKZ_Riley-Hoff.jpg
 116,Night III,9 x 12in,Charcoal on Paper,50,1,draw,2022,night3_SQKZ_Riley-Hoff.jpg
-117,Fiat,9 x 12in,Charcoal and Graphite on Paper,50,1111,draw,2022,Fiat_SQKZ_Riley-Hoff.jpg
+117,Fiat,9 x 12in,Charcoal and Graphite on Paper,1111,1,draw,2022,Fiat_SQKZ_Riley-Hoff.jpg
 118,Clairity,22 x 30in,Charcoal on Paper,250,0,draw,2019,Clairity_SQKZ_Riley-Hoff.jpg
 119,Timeline,30 x 22in,Charcoal on Paper,250,0,draw,2019,Timeline_SQKZ_Riley-Hoff.jpg
 120,Raspberries,"31 x 22in, Diptych",Charcoal on Paper,250,2,draw,2018,Raspberries_SQKZ_Riley-Hoff.jpg
