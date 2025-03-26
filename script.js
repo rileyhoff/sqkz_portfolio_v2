@@ -159,11 +159,11 @@ function fullscreenViewOpen(el) {
     if (!(art.detail_imgs == 0 || art.detail_imgs == undefined)) {
       document.getElementById("detail_imgs").className = "active";
       //reset and add main image & add title
-      document.getElementById("detail_imgs").innerHTML = "<p id='detail_title' class='hoverable' >Detail.</p><img src='" + el.src + "' class = 'view'  onclick='detailActive(this)'></img>";
+      document.getElementById("detail_imgs").innerHTML = "<p id='detail_title' class='hoverable' >Detail.</p><img src='" + el.src + "' class = 'view' alt=''  onclick='detailActive(this)'></img>";
       var detail_folder = art.file.split('.').slice(0, -1).join('.');
       for (var i = 1; i <= art.detail_imgs; i++) {
         if (i >= 10) {return;}else{
-        document.getElementById("detail_imgs").innerHTML += "<img src='/imgs/" + art.section + "/details/" + detail_folder + "/" + i + ".jpg' onclick='detailActive(this)'>"
+        document.getElementById("detail_imgs").innerHTML += "<img src='/imgs/" + art.section + "/details/" + detail_folder + "/" + i + ".jpg' alt='detail "+i+"' onclick='detailActive(this)'>"
       }
     }
     }
