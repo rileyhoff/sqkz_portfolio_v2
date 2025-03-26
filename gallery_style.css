@@ -510,7 +510,7 @@ img.gallery {
   font-size: 1em;
 }
 
-#price.nfs #price_inquire_btn {
+#price.nfs #price_inquire_btn, #price.sold #price_inquire_btn {
   display: none;
 }
 
