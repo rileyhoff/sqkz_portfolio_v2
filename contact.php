@@ -117,7 +117,7 @@ switch (@$_GET['do'])
     <?php if($staus == "sent"){
   echo "<h2 id='sent_msg'>Your message was sent. Thank you for your interest! &#10084;</h2>";
 }?>
-    <div id="art_sample"><img id="sample_img" src="">
+    <div id="art_sample"><img id="sample_img" src="" alt="">
     <p id="art_title"></p>
   </div>
     <form action="contact?do=send" method="POST" id="contact_form" class="grid-container">
