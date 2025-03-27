@@ -1148,7 +1148,7 @@ const artworks = [
     "title": "Swan",
     "dimentions": "5 x 6.5in",
     "medium": "Charcoal on Paper",
-    "price": 0,
+    "price": 1111,
     "detail_imgs": 1,
     "section": "draw",
     "subsection": 2024,

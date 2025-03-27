@@ -567,7 +567,7 @@ form:valid #contact_submit:active {
   text-align: center;
   color: var(--bg-color);
   font-size: 1.5em;
-  z-index: 1000;
+  z-index: 1001;
   transform-origin: top;
   animation: slide-down 1s 0s 1 backwards;
   transition: all .5s;
@@ -804,7 +804,7 @@ form:valid #contact_submit:active {
   nav,
   .contact nav.right_nav {
     position: fixed;
-    top: 80vh;
+    top: 100vh;
     left: 0;
     height: 80vh;
     width: 100vw;
