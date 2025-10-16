@@ -57,26 +57,34 @@ function swipeLeft(e) {
 }
 
 function pastIntro() {
-  if (document.body.scrollTop > (document.getElementById("intro").offsetHeight - 20) || document.documentElement.scrollTop > (document.getElementById("intro").offsetHeight - 20)) {
-    document.getElementById("body").classList.add("detail");
-  } else {
-    document.getElementById("body").classList.remove("detail");
-  }
-  document.body.style.setProperty('--scroll', window.body.scrollTop / window.body.offsetHeight);
+  const intro = document.getElementById("intro");
+  const body = document.getElementById("body");
+  const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+  // Toggle "detail" class based on scroll position
+  body.classList.toggle("detail", scrollTop > (intro.offsetHeight - 20));
+
+  // Set scroll progress CSS variable
+  const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  document.body.style.setProperty('--scroll', scrollTop / docHeight);
 }
 
+
 function contactForm() {
+  const contact = document.getElementById('contact');
+  const about = document.getElementById('about');
+
   if (contact == false) {
-    document.getElementById('about').classList.toggle("show_form");
+    about.classList.toggle("show_form");
     if (document.body.classList.contains("mbl")) {
-      document.getElementById('contact').innerHTML = "X.";
+      contact.innerHTML = "X.";
     } else {
-      document.getElementById('contact').innerHTML = "About.";
+      contact.innerHTML = "About.";
     }
     contact = true;
   } else {
-    document.getElementById('about').classList.toggle("show_form");
-    document.getElementById('contact').innerHTML = "Contact.";
+    about.classList.toggle("show_form");
+    contact.innerHTML = "Contact.";
     contact = false;
   }
 }
@@ -114,58 +122,68 @@ function getArtworkIdString(str) {
 
 function fullscreenViewOpen(el) {
 
+  const artMainImg = document.getElementById("fullscreen_img");
+  const artTitle = document.getElementById("art_title");
+  const artDim = document.getElementById("dimensions");
+  const artMedium = document.getElementById("medium");
+  const artPriceText = document.getElementById("price_text");
+  const artPriceBox = document.getElementById("price");
+  const inquireLink = document.getElementById("inquire_link");
+  const detailImgs = document.getElementById("detail_imgs");
+
+
   //get id number of image
   // var id = getArtworkId(el);
   var id = el.id;
 
   if (artworks[id] == undefined) {
-    document.getElementById("fullscreen_img").src = el.src;
-    //get art infomation
-    document.getElementById("art_title").innerHTML = "Untitled.";
-    document.getElementById("dimentions").innerHTML = "";
-    document.getElementById("medium").innerHTML = "";
+    artMainImg.src = el.src;
+    //get art information
+    artTitle.innerHTML = "Untitled.";
+    artDim.innerHTML = "";
+    artMedium.innerHTML = "";
   } else {
 
     var art = artworks[id];
     //place fullscreen image
-    document.getElementById("fullscreen_img").src = el.src;
+    artMainImg.src = el.src;
 
     //get art infomation
-    document.getElementById("art_title").innerHTML = art.title;
-    document.getElementById("dimentions").innerHTML = art.dimentions;
-    document.getElementById("medium").innerHTML = art.medium;
+    artTitle.innerHTML = art.title;
+    artDim.innerHTML = art.dimensions;
+    artMedium.innerHTML = art.medium;
 
     //see if work is for sale
     if (artworks[id].price == 0 || artworks[id].price == "NFS") {
-      document.getElementById("price_text").innerHTML = "Not for Sale";
-      // document.getElementById("price_text").style.color = "#aaa";
-      document.getElementById("price").className = "nfs";
+      artPriceText.innerHTML = "Not for Sale";
+      // artPriceText.style.color = "#aaa";
+      artPriceBox.className = "nfs";
     } else if (artworks[id].price == "sold" || artworks[id].price == 1111) {
-      document.getElementById("price_text").innerHTML = "Sold";
-      document.getElementById("price").className = "sold";
+      artPriceText.innerHTML = "Sold";
+      artPriceBox.className = "sold";
     } else if (artworks[id].price == "hold" || artworks[id].price == 1) {
-      document.getElementById("price_text").innerHTML = "Hold";
-      document.getElementById("price").className = "hold";
-      // document.getElementById("inquire_link").href = "contact.php?art=/imgs/" + el.src.split('/').slice(-2).join('/');
-      document.getElementById("inquire_link").href = "contact.php?art=" + id;
+      artPriceText.innerHTML = "Hold";
+      artPriceBox.className = "hold";
+      // inquireLink.href = "contact.php?art=/imgs/" + el.src.split('/').slice(-2).join('/');
+      inquireLink.href = "contact.php?art=" + id;
     } else {
-      document.getElementById("price_text").innerHTML = "Available";
-      document.getElementById("price").className = "available";
-      // document.getElementById("inquire_link").href = "contact.php?art=/imgs/" + el.src.split('/').slice(-2).join('/');
-      document.getElementById("inquire_link").href = "contact.php?art=" + id;
+      artPriceText.innerHTML = "Available";
+      artPriceBox.className = "available";
+      // inquireLink.href = "contact.php?art=/imgs/" + el.src.split('/').slice(-2).join('/');
+      inquireLink.href = "contact.php?art=" + id;
     }
 
     // get detail images if available
     if (!(art.detail_imgs == 0 || art.detail_imgs == undefined)) {
-      document.getElementById("detail_imgs").className = "active";
+      detailImgs.className = "active";
       //reset and add main image & add title
-      document.getElementById("detail_imgs").innerHTML = "<p id='detail_title' class='hoverable' >Detail.</p><img src='" + el.src + "' class = 'view' alt=''  onclick='detailActive(this)'></img>";
+      detailImgs.innerHTML = "<p id='detail_title' class='hoverable' >Detail.</p><img src='" + el.src + "' class = 'view' alt=''  onclick='detailActive(this)'></img>";
       var detail_folder = art.file.split('.').slice(0, -1).join('.');
       for (var i = 1; i <= art.detail_imgs; i++) {
-        if (i >= 10) {return;}else{
-        document.getElementById("detail_imgs").innerHTML += "<img src='/imgs/" + art.section + "/details/" + detail_folder + "/" + i + ".jpg' alt='detail "+i+"' onclick='detailActive(this)'>"
+        if (i >= 10) { return; } else {
+          detailImgs.innerHTML += "<img src='/imgs/" + art.section + "/details/" + detail_folder + "/" + i + ".jpg' alt='detail " + i + "' onclick='detailActive(this)'>"
+        }
       }
-    }
     }
   }
   //make screen active
@@ -173,15 +191,19 @@ function fullscreenViewOpen(el) {
 }
 
 function fullscreenViewClose() {
-  document.getElementById('fullscreen_view').classList.remove('active');
-  document.getElementById('detail_imgs').classList.remove('active');
+  const fullscreen = document.getElementById('fullscreen_view');
+  const detailImgs = document.getElementById('detail_imgs');
+
+  if (fullscreen) fullscreen.classList.remove('active');
+  if (detailImgs) detailImgs.classList.remove('active');
 }
 
 //swap detail image with fullscreen image
 function detailActive(el) {
+  const detailImgs = document.getElementById('detail_imgs');
   //remove view from all detail images
   NodeList.prototype.forEach = Array.prototype.forEach;
-  var children = document.getElementById("detail_imgs").childNodes;
+  var children = detailImgs.childNodes;
   children.forEach(function (item) {
     item.classList.remove("view")
   });
@@ -190,86 +212,108 @@ function detailActive(el) {
   document.getElementById('fullscreen_img').src = el.src;
 }
 
-//grid view
+//change grid or list view
 function gridView() {
-  document.getElementById("imgs").scrollTop = 0; // make sure images are scrolled to top
-  document.body.classList.toggle('grid');
-  document.body.classList.toggle('list');
+  // Scroll to top of image container
+  document.getElementById("imgs").scrollTop = 0;
+
+  const body = document.body;
+
+  if (body.classList.contains('list')) {
+    body.classList.replace('list', 'grid');
+  } else {
+    body.classList.remove('grid');
+    body.classList.add('list');
+  }
 }
-function openCategories() {
-  document.getElementById('categories').classList.toggle('open');
+
+function aoToggle() {
+  document.getElementById('available_only').classList.toggle('active');
+  document.getElementById('ao_cat').classList.toggle('active');
 }
 
 function filter(category, el) {
-  if (category != "video") {
-    // remove video class on body
-    if (document.body.classList.contains('video')) { document.body.classList.remove('video'); }
+  const imgs = document.getElementById('imgs');
+  const availableOnlyButton = document.getElementById('available_only');
+  const ao = availableOnlyButton.classList.contains('active');
+  const images = document.getElementsByClassName('gallery');
+  const navTitle = document.getElementById('nav_title');
 
-    //get all artwork images
-    var images = document.getElementsByClassName("gallery");
+  // Fade out
+  imgs.style.opacity = "0";
 
-    for (var i = 0; i < images.length; i++) {
-      if (category == "all") {
-        images[i].style.display = "block";
-        images[i].style.animation = "slide-left 1s";
-      } else if (category == "available") {
-        //get id number of image
-        var id = images[i].id;
-        if (artworks[id] == undefined || (artworks[id].price == (1111)|| artworks[id].price == (0))) {
-          images[i].style.display = "none";
-        } else {
-          images[i].style.display = "block";
-          images[i].style.animation = "slide-left 1s";
-        }
+  if (category === "video") {
+    showVideo();
+  } else {
+    document.body.classList.remove('video');
+
+    for (let i = 0; i < images.length; i++) {
+      const img = images[i];
+      const id = img.id;
+      const artwork = artworks[id];
+
+      let show = false;
+
+      if (category === "all") { //show artworks
+        show = ao ? (artwork && artwork.price !== 1111 && artwork.price !== 0) : true;  //check if available only is toggled
       } else {
-        //get id number of image
-        var id = images[i].id;
-        if (artworks[id] == undefined || !(artworks[id].subsection == category)) {
-          images[i].style.display = "none";
-        } else {
-          images[i].style.display = "block";
-          images[i].style.animation = "slide-left 1s";
+        if (artwork && artwork.subsection === category) {
+          show = ao ? (artwork.price !== 1111 && artwork.price !== 0) : true;  //check if available only is toggled
         }
       }
+
+      //display or hid images 
+      img.parentElement.style.display = show ? "inline-block" : "none";
     }
-  } else {
-    //video is category
-    showVideo();
   }
-  //make clicked link active
-  var children = document.getElementById("categories").children;
-  for (var i = 0; i < children.length; i++) {
-    children[i].classList.remove("active");
+
+  // Update active category buttons
+  const catLists = document.querySelectorAll('.cat-list .cat');
+  for (let i = 0; i < catLists.length; i++) {
+    const catEl = catLists[i];
+    catEl.classList.toggle("active", catEl.dataset.cat == category);
   }
-  el.classList.add("active");
-  document.getElementById('categories').classList.remove('open');
+
+  // Fade in
+  imgs.style.opacity = "1";
+
+  if (el) {
+    if (navTitle && (category != 'all')) {
+      navTitle.innerHTML = el.innerHTML;
+      navTitle.classList.add('open');
+    } else {
+      navTitle.innerHTML = "";
+      navTitle.classList.remove('open');
+    }
+    el.parentElement.classList.remove('open'); //close category menu
+  }
+
+  document.body.scrollTo(0, 0);
+  imgs.scrollTo(0,0);
+
+  return category;
 }
 
 function displayImages(type, n) { //n is max number of images
-  var folder = "imgs/" + type;
+  var folder = "/imgs/" + type;
+  var imgHtml = "";
+
   for (var i = 0; i < n; i++) {
-    if (typeof artworks[i] === 'undefined' || artworks[i] === null) { return; }
+    if (typeof artworks[i] === 'undefined' || artworks[i] === null) { break; }
     else {
       var file = artworks[i].file;
       if (file != undefined && file != "" && artworks[i].section == type) {
-        if (i < 3) { //eager loading
-          document.getElementById("imgs").innerHTML += "<div class='gallery_img'><img "
-            + "srcset='" + folder + "/500px/" + file + " 500w, "
-            + folder + "/1000px/" + file + " 1000w, "
-            + folder + "/" + file + " 1700w'"
-            + "alt='" + artworks[i].title + "' "
-            + "src='" + folder + "/" + file + "' id='" + i + "' class='gallery' loading='eager' onload='fadeIn(this)' onclick='fullscreenViewOpen(this)'></div>";
-        } else {
-          document.getElementById("imgs").innerHTML += "<div class='gallery_img'><img "
-            + "srcset='" + folder + "/500px/" + file + " 500w, "
-            + folder + "/1000px/" + file + " 1000w, "
-            + folder + "/" + file + " 1700w'"
-            + "alt='" + artworks[i].title + "' "
-            + "src='" + folder + "/" + file + "' id='" + i + "' class='gallery' loading='lazy' onload='fadeIn(this)' onclick='fullscreenViewOpen(this)'></div>";
-        }
+        imgHtml += "<div class='gallery_img fs-link'  onclick='fullscreenViewOpen(this.firstChild)'><img srcset='" + folder + "/500px/" + file + " 500w, "
+          + folder + "/1000px/" + file + " 1000w, "
+          + folder + "/" + file + " 1700w'"
+          + "alt='" + artworks[i].title + "' "
+          + "src='" + folder + "/" + file + "' id='" + i + "' class='gallery '";
+        if (i < 3) { imgHtml += " loading='eager' " } else { imgHtml += " loading='lazy' " }
+        imgHtml += " onload='fadeIn(this)' onclick='fullscreenViewOpen(this)'></div>";
       }
     }
   }
+  document.getElementById("imgs").innerHTML += imgHtml;
 }
 
 function showVideo() {
@@ -279,6 +323,14 @@ function showVideo() {
     document.body.classList.add('grid');
   }
 }
+
+//custom cursor hover animation
+  function cursorHover() {
+    $('#cursor').addClass('hover');
+  }
+  function endCursorHover() {
+    $('#cursor').removeClass('hover');
+  }
 
 //init
 z = 0;

@@ -879,7 +879,7 @@ form:valid #contact_submit:active {
     position: fixed;
     bottom: 8.5vh;
     left: 50%;
-    margin-left: -17.5px;
+    margin-left: -7.5px;
     z-index: 2000;
     transition: all .2s ease-in-out;
   }
@@ -892,7 +892,7 @@ form:valid #contact_submit:active {
 
   .bar1,
   .bar2 {
-    width: 35px;
+    width: 15px;
     height: 2px;
     background-color: var(--bg-color);
     margin: 6px 0;
@@ -914,8 +914,8 @@ form:valid #contact_submit:active {
 
   .change .bar2 {
     /* Rotate last bar */
-    -webkit-transform: rotate(45deg) translate(-4px, 4px);
-    transform: rotate(45deg) translate(-4px, -4px);
+    -webkit-transform: rotate(45deg) translate(-3.5px, 4px);
+    transform: rotate(45deg) translate(-3.5px, -4px);
   }
 
   /*about section */

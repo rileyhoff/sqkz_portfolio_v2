@@ -2,7 +2,7 @@ const artworks = [
   {
     "id": 0,
     "title": "Springtime",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Oil on Board",
     "price": 200,
     "detail_imgs": 3,
@@ -13,7 +13,7 @@ const artworks = [
   {
     "id": 1,
     "title": "R",
-    "dimentions": "18 x 24in",
+    "dimensions": "18 x 24in",
     "medium": "Oil on Canvas",
     "price": 300,
     "detail_imgs": 4,
@@ -24,7 +24,7 @@ const artworks = [
   {
     "id": 2,
     "title": "Rouge",
-    "dimentions": "30 x 40in",
+    "dimensions": "30 x 40in",
     "medium": "Oil on Canvas",
     "price": 600,
     "detail_imgs": 4,
@@ -35,7 +35,7 @@ const artworks = [
   {
     "id": 3,
     "title": "Thanksgiving",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Oil on Paper",
     "price": 0,
     "detail_imgs": 3,
@@ -46,7 +46,7 @@ const artworks = [
   {
     "id": 4,
     "title": "Untitled",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Oil on Board",
     "price": 1111,
     "detail_imgs": 1,
@@ -57,7 +57,7 @@ const artworks = [
   {
     "id": 5,
     "title": "Bernadett",
-    "dimentions": "16 x 20in",
+    "dimensions": "16 x 20in",
     "medium": "Oil on Canvas",
     "price": 1111,
     "detail_imgs": 4,
@@ -68,7 +68,7 @@ const artworks = [
   {
     "id": 6,
     "title": "Holly Grove",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Oil on Board",
     "price": 1111,
     "detail_imgs": 1,
@@ -79,7 +79,7 @@ const artworks = [
   {
     "id": 7,
     "title": "Spider Plant",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Oil on Board",
     "price": 200,
     "detail_imgs": 3,
@@ -90,7 +90,7 @@ const artworks = [
   {
     "id": 8,
     "title": "Old Westbury",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Oil on Board",
     "price": 250,
     "detail_imgs": 2,
@@ -101,7 +101,7 @@ const artworks = [
   {
     "id": 9,
     "title": "Photobooth",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Oil on Board",
     "price": 0,
     "detail_imgs": 1,
@@ -112,7 +112,7 @@ const artworks = [
   {
     "id": 10,
     "title": "Cohasett - Untitled",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Oil on Board",
     "price": 1111,
     "detail_imgs": 1,
@@ -123,18 +123,18 @@ const artworks = [
   {
     "id": 11,
     "title": "Memories",
-    "dimentions": "16 x 20in",
+    "dimensions": "16 x 20in",
     "medium": "Oil on Canvas",
     "price": 1111,
     "detail_imgs": 2,
     "section": "paint",
-    "subsection": 2024,
+    "subsection": "paint",
     "file": "memories_SQKZ_riley-hoff.jpg"
   },
   {
     "id": 12,
     "title": "Maia",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Oil on Board",
     "price": 0,
     "detail_imgs": 3,
@@ -145,7 +145,7 @@ const artworks = [
   {
     "id": 13,
     "title": "Cowboy Study",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Oil on Paper",
     "price": 1111,
     "detail_imgs": 1,
@@ -156,7 +156,7 @@ const artworks = [
   {
     "id": 14,
     "title": "Some Clouds",
-    "dimentions": "5.5 x 12in",
+    "dimensions": "5.5 x 12in",
     "medium": "Oil on Board",
     "price": 0,
     "detail_imgs": 1,
@@ -167,7 +167,7 @@ const artworks = [
   {
     "id": 15,
     "title": "Ioborda",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Oil on Canvas",
     "price": 1111,
     "detail_imgs": 2,
@@ -178,7 +178,7 @@ const artworks = [
   {
     "id": 16,
     "title": "Untitled",
-    "dimentions": "9 x 7in",
+    "dimensions": "9 x 7in",
     "medium": "Oil on Board",
     "price": 0,
     "detail_imgs": 3,
@@ -189,7 +189,7 @@ const artworks = [
   {
     "id": 17,
     "title": "June",
-    "dimentions": "12 x 16in",
+    "dimensions": "12 x 16in",
     "medium": "Oil on Canvas",
     "price": 1111,
     "detail_imgs": 2,
@@ -200,7 +200,7 @@ const artworks = [
   {
     "id": 18,
     "title": "Untitled",
-    "dimentions": "36 x 30in",
+    "dimensions": "36 x 30in",
     "medium": "Oil on Canvas",
     "price": 0,
     "detail_imgs": 1,
@@ -211,7 +211,7 @@ const artworks = [
   {
     "id": 19,
     "title": "November",
-    "dimentions": "30 x 30in",
+    "dimensions": "30 x 30in",
     "medium": "Oil on Canvas",
     "price": 500,
     "detail_imgs": 6,
@@ -222,7 +222,7 @@ const artworks = [
   {
     "id": 20,
     "title": "Maia",
-    "dimentions": "11 x 14in",
+    "dimensions": "11 x 14in",
     "medium": "Oil on Canvas",
     "price": 0,
     "detail_imgs": 2,
@@ -233,7 +233,7 @@ const artworks = [
   {
     "id": 21,
     "title": "Bobcat",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Oil with gold dust on Board",
     "price": 100,
     "detail_imgs": 1,
@@ -244,7 +244,7 @@ const artworks = [
   {
     "id": 22,
     "title": "Beach in winter",
-    "dimentions": "10 x 12in",
+    "dimensions": "10 x 12in",
     "medium": "Oil on Board",
     "price": 1111,
     "detail_imgs": 2,
@@ -255,7 +255,7 @@ const artworks = [
   {
     "id": 23,
     "title": "Mew",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Oil on Board",
     "price": 150,
     "detail_imgs": 1,
@@ -266,7 +266,7 @@ const artworks = [
   {
     "id": 24,
     "title": "Untitled",
-    "dimentions": "26 x 26in",
+    "dimensions": "26 x 26in",
     "medium": "Oil on Canvas",
     "price": 0,
     "detail_imgs": 3,
@@ -277,7 +277,7 @@ const artworks = [
   {
     "id": 25,
     "title": "Silver Tree",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Oil on Paper",
     "price": 1111,
     "detail_imgs": 0,
@@ -288,7 +288,7 @@ const artworks = [
   {
     "id": 26,
     "title": "Sunday",
-    "dimentions": "18 x 12in",
+    "dimensions": "18 x 12in",
     "medium": "Oil on Canvas",
     "price": 250,
     "detail_imgs": 3,
@@ -299,7 +299,7 @@ const artworks = [
   {
     "id": 27,
     "title": "turns",
-    "dimentions": "16 x 20in",
+    "dimensions": "16 x 20in",
     "medium": "Oil on Canvas",
     "price": 1111,
     "detail_imgs": 3,
@@ -310,7 +310,7 @@ const artworks = [
   {
     "id": 28,
     "title": "Horse study",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Oil on Board",
     "price": 1111,
     "detail_imgs": 2,
@@ -321,7 +321,7 @@ const artworks = [
   {
     "id": 29,
     "title": "Bowl",
-    "dimentions": "14 x 14in",
+    "dimensions": "14 x 14in",
     "medium": "Oil on Canvas",
     "price": 1111,
     "detail_imgs": 2,
@@ -332,7 +332,7 @@ const artworks = [
   {
     "id": 30,
     "title": "Brothers",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Oil on Paper",
     "price": 0,
     "detail_imgs": 1,
@@ -343,7 +343,7 @@ const artworks = [
   {
     "id": 31,
     "title": "Sandy Beach",
-    "dimentions": "16 x 20in",
+    "dimensions": "16 x 20in",
     "medium": "Oil on Canvas",
     "price": 1111,
     "detail_imgs": 2,
@@ -354,7 +354,7 @@ const artworks = [
   {
     "id": 32,
     "title": "Horse study II",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Oil on Board",
     "price": 1111,
     "detail_imgs": 1,
@@ -365,7 +365,7 @@ const artworks = [
   {
     "id": 33,
     "title": "Self Portrait with Olive Branch",
-    "dimentions": "16 x 20in",
+    "dimensions": "16 x 20in",
     "medium": "Oil on Canvas",
     "price": 250,
     "detail_imgs": 3,
@@ -376,7 +376,7 @@ const artworks = [
   {
     "id": 34,
     "title": "Central Park",
-    "dimentions": "8 x 12in",
+    "dimensions": "8 x 12in",
     "medium": "Oil on Canvas",
     "price": 150,
     "detail_imgs": 1,
@@ -387,7 +387,7 @@ const artworks = [
   {
     "id": 35,
     "title": "Swan II",
-    "dimentions": "10 x 14in",
+    "dimensions": "10 x 14in",
     "medium": "Oil on Canvas",
     "price": 0,
     "detail_imgs": 2,
@@ -398,7 +398,7 @@ const artworks = [
   {
     "id": 36,
     "title": "ACIHR",
-    "dimentions": "8 x 12in",
+    "dimensions": "8 x 12in",
     "medium": "Oil on Canvas",
     "price": 1111,
     "detail_imgs": 2,
@@ -409,7 +409,7 @@ const artworks = [
   {
     "id": 37,
     "title": "Fall",
-    "dimentions": "8 x 12in",
+    "dimensions": "8 x 12in",
     "medium": "Oil on Canvas",
     "price": 1111,
     "detail_imgs": 1,
@@ -420,7 +420,7 @@ const artworks = [
   {
     "id": 38,
     "title": "Gelle Fra",
-    "dimentions": "8 x 10in",
+    "dimensions": "8 x 10in",
     "medium": "Oil on Board",
     "price": 0,
     "detail_imgs": 1,
@@ -431,7 +431,7 @@ const artworks = [
   {
     "id": 39,
     "title": "Untitled.",
-    "dimentions": "8 x 10in",
+    "dimensions": "8 x 10in",
     "medium": "Oil on Board",
     "price": 0,
     "detail_imgs": 4,
@@ -442,7 +442,7 @@ const artworks = [
   {
     "id": 40,
     "title": "Gigi with cut on her paw",
-    "dimentions": "",
+    "dimensions": "",
     "medium": "Oil on Board",
     "price": 0,
     "detail_imgs": 1,
@@ -453,7 +453,7 @@ const artworks = [
   {
     "id": 41,
     "title": "San Diego",
-    "dimentions": "9 x 16in",
+    "dimensions": "9 x 16in",
     "medium": "Oil on Paper",
     "price": 60,
     "detail_imgs": 1,
@@ -464,7 +464,7 @@ const artworks = [
   {
     "id": 42,
     "title": "Self Portrait with Guitar",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Oil on Paper",
     "price": 50,
     "detail_imgs": 1,
@@ -475,7 +475,7 @@ const artworks = [
   {
     "id": 43,
     "title": "Summer in Winter",
-    "dimentions": "",
+    "dimensions": "",
     "medium": "Oil on Canvas",
     "price": 200,
     "detail_imgs": 1,
@@ -486,7 +486,7 @@ const artworks = [
   {
     "id": 44,
     "title": "Shell",
-    "dimentions": "16 x 20in",
+    "dimensions": "16 x 20in",
     "medium": "Oil on Canvas",
     "price": 250,
     "detail_imgs": 1,
@@ -497,7 +497,7 @@ const artworks = [
   {
     "id": 45,
     "title": "Maia",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Oil on Paper",
     "price": 0,
     "detail_imgs": 1,
@@ -508,7 +508,7 @@ const artworks = [
   {
     "id": 46,
     "title": "Dress Shoes",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Oil on Board",
     "price": 1111,
     "detail_imgs": 2,
@@ -519,7 +519,7 @@ const artworks = [
   {
     "id": 47,
     "title": "Hawaii",
-    "dimentions": "15 x 19in",
+    "dimensions": "15 x 19in",
     "medium": "Oil on Canvas",
     "price": 1111,
     "detail_imgs": 3,
@@ -530,7 +530,7 @@ const artworks = [
   {
     "id": 48,
     "title": "Lands End II",
-    "dimentions": "16 x 20in",
+    "dimensions": "16 x 20in",
     "medium": "Oil on Canvas",
     "price": 250,
     "detail_imgs": 3,
@@ -541,7 +541,7 @@ const artworks = [
   {
     "id": 49,
     "title": "Gaze",
-    "dimentions": "",
+    "dimensions": "",
     "medium": "Oil on Canvas",
     "price": 150,
     "detail_imgs": 1,
@@ -552,7 +552,7 @@ const artworks = [
   {
     "id": 50,
     "title": "Sunburn",
-    "dimentions": "22 x 18in",
+    "dimensions": "22 x 18in",
     "medium": "Oil on Canvas",
     "price": 1111,
     "detail_imgs": 3,
@@ -563,7 +563,7 @@ const artworks = [
   {
     "id": 51,
     "title": "Pacific St",
-    "dimentions": "24 x 30in",
+    "dimensions": "24 x 30in",
     "medium": "Acrylic on Canvas",
     "price": 0,
     "detail_imgs": 2,
@@ -574,7 +574,7 @@ const artworks = [
   {
     "id": 52,
     "title": "Toile",
-    "dimentions": "16 x 20in",
+    "dimensions": "16 x 20in",
     "medium": "Oil on Canvas",
     "price": 1111,
     "detail_imgs": 5,
@@ -585,7 +585,7 @@ const artworks = [
   {
     "id": 53,
     "title": "Espresso Martini",
-    "dimentions": "7.5 x 10in",
+    "dimensions": "7.5 x 10in",
     "medium": "Oil on Paper",
     "price": 60,
     "detail_imgs": 1,
@@ -596,9 +596,9 @@ const artworks = [
   {
     "id": 54,
     "title": "Grand Army Plaza",
-    "dimentions": "11 x 14in",
+    "dimensions": "11 x 14in",
     "medium": "Oil on Paper",
-    "price": 50,
+    "price": 1111,
     "detail_imgs": 1,
     "section": "paint",
     "subsection": 2022,
@@ -607,7 +607,7 @@ const artworks = [
   {
     "id": 55,
     "title": "Secondary",
-    "dimentions": "",
+    "dimensions": "",
     "medium": "Oil on Canvas",
     "price": 0,
     "detail_imgs": 1,
@@ -618,7 +618,7 @@ const artworks = [
   {
     "id": 56,
     "title": "Iris",
-    "dimentions": "8 x 10in",
+    "dimensions": "8 x 10in",
     "medium": "Oil on Board",
     "price": 150,
     "detail_imgs": 1,
@@ -629,7 +629,7 @@ const artworks = [
   {
     "id": 57,
     "title": "Untitled.",
-    "dimentions": "20 x 17in",
+    "dimensions": "20 x 17in",
     "medium": "Oil on Canvas",
     "price": 300,
     "detail_imgs": 2,
@@ -640,7 +640,7 @@ const artworks = [
   {
     "id": 58,
     "title": "Untitled.",
-    "dimentions": "11 x 14in",
+    "dimensions": "11 x 14in",
     "medium": "Oil on Paper",
     "price": 50,
     "detail_imgs": 2,
@@ -651,18 +651,18 @@ const artworks = [
   {
     "id": 59,
     "title": "Chantal II",
-    "dimentions": "14 x 14in",
+    "dimensions": "14 x 14in",
     "medium": "Oil on Canvas",
     "price": 150,
     "detail_imgs": 1,
     "section": "paint",
     "subsection": "q",
-    "file": "chantal 2_SKQZ_Riley-Hoff.jpg"
+    "file": "chantal%202_SKQZ_Riley-Hoff.jpg"
   },
   {
     "id": 60,
     "title": "Rodin",
-    "dimentions": "8 x 10in",
+    "dimensions": "8 x 10in",
     "medium": "Oil on Canvas",
     "price": 1111,
     "detail_imgs": 2,
@@ -673,7 +673,7 @@ const artworks = [
   {
     "id": 61,
     "title": "Bella at Home",
-    "dimentions": "",
+    "dimensions": "",
     "medium": "Oil on Canvas",
     "price": 0,
     "detail_imgs": 2,
@@ -684,7 +684,7 @@ const artworks = [
   {
     "id": 62,
     "title": "Morning",
-    "dimentions": "22 x 18in",
+    "dimensions": "22 x 18in",
     "medium": "Acrylics on Canvas",
     "price": 500,
     "detail_imgs": 2,
@@ -695,7 +695,7 @@ const artworks = [
   {
     "id": 63,
     "title": "Wine Still Life",
-    "dimentions": "8 x 10in",
+    "dimensions": "8 x 10in",
     "medium": "Oil on Board",
     "price": 1111,
     "detail_imgs": 1,
@@ -706,7 +706,7 @@ const artworks = [
   {
     "id": 64,
     "title": "Orchids",
-    "dimentions": "14 x 18in",
+    "dimensions": "14 x 18in",
     "medium": "Oil on Canvas Board",
     "price": 500,
     "detail_imgs": 6,
@@ -717,18 +717,18 @@ const artworks = [
   {
     "id": 65,
     "title": "Untitled",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Oil on Board",
     "price": 1111,
     "detail_imgs": 2,
     "section": "paint",
     "subsection": "q",
-    "file": "Untitled flower 2_SQKZ_Riley-Hoff.jpg"
+    "file": "Untitled%20flower%202_SQKZ_Riley-Hoff.jpg"
   },
   {
     "id": 66,
     "title": "Chantal",
-    "dimentions": "8 x 12in",
+    "dimensions": "8 x 12in",
     "medium": "Acrylics on Canvas",
     "price": 200,
     "detail_imgs": 2,
@@ -739,7 +739,7 @@ const artworks = [
   {
     "id": 67,
     "title": "Dog on Tiles",
-    "dimentions": "8 x 10in",
+    "dimensions": "8 x 10in",
     "medium": "Oil on Board",
     "price": 150,
     "detail_imgs": 4,
@@ -750,7 +750,7 @@ const artworks = [
   {
     "id": 68,
     "title": "Exit 2",
-    "dimentions": "18 x 20in",
+    "dimensions": "18 x 20in",
     "medium": "Oil on Canvas Panel",
     "price": 1111,
     "detail_imgs": 1,
@@ -761,7 +761,7 @@ const artworks = [
   {
     "id": 69,
     "title": "Danville",
-    "dimentions": "21 x 26in",
+    "dimensions": "21 x 26in",
     "medium": "Acrylics on Canvas",
     "price": 1111,
     "detail_imgs": 2,
@@ -772,7 +772,7 @@ const artworks = [
   {
     "id": 70,
     "title": "River",
-    "dimentions": "8 x 12in",
+    "dimensions": "8 x 12in",
     "medium": "Oil on Canvas",
     "price": 150,
     "detail_imgs": 1,
@@ -783,7 +783,7 @@ const artworks = [
   {
     "id": 71,
     "title": "Before",
-    "dimentions": "8 x 10in",
+    "dimensions": "8 x 10in",
     "medium": "Oil on Board",
     "price": 1111,
     "detail_imgs": 1,
@@ -794,7 +794,7 @@ const artworks = [
   {
     "id": 72,
     "title": "Untitled.",
-    "dimentions": "14 x 14in",
+    "dimensions": "14 x 14in",
     "medium": "Oil on Canvas",
     "price": 150,
     "detail_imgs": 1,
@@ -805,7 +805,7 @@ const artworks = [
   {
     "id": 73,
     "title": "Jorja",
-    "dimentions": "",
+    "dimensions": "",
     "medium": "Oil on Paper",
     "price": 100,
     "detail_imgs": 1,
@@ -816,7 +816,7 @@ const artworks = [
   {
     "id": 74,
     "title": "Palm Oil",
-    "dimentions": "14 x 14in",
+    "dimensions": "14 x 14in",
     "medium": "Oil on Canvas",
     "price": 250,
     "detail_imgs": 1,
@@ -827,7 +827,7 @@ const artworks = [
   {
     "id": 75,
     "title": "Distance",
-    "dimentions": "10 x 14in",
+    "dimensions": "10 x 14in",
     "medium": "Acrylics on Canvas",
     "price": 0,
     "detail_imgs": 0,
@@ -838,7 +838,7 @@ const artworks = [
   {
     "id": 76,
     "title": "Self Portrait with Dells",
-    "dimentions": "8 x 10in",
+    "dimensions": "8 x 10in",
     "medium": "Oil on Board",
     "price": 150,
     "detail_imgs": 1,
@@ -849,18 +849,18 @@ const artworks = [
   {
     "id": 77,
     "title": "Lavender II",
-    "dimentions": "8 x 8in",
+    "dimensions": "8 x 8in",
     "medium": "Acrylics on Canvas",
     "price": 100,
     "detail_imgs": 3,
     "section": "paint",
     "subsection": "thesis",
-    "file": "Lavender II_SQKZ_Riley-Hoff.jpg"
+    "file": "Lavender%20II_SQKZ_Riley-Hoff.jpg"
   },
   {
     "id": 78,
     "title": "Self Portrait at Night",
-    "dimentions": "8 x 10in",
+    "dimensions": "8 x 10in",
     "medium": "Oil on Board",
     "price": 150,
     "detail_imgs": 3,
@@ -871,7 +871,7 @@ const artworks = [
   {
     "id": 79,
     "title": "Ray",
-    "dimentions": "10 x 14in",
+    "dimensions": "10 x 14in",
     "medium": "Acrylics on Canvas",
     "price": 200,
     "detail_imgs": 0,
@@ -882,7 +882,7 @@ const artworks = [
   {
     "id": 80,
     "title": "Engulf",
-    "dimentions": "22 x 18in",
+    "dimensions": "22 x 18in",
     "medium": "Acrylics on Canvas",
     "price": 0,
     "detail_imgs": 0,
@@ -893,7 +893,7 @@ const artworks = [
   {
     "id": 81,
     "title": "Lavender",
-    "dimentions": "24 x 16in",
+    "dimensions": "24 x 16in",
     "medium": "Acrylics on Canvas",
     "price": 500,
     "detail_imgs": 3,
@@ -904,7 +904,7 @@ const artworks = [
   {
     "id": 82,
     "title": "Communication",
-    "dimentions": "30 x 22in",
+    "dimensions": "30 x 22in",
     "medium": "Acrylics on Canvas",
     "price": 0,
     "detail_imgs": 2,
@@ -915,18 +915,18 @@ const artworks = [
   {
     "id": 83,
     "title": "Flower Still Life with Lavender",
-    "dimentions": "10 x 14in",
+    "dimensions": "10 x 14in",
     "medium": "Acrylics on Board",
     "price": 1111,
     "detail_imgs": 0,
     "section": "paint",
     "subsection": 2019,
-    "file": "Flower Still Life with Lavender_SQKZ_Riley-Hoff.jpg"
+    "file": "Flower%20Still%20Life%20with%20Lavender_SQKZ_Riley-Hoff.jpg"
   },
   {
     "id": 84,
     "title": "Here",
-    "dimentions": "20 x 20in",
+    "dimensions": "20 x 20in",
     "medium": "Acrylics on Canvas",
     "price": 500,
     "detail_imgs": 3,
@@ -937,18 +937,18 @@ const artworks = [
   {
     "id": 85,
     "title": "Here II",
-    "dimentions": "8 x 8in",
+    "dimensions": "8 x 8in",
     "medium": "Acrylics on Canvas",
     "price": 100,
     "detail_imgs": 3,
     "section": "paint",
     "subsection": "thesis",
-    "file": "Here II_SQKZ_Riley-Hoff.jpg"
+    "file": "Here%20II_SQKZ_Riley-Hoff.jpg"
   },
   {
     "id": 86,
     "title": "Knife",
-    "dimentions": "",
+    "dimensions": "",
     "medium": "Oil on Paper",
     "price": 30,
     "detail_imgs": 1,
@@ -959,7 +959,7 @@ const artworks = [
   {
     "id": 87,
     "title": "Lands End",
-    "dimentions": "",
+    "dimensions": "",
     "medium": "Oil on Paper",
     "price": 1111,
     "detail_imgs": 1,
@@ -970,7 +970,7 @@ const artworks = [
   {
     "id": 88,
     "title": "Dusk",
-    "dimentions": "24 x 18in",
+    "dimensions": "24 x 18in",
     "medium": "Acrylics on Board",
     "price": 250,
     "detail_imgs": 0,
@@ -981,7 +981,7 @@ const artworks = [
   {
     "id": 89,
     "title": "Untitled.",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Oil on Paper",
     "price": 0,
     "detail_imgs": 1,
@@ -992,7 +992,7 @@ const artworks = [
   {
     "id": 90,
     "title": "Emerald",
-    "dimentions": "",
+    "dimensions": "",
     "medium": "Acrylics on Paper",
     "price": 0,
     "detail_imgs": 0,
@@ -1003,18 +1003,18 @@ const artworks = [
   {
     "id": 91,
     "title": "Arizona II",
-    "dimentions": "8 x 8in",
+    "dimensions": "8 x 8in",
     "medium": "Acrylics on Canvas",
     "price": 100,
     "detail_imgs": 3,
     "section": "paint",
     "subsection": "thesis",
-    "file": "Arizona II_SQKZ_Riley-Hoff.jpg"
+    "file": "Arizona%20II_SQKZ_Riley-Hoff.jpg"
   },
   {
     "id": 92,
     "title": "Arizona",
-    "dimentions": "22 x 18in",
+    "dimensions": "22 x 18in",
     "medium": "Acrylics on Canvas",
     "price": 0,
     "detail_imgs": 3,
@@ -1025,7 +1025,7 @@ const artworks = [
   {
     "id": 93,
     "title": "Valentine",
-    "dimentions": "10 x 10in",
+    "dimensions": "10 x 10in",
     "medium": "Acrylics on Canvas",
     "price": 1111,
     "detail_imgs": 0,
@@ -1036,7 +1036,7 @@ const artworks = [
   {
     "id": 94,
     "title": "Rust",
-    "dimentions": "8 x 10in",
+    "dimensions": "8 x 10in",
     "medium": "Acylics on Canvas",
     "price": 1111,
     "detail_imgs": 1,
@@ -1047,18 +1047,18 @@ const artworks = [
   {
     "id": 95,
     "title": "Untitled (flowers)",
-    "dimentions": "10 x 14in",
+    "dimensions": "10 x 14in",
     "medium": "Acrylics on Canvas",
     "price": 100,
     "detail_imgs": 0,
     "section": "paint",
     "subsection": 2019,
-    "file": "Untitled flowers_SQKZ_Riley-Hoff.jpg"
+    "file": "Untitled%20flowers_SQKZ_Riley-Hoff.jpg"
   },
   {
     "id": 96,
     "title": "Marble",
-    "dimentions": "8 x 10in",
+    "dimensions": "8 x 10in",
     "medium": "Acrylics on Board",
     "price": 250,
     "detail_imgs": 1,
@@ -1069,29 +1069,29 @@ const artworks = [
   {
     "id": 97,
     "title": "Untitled (hands)",
-    "dimentions": "10 x 14in",
+    "dimensions": "10 x 14in",
     "medium": "Acrylics on Canvas",
     "price": 100,
     "detail_imgs": 0,
     "section": "paint",
     "subsection": 2019,
-    "file": "Untitled hands_SQKZ_Riley-Hoff.jpg"
+    "file": "Untitled%20hands_SQKZ_Riley-Hoff.jpg"
   },
   {
     "id": 98,
     "title": "Still Life with Lime",
-    "dimentions": "14 x 10in",
+    "dimensions": "14 x 10in",
     "medium": "Acrylics on Canvas",
     "price": 1111,
     "detail_imgs": 0,
     "section": "paint",
     "subsection": 2019,
-    "file": "Still Life with Lime_SQKZ_Riley-Hoff.jpg"
+    "file": "Still%20Life%20with%20Lime_SQKZ_Riley-Hoff.jpg"
   },
   {
     "id": 99,
     "title": "Iceland",
-    "dimentions": "8 x 36in",
+    "dimensions": "8 x 36in",
     "medium": "Oil on Canvas",
     "price": 300,
     "detail_imgs": 6,
@@ -1102,29 +1102,29 @@ const artworks = [
   {
     "id": 100,
     "title": "Morning II",
-    "dimentions": "8 x 8in",
+    "dimensions": "8 x 8in",
     "medium": "Acrylics on Canvas",
     "price": 100,
     "detail_imgs": 2,
     "section": "paint",
     "subsection": "thesis",
-    "file": "Morning II_SQKZ_Riley-Hoff.jpg"
+    "file": "Morning%20II_SQKZ_Riley-Hoff.jpg"
   },
   {
     "id": 101,
     "title": "Self Portrait with Flowers",
-    "dimentions": "22 x 18in",
+    "dimensions": "22 x 18in",
     "medium": "Acrylics on Canvas",
     "price": 1111,
     "detail_imgs": 0,
     "section": "paint",
     "subsection": 2019,
-    "file": "Self Portrait with Flowers_SQKZ_Riley-Hoff.jpg"
+    "file": "Self%20Portrait%20with%20Flowers_SQKZ_Riley-Hoff.jpg"
   },
   {
     "id": 102,
     "title": "Gigi",
-    "dimentions": "Unknown",
+    "dimensions": "Unknown",
     "medium": "Acrylics on Canvas",
     "price": 0,
     "detail_imgs": 0,
@@ -1135,7 +1135,7 @@ const artworks = [
   {
     "id": 103,
     "title": "Coup",
-    "dimentions": "5 x 6.5in",
+    "dimensions": "5 x 6.5in",
     "medium": "Charcoal on Paper",
     "price": 150,
     "detail_imgs": 1,
@@ -1146,9 +1146,9 @@ const artworks = [
   {
     "id": 104,
     "title": "Swan",
-    "dimentions": "5 x 6.5in",
+    "dimensions": "5 x 6.5in",
     "medium": "Charcoal on Paper",
-    "price": 1111,
+    "price": 0,
     "detail_imgs": 1,
     "section": "draw",
     "subsection": 2024,
@@ -1157,7 +1157,7 @@ const artworks = [
   {
     "id": 105,
     "title": "Runner - Cover Art",
-    "dimentions": "8 x 8in",
+    "dimensions": "8 x 8in",
     "medium": "Charcoal on Paper",
     "price": 100,
     "detail_imgs": 0,
@@ -1168,7 +1168,7 @@ const artworks = [
   {
     "id": 106,
     "title": "Voices Stuck - Cover Art",
-    "dimentions": "8 x 8in",
+    "dimensions": "8 x 8in",
     "medium": "Charcoal and Graphite on Paper",
     "price": 1111,
     "detail_imgs": 0,
@@ -1179,7 +1179,7 @@ const artworks = [
   {
     "id": 107,
     "title": "Avoid the Wait - Cover Art",
-    "dimentions": "8 x 8in",
+    "dimensions": "8 x 8in",
     "medium": "Charcoal and Graphite on Paper",
     "price": 100,
     "detail_imgs": 0,
@@ -1190,7 +1190,7 @@ const artworks = [
   {
     "id": 108,
     "title": "Untitled",
-    "dimentions": "5 x 7in",
+    "dimensions": "5 x 7in",
     "medium": "Charcoal on Paper",
     "price": 1111,
     "detail_imgs": 1,
@@ -1201,7 +1201,7 @@ const artworks = [
   {
     "id": 109,
     "title": "Olive",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Graphite on Paper",
     "price": 50,
     "detail_imgs": 1,
@@ -1212,7 +1212,7 @@ const artworks = [
   {
     "id": 110,
     "title": "Luxembourg",
-    "dimentions": "15 x 24in",
+    "dimensions": "15 x 24in",
     "medium": "Charcoal on Paper",
     "price": 250,
     "detail_imgs": 2,
@@ -1223,7 +1223,7 @@ const artworks = [
   {
     "id": 111,
     "title": "Munich",
-    "dimentions": "15 x 24in",
+    "dimensions": "15 x 24in",
     "medium": "Charcoal on Paper",
     "price": 250,
     "detail_imgs": 2,
@@ -1234,18 +1234,18 @@ const artworks = [
   {
     "id": 112,
     "title": "My bed for a bit",
-    "dimentions": "",
+    "dimensions": "",
     "medium": "Charcoal on Paper",
     "price": 0,
     "detail_imgs": 1,
     "section": "draw",
     "subsection": 2019,
-    "file": "My bed for a bit_SQKZ_Riley-Hoff.jpg"
+    "file": "My%20bed%20for%20a%20bit_SQKZ_Riley-Hoff.jpg"
   },
   {
     "id": 113,
     "title": "Sense",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Charcoal on Paper",
     "price": 1111,
     "detail_imgs": 1,
@@ -1256,7 +1256,7 @@ const artworks = [
   {
     "id": 114,
     "title": "Nothing.",
-    "dimentions": "7.5 x 11in",
+    "dimensions": "7.5 x 11in",
     "medium": "Charcoal on Paper",
     "price": 0,
     "detail_imgs": 1,
@@ -1267,7 +1267,7 @@ const artworks = [
   {
     "id": 115,
     "title": "Lie",
-    "dimentions": "24 x 30in",
+    "dimensions": "24 x 30in",
     "medium": "Charcoal on Paper",
     "price": 100,
     "detail_imgs": 1,
@@ -1278,7 +1278,7 @@ const artworks = [
   {
     "id": 116,
     "title": "Ilie",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Charcoal on Paper",
     "price": 0,
     "detail_imgs": 0,
@@ -1289,7 +1289,7 @@ const artworks = [
   {
     "id": 117,
     "title": "Swan",
-    "dimentions": "11 x 14in",
+    "dimensions": "11 x 14in",
     "medium": "Charcoal on Paper",
     "price": 1111,
     "detail_imgs": 1,
@@ -1300,7 +1300,7 @@ const artworks = [
   {
     "id": 118,
     "title": "Untitled.",
-    "dimentions": "",
+    "dimensions": "",
     "medium": "Charcoal on Paper",
     "price": 150,
     "detail_imgs": 1,
@@ -1311,7 +1311,7 @@ const artworks = [
   {
     "id": 119,
     "title": "Aimee",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Charcoal on Paper",
     "price": 100,
     "detail_imgs": 1,
@@ -1322,7 +1322,7 @@ const artworks = [
   {
     "id": 120,
     "title": "Unititled.",
-    "dimentions": "22 x 30in",
+    "dimensions": "22 x 30in",
     "medium": "Charcoal on Paper",
     "price": 200,
     "detail_imgs": 2,
@@ -1333,7 +1333,7 @@ const artworks = [
   {
     "id": 121,
     "title": "jaiksen",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Charcoal on Paper",
     "price": 200,
     "detail_imgs": 1,
@@ -1344,7 +1344,7 @@ const artworks = [
   {
     "id": 122,
     "title": "Untitled.",
-    "dimentions": "-",
+    "dimensions": "-",
     "medium": "Charcoal on Paper",
     "price": 100,
     "detail_imgs": 1,
@@ -1355,7 +1355,7 @@ const artworks = [
   {
     "id": 123,
     "title": "Bella, Profile",
-    "dimentions": "11 x 14in",
+    "dimensions": "11 x 14in",
     "medium": "Charcoal on Paper",
     "price": 0,
     "detail_imgs": 2,
@@ -1366,7 +1366,7 @@ const artworks = [
   {
     "id": 124,
     "title": "Night I",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Charcoal on Paper",
     "price": 50,
     "detail_imgs": 1,
@@ -1377,7 +1377,7 @@ const artworks = [
   {
     "id": 125,
     "title": "Night II",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Charcoal on Paper",
     "price": 1111,
     "detail_imgs": 1,
@@ -1388,7 +1388,7 @@ const artworks = [
   {
     "id": 126,
     "title": "Night III",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Charcoal on Paper",
     "price": 50,
     "detail_imgs": 1,
@@ -1399,7 +1399,7 @@ const artworks = [
   {
     "id": 127,
     "title": "Fiat",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Charcoal and Graphite on Paper",
     "price": 1111,
     "detail_imgs": 1,
@@ -1410,7 +1410,7 @@ const artworks = [
   {
     "id": 128,
     "title": "Clairity",
-    "dimentions": "22 x 30in",
+    "dimensions": "22 x 30in",
     "medium": "Charcoal on Paper",
     "price": 250,
     "detail_imgs": 0,
@@ -1421,7 +1421,7 @@ const artworks = [
   {
     "id": 129,
     "title": "Timeline",
-    "dimentions": "30 x 22in",
+    "dimensions": "30 x 22in",
     "medium": "Charcoal on Paper",
     "price": 250,
     "detail_imgs": 0,
@@ -1432,7 +1432,7 @@ const artworks = [
   {
     "id": 130,
     "title": "Raspberries",
-    "dimentions": "31 x 22in, Diptych",
+    "dimensions": "31 x 22in, Diptych",
     "medium": "Charcoal on Paper",
     "price": 250,
     "detail_imgs": 2,
@@ -1443,7 +1443,7 @@ const artworks = [
   {
     "id": 131,
     "title": "Devotion",
-    "dimentions": "22 x 30in",
+    "dimensions": "22 x 30in",
     "medium": "Charcoal on Paper",
     "price": 250,
     "detail_imgs": 0,
@@ -1454,7 +1454,7 @@ const artworks = [
   {
     "id": 132,
     "title": "Fracture",
-    "dimentions": "22 x 22in",
+    "dimensions": "22 x 22in",
     "medium": "Charcoal on Paper",
     "price": 250,
     "detail_imgs": 0,
@@ -1465,7 +1465,7 @@ const artworks = [
   {
     "id": 133,
     "title": "Gigi on bed.",
-    "dimentions": "9 x 12in",
+    "dimensions": "9 x 12in",
     "medium": "Charcoal on Paper",
     "price": 0,
     "detail_imgs": 1,
@@ -1476,29 +1476,29 @@ const artworks = [
   {
     "id": 134,
     "title": "Still I Wonder Why",
-    "dimentions": "20 x 28in",
+    "dimensions": "20 x 28in",
     "medium": "Charcoal on Paper",
     "price": 100,
     "detail_imgs": 0,
     "section": "draw",
     "subsection": 2018,
-    "file": "Still I Wonder Why_SQKZ_Riley-Hoff.jpg"
+    "file": "Still%20I%20Wonder%20Why_SQKZ_Riley-Hoff.jpg"
   },
   {
     "id": 135,
     "title": "Untitled Sketch",
-    "dimentions": "",
+    "dimensions": "",
     "medium": "Pencil on Paper",
     "price": 0,
     "detail_imgs": 0,
     "section": "draw",
     "subsection": 2019,
-    "file": "Untitled Sketch_SQKZ_Riley-Hoff.jpg"
+    "file": "Untitled%20Sketch_SQKZ_Riley-Hoff.jpg"
   },
   {
     "id": 136,
     "title": "Blue Tree",
-    "dimentions": "16 x 12in",
+    "dimensions": "16 x 12in",
     "medium": "Framed photo",
     "price": 0,
     "detail_imgs": 2,
@@ -1509,7 +1509,7 @@ const artworks = [
   {
     "id": 137,
     "title": "Broke Bais Cover Art",
-    "dimentions": "",
+    "dimensions": "",
     "medium": "Digtal art",
     "price": 0,
     "detail_imgs": 0,
@@ -1520,7 +1520,7 @@ const artworks = [
   {
     "id": 138,
     "title": "Broke Bais Cover Art",
-    "dimentions": "",
+    "dimensions": "",
     "medium": "Digtal art",
     "price": 0,
     "detail_imgs": 0,
@@ -1531,7 +1531,7 @@ const artworks = [
   {
     "id": 139,
     "title": "Untitled Collage",
-    "dimentions": "12 x 12in",
+    "dimensions": "12 x 12in",
     "medium": "Mixed Media",
     "price": 0,
     "detail_imgs": 4,
@@ -1542,84 +1542,84 @@ const artworks = [
   {
     "id": 140,
     "title": "At Sea",
-    "dimentions": "",
+    "dimensions": "",
     "medium": "Collage",
     "price": 0,
     "detail_imgs": 0,
     "section": "misc",
     "subsection": "collage",
-    "file": "At Sea_SQKZ_Riley-Hoff.jpg"
+    "file": "At%20Sea_SQKZ_Riley-Hoff.jpg"
   },
   {
     "id": 141,
     "title": "Last Night I",
-    "dimentions": "",
+    "dimensions": "",
     "medium": "Collage, Photography",
     "price": 0,
     "detail_imgs": 0,
     "section": "misc",
     "subsection": "ln",
-    "file": "Last Night I_SQKZ_Riley-Hoff.jpg"
+    "file": "Last%20Night%20I_SQKZ_Riley-Hoff.jpg"
   },
   {
     "id": 142,
     "title": "Last Night II",
-    "dimentions": "",
+    "dimensions": "",
     "medium": "Collage, Photography",
     "price": 0,
     "detail_imgs": 0,
     "section": "misc",
     "subsection": "ln",
-    "file": "Last Night II_SQKZ_Riley-Hoff.jpg"
+    "file": "Last%20Night%20II_SQKZ_Riley-Hoff.jpg"
   },
   {
     "id": 143,
     "title": "Last Night III",
-    "dimentions": "",
+    "dimensions": "",
     "medium": "Collage, Photography",
     "price": 0,
     "detail_imgs": 0,
     "section": "misc",
     "subsection": "ln",
-    "file": "Last Night III_SQKZ_Riley-Hoff.jpg"
+    "file": "Last%20Night%20III_SQKZ_Riley-Hoff.jpg"
   },
   {
     "id": 144,
     "title": "Last Night IV",
-    "dimentions": "",
+    "dimensions": "",
     "medium": "Collage, Photography",
     "price": 0,
     "detail_imgs": 0,
     "section": "misc",
     "subsection": "ln",
-    "file": "Last Night IV_SQKZ_Riley-Hoff.jpg"
+    "file": "Last%20Night%20IV_SQKZ_Riley-Hoff.jpg"
   },
   {
     "id": 145,
     "title": "Last Night V",
-    "dimentions": "",
+    "dimensions": "",
     "medium": "Collage, Photography",
     "price": 0,
     "detail_imgs": 0,
     "section": "misc",
     "subsection": "ln",
-    "file": "Last Night V_SQKZ_Riley-Hoff.jpg"
+    "file": "Last%20Night%20V_SQKZ_Riley-Hoff.jpg"
   },
   {
     "id": 146,
     "title": "Last Night VI",
-    "dimentions": "",
+    "dimensions": "",
     "medium": "Collage, Photography",
     "price": 0,
     "detail_imgs": 0,
     "section": "misc",
     "subsection": "ln",
-    "file": "Last Night VI_SQKZ_Riley-Hoff.jpg"
+    "file": "Last%20Night%20VI_SQKZ_Riley-Hoff.jpg"
   },
   {
     "id": 147,
     "title": "Teal",
-    "dimentions": "2 x 7in",
+    "dimensions": "2 x 7in",
     "medium": "Collage",
     "price": 0,
     "detail_imgs": 1,
@@ -1630,7 +1630,7 @@ const artworks = [
   {
     "id": 148,
     "title": "Untitled Collage 6",
-    "dimentions": "3.5 x 4in",
+    "dimensions": "3.5 x 4in",
     "medium": "Collage",
     "price": 0,
     "detail_imgs": 1,
@@ -1641,7 +1641,7 @@ const artworks = [
   {
     "id": 149,
     "title": "Peitra",
-    "dimentions": "",
+    "dimensions": "",
     "medium": "Collage",
     "price": 0,
     "detail_imgs": 1,
@@ -1652,7 +1652,7 @@ const artworks = [
   {
     "id": 150,
     "title": "Untitled Collage 4",
-    "dimentions": "",
+    "dimensions": "",
     "medium": "Collage",
     "price": 0,
     "detail_imgs": 1,
@@ -1663,7 +1663,7 @@ const artworks = [
   {
     "id": 151,
     "title": "Untitled Collage 1",
-    "dimentions": "",
+    "dimensions": "",
     "medium": "Collage",
     "price": 0,
     "detail_imgs": 1,
@@ -1674,7 +1674,7 @@ const artworks = [
   {
     "id": 152,
     "title": "Untitled Collage 7",
-    "dimentions": "",
+    "dimensions": "",
     "medium": "Collage",
     "price": 0,
     "detail_imgs": 1,
@@ -1685,7 +1685,7 @@ const artworks = [
   {
     "id": 153,
     "title": "Untitled.",
-    "dimentions": "Digital",
+    "dimensions": "Digital",
     "medium": "Photography",
     "price": 0,
     "detail_imgs": 0,
@@ -1696,7 +1696,7 @@ const artworks = [
   {
     "id": 154,
     "title": "$$$$",
-    "dimentions": "",
+    "dimensions": "",
     "medium": "Collage, Mixed Media",
     "price": 0,
     "detail_imgs": 0,
@@ -1707,7 +1707,7 @@ const artworks = [
   {
     "id": 155,
     "title": "Untitled.",
-    "dimentions": "Digital",
+    "dimensions": "Digital",
     "medium": "Photography",
     "price": 0,
     "detail_imgs": 0,
@@ -1718,7 +1718,7 @@ const artworks = [
   {
     "id": 156,
     "title": "Untitled.",
-    "dimentions": "Digital",
+    "dimensions": "Digital",
     "medium": "Photography",
     "price": 0,
     "detail_imgs": 0,
@@ -1729,7 +1729,7 @@ const artworks = [
   {
     "id": 157,
     "title": "Untitled.",
-    "dimentions": "Digital",
+    "dimensions": "Digital",
     "medium": "Photography",
     "price": 0,
     "detail_imgs": 0,
@@ -1740,7 +1740,7 @@ const artworks = [
   {
     "id": 158,
     "title": "Untitled.",
-    "dimentions": "Digital",
+    "dimensions": "Digital",
     "medium": "Photography",
     "price": 0,
     "detail_imgs": 0,
@@ -1751,7 +1751,7 @@ const artworks = [
   {
     "id": 159,
     "title": "Untitled.",
-    "dimentions": "Digital",
+    "dimensions": "Digital",
     "medium": "Photography",
     "price": 0,
     "detail_imgs": 0,
@@ -1762,7 +1762,7 @@ const artworks = [
   {
     "id": 160,
     "title": "Untitled.",
-    "dimentions": "Digital",
+    "dimensions": "Digital",
     "medium": "Photography",
     "price": 0,
     "detail_imgs": 0,
@@ -1773,7 +1773,7 @@ const artworks = [
   {
     "id": 161,
     "title": "Untitled.",
-    "dimentions": "Digital",
+    "dimensions": "Digital",
     "medium": "Photography",
     "price": 0,
     "detail_imgs": 0,
@@ -1784,7 +1784,7 @@ const artworks = [
   {
     "id": 162,
     "title": "Untitled.",
-    "dimentions": "Digital",
+    "dimensions": "Digital",
     "medium": "Photography",
     "price": 0,
     "detail_imgs": 0,
@@ -1795,7 +1795,7 @@ const artworks = [
   {
     "id": 163,
     "title": "Untitled.",
-    "dimentions": "Digital",
+    "dimensions": "Digital",
     "medium": "Photography",
     "price": 0,
     "detail_imgs": 0,
@@ -1806,7 +1806,7 @@ const artworks = [
   {
     "id": 164,
     "title": "Untitled.",
-    "dimentions": "Digital",
+    "dimensions": "Digital",
     "medium": "Photography",
     "price": 0,
     "detail_imgs": 0,
@@ -1817,7 +1817,7 @@ const artworks = [
   {
     "id": 165,
     "title": "Untitled.",
-    "dimentions": "Digital",
+    "dimensions": "Digital",
     "medium": "Photography",
     "price": 0,
     "detail_imgs": 0,
@@ -1828,7 +1828,7 @@ const artworks = [
   {
     "id": 166,
     "title": "Untitled.",
-    "dimentions": "Digital",
+    "dimensions": "Digital",
     "medium": "Photography",
     "price": 0,
     "detail_imgs": 0,
@@ -1839,7 +1839,7 @@ const artworks = [
   {
     "id": 167,
     "title": "Untitled.",
-    "dimentions": "Digital",
+    "dimensions": "Digital",
     "medium": "Photography",
     "price": 0,
     "detail_imgs": 0,
@@ -1850,7 +1850,7 @@ const artworks = [
   {
     "id": 168,
     "title": "Untitled.",
-    "dimentions": "Digital",
+    "dimensions": "Digital",
     "medium": "Photography",
     "price": 0,
     "detail_imgs": 0,
@@ -1861,18 +1861,18 @@ const artworks = [
   {
     "id": 169,
     "title": "Self Portrait",
-    "dimentions": "Digital",
+    "dimensions": "Digital",
     "medium": "Photography",
     "price": 0,
     "detail_imgs": 0,
     "section": "misc",
     "subsection": "photo",
-    "file": "self Portrait__SQKZ_Riley-Hoff.jpg"
+    "file": "self%20Portrait__SQKZ_Riley-Hoff.jpg"
   },
   {
     "id": 170,
     "title": "Untitled.",
-    "dimentions": "Digital",
+    "dimensions": "Digital",
     "medium": "Photography",
     "price": 0,
     "detail_imgs": 0,

@@ -24,7 +24,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <script src="data/artworks.js"></script>
   <script src="script.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -32,68 +33,75 @@
 <script src="//html5shim.googlecode.com/sin/trunk/html5.js"></script>
 <![endif]-->
 </head>
-<script>
-
-  //if on mobile add make grid mode
-  var width = $(window).width();
-  if (width <= 850) {
-    $('body').addClass('grid');
-  }
-  $(window).resize(function () {
-    if (width <= 850) {
-      $('body').addClass('grid');
-    }
-  });
-
-</script>
 
 <body class="list">
+  <script>
+
+    var cat = 'all'; //current category
+
+    //if on mobile add make grid mode
+    var width = $(window).width();
+    
+  </script>
   <div id="cursor"></div>
-  <header>
-    <a href="javascript:delay('/')">
-      <h1 id="sqkz_title">Sqkz</h1>
-    </a>
-    <nav class="">
-      <a href="javascript:delay('/painting.html')">painting</a>
-      <a href="javascript:delay('/drawing.html')">drawing</a>
-      <a href="#" class="active">misc</a>
-      <a href="javascript:delay('/#about')">about</a>
-    </nav>
-    <!-- mobile menu icon -->
-    <div id="mbl_icon" class="mobile_icon" onclick="mobileIcon(this)">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
+  <header id="header">
+    <div class="row_1">
+      <a href="/">
+        <h1 id="sqkz_title">Sqkz</h1>
+      </a>
+      <div id="nav_title"></div>
+      <nav class="">
+        <a href="/index.html" class="sqkz_title">SQKZ</a>
+        <a href="/painting.html">painting</a>
+        <a href="/drawing.html">drawing</a>
+        <a href="#" class="active">misc</a>
+        <a href="/#about">about</a>
+      </nav>
+      <!-- mobile menu icon -->
+      <div class="mbl_menu">
+        <div id="mbl_icon" class="mobile_icon" onclick="mobileIcon(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+        </div>
+      </div>
+    </div>
+    <div id="categories-m" class="row_2 categories cat-list">
+      <div class="cat_title" onclick="this.parentElement.classList.toggle('open')">Filter</div>
+      <button onclick="cat = filter('all',this)" class="active cat" onmouseover="cursorHover()"
+        onmouseout="endCursorHover()" data-cat="all">View All</button>
+      <div class="divider"></div>
+      <button onclick="cat = filter('gd',this)" class="cat" onmouseover="cursorHover()" onmouseout="endCursorHover()"
+        data-cat="gd">Digital</button>
+      <button onclick="cat = filter('ln',this)" class="cat" onmouseover="cursorHover()" onmouseout="endCursorHover()"
+        data-cat="ln">Last Night</button>
+      <button onclick="cat = filter('collage',this)" class="cat" onmouseover="cursorHover()" onmouseout="endCursorHover()"
+        data-cat="collage">Collages</button>
+      <button onclick="cat = filter('photo',this)" class="cat" onmouseover="cursorHover()" onmouseout="endCursorHover()"
+        data-cat="photo">Photography</button>
+      <!-- <div class="divider"></div> -->
+      <!-- <button onclick="cat = filter('video',this)" class="cat" onmouseover="cursorHover()" onmouseout="endCursorHover()" data-cat="video">Video</button> -->
+    </div>
+    <!-- <div class="cat-end"></div> -->
+    <div class="row_3">
+      <div id="available_only" class="hoverable" onclick="this.classList.toggle('active');  filter(cat,null)">
+        <span>Available Only</span></div>
+        <div class="view">
+          <button id="grid_btn" class="grid_btn" onclick="gridView()">
+            <svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600"><defs></defs><rect class="b" x="450" y="450" width="150" height="150" rx="30" ry="30"/><rect class="b" x="450" y="225" width="150" height="150" rx="30" ry="30"/><rect class="b" x="450" width="150" height="150" rx="30" ry="30"/><rect class="b" x="225" y="450" width="150" height="150" rx="30" ry="30"/><rect class="b" x="225" y="225" width="150" height="150" rx="30" ry="30"/><rect class="b" x="225" width="150" height="150" rx="30" ry="30"/><rect class="b" y="450" width="150" height="150" rx="30" ry="30"/><rect class="b" y="225" width="150" height="150" rx="30" ry="30"/><rect class="b" width="150" height="150" rx="30" ry="30"/></svg>
+            <span class="txt">Grid</span>
+          </button>
+          <button id="grid_btn" class="list_btn" onclick="gridView()"><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 150"><defs></defs><rect class="b" x="425" y="0" width="175" height="150" rx="30" ry="30"/><rect class="b" x="212.5" width="175" height="150" rx="30" ry="30"/><rect class="b" y="0" width="175" height="150" rx="30" ry="30"/></svg><span class="txt">List</span></button>
+        </div>
     </div>
   </header>
   <section id="imgs">
-    <button id="categories_btn" onclick="openCategories()" onmouseover="cursorHover()" onmouseout="endCursorHover()">Categories</button>
-    <div id="categories">
-      <button class="video_btn" onclick="filter('video',this)" onmouseover="cursorHover()" onmouseout="endCursorHover()">[ Video ]</button>
-      <button onclick="filter('gd',this)" class="" onmouseover="cursorHover()" onmouseout="endCursorHover()">Digital</button>
-      <button onclick="filter('ln',this)" class="" onmouseover="cursorHover()" onmouseout="endCursorHover()">Last Night</button>
-      <button onclick="filter('collage',this)" class="" onmouseover="cursorHover()" onmouseout="endCursorHover()">Collages</button>
-      <button onclick="filter('photo',this)" class="" onmouseover="cursorHover()" onmouseout="endCursorHover()">Photography</button>
-      <button onclick="filter('all',this)" class="active" onmouseover="cursorHover()" onmouseout="endCursorHover()">View All</button>
-    </div>
     <div id="next_btn" class="move_btn" onmouseover="interval = setInterval(galleryNext,10);"
       onmouseout="clearInterval(interval);"></div>
     <div id="prev_btn" class="move_btn" onmouseover="interval = setInterval(galleryPrev,10);"
       onmouseout="clearInterval(interval);"></div>
     <!-- images go here -->
-    <div class="vid_grid" style="display: none;">
-      <div style="padding:50% 0 0 0;position:relative;"><iframe loading="lazy" src="https://player.vimeo.com/video/435499770?h=b9a765949c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="jojoba_7"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-      <div style="padding:75% 0 0 0;position:relative;"><iframe loading="lazy" src="https://player.vimeo.com/video/707521674?h=25a13f5fa9&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Velvet.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-      <div style="padding:75% 0 0 0;position:relative;"><iframe  loading="lazy" src="https://player.vimeo.com/video/707522312?h=65d963e760&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="BrkMsc_Final.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-      <div style="padding:177.78% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/707867848?h=0978130903&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="FARSI"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-      <div style="padding:177.78% 0 0 0;position:relative;"><iframe loading="lazy" src="https://player.vimeo.com/video/707522720?h=d2736f018b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="bells_synth.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-      <div style="padding:177.78% 0 0 0;position:relative;"><iframe loading="lazy" src="https://player.vimeo.com/video/707522754?h=cebe47195a&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="bells_grain.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-    </div>
   </section>
-
-  <button id="grid_btn" onclick="gridView()">
-    <span id="grid_svg" title="Grid View"><span class="mbl-txt">Grid</span><?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600"><defs></defs><rect class="b" x="450" y="450" width="150" height="150" rx="30" ry="30"/><rect class="b" x="450" y="225" width="150" height="150" rx="30" ry="30"/><rect class="b" x="450" width="150" height="150" rx="30" ry="30"/><rect class="b" x="225" y="450" width="150" height="150" rx="30" ry="30"/><rect class="b" x="225" y="225" width="150" height="150" rx="30" ry="30"/><rect class="b" x="225" width="150" height="150" rx="30" ry="30"/><rect class="b" y="450" width="150" height="150" rx="30" ry="30"/><rect class="b" y="225" width="150" height="150" rx="30" ry="30"/><rect class="b" width="150" height="150" rx="30" ry="30"/></svg></span>
-    <span id="list_svg" title="List View"><span class="mbl-txt">List</span><?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 150"><defs></defs><rect class="b" x="425" y="0" width="175" height="150" rx="30" ry="30"/><rect class="b" x="212.5" width="175" height="150" rx="30" ry="30"/><rect class="b" y="0" width="175" height="150" rx="30" ry="30"/></svg></span>
- </button>
+  <footer></footer>
 
   <!-- fullscreen image view -->
   <div id="fullscreen_view" class="">
@@ -105,66 +113,120 @@
       </div>
       <div id="artwork_info">
         <p id="art_title">Untitled</p>
-        <p id="dimentions"></p>
+        <p id="dimensions"></p>
         <p id="medium"></p>
         <p id="price">
-          <svg id="price_dot" class="dot" onclick="theatreView()"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 644 644"><title>price_dot</title><path d="M312.40571,0h23.23061c0,278.75264,308.62688,298.6688,308.62688,298.6688v29.87425S338.95077,365.04619,338.95077,643.79883H309.08389C309.08389,365.04619.457,328.54305.457,328.54305V298.6688S312.40571,278.75264,312.40571,0Z"/></svg>
+          <svg id="price_dot" class="dot" onclick="theatreView()" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 644 644">
+            <title>price_dot</title>
+            <path
+              d="M312.40571,0h23.23061c0,278.75264,308.62688,298.6688,308.62688,298.6688v29.87425S338.95077,365.04619,338.95077,643.79883H309.08389C309.08389,365.04619.457,328.54305.457,328.54305V298.6688S312.40571,278.75264,312.40571,0Z" />
+          </svg>
           <span id="price_text"></span><br />
           <a id="inquire_link" href="contact.php"><button id="price_inquire_btn">Inquire</button></a>
         </p>
       </div>
       <button id="fullscreen_exit" onclick="fullscreenViewClose()">
-        &#10006;
+        <div class="bar1"></div>
+        <div class="bar2"></div>
       </button>
       <div id="fullscreen_bg" onclick="fullscreenViewClose()"></div>
     </div>
 
 </body>
 <script>
-// track mouse position
-var cursor = document.getElementById('cursor');
-document.addEventListener('mousemove', moveCursor)
-
-function moveCursor(e) {
-  var x = e.clientX;
-  var y = e.clientY;
-  cursor.style.left = `${x}px`;
-  cursor.style.top = `${y}px`;
-}
-
-//get all anchor tags, buttons and hoverable elements to animate cursor hover
-var links = Array.from(document.querySelectorAll('a, button, .hoverable'));
-
-links.forEach(links => {
-  links.addEventListener('mousemove', function() {
-    cursor.classList.add('hover');
-  })
-  links.addEventListener('mouseleave', function () {
-    cursor.classList.remove('hover');
-  })
-});
-//click animation
-window.addEventListener("mousedown", ()=>{
-  $('#cursor').addClass('mouse-down');
-    });
-    window.addEventListener("mouseup", ()=>{
-  $('#cursor').removeClass('mouse-down');
-    });
-//hover animation
-  function cursorHover() {
-      $('#cursor').addClass('hover');
-  }
-  function endCursorHover() {
-      $('#cursor').removeClass('hover');
-  }
-
   //display images
-  displayImages("misc", 150);
+  displayImages("misc", 169);
+  
+    //remove animate out if on body tag
+    if (document.body.classList.contains('animate_out')) { document.body.classList.remove('ainmimate_out') }
+
+
+  const scrollTarget = (width < 750) ? document.body : window;
+  let lastScrollTop = 0;
+
+scrollTarget.addEventListener('scroll', function () {
+  const currentScroll = scrollTarget.scrollTop || document.documentElement.scrollTop;
+
+  if (currentScroll > lastScrollTop) {
+    document.body.classList.add('scrolling');
+  } else {
+    document.body.classList.remove('scrolling');
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});
+
+// --- mobile only ---
+
+  //initial window width check
+  if (width <= 850 && document.body.classList.contains('list')) {
+    document.body.classList.remove('list');
+    document.body.classList.add('grid');
+  }
+
+  // --- mobile only (smaller breakpoint) ---
+  if (width < 750) {
+    var gallery = document.getElementById('imgs');
+    gallery.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (gallery.scrollTop > 100) {
+        document.getElementById("header").classList.add('scroll');
+      }
+      else {
+        document.getElementById("header").classList.remove('scroll');
+      }
+
+    }
+  }
+
+  // --- desktop only ---
+  if (width > 850) {
+
+  // track mouse position
+  var cursor = document.getElementById('cursor');
+  document.addEventListener('mousemove', moveCursor)
+
+  function moveCursor(e) {
+    var x = e.clientX;
+    var y = e.clientY;
+    cursor.style.left = `${x}px`;
+    cursor.style.top = `${y}px`;
+  }
+
+  //get all anchor tags, buttons and hoverable elements to animate cursor hover
+  var links = Array.from(document.querySelectorAll('a, button, .hoverable'));
+  var fullscreen_links = Array.from(document.querySelectorAll('.fs-link'));
+
+  links.forEach(links => {
+    links.addEventListener('mousemove', function () {
+      cursor.classList.add('hover');
+    })
+    links.addEventListener('mouseleave', function () {
+      cursor.classList.remove('hover');
+    })
+  });
+  fullscreen_links.forEach(fullscreen_links => {
+    fullscreen_links.addEventListener('mousemove', function () {
+      cursor.classList.add('fs-hover');
+    })
+    fullscreen_links.addEventListener('mouseleave', function () {
+      cursor.classList.remove('fs-hover');
+    })
+  });
+  //click animation
+  window.addEventListener("mousedown", () => {
+    $('#cursor').addClass('mouse-down');
+  });
+  window.addEventListener("mouseup", () => {
+    $('#cursor').removeClass('mouse-down');
+  });
 
   //horizontally scroll gallery section
   (function () {
     function scrollHorizontally(e) {
-      if ((document.body.className == "list") && (width > 750)) {
+      if (document.body.className == "list") {
         e = window.event || e;
         var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
         document.getElementById('imgs').scrollLeft -= (delta * 80); // Multiplied by 80
@@ -182,11 +244,8 @@ window.addEventListener("mousedown", ()=>{
     }
   })();
 
-  //initial window width check
-  if (width <= 850) {
-    $('body').removeClass('list');
-    $('body').addClass('grid');
-  }
+}
+
 </script>
 
 </html>
