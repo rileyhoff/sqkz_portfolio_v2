@@ -315,6 +315,26 @@ function displayImages(type, n) { //n is max number of images
   }
   document.getElementById("imgs").innerHTML += imgHtml;
 }
+// for images hosted on uploadcare
+function UCDisplayImages(type, n) { //n is max number of images
+  var ucRoot = "vqoirgk9gd.ucarecd.net";
+  var folder = "https://sqkz.art/imgs/" + type;
+  var imgHtml = "";
+
+  for (var i = 0; i < n; i++) {
+    if (typeof artworks[i] === 'undefined' || artworks[i] === null) { break; }
+    else {
+      var file = artworks[i].file;
+      if (file != undefined && file != "" && artworks[i].section == type) {
+        imgHtml += "<div class='gallery_img fs-link'  onclick='fullscreenViewOpen(this.firstChild)'><uc-img "
+          + "alt='" + artworks[i].title + "' "
+          + "src='" + folder + "/" + file + "' id='" + i + "' class='gallery '";
+        imgHtml += " onclick='fullscreenViewOpen(this)'></uc-img></div>";
+      }
+    }
+  }
+  document.getElementById("imgs").innerHTML += imgHtml;
+}
 
 function showVideo() {
   document.body.classList.add('video');
@@ -342,3 +362,42 @@ var contact = false;
 
 //interval id
 var interval;
+
+function runPreloader() {
+    var imgs = Array.prototype.slice.call(document.images);
+    var totalImages = imgs.length;
+    var totalToLoad = Math.min(totalImages, 5);
+    var counter = 0;
+    var pChange = totalToLoad > 0 ? 100 / totalToLoad : 100;
+    var splash = document.getElementById('splash');
+    var percent = document.getElementById('percent');
+    var section = document.getElementById('imgs');
+    if (!splash || !percent) return;
+
+    function incrementCounter() {
+        counter++;
+        var pct = Math.min(100, Math.ceil(counter * pChange));
+        percent.innerHTML = pct;
+        if (counter >= totalToLoad) {
+            splash.classList.add('loaded');
+            section.classList.add('slide-left');
+        }
+    }
+    function onImgLoad() {
+        incrementCounter();
+    }
+    if (totalToLoad === 0) {
+        percent.innerHTML = 100;
+        splash.classList.add('loaded');
+        section.classList.add('slide-left');
+    } else {
+        imgs.forEach(function (img) {
+            if (img.complete) {
+                incrementCounter();
+            } else {
+                img.addEventListener('load', onImgLoad, { once: true });
+                img.addEventListener('error', onImgLoad, { once: true });
+            }
+        });
+    }
+}

@@ -41,7 +41,7 @@
 
     //if on mobile add make grid mode
     var width = $(window).width();
-    
+
   </script>
   <div id="cursor"></div>
   <header id="header">
@@ -74,8 +74,8 @@
         data-cat="gd">Digital</button>
       <button onclick="cat = filter('ln',this)" class="cat" onmouseover="cursorHover()" onmouseout="endCursorHover()"
         data-cat="ln">Last Night</button>
-      <button onclick="cat = filter('collage',this)" class="cat" onmouseover="cursorHover()" onmouseout="endCursorHover()"
-        data-cat="collage">Collages</button>
+      <button onclick="cat = filter('collage',this)" class="cat" onmouseover="cursorHover()"
+        onmouseout="endCursorHover()" data-cat="collage">Collages</button>
       <button onclick="cat = filter('photo',this)" class="cat" onmouseover="cursorHover()" onmouseout="endCursorHover()"
         data-cat="photo">Photography</button>
       <!-- <div class="divider"></div> -->
@@ -84,16 +84,38 @@
     <!-- <div class="cat-end"></div> -->
     <div class="row_3">
       <div id="available_only" class="hoverable" onclick="this.classList.toggle('active');  filter(cat,null)">
-        <span>Available Only</span></div>
-        <div class="view">
-          <button id="grid_btn" class="grid_btn" onclick="gridView()">
-            <svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600"><defs></defs><rect class="b" x="450" y="450" width="150" height="150" rx="30" ry="30"/><rect class="b" x="450" y="225" width="150" height="150" rx="30" ry="30"/><rect class="b" x="450" width="150" height="150" rx="30" ry="30"/><rect class="b" x="225" y="450" width="150" height="150" rx="30" ry="30"/><rect class="b" x="225" y="225" width="150" height="150" rx="30" ry="30"/><rect class="b" x="225" width="150" height="150" rx="30" ry="30"/><rect class="b" y="450" width="150" height="150" rx="30" ry="30"/><rect class="b" y="225" width="150" height="150" rx="30" ry="30"/><rect class="b" width="150" height="150" rx="30" ry="30"/></svg>
-            <span class="txt">Grid</span>
-          </button>
-          <button id="grid_btn" class="list_btn" onclick="gridView()"><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 150"><defs></defs><rect class="b" x="425" y="0" width="175" height="150" rx="30" ry="30"/><rect class="b" x="212.5" width="175" height="150" rx="30" ry="30"/><rect class="b" y="0" width="175" height="150" rx="30" ry="30"/></svg><span class="txt">List</span></button>
-        </div>
+        <span>Available Only</span>
+      </div>
+      <div class="view">
+        <button id="grid_btn" class="grid_btn" onclick="gridView()">
+          <svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+            <defs></defs>
+            <rect class="b" x="450" y="450" width="150" height="150" rx="30" ry="30" />
+            <rect class="b" x="450" y="225" width="150" height="150" rx="30" ry="30" />
+            <rect class="b" x="450" width="150" height="150" rx="30" ry="30" />
+            <rect class="b" x="225" y="450" width="150" height="150" rx="30" ry="30" />
+            <rect class="b" x="225" y="225" width="150" height="150" rx="30" ry="30" />
+            <rect class="b" x="225" width="150" height="150" rx="30" ry="30" />
+            <rect class="b" y="450" width="150" height="150" rx="30" ry="30" />
+            <rect class="b" y="225" width="150" height="150" rx="30" ry="30" />
+            <rect class="b" width="150" height="150" rx="30" ry="30" />
+          </svg>
+          <span class="txt">Grid</span>
+        </button>
+        <button id="grid_btn" class="list_btn" onclick="gridView()"><svg id="a" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 600 150">
+            <defs></defs>
+            <rect class="b" x="425" y="0" width="175" height="150" rx="30" ry="30" />
+            <rect class="b" x="212.5" width="175" height="150" rx="30" ry="30" />
+            <rect class="b" y="0" width="175" height="150" rx="30" ry="30" />
+          </svg><span class="txt">List</span></button>
+      </div>
     </div>
   </header>
+  <div id="splash">
+    <img class="sqkz_flower" src="icon/sqkzflower_sm.png" alt="sqkz flower logo">
+    <div><span id="percent">0</span> %</div>
+  </div>
   <section id="imgs">
     <div id="next_btn" class="move_btn" onmouseover="interval = setInterval(galleryNext,10);"
       onmouseout="clearInterval(interval);"></div>
@@ -137,27 +159,27 @@
 <script>
   //display images
   displayImages("misc", 169);
-  
-    //remove animate out if on body tag
-    if (document.body.classList.contains('animate_out')) { document.body.classList.remove('ainmimate_out') }
+
+  //remove animate out if on body tag
+  if (document.body.classList.contains('animate_out')) { document.body.classList.remove('ainmimate_out') }
 
 
   const scrollTarget = (width < 750) ? document.body : window;
   let lastScrollTop = 0;
 
-scrollTarget.addEventListener('scroll', function () {
-  const currentScroll = scrollTarget.scrollTop || document.documentElement.scrollTop;
+  scrollTarget.addEventListener('scroll', function () {
+    const currentScroll = scrollTarget.scrollTop || document.documentElement.scrollTop;
 
-  if (currentScroll > lastScrollTop) {
-    document.body.classList.add('scrolling');
-  } else {
-    document.body.classList.remove('scrolling');
-  }
+    if (currentScroll > lastScrollTop) {
+      document.body.classList.add('scrolling');
+    } else {
+      document.body.classList.remove('scrolling');
+    }
 
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-});
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  });
 
-// --- mobile only ---
+  // --- mobile only ---
 
   //initial window width check
   if (width <= 850 && document.body.classList.contains('list')) {
@@ -184,68 +206,68 @@ scrollTarget.addEventListener('scroll', function () {
   // --- desktop only ---
   if (width > 850) {
 
-  // track mouse position
-  var cursor = document.getElementById('cursor');
-  document.addEventListener('mousemove', moveCursor)
+    // track mouse position
+    var cursor = document.getElementById('cursor');
+    document.addEventListener('mousemove', moveCursor)
 
-  function moveCursor(e) {
-    var x = e.clientX;
-    var y = e.clientY;
-    cursor.style.left = `${x}px`;
-    cursor.style.top = `${y}px`;
-  }
+    function moveCursor(e) {
+      var x = e.clientX;
+      var y = e.clientY;
+      cursor.style.left = `${x}px`;
+      cursor.style.top = `${y}px`;
+    }
 
-  //get all anchor tags, buttons and hoverable elements to animate cursor hover
-  var links = Array.from(document.querySelectorAll('a, button, .hoverable'));
-  var fullscreen_links = Array.from(document.querySelectorAll('.fs-link'));
+    //get all anchor tags, buttons and hoverable elements to animate cursor hover
+    var links = Array.from(document.querySelectorAll('a, button, .hoverable'));
+    var fullscreen_links = Array.from(document.querySelectorAll('.fs-link'));
 
-  links.forEach(links => {
-    links.addEventListener('mousemove', function () {
-      cursor.classList.add('hover');
-    })
-    links.addEventListener('mouseleave', function () {
-      cursor.classList.remove('hover');
-    })
-  });
-  fullscreen_links.forEach(fullscreen_links => {
-    fullscreen_links.addEventListener('mousemove', function () {
-      cursor.classList.add('fs-hover');
-    })
-    fullscreen_links.addEventListener('mouseleave', function () {
-      cursor.classList.remove('fs-hover');
-    })
-  });
-  //click animation
-  window.addEventListener("mousedown", () => {
-    $('#cursor').addClass('mouse-down');
-  });
-  window.addEventListener("mouseup", () => {
-    $('#cursor').removeClass('mouse-down');
-  });
+    links.forEach(links => {
+      links.addEventListener('mousemove', function () {
+        cursor.classList.add('hover');
+      })
+      links.addEventListener('mouseleave', function () {
+        cursor.classList.remove('hover');
+      })
+    });
+    fullscreen_links.forEach(fullscreen_links => {
+      fullscreen_links.addEventListener('mousemove', function () {
+        cursor.classList.add('fs-hover');
+      })
+      fullscreen_links.addEventListener('mouseleave', function () {
+        cursor.classList.remove('fs-hover');
+      })
+    });
+    //click animation
+    window.addEventListener("mousedown", () => {
+      $('#cursor').addClass('mouse-down');
+    });
+    window.addEventListener("mouseup", () => {
+      $('#cursor').removeClass('mouse-down');
+    });
 
-  //horizontally scroll gallery section
-  (function () {
-    function scrollHorizontally(e) {
-      if (document.body.className == "list") {
-        e = window.event || e;
-        var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-        document.getElementById('imgs').scrollLeft -= (delta * 80); // Multiplied by 80
-        e.preventDefault();
+    //horizontally scroll gallery section
+    (function () {
+      function scrollHorizontally(e) {
+        if (document.body.className == "list") {
+          e = window.event || e;
+          var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+          document.getElementById('imgs').scrollLeft -= (delta * 80); // Multiplied by 80
+          e.preventDefault();
+        }
       }
-    }
-    if (document.getElementById('imgs').addEventListener) {
-      // IE9, Chrome, Safari, Opera
-      document.getElementById('imgs').addEventListener("mousewheel", scrollHorizontally, false);
-      // Firefox
-      document.getElementById('imgs').addEventListener("DOMMouseScroll", scrollHorizontally, false);
-    } else {
-      // IE 6/7/8
-      document.getElementById('imgs').attachEvent("onmousewheel", scrollHorizontally);
-    }
-  })();
+      if (document.getElementById('imgs').addEventListener) {
+        // IE9, Chrome, Safari, Opera
+        document.getElementById('imgs').addEventListener("mousewheel", scrollHorizontally, false);
+        // Firefox
+        document.getElementById('imgs').addEventListener("DOMMouseScroll", scrollHorizontally, false);
+      } else {
+        // IE 6/7/8
+        document.getElementById('imgs').attachEvent("onmousewheel", scrollHorizontally);
+      }
+    })();
 
-}
-
+  }
+  runPreloader();
 </script>
 
 </html>
