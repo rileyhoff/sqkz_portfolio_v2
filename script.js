@@ -35,8 +35,10 @@ function mouseMove() {
     if (x > 20) {
       x = 0;
     }
-    document.getElementById(x + 5).className = "active";
-    document.getElementById(prev + 5).className = "hidden";
+    var elem = document.getElementById(x + 5);
+    var prevElem = document.getElementById(prev + 5);
+    if(elem) {elem.className = "active";}
+    if(prevElem){ prevElem.className = "hidden"; }
   }
 }
 
@@ -66,7 +68,8 @@ function pastIntro() {
 
   // Set scroll progress CSS variable
   const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  document.body.style.setProperty('--scroll', scrollTop / docHeight);
+  const scrollProgress = docHeight > 0 ? scrollTop / docHeight : 0;
+  document.body.style.setProperty('--scroll', scrollProgress);
 }
 
 
@@ -238,9 +241,11 @@ function filter(category, el) {
   const ao = availableOnlyButton.classList.contains('active');
   const images = document.getElementsByClassName('gallery');
   const navTitle = document.getElementById('nav_title');
+  let hasImages = false;
 
   // Fade out
   imgs.style.opacity = "0";
+  document.getElementById('no_art_msg').classList.add('hide');
 
   if (category === "video") {
     showVideo();
@@ -262,8 +267,13 @@ function filter(category, el) {
         }
       }
 
-      //display or hid images 
+      //display or hide images 
       img.parentElement.style.display = show ? "inline-block" : "none";
+      if (show) { hasImages = true; }
+    }
+
+    if (!hasImages) {
+      document.getElementById('no_art_msg').classList.remove('hide');
     }
   }
 
