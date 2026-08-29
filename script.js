@@ -182,9 +182,11 @@ function fullscreenViewOpen(el) {
       //reset and add main image & add title
       detailImgs.innerHTML = "<p id='detail_title' class='hoverable' >Detail.</p><img src='" + el.src + "' class = 'view' alt=''  onclick='detailActive(this)'></img>";
       var detail_folder = art.file.split('.').slice(0, -1).join('.');
+      var fileExt = art.file.split('.').pop(); // get extension from main image
+      var detailExt = (fileExt === 'avif') ? '.avif' : '.jpg'; // use .avif if main is avif, else .jpg
       for (var i = 1; i <= art.detail_imgs; i++) {
         if (i >= 10) { return; } else {
-          detailImgs.innerHTML += "<img src='/imgs/" + art.section + "/details/" + detail_folder + "/" + i + ".jpg' alt='detail " + i + "' onclick='detailActive(this)'>"
+          detailImgs.innerHTML += "<img src='/imgs/" + art.section + "/details/" + detail_folder + "/" + i + detailExt + "' alt='detail " + i + "' onclick='detailActive(this)'>"
         }
       }
     }
@@ -199,7 +201,7 @@ function fullscreenViewClose() {
 
   if (fullscreen) fullscreen.classList.remove('active');
   if (detailImgs) detailImgs.classList.remove('active');
-}
+} 
 
 //swap detail image with fullscreen image
 function detailActive(el) {
