@@ -1,49 +1,8 @@
-function displayItems() {
-  var url = document.URL;
-  var id = url.substring(url.lastIndexOf('#') + 1);
-  if (Number.isInteger(id)) {
-    document.getElementById(id).style.display = "block";
-    document.getElementById(id + "Nav").className = "active";
-  }
-}
-
 //mobile menu animation
 function mobileIcon(el) {
   el.classList.toggle("change");
   document.getElementsByTagName('NAV')[0].classList.toggle("show");
   document.getElementById('sqkz_title').classList.toggle("open");
-}
-//mobile menu animation index page
-function mobileIconHP(el) {
-  el.classList.toggle("change");
-  document.getElementsByTagName('NAV')[0].classList.toggle("show");
-  document.getElementById('sqkz_title_svg').classList.toggle("open");
-}
-
-function mouseMove() {
-  z += 1;
-  //how fast to change items
-  if ((z % 10) == 1) {
-    //when on first element set prev to last element
-    if (x == 0) {
-      prev = 20;
-    } else {
-      prev = x - 1;
-    }
-    x += 1;
-    //number of items (including 0)  --> AKA Minus 1!
-    if (x > 20) {
-      x = 0;
-    }
-    var elem = document.getElementById(x + 5);
-    var prevElem = document.getElementById(prev + 5);
-    if(elem) {elem.className = "active";}
-    if(prevElem){ prevElem.className = "hidden"; }
-  }
-}
-
-function pauseImages() {
-  document.getElementById("bg").classList.toggle("pause");
 }
 
 function fadeIn(el) {
@@ -54,44 +13,6 @@ function theatreView() {
   document.getElementById("body").classList.toggle("theatre");
 }
 
-function swipeLeft(e) {
-  e.parentElement.classList.add("animateOut");
-}
-
-function pastIntro() {
-  const intro = document.getElementById("intro");
-  const body = document.getElementById("body");
-  const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-
-  // Toggle "detail" class based on scroll position
-  body.classList.toggle("detail", scrollTop > (intro.offsetHeight - 20));
-
-  // Set scroll progress CSS variable
-  const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  const scrollProgress = docHeight > 0 ? scrollTop / docHeight : 0;
-  document.body.style.setProperty('--scroll', scrollProgress);
-}
-
-
-function contactForm() {
-  const contact = document.getElementById('contact');
-  const about = document.getElementById('about');
-
-  if (contact == false) {
-    about.classList.toggle("show_form");
-    if (document.body.classList.contains("mbl")) {
-      contact.innerHTML = "X.";
-    } else {
-      contact.innerHTML = "About.";
-    }
-    contact = true;
-  } else {
-    about.classList.toggle("show_form");
-    contact.innerHTML = "Contact.";
-    contact = false;
-  }
-}
-
 function galleryNext() {
   var el = document.querySelector('section');
   el.scrollLeft += 10;
@@ -100,27 +21,6 @@ function galleryNext() {
 function galleryPrev() {
   var el = document.querySelector('section');
   el.scrollLeft -= 10;
-}
-
-//delay links to run animations
-function delay(URL) {
-  document.body.classList.add("animate_out");
-  setTimeout(function () {
-    window.location = URL
-  }, 500);
-}
-
-function getArtworkId(el) {
-  //get id number of image
-  var id = el.src.split("_").slice(-1).pop(); //get file name of image and containing folder
-  id = id.split('.').slice(0, -1).join('.'); //take off file extention
-  return id;
-}
-function getArtworkIdString(str) {
-  //get id number of image
-  var id = str.split("_").slice(-1).pop(); //get file name of image and containing folder
-  id = id.split('.').slice(0, -1).join('.'); //take off file extention
-  return id;
 }
 
 function fullscreenViewOpen(el) {
@@ -136,7 +36,6 @@ function fullscreenViewOpen(el) {
 
 
   //get id number of image
-  // var id = getArtworkId(el);
   var id = el.id;
 
   if (artworks[id] == undefined) {
@@ -167,13 +66,13 @@ function fullscreenViewOpen(el) {
     } else if (artworks[id].price == "hold" || artworks[id].price == 1) {
       artPriceText.innerHTML = "Hold";
       artPriceBox.className = "hold";
-      // inquireLink.href = "contact.php?art=/imgs/" + el.src.split('/').slice(-2).join('/');
-      inquireLink.href = "contact.php?art=" + id;
+      // inquireLink.href = "index_2.html#contact?art=/imgs/" + el.src.split('/').slice(-2).join('/');
+      inquireLink.href = "index_2.html?art=" + id + "#contact";
     } else {
       artPriceText.innerHTML = "Available";
       artPriceBox.className = "available";
-      // inquireLink.href = "contact.php?art=/imgs/" + el.src.split('/').slice(-2).join('/');
-      inquireLink.href = "contact.php?art=" + id;
+      // inquireLink.href = "index_2.html#contact?art=/imgs/" + el.src.split('/').slice(-2).join('/');
+      inquireLink.href = "index_2.html?art=" + id + "#contact";
     }
 
     // get detail images if available
@@ -325,26 +224,6 @@ function displayImages(type, n) { //n is max number of images
   }
   document.getElementById("imgs").innerHTML += imgHtml;
 }
-// for images hosted on uploadcare
-function UCDisplayImages(type, n) { //n is max number of images
-  var ucRoot = "vqoirgk9gd.ucarecd.net";
-  var folder = "https://sqkz.art/imgs/" + type;
-  var imgHtml = "";
-
-  for (var i = 0; i < n; i++) {
-    if (typeof artworks[i] === 'undefined' || artworks[i] === null) { break; }
-    else {
-      var file = artworks[i].file;
-      if (file != undefined && file != "" && artworks[i].section == type) {
-        imgHtml += "<div class='gallery_img fs-link'  onclick='fullscreenViewOpen(this.firstChild)'><uc-img "
-          + "alt='" + artworks[i].title + "' "
-          + "src='" + folder + "/" + file + "' id='" + i + "' class='gallery '";
-        imgHtml += " onclick='fullscreenViewOpen(this)'></uc-img></div>";
-      }
-    }
-  }
-  document.getElementById("imgs").innerHTML += imgHtml;
-}
 
 function showVideo() {
   document.body.classList.add('video');
@@ -361,14 +240,6 @@ function showVideo() {
   function endCursorHover() {
     $('#cursor').removeClass('hover');
   }
-
-//init
-z = 0;
-x = 0; //change back to 0 to use above function
-prev = 0;
-
-//contact form not opened
-var contact = false;
 
 //interval id
 var interval;
