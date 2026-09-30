@@ -11,11 +11,24 @@ $message = trim($_POST['message'] ?? '');
 $artwork = trim($_POST['art'] ?? '');
 $honeypot = trim($_POST['info'] ?? '');
 
-$redirect = '/contact.html?status=error';
+$returnPage = $_POST['return_to'] ?? 'index.html';
+if (!in_array($returnPage, ['index.html', 'contact.html'], true)) {
+    $returnPage = 'index.html';
+}
+
+$artParam = ctype_digit($artwork) ? $artwork : '';
+$redirect = static function (string $status) use ($returnPage, $artParam): void {
+    $query = ['status' => $status];
+    if ($returnPage === 'contact.html' && $artParam !== '') {
+        $query['art'] = $artParam;
+    }
+
+    header('Location: ' . $returnPage . '?' . http_build_query($query), true, 303);
+    exit;
+};
 
 if ($honeypot !== '' || $name === '' || $message === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    header('Location: ' . $redirect);
-    exit;
+    $redirect('error');
 }
 
 $name = str_replace(["\r", "\n"], '', $name);
@@ -27,28 +40,24 @@ if ($phone !== '' && (
     strlen($phoneDigits) < 7 ||
     strlen($phoneDigits) > 15
 )) {
-    header('Location: ' . $redirect);
-    exit;
+    $redirect('error');
 }
 
 if ($name === '' || $name === 'HenryDef') {
-    header('Location: ' . $redirect);
-    exit;
+    $redirect('error');
 }
 
 $emailBody = $message . "\n\n";
 $emailBody .= "---\n" . $name . "\n";
-$emailBody .= "E: " . $email . "\n";
-$emailBody .= "P: " . $phone . "\n";
+$emailBody .= "Email: " . $email . "\n";
+$emailBody .= "Phone: " . $phone . "\n";
 $emailBody .= "Artwork id: " . $artwork . "\n";
 
 $headers = "From: inquiry@sqkz.art\r\n";
 $subject = 'SQKZ - Art inquiry from ' . $name . '!';
 
 if (mail('rileyhoff@outlook.com', $subject, $emailBody, $headers)) {
-    header('Location: /contact.html?status=sent');
-    exit;
+    $redirect('sent');
 }
 
-header('Location: ' . $redirect);
-exit;
+$redirect('error');
