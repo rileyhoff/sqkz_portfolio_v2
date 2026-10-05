@@ -34,14 +34,14 @@ const artworks = [
   },
   {
     "id": 3,
-    "title": "Beach Day",
+    "title": "Springtime",
     "dimensions": "9 x 12in",
-    "medium": "Oil on Aluminum Panel",
+    "medium": "Oil on Board",
     "price": 200,
-    "detail_imgs": 2,
+    "detail_imgs": 3,
     "section": "paint",
-    "subsection": 2026,
-    "file": "maia-bw_SQKZ_Riley-Hoff.avif"
+    "subsection": 2024,
+    "file": "springtime_SQKZ_riley-hoff.webp"
   },
   {
     "id": 4,
@@ -78,14 +78,14 @@ const artworks = [
   },
   {
     "id": 7,
-    "title": "Springtime",
+    "title": "Maia in Sicily",
     "dimensions": "9 x 12in",
     "medium": "Oil on Board",
-    "price": 200,
-    "detail_imgs": 3,
+    "price": 0,
+    "detail_imgs": 2,
     "section": "paint",
-    "subsection": 2024,
-    "file": "springtime_SQKZ_riley-hoff.webp"
+    "subsection": 2026,
+    "file": "maia-sicily_SQKZ_riley-hoff.avif"
   },
   {
     "id": 8,
@@ -111,14 +111,14 @@ const artworks = [
   },
   {
     "id": 10,
-    "title": "Maia in Sicily",
+    "title": "Beach Day",
     "dimensions": "9 x 12in",
-    "medium": "Oil on Board",
-    "price": 0,
+    "medium": "Oil on Aluminum Panel",
+    "price": 200,
     "detail_imgs": 2,
     "section": "paint",
     "subsection": 2026,
-    "file": "maia-sicily_SQKZ_riley-hoff.avif"
+    "file": "maia-bw_SQKZ_Riley-Hoff.avif"
   },
   {
     "id": 11,
