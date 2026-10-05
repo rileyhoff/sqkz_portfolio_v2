@@ -66,13 +66,13 @@ function fullscreenViewOpen(el) {
     } else if (artworks[id].price == "hold" || artworks[id].price == 1) {
       artPriceText.innerHTML = "Hold";
       artPriceBox.className = "hold";
-      // inquireLink.href = "index_2.html#contact?art=/imgs/" + el.src.split('/').slice(-2).join('/');
-      inquireLink.href = "index_2.html?art=" + id + "#contact";
+      // inquireLink.href = "index.html#contact?art=/imgs/" + el.src.split('/').slice(-2).join('/');
+      inquireLink.href = "index.html?art=" + id + "#contact";
     } else {
       artPriceText.innerHTML = "Available";
       artPriceBox.className = "available";
-      // inquireLink.href = "index_2.html#contact?art=/imgs/" + el.src.split('/').slice(-2).join('/');
-      inquireLink.href = "index_2.html?art=" + id + "#contact";
+      // inquireLink.href = "index.html#contact?art=/imgs/" + el.src.split('/').slice(-2).join('/');
+      inquireLink.href = "index.html?art=" + id + "#contact";
     }
 
     // get detail images if available

@@ -26,7 +26,7 @@ a {
 html, body {
    width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: transparent;
   color: var(--text-color);
   margin: 0;
   padding: 0;
@@ -449,6 +449,36 @@ nav .header,
   box-shadow: 0 0 6px 0 #2ed839d0;
 }
 
+#sent_msg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 80vw;
+  padding: 6vh 10vw;
+  margin: 0;
+  background-color: rgb(56, 187, 106);
+  color: #fff;
+  text-align: center;
+  font-size: 1.5em;
+  z-index: 1001;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 18px;
+  transform-origin: top;
+  animation: slide-down 1s 0s 1 backwards;
+  transition: all .5s;
+  z-index: 10000;
+}
+
+@keyframes slide-down {
+  0% {
+    top: -100%;
+  }
+
+  100% {
+    top: 0;
+  }
+}
 
 /* Nav Container */
 nav {
@@ -562,13 +592,14 @@ nav.collapsed {
   color: #ccc;
   font-family: monospace;
   text-align: right;
-  z-index: 0;
+  z-index: -1;
 }
 
 .version>p:first-of-type {
   font-weight: bold;
   letter-spacing: 2px;
 }
+
 
 /* Carousel pause/play button */
 .carousel-pause {
