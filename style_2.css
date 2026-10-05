@@ -734,7 +734,7 @@ nav.collapsed {
     left: 5vw;
     top: 55vh;
     width: 60vw;
-    min-width: none;
+    min-width: 0;
     height: auto;
     bottom: unset;
     padding-top: 48px;
@@ -770,7 +770,7 @@ nav.collapsed {
     left: 20px;
     top: 50px;
     width: calc(100vw - 40px);
-    min-width: none;
+    min-width: 0;
     height: auto;
   }
 
