@@ -34,14 +34,14 @@ const artworks = [
   },
   {
     "id": 3,
-    "title": "Maia in Sicily",
+    "title": "Beach Day",
     "dimensions": "9 x 12in",
-    "medium": "Oil on Board",
-    "price": 0,
+    "medium": "Oil on Aluminum Panel",
+    "price": 200,
     "detail_imgs": 2,
     "section": "paint",
     "subsection": 2026,
-    "file": "maia-sicily_SQKZ_riley-hoff.avif"
+    "file": "maia-bw_SQKZ_Riley-Hoff.avif"
   },
   {
     "id": 4,
@@ -111,6 +111,17 @@ const artworks = [
   },
   {
     "id": 10,
+    "title": "Maia in Sicily",
+    "dimensions": "9 x 12in",
+    "medium": "Oil on Board",
+    "price": 0,
+    "detail_imgs": 2,
+    "section": "paint",
+    "subsection": 2026,
+    "file": "maia-sicily_SQKZ_riley-hoff.avif"
+  },
+  {
+    "id": 11,
     "title": "Petit Palais",
     "dimensions": "8 x 16in",
     "medium": "Oil on Canvas",
@@ -121,7 +132,7 @@ const artworks = [
     "file": "ml-paris_SQKZ_Riley-Hoff.avif"
   },
   {
-    "id": 11,
+    "id": 12,
     "title": "Thanksgiving",
     "dimensions": "9 x 12in",
     "medium": "Oil on Paper",
@@ -132,7 +143,7 @@ const artworks = [
     "file": "thanksgiving_SQKZ_riley-hoff.webp"
   },
   {
-    "id": 12,
+    "id": 13,
     "title": "Untitled",
     "dimensions": "9 x 12in",
     "medium": "Oil on Board",
@@ -143,7 +154,7 @@ const artworks = [
     "file": "ballet_SQKZ_riley-hoff.webp"
   },
   {
-    "id": 13,
+    "id": 14,
     "title": "Bernadett",
     "dimensions": "16 x 20in",
     "medium": "Oil on Canvas",
@@ -154,7 +165,7 @@ const artworks = [
     "file": "bernadett_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 14,
+    "id": 15,
     "title": "Holly Grove",
     "dimensions": "9 x 12in",
     "medium": "Oil on Board",
@@ -165,7 +176,7 @@ const artworks = [
     "file": "holly-grove_SQKZ_riley-hoff.webp"
   },
   {
-    "id": 15,
+    "id": 16,
     "title": "Spider Plant",
     "dimensions": "9 x 12in",
     "medium": "Oil on Board",
@@ -176,7 +187,7 @@ const artworks = [
     "file": "spider-plant_SQKZ_riley-hoff.webp"
   },
   {
-    "id": 16,
+    "id": 17,
     "title": "Old Westbury",
     "dimensions": "9 x 12in",
     "medium": "Oil on Board",
@@ -187,7 +198,7 @@ const artworks = [
     "file": "westbury_SQKZ_riley-hoff.jpg"
   },
   {
-    "id": 17,
+    "id": 18,
     "title": "Bog",
     "dimensions": "9 x 12in",
     "medium": "Oil on Paper",
@@ -198,7 +209,7 @@ const artworks = [
     "file": "bog_SQKZ_riley-hoff.avif"
   },
   {
-    "id": 18,
+    "id": 19,
     "title": "Photobooth",
     "dimensions": "9 x 12in",
     "medium": "Oil on Board",
@@ -209,7 +220,7 @@ const artworks = [
     "file": "photobooth_SQKZ_riley-hoff.jpg"
   },
   {
-    "id": 19,
+    "id": 20,
     "title": "Cohasett - Untitled",
     "dimensions": "9 x 12in",
     "medium": "Oil on Board",
@@ -220,7 +231,7 @@ const artworks = [
     "file": "cohasett-impression_SQKZ_riley-hoff.webp"
   },
   {
-    "id": 20,
+    "id": 21,
     "title": "Memories",
     "dimensions": "16 x 20in",
     "medium": "Oil on Canvas",
@@ -231,7 +242,7 @@ const artworks = [
     "file": "memories_SQKZ_riley-hoff.jpg"
   },
   {
-    "id": 21,
+    "id": 22,
     "title": "Maia",
     "dimensions": "9 x 12in",
     "medium": "Oil on Board",
@@ -242,7 +253,7 @@ const artworks = [
     "file": "maia-3_SQKZ_riley-hoff.webp"
   },
   {
-    "id": 22,
+    "id": 23,
     "title": "Cowboy Study",
     "dimensions": "9 x 12in",
     "medium": "Oil on Paper",
@@ -253,7 +264,7 @@ const artworks = [
     "file": "cowboy_SQKZ_riley-hoff.jpg"
   },
   {
-    "id": 23,
+    "id": 24,
     "title": "Some Clouds",
     "dimensions": "5.5 x 12in",
     "medium": "Oil on Board",
@@ -264,7 +275,7 @@ const artworks = [
     "file": "clouds_SQKZ_riley-hoff.webp"
   },
   {
-    "id": 24,
+    "id": 25,
     "title": "Ioborda",
     "dimensions": "9 x 12in",
     "medium": "Oil on Canvas",
@@ -275,7 +286,7 @@ const artworks = [
     "file": "Ioborda_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 25,
+    "id": 26,
     "title": "Untitled",
     "dimensions": "9 x 7in",
     "medium": "Oil on Board",
@@ -286,7 +297,7 @@ const artworks = [
     "file": "maia-back_SQKZ_riley-hoff.webp"
   },
   {
-    "id": 26,
+    "id": 27,
     "title": "June",
     "dimensions": "12 x 16in",
     "medium": "Oil on Canvas",
@@ -297,7 +308,7 @@ const artworks = [
     "file": "June_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 27,
+    "id": 28,
     "title": "Untitled",
     "dimensions": "36 x 30in",
     "medium": "Oil on Canvas",
@@ -308,7 +319,7 @@ const artworks = [
     "file": "santos_SQKZ_riley-hoff.jpg"
   },
   {
-    "id": 28,
+    "id": 29,
     "title": "November",
     "dimensions": "30 x 30in",
     "medium": "Oil on Canvas",
@@ -319,7 +330,7 @@ const artworks = [
     "file": "November_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 29,
+    "id": 30,
     "title": "Maia",
     "dimensions": "11 x 14in",
     "medium": "Oil on Canvas",
@@ -330,7 +341,7 @@ const artworks = [
     "file": "maia-2_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 30,
+    "id": 31,
     "title": "Bobcat",
     "dimensions": "9 x 12in",
     "medium": "Oil with gold dust on Board",
@@ -341,7 +352,7 @@ const artworks = [
     "file": "bobcat_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 31,
+    "id": 32,
     "title": "Beach in winter",
     "dimensions": "10 x 12in",
     "medium": "Oil on Board",
@@ -352,7 +363,7 @@ const artworks = [
     "file": "beachinwinter_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 32,
+    "id": 33,
     "title": "Mew",
     "dimensions": "9 x 12in",
     "medium": "Oil on Board",
@@ -363,7 +374,7 @@ const artworks = [
     "file": "mew_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 33,
+    "id": 34,
     "title": "Untitled",
     "dimensions": "26 x 26in",
     "medium": "Oil on Canvas",
@@ -374,7 +385,7 @@ const artworks = [
     "file": "Untitled-sunsets_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 34,
+    "id": 35,
     "title": "Silver Tree",
     "dimensions": "9 x 12in",
     "medium": "Oil on Paper",
@@ -385,7 +396,7 @@ const artworks = [
     "file": "Silver-tree_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 35,
+    "id": 36,
     "title": "Sunday",
     "dimensions": "18 x 12in",
     "medium": "Oil on Canvas",
@@ -396,7 +407,7 @@ const artworks = [
     "file": "Sunday_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 36,
+    "id": 37,
     "title": "turns",
     "dimensions": "16 x 20in",
     "medium": "Oil on Canvas",
@@ -407,7 +418,7 @@ const artworks = [
     "file": "turns_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 37,
+    "id": 38,
     "title": "Horse study",
     "dimensions": "9 x 12in",
     "medium": "Oil on Board",
@@ -418,7 +429,7 @@ const artworks = [
     "file": "horse-study_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 38,
+    "id": 39,
     "title": "Bowl",
     "dimensions": "14 x 14in",
     "medium": "Oil on Canvas",
@@ -429,7 +440,7 @@ const artworks = [
     "file": "bowl_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 39,
+    "id": 40,
     "title": "Brothers",
     "dimensions": "9 x 12in",
     "medium": "Oil on Paper",
@@ -440,7 +451,7 @@ const artworks = [
     "file": "Brothers_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 40,
+    "id": 41,
     "title": "Sandy Beach",
     "dimensions": "16 x 20in",
     "medium": "Oil on Canvas",
@@ -451,7 +462,7 @@ const artworks = [
     "file": "Sandy-beach_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 41,
+    "id": 42,
     "title": "Horse study II",
     "dimensions": "9 x 12in",
     "medium": "Oil on Board",
@@ -462,7 +473,7 @@ const artworks = [
     "file": "horse-2_SQKZ_riley-hoff.jpg"
   },
   {
-    "id": 42,
+    "id": 43,
     "title": "Self Portrait with Olive Branch",
     "dimensions": "16 x 20in",
     "medium": "Oil on Canvas",
@@ -473,7 +484,7 @@ const artworks = [
     "file": "Self-portrait-olive_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 43,
+    "id": 44,
     "title": "Central Park",
     "dimensions": "8 x 12in",
     "medium": "Oil on Canvas",
@@ -484,7 +495,7 @@ const artworks = [
     "file": "Central-park_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 44,
+    "id": 45,
     "title": "Swan II",
     "dimensions": "10 x 14in",
     "medium": "Oil on Canvas",
@@ -495,7 +506,7 @@ const artworks = [
     "file": "swan2_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 45,
+    "id": 46,
     "title": "ACIHR",
     "dimensions": "8 x 12in",
     "medium": "Oil on Canvas",
@@ -506,7 +517,7 @@ const artworks = [
     "file": "ACIHR_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 46,
+    "id": 47,
     "title": "Fall",
     "dimensions": "8 x 12in",
     "medium": "Oil on Canvas",
@@ -517,7 +528,7 @@ const artworks = [
     "file": "Fall_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 47,
+    "id": 48,
     "title": "Gelle Fra",
     "dimensions": "8 x 10in",
     "medium": "Oil on Board",
@@ -528,7 +539,7 @@ const artworks = [
     "file": "GelleFra_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 48,
+    "id": 49,
     "title": "Untitled.",
     "dimensions": "8 x 10in",
     "medium": "Oil on Board",
@@ -539,7 +550,7 @@ const artworks = [
     "file": "untitledportrait1_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 49,
+    "id": 50,
     "title": "Gigi with cut on her paw",
     "dimensions": "",
     "medium": "Oil on Board",
@@ -550,7 +561,7 @@ const artworks = [
     "file": "gigi-red-carpet_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 50,
+    "id": 51,
     "title": "San Diego",
     "dimensions": "9 x 16in",
     "medium": "Oil on Paper",
@@ -561,7 +572,7 @@ const artworks = [
     "file": "sandiego_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 51,
+    "id": 52,
     "title": "Self Portrait with Guitar",
     "dimensions": "9 x 12in",
     "medium": "Oil on Paper",
@@ -572,7 +583,7 @@ const artworks = [
     "file": "self-portrait-with-guitar_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 52,
+    "id": 53,
     "title": "Summer in Winter",
     "dimensions": "",
     "medium": "Oil on Canvas",
@@ -583,7 +594,7 @@ const artworks = [
     "file": "summerinwinter_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 53,
+    "id": 54,
     "title": "Shell",
     "dimensions": "16 x 20in",
     "medium": "Oil on Canvas",
@@ -594,7 +605,7 @@ const artworks = [
     "file": "Shell_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 54,
+    "id": 55,
     "title": "Maia",
     "dimensions": "9 x 12in",
     "medium": "Oil on Paper",
@@ -605,7 +616,7 @@ const artworks = [
     "file": "Maia_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 55,
+    "id": 56,
     "title": "Dress Shoes",
     "dimensions": "9 x 12in",
     "medium": "Oil on Board",
@@ -616,7 +627,7 @@ const artworks = [
     "file": "dress-shoes_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 56,
+    "id": 57,
     "title": "Hawaii",
     "dimensions": "15 x 19in",
     "medium": "Oil on Canvas",
@@ -627,7 +638,7 @@ const artworks = [
     "file": "Hawaii_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 57,
+    "id": 58,
     "title": "Lands End II",
     "dimensions": "16 x 20in",
     "medium": "Oil on Canvas",
@@ -638,7 +649,7 @@ const artworks = [
     "file": "Lands-End-2_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 58,
+    "id": 59,
     "title": "Gaze",
     "dimensions": "",
     "medium": "Oil on Canvas",
@@ -649,7 +660,7 @@ const artworks = [
     "file": "gaze_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 59,
+    "id": 60,
     "title": "Sunburn",
     "dimensions": "22 x 18in",
     "medium": "Oil on Canvas",
@@ -660,7 +671,7 @@ const artworks = [
     "file": "sunburn_SKQZ_Riley-Hoff.jpg"
   },
   {
-    "id": 60,
+    "id": 61,
     "title": "Pacific St",
     "dimensions": "24 x 30in",
     "medium": "Acrylic on Canvas",
@@ -671,7 +682,7 @@ const artworks = [
     "file": "Pacific-St_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 61,
+    "id": 62,
     "title": "Toile",
     "dimensions": "16 x 20in",
     "medium": "Oil on Canvas",
@@ -682,7 +693,7 @@ const artworks = [
     "file": "toile_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 62,
+    "id": 63,
     "title": "Espresso Martini",
     "dimensions": "7.5 x 10in",
     "medium": "Oil on Paper",
@@ -693,7 +704,7 @@ const artworks = [
     "file": "espresso_SQKZ_Riley-Hoff.webp"
   },
   {
-    "id": 63,
+    "id": 64,
     "title": "Grand Army Plaza",
     "dimensions": "11 x 14in",
     "medium": "Oil on Paper",
@@ -704,7 +715,7 @@ const artworks = [
     "file": "grand-army-plaza_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 64,
+    "id": 65,
     "title": "Secondary",
     "dimensions": "",
     "medium": "Oil on Canvas",
@@ -715,7 +726,7 @@ const artworks = [
     "file": "secondary_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 65,
+    "id": 66,
     "title": "Iris",
     "dimensions": "8 x 10in",
     "medium": "Oil on Board",
@@ -726,7 +737,7 @@ const artworks = [
     "file": "iris_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 66,
+    "id": 67,
     "title": "Untitled.",
     "dimensions": "20 x 17in",
     "medium": "Oil on Canvas",
@@ -737,7 +748,7 @@ const artworks = [
     "file": "Untitled-Gold_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 67,
+    "id": 68,
     "title": "Untitled.",
     "dimensions": "11 x 14in",
     "medium": "Oil on Paper",
@@ -748,7 +759,7 @@ const artworks = [
     "file": "cat_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 68,
+    "id": 69,
     "title": "Chantal II",
     "dimensions": "14 x 14in",
     "medium": "Oil on Canvas",
@@ -759,7 +770,7 @@ const artworks = [
     "file": "chantal%202_SKQZ_Riley-Hoff.jpg"
   },
   {
-    "id": 69,
+    "id": 70,
     "title": "Rodin",
     "dimensions": "8 x 10in",
     "medium": "Oil on Canvas",
@@ -770,7 +781,7 @@ const artworks = [
     "file": "rodin_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 70,
+    "id": 71,
     "title": "Bella at Home",
     "dimensions": "",
     "medium": "Oil on Canvas",
@@ -781,7 +792,7 @@ const artworks = [
     "file": "bella-at-home_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 71,
+    "id": 72,
     "title": "Morning",
     "dimensions": "22 x 18in",
     "medium": "Acrylics on Canvas",
@@ -792,7 +803,7 @@ const artworks = [
     "file": "Morning_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 72,
+    "id": 73,
     "title": "Wine Still Life",
     "dimensions": "8 x 10in",
     "medium": "Oil on Board",
@@ -803,7 +814,7 @@ const artworks = [
     "file": "wine_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 73,
+    "id": 74,
     "title": "Orchids",
     "dimensions": "14 x 18in",
     "medium": "Oil on Canvas Board",
@@ -814,7 +825,7 @@ const artworks = [
     "file": "Orchids_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 74,
+    "id": 75,
     "title": "Untitled",
     "dimensions": "9 x 12in",
     "medium": "Oil on Board",
@@ -825,7 +836,7 @@ const artworks = [
     "file": "Untitled%20flower%202_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 75,
+    "id": 76,
     "title": "Chantal",
     "dimensions": "8 x 12in",
     "medium": "Acrylics on Canvas",
@@ -836,7 +847,7 @@ const artworks = [
     "file": "Chantal_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 76,
+    "id": 77,
     "title": "Dog on Tiles",
     "dimensions": "8 x 10in",
     "medium": "Oil on Board",
@@ -847,7 +858,7 @@ const artworks = [
     "file": "dogontiles_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 77,
+    "id": 78,
     "title": "Exit 2",
     "dimensions": "18 x 20in",
     "medium": "Oil on Canvas Panel",
@@ -858,7 +869,7 @@ const artworks = [
     "file": "Exit2_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 78,
+    "id": 79,
     "title": "Danville",
     "dimensions": "21 x 26in",
     "medium": "Acrylics on Canvas",
@@ -869,7 +880,7 @@ const artworks = [
     "file": "Danville_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 79,
+    "id": 80,
     "title": "River",
     "dimensions": "8 x 12in",
     "medium": "Oil on Canvas",
@@ -880,7 +891,7 @@ const artworks = [
     "file": "river_SKQZ_Riley-Hoff.jpg"
   },
   {
-    "id": 80,
+    "id": 81,
     "title": "Before",
     "dimensions": "8 x 10in",
     "medium": "Oil on Board",
@@ -891,7 +902,7 @@ const artworks = [
     "file": "Before_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 81,
+    "id": 82,
     "title": "Untitled.",
     "dimensions": "14 x 14in",
     "medium": "Oil on Canvas",
@@ -902,7 +913,7 @@ const artworks = [
     "file": "late_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 82,
+    "id": 83,
     "title": "Jorja",
     "dimensions": "",
     "medium": "Oil on Paper",
@@ -913,7 +924,7 @@ const artworks = [
     "file": "jorja_SKQZ_Riley-Hoff.jpg"
   },
   {
-    "id": 83,
+    "id": 84,
     "title": "Palm Oil",
     "dimensions": "14 x 14in",
     "medium": "Oil on Canvas",
@@ -924,7 +935,7 @@ const artworks = [
     "file": "Palm-Oil_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 84,
+    "id": 85,
     "title": "Distance",
     "dimensions": "10 x 14in",
     "medium": "Acrylics on Canvas",
@@ -935,7 +946,7 @@ const artworks = [
     "file": "Distance_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 85,
+    "id": 86,
     "title": "Self Portrait with Dells",
     "dimensions": "8 x 10in",
     "medium": "Oil on Board",
@@ -946,7 +957,7 @@ const artworks = [
     "file": "Self-Portrait-Dells_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 86,
+    "id": 87,
     "title": "Lavender II",
     "dimensions": "8 x 8in",
     "medium": "Acrylics on Canvas",
@@ -957,7 +968,7 @@ const artworks = [
     "file": "Lavender%20II_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 87,
+    "id": 88,
     "title": "Self Portrait at Night",
     "dimensions": "8 x 10in",
     "medium": "Oil on Board",
@@ -968,7 +979,7 @@ const artworks = [
     "file": "selfportraitatnight_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 88,
+    "id": 89,
     "title": "Ray",
     "dimensions": "10 x 14in",
     "medium": "Acrylics on Canvas",
@@ -979,7 +990,7 @@ const artworks = [
     "file": "Ray_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 89,
+    "id": 90,
     "title": "Engulf",
     "dimensions": "22 x 18in",
     "medium": "Acrylics on Canvas",
@@ -990,7 +1001,7 @@ const artworks = [
     "file": "Engulf_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 90,
+    "id": 91,
     "title": "Lavender",
     "dimensions": "24 x 16in",
     "medium": "Acrylics on Canvas",
@@ -1001,7 +1012,7 @@ const artworks = [
     "file": "Lavender_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 91,
+    "id": 92,
     "title": "Communication",
     "dimensions": "30 x 22in",
     "medium": "Acrylics on Canvas",
@@ -1012,7 +1023,7 @@ const artworks = [
     "file": "Communication_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 92,
+    "id": 93,
     "title": "Flower Still Life with Lavender",
     "dimensions": "10 x 14in",
     "medium": "Acrylics on Board",
@@ -1023,7 +1034,7 @@ const artworks = [
     "file": "Flower%20Still%20Life%20with%20Lavender_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 93,
+    "id": 94,
     "title": "Here",
     "dimensions": "20 x 20in",
     "medium": "Acrylics on Canvas",
@@ -1034,7 +1045,7 @@ const artworks = [
     "file": "Here_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 94,
+    "id": 95,
     "title": "Here II",
     "dimensions": "8 x 8in",
     "medium": "Acrylics on Canvas",
@@ -1045,7 +1056,7 @@ const artworks = [
     "file": "Here%20II_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 95,
+    "id": 96,
     "title": "Knife",
     "dimensions": "",
     "medium": "Oil on Paper",
@@ -1056,7 +1067,7 @@ const artworks = [
     "file": "knife_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 96,
+    "id": 97,
     "title": "Lands End",
     "dimensions": "",
     "medium": "Oil on Paper",
@@ -1067,7 +1078,7 @@ const artworks = [
     "file": "lands-end_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 97,
+    "id": 98,
     "title": "Dusk",
     "dimensions": "24 x 18in",
     "medium": "Acrylics on Board",
@@ -1078,7 +1089,7 @@ const artworks = [
     "file": "Dusk_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 98,
+    "id": 99,
     "title": "Untitled.",
     "dimensions": "9 x 12in",
     "medium": "Oil on Paper",
@@ -1089,7 +1100,7 @@ const artworks = [
     "file": "bella-blue_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 99,
+    "id": 100,
     "title": "Emerald",
     "dimensions": "",
     "medium": "Acrylics on Paper",
@@ -1100,7 +1111,7 @@ const artworks = [
     "file": "Emerald_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 100,
+    "id": 101,
     "title": "Arizona II",
     "dimensions": "8 x 8in",
     "medium": "Acrylics on Canvas",
@@ -1111,7 +1122,7 @@ const artworks = [
     "file": "Arizona%20II_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 101,
+    "id": 102,
     "title": "Arizona",
     "dimensions": "22 x 18in",
     "medium": "Acrylics on Canvas",
@@ -1122,7 +1133,7 @@ const artworks = [
     "file": "Arizona_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 102,
+    "id": 103,
     "title": "Valentine",
     "dimensions": "10 x 10in",
     "medium": "Acrylics on Canvas",
@@ -1133,7 +1144,7 @@ const artworks = [
     "file": "Valentine_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 103,
+    "id": 104,
     "title": "Rust",
     "dimensions": "8 x 10in",
     "medium": "Acylics on Canvas",
@@ -1144,7 +1155,7 @@ const artworks = [
     "file": "Rust_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 104,
+    "id": 105,
     "title": "Untitled (flowers)",
     "dimensions": "10 x 14in",
     "medium": "Acrylics on Canvas",
@@ -1155,7 +1166,7 @@ const artworks = [
     "file": "Untitled%20flowers_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 105,
+    "id": 106,
     "title": "Marble",
     "dimensions": "8 x 10in",
     "medium": "Acrylics on Board",
@@ -1166,7 +1177,7 @@ const artworks = [
     "file": "Marble_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 106,
+    "id": 107,
     "title": "Untitled (hands)",
     "dimensions": "10 x 14in",
     "medium": "Acrylics on Canvas",
@@ -1177,7 +1188,7 @@ const artworks = [
     "file": "Untitled%20hands_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 107,
+    "id": 108,
     "title": "Still Life with Lime",
     "dimensions": "14 x 10in",
     "medium": "Acrylics on Canvas",
@@ -1188,7 +1199,7 @@ const artworks = [
     "file": "Still%20Life%20with%20Lime_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 108,
+    "id": 109,
     "title": "Iceland",
     "dimensions": "8 x 36in",
     "medium": "Oil on Canvas",
@@ -1199,7 +1210,7 @@ const artworks = [
     "file": "Iceland_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 109,
+    "id": 110,
     "title": "Morning II",
     "dimensions": "8 x 8in",
     "medium": "Acrylics on Canvas",
@@ -1210,7 +1221,7 @@ const artworks = [
     "file": "Morning%20II_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 110,
+    "id": 111,
     "title": "Self Portrait with Flowers",
     "dimensions": "22 x 18in",
     "medium": "Acrylics on Canvas",
@@ -1221,7 +1232,7 @@ const artworks = [
     "file": "Self%20Portrait%20with%20Flowers_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 111,
+    "id": 112,
     "title": "Gigi",
     "dimensions": "Unknown",
     "medium": "Acrylics on Canvas",
@@ -1232,7 +1243,7 @@ const artworks = [
     "file": "Gigi_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 112,
+    "id": 113,
     "title": "Coup",
     "dimensions": "5 x 6.5in",
     "medium": "Charcoal on Paper",
@@ -1243,7 +1254,7 @@ const artworks = [
     "file": "coup_SQKZ_Riley-Hoff.webp"
   },
   {
-    "id": 113,
+    "id": 114,
     "title": "Swan",
     "dimensions": "5 x 6.5in",
     "medium": "Charcoal on Paper",
@@ -1254,7 +1265,7 @@ const artworks = [
     "file": "swan-c_SQKZ_Riley-Hoff.webp"
   },
   {
-    "id": 114,
+    "id": 115,
     "title": "Runner - Cover Art",
     "dimensions": "8 x 8in",
     "medium": "Charcoal on Paper",
@@ -1265,7 +1276,7 @@ const artworks = [
     "file": "Runner_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 115,
+    "id": 116,
     "title": "Voices Stuck - Cover Art",
     "dimensions": "8 x 8in",
     "medium": "Charcoal and Graphite on Paper",
@@ -1276,7 +1287,7 @@ const artworks = [
     "file": "VS_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 116,
+    "id": 117,
     "title": "Avoid the Wait - Cover Art",
     "dimensions": "8 x 8in",
     "medium": "Charcoal and Graphite on Paper",
@@ -1287,7 +1298,7 @@ const artworks = [
     "file": "ATW_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 117,
+    "id": 118,
     "title": "Untitled",
     "dimensions": "5 x 7in",
     "medium": "Charcoal on Paper",
@@ -1298,7 +1309,7 @@ const artworks = [
     "file": "cat_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 118,
+    "id": 119,
     "title": "Olive",
     "dimensions": "9 x 12in",
     "medium": "Graphite on Paper",
@@ -1309,7 +1320,7 @@ const artworks = [
     "file": "olive_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 119,
+    "id": 120,
     "title": "Luxembourg",
     "dimensions": "15 x 24in",
     "medium": "Charcoal on Paper",
@@ -1320,7 +1331,7 @@ const artworks = [
     "file": "Luxembourg_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 120,
+    "id": 121,
     "title": "Munich",
     "dimensions": "15 x 24in",
     "medium": "Charcoal on Paper",
@@ -1331,7 +1342,7 @@ const artworks = [
     "file": "Munich_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 121,
+    "id": 122,
     "title": "My bed for a bit",
     "dimensions": "",
     "medium": "Charcoal on Paper",
@@ -1342,7 +1353,7 @@ const artworks = [
     "file": "My%20bed%20for%20a%20bit_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 122,
+    "id": 123,
     "title": "Sense",
     "dimensions": "9 x 12in",
     "medium": "Charcoal on Paper",
@@ -1353,7 +1364,7 @@ const artworks = [
     "file": "Sense_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 123,
+    "id": 124,
     "title": "Nothing.",
     "dimensions": "7.5 x 11in",
     "medium": "Charcoal on Paper",
@@ -1364,7 +1375,7 @@ const artworks = [
     "file": "Nothing_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 124,
+    "id": 125,
     "title": "Lie",
     "dimensions": "24 x 30in",
     "medium": "Charcoal on Paper",
@@ -1375,7 +1386,7 @@ const artworks = [
     "file": "lie_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 125,
+    "id": 126,
     "title": "Ilie",
     "dimensions": "9 x 12in",
     "medium": "Charcoal on Paper",
@@ -1386,7 +1397,7 @@ const artworks = [
     "file": "Ilie_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 126,
+    "id": 127,
     "title": "Swan",
     "dimensions": "11 x 14in",
     "medium": "Charcoal on Paper",
@@ -1397,7 +1408,7 @@ const artworks = [
     "file": "swan_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 127,
+    "id": 128,
     "title": "Untitled.",
     "dimensions": "",
     "medium": "Charcoal on Paper",
@@ -1408,7 +1419,7 @@ const artworks = [
     "file": "Chive_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 128,
+    "id": 129,
     "title": "Aimee",
     "dimensions": "9 x 12in",
     "medium": "Charcoal on Paper",
@@ -1419,7 +1430,7 @@ const artworks = [
     "file": "Aimee_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 129,
+    "id": 130,
     "title": "Unititled.",
     "dimensions": "22 x 30in",
     "medium": "Charcoal on Paper",
@@ -1430,7 +1441,7 @@ const artworks = [
     "file": "untitled-palm-tree_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 130,
+    "id": 131,
     "title": "jaiksen",
     "dimensions": "9 x 12in",
     "medium": "Charcoal on Paper",
@@ -1441,7 +1452,7 @@ const artworks = [
     "file": "jaiksen_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 131,
+    "id": 132,
     "title": "Untitled.",
     "dimensions": "-",
     "medium": "Charcoal on Paper",
@@ -1452,7 +1463,7 @@ const artworks = [
     "file": "untitledportrait2_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 132,
+    "id": 133,
     "title": "Bella, Profile",
     "dimensions": "11 x 14in",
     "medium": "Charcoal on Paper",
@@ -1463,7 +1474,7 @@ const artworks = [
     "file": "bella-profile_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 133,
+    "id": 134,
     "title": "Night I",
     "dimensions": "9 x 12in",
     "medium": "Charcoal on Paper",
@@ -1474,7 +1485,7 @@ const artworks = [
     "file": "night1_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 134,
+    "id": 135,
     "title": "Night II",
     "dimensions": "9 x 12in",
     "medium": "Charcoal on Paper",
@@ -1485,7 +1496,7 @@ const artworks = [
     "file": "night2_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 135,
+    "id": 136,
     "title": "Night III",
     "dimensions": "9 x 12in",
     "medium": "Charcoal on Paper",
@@ -1496,7 +1507,7 @@ const artworks = [
     "file": "night3_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 136,
+    "id": 137,
     "title": "Fiat",
     "dimensions": "9 x 12in",
     "medium": "Charcoal and Graphite on Paper",
@@ -1507,7 +1518,7 @@ const artworks = [
     "file": "Fiat_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 137,
+    "id": 138,
     "title": "Clairity",
     "dimensions": "22 x 30in",
     "medium": "Charcoal on Paper",
@@ -1518,7 +1529,7 @@ const artworks = [
     "file": "Clairity_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 138,
+    "id": 139,
     "title": "Timeline",
     "dimensions": "30 x 22in",
     "medium": "Charcoal on Paper",
@@ -1529,7 +1540,7 @@ const artworks = [
     "file": "Timeline_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 139,
+    "id": 140,
     "title": "Raspberries",
     "dimensions": "31 x 22in, Diptych",
     "medium": "Charcoal on Paper",
@@ -1540,7 +1551,7 @@ const artworks = [
     "file": "Raspberries_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 140,
+    "id": 141,
     "title": "Devotion",
     "dimensions": "22 x 30in",
     "medium": "Charcoal on Paper",
@@ -1551,7 +1562,7 @@ const artworks = [
     "file": "Devotion_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 141,
+    "id": 142,
     "title": "Fracture",
     "dimensions": "22 x 22in",
     "medium": "Charcoal on Paper",
@@ -1562,7 +1573,7 @@ const artworks = [
     "file": "Fracture_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 142,
+    "id": 143,
     "title": "Gigi on bed.",
     "dimensions": "9 x 12in",
     "medium": "Charcoal on Paper",
@@ -1573,7 +1584,7 @@ const artworks = [
     "file": "Gigi-on-Bed_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 143,
+    "id": 144,
     "title": "Still I Wonder Why",
     "dimensions": "20 x 28in",
     "medium": "Charcoal on Paper",
@@ -1584,7 +1595,7 @@ const artworks = [
     "file": "Still%20I%20Wonder%20Why_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 144,
+    "id": 145,
     "title": "Untitled Sketch",
     "dimensions": "",
     "medium": "Pencil on Paper",
@@ -1595,26 +1606,15 @@ const artworks = [
     "file": "Untitled%20Sketch_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 145,
+    "id": 146,
     "title": "Blue Tree",
-    "dimensions": "16 x 12in",
+    "dimensions": "16 x 12in ",
     "medium": "Framed photo",
     "price": 0,
     "detail_imgs": 2,
     "section": "misc",
     "subsection": "photo",
     "file": "blue-tree_SQKZ_riley-hoff.jpg"
-  },
-  {
-    "id": 146,
-    "title": "Broke Bais Cover Art",
-    "dimensions": "",
-    "medium": "Digtal art",
-    "price": 0,
-    "detail_imgs": 0,
-    "section": "misc",
-    "subsection": "gd",
-    "file": "MG-bobcat_SQKZ_Riley-Hoff.jpg"
   },
   {
     "id": 147,
@@ -1625,10 +1625,21 @@ const artworks = [
     "detail_imgs": 0,
     "section": "misc",
     "subsection": "gd",
-    "file": "MeadowGates_SQKZ_Riley-Hoff.jpg"
+    "file": "MG-bobcat_SQKZ_Riley-Hoff.jpg"
   },
   {
     "id": 148,
+    "title": "Broke Bais Cover Art",
+    "dimensions": "",
+    "medium": "Digtal art",
+    "price": 0,
+    "detail_imgs": 0,
+    "section": "misc",
+    "subsection": "gd",
+    "file": "MeadowGates_SQKZ_Riley-Hoff.jpg"
+  },
+  {
+    "id": 149,
     "title": "Untitled Collage",
     "dimensions": "12 x 12in",
     "medium": "Mixed Media",
@@ -1639,7 +1650,7 @@ const artworks = [
     "file": "Untitled-Collage_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 149,
+    "id": 150,
     "title": "At Sea",
     "dimensions": "",
     "medium": "Collage",
@@ -1650,7 +1661,7 @@ const artworks = [
     "file": "At%20Sea_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 150,
+    "id": 151,
     "title": "Last Night I",
     "dimensions": "",
     "medium": "Collage, Photography",
@@ -1661,7 +1672,7 @@ const artworks = [
     "file": "Last%20Night%20I_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 151,
+    "id": 152,
     "title": "Last Night II",
     "dimensions": "",
     "medium": "Collage, Photography",
@@ -1672,7 +1683,7 @@ const artworks = [
     "file": "Last%20Night%20II_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 152,
+    "id": 153,
     "title": "Last Night III",
     "dimensions": "",
     "medium": "Collage, Photography",
@@ -1683,7 +1694,7 @@ const artworks = [
     "file": "Last%20Night%20III_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 153,
+    "id": 154,
     "title": "Last Night IV",
     "dimensions": "",
     "medium": "Collage, Photography",
@@ -1694,7 +1705,7 @@ const artworks = [
     "file": "Last%20Night%20IV_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 154,
+    "id": 155,
     "title": "Last Night V",
     "dimensions": "",
     "medium": "Collage, Photography",
@@ -1705,7 +1716,7 @@ const artworks = [
     "file": "Last%20Night%20V_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 155,
+    "id": 156,
     "title": "Last Night VI",
     "dimensions": "",
     "medium": "Collage, Photography",
@@ -1716,7 +1727,7 @@ const artworks = [
     "file": "Last%20Night%20VI_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 156,
+    "id": 157,
     "title": "Teal",
     "dimensions": "2 x 7in",
     "medium": "Collage",
@@ -1727,7 +1738,7 @@ const artworks = [
     "file": "teal_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 157,
+    "id": 158,
     "title": "Untitled Collage 6",
     "dimensions": "3.5 x 4in",
     "medium": "Collage",
@@ -1738,7 +1749,7 @@ const artworks = [
     "file": "colage6_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 158,
+    "id": 159,
     "title": "Peitra",
     "dimensions": "",
     "medium": "Collage",
@@ -1749,7 +1760,7 @@ const artworks = [
     "file": "peitra_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 159,
+    "id": 160,
     "title": "Untitled Collage 4",
     "dimensions": "",
     "medium": "Collage",
@@ -1760,7 +1771,7 @@ const artworks = [
     "file": "collage-IV_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 160,
+    "id": 161,
     "title": "Untitled Collage 1",
     "dimensions": "",
     "medium": "Collage",
@@ -1771,7 +1782,7 @@ const artworks = [
     "file": "DSC_0672_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 161,
+    "id": 162,
     "title": "Untitled Collage 7",
     "dimensions": "",
     "medium": "Collage",
@@ -1782,7 +1793,7 @@ const artworks = [
     "file": "collage-7_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 162,
+    "id": 163,
     "title": "Untitled.",
     "dimensions": "Digital",
     "medium": "Photography",
@@ -1793,7 +1804,7 @@ const artworks = [
     "file": "aus-dog_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 163,
+    "id": 164,
     "title": "$$$$",
     "dimensions": "",
     "medium": "Collage, Mixed Media",
@@ -1804,7 +1815,7 @@ const artworks = [
     "file": "moneyy_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 164,
+    "id": 165,
     "title": "Untitled.",
     "dimensions": "Digital",
     "medium": "Photography",
@@ -1815,7 +1826,7 @@ const artworks = [
     "file": "glasses_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 165,
+    "id": 166,
     "title": "Untitled.",
     "dimensions": "Digital",
     "medium": "Photography",
@@ -1826,7 +1837,7 @@ const artworks = [
     "file": "birthday_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 166,
+    "id": 167,
     "title": "Untitled.",
     "dimensions": "Digital",
     "medium": "Photography",
@@ -1837,7 +1848,7 @@ const artworks = [
     "file": "newspaper_SQKZ_Riley-Hoff-14.jpg"
   },
   {
-    "id": 167,
+    "id": 168,
     "title": "Untitled.",
     "dimensions": "Digital",
     "medium": "Photography",
@@ -1848,7 +1859,7 @@ const artworks = [
     "file": "buttin_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 168,
+    "id": 169,
     "title": "Untitled.",
     "dimensions": "Digital",
     "medium": "Photography",
@@ -1859,7 +1870,7 @@ const artworks = [
     "file": "Car_Datsun_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 169,
+    "id": 170,
     "title": "Untitled.",
     "dimensions": "Digital",
     "medium": "Photography",
@@ -1870,7 +1881,7 @@ const artworks = [
     "file": "angel-gigi_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 170,
+    "id": 171,
     "title": "Untitled.",
     "dimensions": "Digital",
     "medium": "Photography",
@@ -1881,7 +1892,7 @@ const artworks = [
     "file": "Eye_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 171,
+    "id": 172,
     "title": "Untitled.",
     "dimensions": "Digital",
     "medium": "Photography",
@@ -1892,7 +1903,7 @@ const artworks = [
     "file": "Austria_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 172,
+    "id": 173,
     "title": "Untitled.",
     "dimensions": "Digital",
     "medium": "Photography",
@@ -1903,7 +1914,7 @@ const artworks = [
     "file": "Subway_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 173,
+    "id": 174,
     "title": "Untitled.",
     "dimensions": "Digital",
     "medium": "Photography",
@@ -1914,7 +1925,7 @@ const artworks = [
     "file": "Burlington-Self-Portait-1_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 174,
+    "id": 175,
     "title": "Untitled.",
     "dimensions": "Digital",
     "medium": "Photography",
@@ -1925,7 +1936,7 @@ const artworks = [
     "file": "L_Great-Ocean-Road_SQKZ_Riley-Hoff_50.jpg"
   },
   {
-    "id": 175,
+    "id": 176,
     "title": "Untitled.",
     "dimensions": "Digital",
     "medium": "Photography",
@@ -1936,7 +1947,7 @@ const artworks = [
     "file": "Raspberries-1_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 176,
+    "id": 177,
     "title": "Untitled.",
     "dimensions": "Digital",
     "medium": "Photography",
@@ -1947,7 +1958,7 @@ const artworks = [
     "file": "Raspberries-2_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 177,
+    "id": 178,
     "title": "Untitled.",
     "dimensions": "Digital",
     "medium": "Photography",
@@ -1958,7 +1969,7 @@ const artworks = [
     "file": "sprig_SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 178,
+    "id": 179,
     "title": "Self Portrait",
     "dimensions": "Digital",
     "medium": "Photography",
@@ -1969,7 +1980,7 @@ const artworks = [
     "file": "self%20Portrait__SQKZ_Riley-Hoff.jpg"
   },
   {
-    "id": 179,
+    "id": 180,
     "title": "Untitled.",
     "dimensions": "Digital",
     "medium": "Photography",
