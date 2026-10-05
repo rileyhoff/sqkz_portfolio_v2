@@ -1118,11 +1118,6 @@ footer {
     opacity: 1 !important;
   }
 
-
-  #grid_btn {}
-
-  #grid_btn:hover {}
-
   #grid_btn svg {
     display: block;
   }
@@ -1338,11 +1333,13 @@ footer {
     padding-top: 1em;
   }
 
+/* 
   #artwork_info:hover .available #price_inquire_btn,
   #artwork_info:hover .hold #price_inquire_btn {
     /* display: inline-block; */
-    /* animation: fade-in .5s .2s backwards; */
-  }
+    /* animation: fade-in .5s .2s backwards;
+  } 
+    */
 
   #price_inquire_btn {
     /* display: none; */

@@ -7,8 +7,8 @@ Author: Riley Hoff
   --primary-color: #d80036;
   --primary-light-color: #ff00401e;
   --text-color: #000;
-  --font-mono: "DM Mono", monospace, sans-serif;
-  --font-serif: "Cormorant Garamond", serif;
+  --body-font: "Libre Franklin", sans-serif;
+  --serif-font: 'EB Garamond', serif;
 }
 
 @font-face {
@@ -30,7 +30,7 @@ html, body {
   color: var(--text-color);
   margin: 0;
   padding: 0;
-  font-family: var(--font-mono);
+  font-family: var(--body-font);
   overflow-x: hidden;
   overflow-y: hidden;
 }
@@ -182,6 +182,8 @@ body {
   line-height: 48px;
   flex: 1;
   padding-left: 16px;
+  letter-spacing: .25px;
+  font-weight: 500;
 }
 
 .intro-images-container .header,
@@ -314,8 +316,9 @@ nav .header,
 }
 
 .about p a, .contact p a, .inquiry-art p a {
-  font-family: var(--font-mono);
+  font-family: var(--body-font);
   font-size: 12px;
+  letter-spacing: .25px;
   display: inline-block;
   padding: 8px 16px;
   border: 1px solid var(--primary-light-color);
@@ -327,12 +330,16 @@ nav .header,
 
 .about p a::after, .contact p a::after {
   content: "\2197";
-  font-size: 12px;
+  font-size: 14px;
   margin-left: 4px;
+  top: -1px;
+  position: relative;
+  line-height: 0;
 }
 
 .about p a:hover, .contact p a:hover {
   background-color: var(--primary-light-color);
+  font-weight: 500;
 }
 
 .about.collapsed .about-content, .contact.collapsed .contact-content {
@@ -366,7 +373,7 @@ nav .header,
   padding: 8px;
   border: none;
   border-bottom: 1px solid #ccc;
-  font-family: var(--font-mono);
+  font-family: var(--body-font);
   font-size: 14px;
   cursor: text; 
 }
@@ -423,10 +430,11 @@ nav .header,
   width: 100%;
   padding: 12px;
   font-weight: 700;
+  letter-spacing: .25px;
   border: none;
   background-color: #ccc;
   color: #fff;
-  font-family: var(--font-mono);
+  font-family: var(--body-font);
   font-size: 12px;
   cursor: pointer;
   box-shadow: 0 0 0 0 #2ed839d0, inset 0 0 0 0 #2ed839d0;
@@ -461,7 +469,7 @@ nav .header,
   text-align: center;
   font-size: 1.5em;
   z-index: 1001;
-  font-family: var(--font-serif);
+  font-family: var(--serif-font);
   font-weight: 700;
   font-size: 18px;
   transform-origin: top;
@@ -541,6 +549,7 @@ nav a {
   padding: 24px;
   width: auto;
   text-align: left;
+  letter-spacing: .1px;
 }
 
 nav a:hover {
@@ -642,7 +651,7 @@ nav.collapsed {
   top: 0;
   left: 0;
   z-index: 10000;
-    padding: 4px;
+  padding: 4px;
 }
 .section-controls ul {
   display: flex;
@@ -662,21 +671,25 @@ nav.collapsed {
   cursor: pointer;  
   border-radius: 100%;
   width: fit-content;
+  font-weight: 200;
+  letter-spacing: .25px;
   transition: .2s background-color ease, .2s color ease, .2s border-radius ease;
 } 
 .section-controls li:hover {
   background-color: var(--primary-light-color);
   color: var(--primary-color);
   border-radius: 20px;
+  font-weight: 400;
 }
 .section-controls li.active {
   color: var(--primary-color);
   border-radius: 20px;
+  font-weight: 400;
 }
 .section-controls li::before {
   content: "•";
   position: absolute;
-  left: 6px;
+  left: 8px;
   top: 12px;
   font-size: 14px;
   color: var(--primary-color);
