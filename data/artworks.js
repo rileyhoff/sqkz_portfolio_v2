@@ -48,7 +48,7 @@ const artworks = [
     "title": "Sitting",
     "dimensions": "34 x 30in",
     "medium": "Oil on Canvas",
-    "price": 350,
+    "price": 0,
     "detail_imgs": 2,
     "section": "paint",
     "subsection": 2026,

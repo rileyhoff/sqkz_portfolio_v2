@@ -309,7 +309,7 @@ nav .header,
 .about p, .contact p, .inquiry-art p {
   font-size: 18px;
   line-height: 1.4;
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--serif-font), serif;
   margin: 0;
   padding: 24px 0;
   font-weight: 400;
