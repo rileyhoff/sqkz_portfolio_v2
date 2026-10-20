@@ -309,7 +309,7 @@ nav .header,
 .about p, .contact p, .inquiry-art p {
   font-size: 18px;
   line-height: 1.4;
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--serif-font), serif;
   margin: 0;
   padding: 24px 0;
   font-weight: 400;
@@ -734,7 +734,7 @@ nav.collapsed {
     left: 5vw;
     top: 55vh;
     width: 60vw;
-    min-width: none;
+    min-width: 0;
     height: auto;
     bottom: unset;
     padding-top: 48px;
@@ -770,7 +770,7 @@ nav.collapsed {
     left: 20px;
     top: 50px;
     width: calc(100vw - 40px);
-    min-width: none;
+    min-width: 0;
     height: auto;
   }
 
