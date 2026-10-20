@@ -3,15 +3,8 @@ SQKZ.art - Gallery Pages
 Author: Riley Hoff
 */
 
-@font-face {
-  font-family: Vivaldii;
-  src:
-    url(/fonts/VIVALDII.woff) format("woff"),
-    url(/fonts/VIVALDII.woff2) format("woff2")
-}
-
 :root {
-  --header-font: Vivaldii, cursive, serif;
+  --header-font: 'EB Garamond', serif;
   --body-font: "Libre Franklin", sans-serif;
   --serif-font: 'EB Garamond', serif;
   --bg-color: #f5f5f5;
@@ -271,14 +264,14 @@ header:has(#nav_title.open) {
 }
 
 #sqkz_title {
+  position: relative;
   padding-top: 0;
   line-height: 5vh;
-  left: 0;
+  top: 4px;
+  left: 10px;
+  width: 70px;
+  max-height: 40px;
   z-index: 2001;
-}
-
-.sqkz_title {
-  font-size: 2em;
 }
 
 #sqkz_title_svg {
@@ -939,10 +932,10 @@ footer {
   #sqkz_title {
     position: relative;
     font-size: 2em;
-    top: -2px;
-    left: -10px;
-    width: fit-content;
-    height: unset;
+    top: 6px;
+    left: 0;
+    width: 90px;
+    max-height: 40px;
     line-height: 10vh;
     /* animation: slide-left 1s 0s backwards ease-in-out; */
     transition: all .2s;
@@ -1398,7 +1391,7 @@ footer {
 
   #detail_imgs #detail_title {
     display: block;
-    font-family: var(--header-font);
+    font-family: var(--serif-font);
     font-weight: 400;
     position: relative;
     left: 9.5vw;
